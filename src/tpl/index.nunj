@@ -3,5 +3,6 @@
 {% set title = "Walmark" %}
 
 {% block content %}
+    {% include "../tpl/components/greetings.nunj" %}
 
 {% endblock %}
