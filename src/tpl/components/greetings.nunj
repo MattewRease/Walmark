@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="greetings mt-4 py-3 mx-3">
+            <div class="col-12">
+                <h3 class="greetings__title bold py-1">
+                    Good morning Jana!
+                </h3>
+                <p>You have <span class="bold">24 days</span> to finish yuo plan and improve your health condition</p>
+            </div>
+        </div>
+    </div>
+</div>
