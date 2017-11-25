@@ -4,5 +4,7 @@
 
 {% block content %}
     {% include "../tpl/components/greetings.nunj" %}
+    {% include "../tpl/components/invite-friends.nunj" %}
+
 
 {% endblock %}
