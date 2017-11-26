@@ -1,0 +1,61 @@
+{% from '../helpers/svg.nunj' import svg %}
+
+<div class="health">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="health__title col-12 bold py-3">My current health index</h3>
+                <div class="health__index my-4 py-4">
+                    <h5 class="bold py-2 text--green">Your Health Index</h5>
+                    <p>Here yoy can see how you stand on the scale of health index</p>
+                    <div class="col-12 health__index-progress px-0 mx-0">{{ svg('health-index', 'health__index-icon') }}</div>
+                </div>
+                <div class="health__rules">
+                    <h5 class="bold py-2 text--green">5 Areas to Improve Your Health</h5>
+                    <p>Your Health Index is quite high. But it can be even higher! Based on your test responses, we identify several areas to work on:</p>
+                    <ul class="health__list pl-0 mb-5">
+                        <li class="py-1">Maintain a Healthy Diet and Exercise</li>
+                        <li class="py-1">Be sure Your Perscriptions Are Up</li>
+                        <li class="py-1">Make relaxation a Priority</li>
+                        <li class="py-1">Get Enought Sleep</li>
+                        <li class="py-1">Kick Your Unhealthy Vices To The Curb</li>
+                    </ul>
+                    <a class="health__btn col-12 py-3">
+                        <span>Don't worry, we will help you get better!</span>{{ svg('smile', 'health__arrow-icon') }}
+                    </a>
+                    <div class="health__weight my-4 py-4">
+                        <div class="col-4">
+                            <h3 class="py-2">BMI</h3>
+                            <p class="text--green bold health__weight-bmi">20.1</p>
+                        </div>
+                        <div class="health__weight-divider col-8">
+                            <h3 class="py-2">Category</h3>
+                            <p class="bold text--green pt-2">Normal weight</p>
+                        </div>
+                        <div class="col-3">
+                            {{ svg('waist', 'health__weight-waist') }}
+                        </div>
+                        <div class="col-9 py-3">
+                            <p>Normal BMI is 20-25. Your weight to height ratio is deal.</p>
+                        </div>
+                    </div>
+                    <div class="health__weight my-4 py-4">
+                        <div class="col-10">
+                            <p class="bold health__weight-text">Your daily liquid intake is <span class="text--green ">insufficient</span></p>
+                        </div>
+                        <div class="col-2">
+                            {{ svg('smile', 'health__weight-icon') }}
+                        </div>
+                        <div class="col-3">
+                            {{ svg('cup', 'health__weight-waist') }}
+                        </div>
+                        <div class="col-9">
+                            <h3 class="bold">2.5 <span class="bold">Litres</span></h3>
+                            <p>Is optimal fluid intake for your height and weight</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
