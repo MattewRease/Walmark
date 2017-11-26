@@ -6,5 +6,6 @@
     {% include "../tpl/components/greetings.nunj" %}
     {% include "../tpl/components/invite-friends.nunj" %}
     {% include "../tpl/components/navigation.nunj" %}
+    {% include "../tpl/components/health-index.nunj" %}
 
 {% endblock %}
