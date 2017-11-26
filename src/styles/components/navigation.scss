@@ -1,0 +1,39 @@
+.navigation {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        list-style: none;
+
+        & li {
+            background-color: #f6f6f6;
+            padding: 10px 15px;
+            border-left: 4px solid transparent;
+            width: 100%;
+
+            &:hover,
+            &:active {
+                border-left: 4px solid #ff6900;
+                font-weight: bold;
+            }
+        }
+
+        &-index {
+            order: 0;
+        }
+
+        &-orders {
+            order: 1;
+        }
+
+        &-settings {
+            order: 2;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &__list {
+            flex-wrap: nowrap;
+        }
+    }
+}
