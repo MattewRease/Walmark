@@ -9,6 +9,33 @@
     &__index {
         border-top: $main-border;
         border-bottom: $main-border;
+
+        &-wrap {
+            text-align: center;
+        }
+
+        &-progress {
+            font-size: 65px;
+            width: 200px;
+            height: 100px;
+            margin: auto;
+            background-color: transparent;
+            border: 10px solid #009d3a;
+            border-bottom: 0;
+            border-top-right-radius: 110px;
+            border-top-left-radius: 110px;
+
+            &-inner {
+                width: 178px;
+                height: 89px;
+                margin: 1px auto;
+                background-color: transparent;
+                border: 15px solid #009d3a;
+                border-bottom: 0;
+                border-top-right-radius: 110px;
+                border-top-left-radius: 110px;
+            }
+        }
     }
 
     &__btn {

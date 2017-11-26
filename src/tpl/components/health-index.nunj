@@ -8,8 +8,13 @@
                 <div class="health__index my-4 py-4">
                     <h5 class="bold py-2 text--green">Your Health Index</h5>
                     <p>Here yoy can see how you stand on the scale of health index</p>
-                    <div class="col-12 health__index-progress px-0 mx-0">{{ svg('health-index', 'health__index-icon') }}</div>
-                </div>
+                    <div class="health__index-wrap col-12 py-3">
+                        <div class="health__index-progress">
+                            <div class="health__index-progress-inner">
+                                <p class="bold text--green">73</p>
+                            </div>
+                        </div>
+                    </div>
                 <div class="health__rules">
                     <h5 class="bold py-2 text--green">5 Areas to Improve Your Health</h5>
                     <p>Your Health Index is quite high. But it can be even higher! Based on your test responses, we identify several areas to work on:</p>
@@ -32,10 +37,10 @@
                             <h3 class="py-2">Category</h3>
                             <p class="bold text--green pt-2">Normal weight</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             {{ svg('waist', 'health__weight-waist') }}
                         </div>
-                        <div class="col-9 py-3">
+                        <div class="col-8 py-3">
                             <p>Normal BMI is 20-25. Your weight to height ratio is deal.</p>
                         </div>
                     </div>
@@ -46,10 +51,10 @@
                         <div class="col-2">
                             {{ svg('smile', 'health__weight-icon') }}
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             {{ svg('cup', 'health__weight-waist') }}
                         </div>
-                        <div class="col-9">
+                        <div class="col-8">
                             <h3 class="bold">2.5 <span class="bold">Litres</span></h3>
                             <p>Is optimal fluid intake for your height and weight</p>
                         </div>
