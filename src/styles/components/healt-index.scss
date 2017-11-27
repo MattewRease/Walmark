@@ -1,6 +1,4 @@
 .health {
-    border-bottom: $main-border;
-
     &__title {
         text-align: center;
         border-bottom: 2px solid #eee;
@@ -94,7 +92,7 @@
         border-bottom: $main-border;
 
         &-text {
-            font-size: 24px;
+            font-size: 18px;
         }
 
         &-icon {
@@ -109,16 +107,21 @@
         }
 
         &-divider {
-            padding-left: 25px;
             border-left: 1px solid black;
 
             & p {
-                font-size: 24px;
+                font-size: 18px;
             }
         }
 
         &-waist {
-            width: 80px;
+            width: 65px;
+            height: 90px;
+            fill: #7e7e7e;
+        }
+
+        &-cup {
+            width: 75px;
             height: 90px;
             fill: #7e7e7e;
         }
