@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="health__title col-12 bold py-3">My current health index</h3>
+                <h4 class="health__title col-12 bold py-3">My current health index</h4>
                 <div class="health__index my-4 py-4">
                     <h5 class="bold py-2 text--green">Your Health Index</h5>
                     <p>Here yoy can see how you stand on the scale of health index</p>
@@ -29,13 +29,13 @@
                         <span>Don't worry, we will help you get better!</span>{{ svg('smile', 'health__arrow-icon') }}
                     </a>
                     <div class="health__weight my-4 py-4">
-                        <div class="col-4">
-                            <h3 class="py-2">BMI</h3>
-                            <p class="text--green bold health__weight-bmi">20.1</p>
+                        <div class="col-5">
+                            <h3>BMI</h3>
+                            <p class="text--green bold health__weight-bmi mb-0">20.1</p>
                         </div>
-                        <div class="health__weight-divider col-8">
-                            <h3 class="py-2">Category</h3>
-                            <p class="bold text--green pt-2">Normal weight</p>
+                        <div class="health__weight-divider col-7">
+                            <h3>Category</h3>
+                            <p class="bold text--green pt-3 mb-0">Normal weight</p>
                         </div>
                         <div class="col-4">
                             {{ svg('waist', 'health__weight-waist') }}
@@ -51,8 +51,8 @@
                         <div class="col-2">
                             {{ svg('smile', 'health__weight-icon') }}
                         </div>
-                        <div class="col-4">
-                            {{ svg('cup', 'health__weight-waist') }}
+                        <div class="col-4 pt-3">
+                            {{ svg('cup', 'health__weight-cup') }}
                         </div>
                         <div class="col-8">
                             <h3 class="bold">2.5 <span class="bold">Litres</span></h3>
