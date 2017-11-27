@@ -1,0 +1,5 @@
+<div class="health__index-progress">
+    <div class="health__index-progress-inner">
+        <p class="bold text--green">73</p>
+    </div>
+</div>

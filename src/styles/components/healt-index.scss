@@ -6,10 +6,10 @@
 
     &__index {
         border-top: $main-border;
-        border-bottom: $main-border;
 
         &-wrap {
             text-align: center;
+            border-bottom: $main-border;
         }
 
         &-progress {
@@ -34,6 +34,11 @@
                 border-top-left-radius: 110px;
             }
         }
+    }
+
+    &__rules {
+        border-top: $main-border;
+        border-bottom: $main-border;
     }
 
     &__btn {
@@ -71,7 +76,7 @@
             padding: 0 2px;
             margin-right: 10px;
             color: #00983d;
-            background-image: svg-load('../../gfx/svg/icons/fast-forward.svg', fill=green, width=20);
+            // background-image: svg-load('../../gfx/svg/icons/fast-forward.svg', fill=green, width=20);
             border: 1px solid #00983d;
             border-radius: 50%;
             content: '▲';
@@ -85,7 +90,8 @@
         fill: #fff;
     }
 
-    &__weight {
+    &__weight,
+    &__liquid {
         display: flex;
         flex-wrap: wrap;
         border-top: $main-border;

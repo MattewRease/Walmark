@@ -1,0 +1,15 @@
+<div class="health__liquid my-4 py-4">
+    <div class="col-10">
+        <p class="bold health__weight-text">Your daily liquid intake is <span class="text--green ">insufficient</span></p>
+    </div>
+    <div class="col-2">
+        {{ svg('smile', 'health__liquid-icon') }}
+    </div>
+    <div class="col-4 pt-3">
+        {{ svg('cup', 'health__liquid-cup') }}
+    </div>
+    <div class="col-8">
+        <h3 class="bold">2.5 <span class="bold">Litres</span></h3>
+        <p>Is optimal fluid intake for your height and weight</p>
+    </div>
+</div>

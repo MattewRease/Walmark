@@ -1,0 +1,16 @@
+<div class="health__weight my-4 py-4">
+    <div class="col-5">
+        <h3>BMI</h3>
+        <p class="text--green bold health__weight-bmi mb-0">20.1</p>
+    </div>
+    <div class="health__weight-divider col-7">
+        <h3>Category</h3>
+        <p class="bold text--green pt-3 mb-0">Normal weight</p>
+    </div>
+    <div class="col-4">
+        {{ svg('waist', 'health__weight-waist') }}
+    </div>
+    <div class="col-8 py-3">
+        <p>Normal BMI is 20-25. Your weight to height ratio is deal.</p>
+    </div>
+</div>
