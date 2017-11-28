@@ -6,7 +6,7 @@
                     Invite your friends
                 </h5>
                 <form class="invite__wrapper">
-                    <input class="col-8 invite__input" placeholder="Type an email"><a class="invite__btn col-4" href="#">Invite<a/>
+                    <input class="col-8 invite__input" placeholder="Type an email"><a class="invite__btn col-4 col-sm-auto" href="#">Invite<a/>
                     </input>
                 </form>
             </div>

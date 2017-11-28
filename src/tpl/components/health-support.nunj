@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 health__support-plan-week">
+                        <div class="col-12 health__support-plan-week pr-0">
                             <div class="health__support-plan-week-wrap">
                                 <div class="health__support-plan-day">
                                     <h6 class="text--green bold">Monday</h6>
@@ -127,7 +127,7 @@
                             </div>
                             <label class="py-2 mt-3">You missed tasks?</label><span class="health__support-form-tolltip icon icon--tooltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health__support-form-tolltip') }}</span>
                             <div class="col-12 px-0">
-                                <button class="btn btn-outline-success col-12 mb-3">Reset my plan</button>
+                                <button class="btn btn-outline-success col-12 col-sm-7 mb-3">Reset my plan</button>
                             </div>
                         </form>
                         </div>
