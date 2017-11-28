@@ -1,6 +1,6 @@
 {% from '../../helpers/svg.nunj' import svg %}
 
-<div class="health__rules pt-3">
+<div class="health__rules pt-3 px-2">
     <h5 class="bold py-2 text--green">5 Areas to Improve Your Health</h5>
     <p>Your Health Index is quite high. But it can be even higher! Based on your test responses, we identify several areas to work on:</p>
     <ul class="health__list pl-0 mb-5">

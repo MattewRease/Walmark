@@ -1,6 +1,6 @@
 {% from '../../helpers/svg.nunj' import svg %}
 
-<div class="health__weight my-4 py-4">
+<div class="health__weight my-4 pt-4">
     <div class="col-5">
         <h3>BMI</h3>
         <p class="text--green bold health__weight-bmi mb-0">20.1</p>
