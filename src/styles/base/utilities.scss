@@ -40,3 +40,34 @@
     text-align: center;
     border-bottom: 2px solid #eee;
 }
+
+// Flex-box utilities
+.order-1 {
+    order: 1;
+
+    @include media-breakpoint-only(sm) {
+        &-sm{
+        order: 1;
+        }
+    }
+}
+
+.order-2 {
+    order: 2;
+
+    @include media-breakpoint-only(sm) {
+        &-sm{
+        order: 2;
+        }
+    }
+}
+
+.order-3 {
+    order: 3;
+
+    @include media-breakpoint-only(sm) {
+        &-sm{
+        order: 3;
+        }
+    }
+}
