@@ -1,0 +1,133 @@
+.health__support {
+    &-wrap {
+        border: 3px solid #ffd94b;
+        border-radius: 4px;
+    }
+
+    &-plan {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-description {
+            font-size: 12px;
+        }
+    }
+
+    &-index {
+        width: 60px;
+        height: 60px;
+    }
+
+    .progress {
+        height: 7px;
+        background-image: -webkit-gradient(linear, left top, right top, from(rgba(230, 230, 230, .3)), to(rgba(230, 230, 230, .3)), color-stop(.2, #fff));
+        box-shadow: none;
+    }
+
+    .progress-bar {
+        background-image: -webkit-gradient(linear, left top, right top, from(rgba(243, 106, 32, .76)), to(rgba(230, 230, 230, .733)), color-stop(0, rgba(243, 93, 0, .7)));
+        box-shadow: none;
+    }
+
+    &-navigation {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 14px;
+        background-color: #f6f6f6;
+
+        &-prev-icon,
+        &-next-icon {
+            width: 18px;
+            height: 18px;
+            margin: 0 7px;
+            vertical-align: middle;
+            fill: rgb(133, 133, 133);
+        }
+    }
+
+    &-form {
+        &-tolltip {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &-plan {
+        &-week {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            &-wrap {
+                overflow-style: autohiding-scrollbar;
+                width: 100%;
+                height: 1200px;
+                overflow: auto;
+            }
+        }
+
+        &-day {
+            &-tick {
+                width: 40px;
+                height: 40px;
+                fill: $text--green;
+            }
+
+            &-cross {
+                width: 40px;
+                height: 40px;
+                fill: #ed2a32;
+            }
+
+            &-complete {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 80px;
+                background-color: #f8f8f8;
+                border: $main-border;
+                border-radius: 3px;
+            }
+
+            &-btn-ok,
+            &-btn-no {
+                top: -3px;
+                display: inline-block;
+                padding: 4px 10px;
+                text-align: center;
+                cursor: pointer;
+                background-color: #fff;
+                border: 1px solid $text--green;
+                border-radius: 3px;
+            }
+
+            &-btn-done {
+                top: -3px;
+                display: inline-block;
+                padding: 8px 10px;
+                text-align: center;
+                cursor: pointer;
+                background-color: $text--green;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    .yes {
+        background-color: #ace0c4;
+        border: none;
+    }
+
+    .no {
+        background-color: #ffdf87;
+        border: none;
+    }
+
+    .sunday {
+        background-color: #b9f3ff;
+        border: none;
+    }
+}

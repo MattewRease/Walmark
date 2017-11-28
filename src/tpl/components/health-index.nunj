@@ -4,11 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4 class="health__title col-12 bold py-3">My current health index</h4>
-                <div class="health__index mt-4 py-4">
-                    <h5 class="bold py-2 text--green">Your Health Index</h5>
-                    <p>Here yoy can see how you stand on the scale of health index</p>
+                <h4 class="title col-12 bold py-3">My current health index</h4>
+                <div class="health__index mt-2">
                     <div class="health__index-wrap col-12 my-4 pb-5 pt-3">
+                        <h5 class="bold py-2 text--green">Your Health Index</h5>
+                        <p>Here yoy can see how you stand on the scale of health index</p>
                         {% include "../components/health-index/health-progress.nunj" %}
                     </div>
                     {% include "../components/health-index/health-rules.nunj" %}

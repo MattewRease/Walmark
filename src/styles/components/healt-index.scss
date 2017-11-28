@@ -5,18 +5,17 @@
     }
 
     &__index {
-        border-top: $main-border;
-
         &-wrap {
             text-align: center;
-            border-bottom: $main-border;
+            border: $main-border;
+            border-radius: 3px;
         }
 
         &-progress {
-            font-size: 65px;
             width: 200px;
             height: 100px;
             margin: auto;
+            font-size: 65px;
             background-color: transparent;
             border: 10px solid #009d3a;
             border-bottom: 0;
@@ -37,8 +36,8 @@
     }
 
     &__rules {
-        border-top: $main-border;
-        border-bottom: $main-border;
+        border: $main-border;
+        border-radius: 3px;
     }
 
     &__btn {
@@ -94,8 +93,8 @@
     &__liquid {
         display: flex;
         flex-wrap: wrap;
-        border-top: $main-border;
-        border-bottom: $main-border;
+        border: $main-border;
+        border-radius: 3px;
 
         &-text {
             font-size: 18px;
