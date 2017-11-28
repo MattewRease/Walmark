@@ -24,6 +24,19 @@
     font-weight: bold;
 }
 
+.text--white {
+    color: #fff;
+}
+
 .text--green {
-    color: #00983d;
+    color: $text--green;
+}
+
+.text--orange {
+    color: #ff6900;
+}
+
+.title {
+    text-align: center;
+    border-bottom: 2px solid #eee;
 }
