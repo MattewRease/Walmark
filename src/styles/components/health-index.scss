@@ -1,0 +1,157 @@
+.health {
+    &__title {
+        text-align: center;
+        border-bottom: 2px solid #eee;
+    }
+
+    &__index {
+        border: $main-border;
+
+        &-wrap {
+            text-align: center;
+            border-radius: 3px;
+
+            &-progress {
+                height: 80px;
+
+                & p {
+                    position: relative;
+                    top: -50px;
+                    font-size: 36px;
+
+                    @include media-breakpoint-up(sm) {
+                        font-size: 56px;
+                        top: -75px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 66px;
+                        top: -90px;
+                    }
+                }
+
+                &-icon {
+                    width: 150px;
+                    height: 80px;
+
+                    @include media-breakpoint-up(sm) {
+                        width: 180px;
+                        height: 100px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        width: 260px;
+                        height: 150px;
+                    }
+                }
+
+                @include media-breakpoint-up(md) {
+                    margin-top: 100px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &__rules {
+        border: $main-border;
+        border-radius: 3px;
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 5px;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #009639;
+        border-radius: 5px;
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+            background-color: #006d28;
+        }
+
+        & span {
+            padding: 0 40px 0 10px;
+            color: #fff;
+            text-align: left;
+        }
+    }
+
+    &__list {
+        list-style: none;
+
+        & li::before {
+            padding: 0 2px;
+            margin-right: 10px;
+            color: #00983d;
+            // background-image: svg-load('../../gfx/svg/icons/fast-forward.svg', fill=green, width=20);
+            border: 1px solid #00983d;
+            border-radius: 50%;
+            content: '▲';
+        }
+    }
+
+    &__arrow-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        fill: #fff;
+    }
+
+    &__weight,
+    &__liquid {
+        display: flex;
+        flex-wrap: wrap;
+        border: $main-border;
+        border-radius: 3px;
+
+        &-text {
+            font-size: 18px;
+
+            @include media-breakpoint-only(sm) {
+                & {
+                    font-size: 21px;
+                }
+            }
+        }
+
+        &-icon {
+            width: 30px;
+            height: 30px;
+            fill: #00983d;
+        }
+
+        &-bmi {
+            font-size: 32px;
+        }
+
+        &-divider {
+            border-left: 1px solid black;
+
+            & p {
+                font-size: 18px;
+            }
+        }
+
+        &-waist {
+            width: 65px;
+            height: 90px;
+            fill: #7e7e7e;
+        }
+
+        &-cup {
+            width: 75px;
+            height: 90px;
+            fill: #7e7e7e;
+        }
+    }
+}

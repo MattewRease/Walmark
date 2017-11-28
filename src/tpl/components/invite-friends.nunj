@@ -1,15 +1,11 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="invite mt-4 py-3 px-3">
-                <h5 class="invite__title bold py-1">
-                    Invite your friends
-                </h5>
-                <form class="invite__wrapper">
-                    <input class="col-8 invite__input" placeholder="Type an email"><a class="invite__btn col-4 col-sm-auto" href="#">Invite<a/>
-                    </input>
-                </form>
-            </div>
-        </div>
+<div class="col-12 col-md-5">
+    <div class="invite mt-4 py-3 px-3">
+        <h5 class="invite__title bold py-1">
+            Invite your friends
+        </h5>
+        <form class="invite__wrapper">
+            <input class="col-8 invite__input" placeholder="Type an email">
+            </input><a href="#" class="invite__btn col-4 col-sm-auto col-md-4" href="#">Invite</a>
+        </form>
     </div>
 </div>
