@@ -18,6 +18,10 @@
             }
         }
 
+        @include media-breakpoint-up(md) {
+            flex-wrap: nowrap;
+        }
+
         &-index {
             order: 0;
         }
@@ -28,12 +32,6 @@
 
         &-settings {
             order: 2;
-        }
-    }
-
-    @include media-breakpoint-up(md) {
-        &__list {
-            flex-wrap: nowrap;
         }
     }
 }
