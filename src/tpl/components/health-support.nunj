@@ -46,7 +46,7 @@
                                     <div class="health__support-plan-day-complete yes mt-3">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <a class="col-12 health__support-plan-day-btn-ok mb-4">
+                                    <a href="#" class="col-12 health__support-plan-day-btn-ok mb-4">
                                         <span class="text--green">Unmark</span>
                                     </a>
                                 </div>
@@ -55,7 +55,7 @@
                                     <div class="health__support-plan-day-complete yes mt-3">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <a class="col-12 health__support-plan-day-btn-ok mb-4">
+                                    <a href="#" class="col-12 health__support-plan-day-btn-ok mb-4">
                                         <span class="text--green">Unmark</span>
                                     </a>
                                 </div>
@@ -64,7 +64,7 @@
                                     <div class="health__support-plan-day-complete no mt-3">
                                         {{ svg('cross', 'health__support-plan-day-cross') }}
                                     </div>
-                                    <a class="col-12 health__support-plan-day-btn-no mb-4">
+                                    <a href="#" class="col-12 health__support-plan-day-btn-no mb-4">
                                         <span class="text--green">Repeat</span>
                                     </a>
                                 </div>
@@ -73,7 +73,7 @@
                                     <div class="health__support-plan-day-complete yes mt-3">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <a class="col-12 health__support-plan-day-btn-ok mb-4">
+                                    <a href="#" class="col-12 health__support-plan-day-btn-ok mb-4">
                                         <span class="text--green">Unmark</span>
                                     </a>
                                 </div>
@@ -82,7 +82,7 @@
                                     <div class="health__support-plan-day-complete yes mt-3">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <a class="col-12 health__support-plan-day-btn-ok mb-4">
+                                    <a href="#" class="col-12 health__support-plan-day-btn-ok mb-4">
                                         <span class="text--green">Unmark</span>
                                     </a>
                                 </div>
@@ -91,7 +91,7 @@
                                     <div class="health__support-plan-day-complete sunday mt-3">
                                         <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
                                     </div>
-                                    <a class="col-12 health__support-plan-day-btn-done mb-4">
+                                    <a href="#" class="col-12 health__support-plan-day-btn-done mb-4">
                                         <span class="text--white">Unmark</span>
                                     </a>
                                 </div>

@@ -5,32 +5,50 @@
     }
 
     &__index {
+        border: $main-border;
+
         &-wrap {
             text-align: center;
-            border: $main-border;
             border-radius: 3px;
-        }
 
-        &-progress {
-            width: 200px;
-            height: 100px;
-            margin: auto;
-            font-size: 65px;
-            background-color: transparent;
-            border: 10px solid #009d3a;
-            border-bottom: 0;
-            border-top-right-radius: 110px;
-            border-top-left-radius: 110px;
+            &-progress {
+                height: 80px;
 
-            &-inner {
-                width: 178px;
-                height: 89px;
-                margin: 1px auto;
-                background-color: transparent;
-                border: 15px solid #009d3a;
-                border-bottom: 0;
-                border-top-right-radius: 110px;
-                border-top-left-radius: 110px;
+                & p {
+                    position: relative;
+                    top: -50px;
+                    font-size: 36px;
+
+                    @include media-breakpoint-up(sm) {
+                        font-size: 56px;
+                        top: -75px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 66px;
+                        top: -90px;
+                    }
+                }
+
+                &-icon {
+                    width: 150px;
+                    height: 80px;
+
+                    @include media-breakpoint-up(sm) {
+                        width: 180px;
+                        height: 100px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        width: 260px;
+                        height: 150px;
+                    }
+                }
+
+                @include media-breakpoint-up(md) {
+                    margin-top: 100px;
+                    height: 100%;
+                }
             }
         }
     }

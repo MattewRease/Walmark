@@ -6,15 +6,40 @@
         list-style: none;
 
         & li {
-            background-color: #f6f6f6;
-            padding: 10px 15px;
-            border-left: 4px solid transparent;
             width: 100%;
+            padding: 10px 15px;
+            background-color: #f6f6f6;
+            border-left: 4px solid transparent;
 
             &:hover,
             &:active {
-                border-left: 4px solid #ff6900;
                 font-weight: bold;
+                border-left: 4px solid #ff6900;
+            }
+
+            @include media-breakpoint-up(md) {
+                & {
+                    align-items: space-around;
+                    padding: 20px;
+                    text-align: center;
+                    border-top: 6px solid #eee;
+                    border-bottom: 6px solid #eee;
+                    border-left: none;
+
+                    &:hover {
+                        border-top: 6px solid #eee;
+                        border-bottom: 6px solid #eee;
+                        border-left: none;
+
+                        &::after {
+                            position: absolute;
+                            margin-top: 46px;
+                            border: 30px solid transparent;
+                            border-top: 30px solid #eee;
+                            content: '';
+                        }
+                    }
+                }
             }
         }
 

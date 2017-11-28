@@ -1,5 +1,12 @@
-<div class="health__index-progress">
-    <div class="health__index-progress-inner">
-        <p class="bold text--green">73</p>
+{% from '../../helpers/svg.nunj' import svg %}
+
+<div class="health__index mt-2">
+    <div class="health__index-wrap my-4 pt-3 pt-md-0">
+        <h5 class="bold py-2 text--green">Your Health Index</h5>
+        <p>Here yoy can see how you stand on the scale of health index</p>
+        <div class="health__index-wrap-progress mt-md-5">
+            {{ svg('health-index-scale', 'health__index-wrap-progress-icon') }}
+            <p class="bold text--green mb-0">73</p>
+        </div>
     </div>
 </div>
