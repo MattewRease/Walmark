@@ -1,3 +1,5 @@
+{% from '../../helpers/svg.nunj' import svg %}
+
 <div class="health__liquid my-4 py-4">
     <div class="col-10">
         <p class="bold health__weight-text">Your daily liquid intake is <span class="text--green ">insufficient</span></p>
