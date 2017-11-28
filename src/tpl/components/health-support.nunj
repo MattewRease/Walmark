@@ -35,101 +35,117 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 health__support-plan-week pr-0">
+                        <div class="col-12 health__support-plan-week">
                             <div class="health__support-plan-week-wrap">
                                 <div class="health__support-plan-day">
-                                    <h6 class="text--green bold">Monday</h6>
-                                    <div class="health__support-plan-day-complete my-3"></div>
+                                    <h6 class="text--green col-md-2 text-md-right">Monday</h6>
+                                    <div class="health__support-plan-day-complete my-3 col-md-8 offset-mf-2"></div>
                                 </div>
                                 <div class="health__support-plan-day">
-                                    <h6 class="text--green bold">Thuesday</h6>
-                                    <div class="health__support-plan-day-complete yes mt-3">
+                                    <h6 class="text--green col-md-2 text-md-right">Thuesday</h6>
+                                    <div class="health__support-plan-day-complete yes my-2 col-md-8">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <a href="#" class="col-12 health__support-plan-day-btn-ok mb-4">
-                                        <span class="text--green">Unmark</span>
-                                    </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
+                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
+                                            <span class="text--green">Unmark</span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="health__support-plan-day">
-                                    <h6 class="text--green bold">Wednesday</h6>
-                                    <div class="health__support-plan-day-complete yes mt-3">
+                                    <h6 class="text--green col-md-2 text-md-right">Wednesday</h6>
+                                    <div class="health__support-plan-day-complete yes my-2 col-md-8">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <a href="#" class="col-12 health__support-plan-day-btn-ok mb-4">
-                                        <span class="text--green">Unmark</span>
-                                    </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
+                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
+                                            <span class="text--green">Unmark</span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="health__support-plan-day">
-                                    <h6 class="text--green bold">Thursday</h6>
-                                    <div class="health__support-plan-day-complete no mt-3">
+                                    <h6 class="text--green col-md-2 text-md-right">Thursday</h6>
+                                    <div class="health__support-plan-day-complete no my-2 col-md-8">
                                         {{ svg('cross', 'health__support-plan-day-cross') }}
                                     </div>
-                                    <a href="#" class="col-12 health__support-plan-day-btn-no mb-4">
-                                        <span class="text--green">Repeat</span>
-                                    </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
+                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
+                                            <span class="text--green">Repeat</span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="health__support-plan-day">
-                                    <h6 class="text--green bold">Friday</h6>
-                                    <div class="health__support-plan-day-complete yes mt-3">
+                                    <h6 class="text--green col-md-2 text-md-right">Friday</h6>
+                                    <div class="health__support-plan-day-complete yes my-2 col-md-8">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <a href="#" class="col-12 health__support-plan-day-btn-ok mb-4">
-                                        <span class="text--green">Unmark</span>
-                                    </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
+                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
+                                            <span class="text--green">Unmark</span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="health__support-plan-day">
-                                    <h6 class="text--green bold">Saturday</h6>
-                                    <div class="health__support-plan-day-complete yes mt-3">
+                                    <h6 class="text--green col-md-2 text-md-right">Saturday</h6>
+                                    <div class="health__support-plan-day-complete yes my-2 col-md-8">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <a href="#" class="col-12 health__support-plan-day-btn-ok mb-4">
-                                        <span class="text--green">Unmark</span>
-                                    </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
+                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
+                                            <span class="text--green">Unmark</span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="health__support-plan-day">
-                                    <h6 class="text--green bold">Sunday</h6>
-                                    <div class="health__support-plan-day-complete sunday mt-3">
+                                    <h6 class="text--green col-md-2 text-md-right">Sunday</h6>
+                                    <div class="health__support-plan-day-complete sunday my-2 col-md-8">
                                         <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
                                     </div>
-                                    <a href="#" class="col-12 health__support-plan-day-btn-done mb-4">
-                                        <span class="text--white">Unmark</span>
-                                    </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
+                                        <a href="#" class="col-12 health__support-plan-day-btn-done text--white">
+                                            <span class="text--white">Done</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="health__support-form col-12">
-                        <form>
-                            <label class="py-2 mt-3">Set reminders</label><span class="health__support-form-tolltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health__support-form-tolltip') }}</span>
-                            <div class="form-row align-items-center">
-                                <select id="inputState" class="form-control col-8">
-                                    <option selected>Every 3 days</option>
-                                    <option>Every 3 days</option>
-                                    <option>Every 3 days</option>
-                                    <option>Every 3 days</option>
-                                    <option>Every 3 days</option>
-                                </select>
-                                <div class="col-4">
-                                    <button class="btn btn-outline-success col-12">Set</button>
+                            <div class="col-12 col-md-4">
+                                <label class="py-2 mt-3">Set reminders</label><span class="health__support-form-tolltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health__support-form-tolltip') }}</span>
+                                <div class="form-row align-items-center">
+                                    <select id="inputState" class="form-control col-8">
+                                        <option selected>Every 3 days</option>
+                                        <option>Every 3 days</option>
+                                        <option>Every 3 days</option>
+                                        <option>Every 3 days</option>
+                                        <option>Every 3 days</option>
+                                    </select>
+                                    <div class="col-4">
+                                        <button class="btn btn-outline-success col-12">Set</button>
+                                    </div>
                                 </div>
                             </div>
-                            <label class="py-2 mt-2">Preffered time to receive email</label>
-                            <div class="form-row align-items-center">
-                                <select id="inputState" class="form-control col-8">
-                                    <option selected>9:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                </select>
-                                <div class="col-4">
-                                    <button class="btn btn-outline-success col-12">Set</button>
+                            <div class="col-12 col-md-4">
+                                <label class="py-2 mt-2">Preffered time to receive email</label>
+                                <div class="form-row align-items-center">
+                                    <select id="inputState" class="form-control col-8">
+                                        <option selected>9:00</option>
+                                        <option>10:00</option>
+                                        <option>11:00</option>
+                                        <option>12:00</option>
+                                        <option>13:00</option>
+                                    </select>
+                                    <div class="col-4">
+                                        <button class="btn btn-outline-success col-12">Set</button>
+                                    </div>
                                 </div>
                             </div>
-                            <label class="py-2 mt-3">You missed tasks?</label><span class="health__support-form-tolltip icon icon--tooltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health__support-form-tolltip') }}</span>
-                            <div class="col-12 px-0">
-                                <button class="btn btn-outline-success col-12 col-sm-7 mb-3">Reset my plan</button>
+                            <div class="col-12 col-md-4">
+                                <label class="py-2 mt-3">You missed tasks?</label><span class="health__support-form-tolltip icon icon--tooltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health__support-form-tolltip') }}</span>
+                                <div class="col-12 px-0">
+                                    <button class="btn btn-outline-success col-12 col-sm-7 col-md-12 mb-3">Reset my plan</button>
+                                </div>
                             </div>
-                        </form>
                         </div>
                     </div>
                 </div>

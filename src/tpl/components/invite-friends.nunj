@@ -3,9 +3,9 @@
         <h5 class="invite__title bold py-1">
             Invite your friends
         </h5>
-        <form class="invite__wrapper">
+        <div class="invite__wrapper pb-1">
             <input class="col-8 invite__input" placeholder="Type an email">
             </input><a href="#" class="invite__btn col-4 col-sm-auto col-md-4" href="#">Invite</a>
-        </form>
+        </div>
     </div>
 </div>
