@@ -59,7 +59,6 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-nunjucks": "^3.0.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^7.0.0",
     "gulp-prettify": "^0.5.0",
     "gulp-real-favicon": "^0.2.2",
     "gulp-rename": "^1.2.2",
@@ -88,11 +87,16 @@
     "styleguide": "actum/styleguide",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
-    "svgxuse": "^1.2.4",
+    "svgxuse": "^1.2.6",
     "uglifyify": "^4.0.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.9.0",
     "yargs": "^8.0.2"
+  },
+  "devDependencies": {
+    "gulp-postcss": "^7.0.0",
+    "postcss": "^6.0.14",
+    "postcss-svg": "^2.3.0"
   }
 }
