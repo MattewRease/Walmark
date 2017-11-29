@@ -40,8 +40,7 @@
 
         &-prev-icon,
         &-next-icon {
-            width: 18px;
-            height: 18px;
+            @include size(18px);
             margin: 0 7px;
             vertical-align: middle;
             fill: rgb(133, 133, 133);
@@ -55,8 +54,7 @@
         align-items: baseline;
 
         &-tolltip {
-            width: 20px;
-            height: 20px;
+            @include size(20px);
         }
     }
 
@@ -112,14 +110,12 @@
             }
 
             &-tick {
-                width: 40px;
-                height: 40px;
+                @include size(40px);
                 fill: $text--green;
             }
 
             &-cross {
-                width: 40px;
-                height: 40px;
+                @include size(40px);
                 fill: #ed2a32;
             }
 
@@ -133,10 +129,9 @@
                 border-radius: 3px;
 
                 @include media-breakpoint-up(xl) {
+                    @include size(120px);
                     flex-wrap: nowrap;
                     align-items: center;
-                    width: 120px;
-                    height: 120px;
                     font-size: 8px;
                     text-align: center;
                     border-radius: 50%;
@@ -155,14 +150,13 @@
                 }
 
                 @include media-breakpoint-up(xl) {
+                    @include size(28px);
                     top: -40px;
                     left: 30px;
-                    width: 28px;
-                    height: 28px;
                     padding: 14px;
+                    background-color: #ff6712;
                     border: 5px solid white;
                     border-radius: 50%;
-                    background-color: #ff6712;
 
                     &:hover {
                         background-color: #bd5016;
@@ -188,10 +182,9 @@
                 }
 
                 @include media-breakpoint-up(xl) {
+                    @include size(40px);
                     top: -40px;
                     left: 30px;
-                    width: 28px;
-                    height: 28px;
                     padding: 14px;
                     border: 5px solid white;
                     border-radius: 50%;
