@@ -37,66 +37,104 @@
                         </div>
                         <div class="col-12 health__support-plan-week">
                             <div class="health__support-plan-week-wrap">
-                                <div class="health__support-plan-day col-xl-auto">
-                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Monday</h6>
-                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto"></div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 invisible d-xl-none">
-                                        <a href="#" class="col-12 btn-ok">Unmark</a>
+                            <p class="col-xl-auto d-none d-xl-block text--green">Week 1</p>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto">Mondsay</label>
+                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
                                     </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok invisible">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
                                 </div>
-                                <div class="health__support-plan-day col-xl-auto">
-                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Thuesday</h6>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto">Thuesday</label>
                                     <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
-                                        <a href="#" class="col-12 btn-ok">Unmark</a>
-                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
                                 </div>
-                                <div class="health__support-plan-day col-xl-auto">
-                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Wednesday</h6>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto">Wednesday</label>
                                     <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
-                                        <a href="#" class="col-12 btn-ok">Unmark</a>
-                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
                                 </div>
-                                <div class="health__support-plan-day col-xl-auto">
-                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Thursday</h6>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto">Thursday</label>
                                     <div class="health__support-plan-day-complete no my-2 col-md-8 col-xl-auto">
                                         {{ svg('cross', 'health__support-plan-day-cross') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
-                                        <a href="#" class="col-12 btn-ok">Unmark</a>
-                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
                                 </div>
-                                <div class="health__support-plan-day col-xl-auto">
-                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Friday</h6>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto">Friday</label>
                                     <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
-                                        <a href="#" class="col-12 btn-ok">Unmark</a>
-                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
                                 </div>
-                                <div class="health__support-plan-day col-xl-auto">
-                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Saturday</h6>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto">Saturday</label>
                                     <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
-                                        <a href="#" class="col-12 btn-ok">Unmark</a>
-                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
                                 </div>
-                                <div class="health__support-plan-day col-xl-auto">
-                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Sunday</h6>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto">Sunday</label>
                                     <div class="health__support-plan-day-complete sunday my-2 col-md-8 col-xl-auto">
                                         <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
-                                        <a href="#" class="col-12 btn-done text--white">Done</a>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-done">{{ svg('tick', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
+                                </div>
+                                <p class="col-xl-auto d-none d-xl-block text--green">Week 2</p>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto d-xl-none">Monday</label>
+                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                        <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
                                     </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok invisible">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
+                                </div>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto d-xl-none">Thursday</label>
+                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                        <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
+                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok invisible">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
+                                </div>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto d-xl-none">Wednesday</label>
+                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                        <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
+                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok invisible">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
+                                </div>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto d-xl-none">Thursday</label>
+                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                        <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
+                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok invisible">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
+                                </div>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto d-xl-none">Friday</label>
+                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                        <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
+                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok invisible">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
+                                </div>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto d-xl-none">Saturday</label>
+                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                        <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
+                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok invisible">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
+                                </div>
+                                <div class="health__support-plan-day col-xl-auto px-xl-2">
+                                    <label class="text--green col-md-2 text-md-right col-xl-auto d-xl-none">Sunday</label>
+                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                        <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
+                                    </div>
+                                    <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok invisible">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
                                 </div>
                             </div>
                         </div>
