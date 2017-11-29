@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="col-12 px-0 my-3">
-                            <div class="health__support-navigation py-3">
+                            <div class="health__support-navigation py-3 d-xl-none">
                                 <div class="health__support-navigation-prev">
                                     {{ svg('prev', 'health__support-navigation-prev-icon') }}
                                     <span class="text--orange bold">Previous</span>
@@ -37,74 +37,65 @@
                         </div>
                         <div class="col-12 health__support-plan-week">
                             <div class="health__support-plan-week-wrap">
-                                <div class="health__support-plan-day">
-                                    <h6 class="text--green col-md-2 text-md-right">Monday</h6>
-                                    <div class="health__support-plan-day-complete my-3 col-md-8 offset-mf-2"></div>
+                                <div class="health__support-plan-day col-xl-auto">
+                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Monday</h6>
+                                    <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto"></div>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 invisible d-xl-none">
+                                        <a href="#" class="col-12 btn-ok">Unmark</a>
+                                    </div>
                                 </div>
-                                <div class="health__support-plan-day">
-                                    <h6 class="text--green col-md-2 text-md-right">Thuesday</h6>
-                                    <div class="health__support-plan-day-complete yes my-2 col-md-8">
+                                <div class="health__support-plan-day col-xl-auto">
+                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Thuesday</h6>
+                                    <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
-                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
-                                            <span class="text--green">Unmark</span>
-                                        </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
+                                        <a href="#" class="col-12 btn-ok">Unmark</a>
                                     </div>
                                 </div>
-                                <div class="health__support-plan-day">
-                                    <h6 class="text--green col-md-2 text-md-right">Wednesday</h6>
-                                    <div class="health__support-plan-day-complete yes my-2 col-md-8">
+                                <div class="health__support-plan-day col-xl-auto">
+                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Wednesday</h6>
+                                    <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
-                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
-                                            <span class="text--green">Unmark</span>
-                                        </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
+                                        <a href="#" class="col-12 btn-ok">Unmark</a>
                                     </div>
                                 </div>
-                                <div class="health__support-plan-day">
-                                    <h6 class="text--green col-md-2 text-md-right">Thursday</h6>
-                                    <div class="health__support-plan-day-complete no my-2 col-md-8">
+                                <div class="health__support-plan-day col-xl-auto">
+                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Thursday</h6>
+                                    <div class="health__support-plan-day-complete no my-2 col-md-8 col-xl-auto">
                                         {{ svg('cross', 'health__support-plan-day-cross') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
-                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
-                                            <span class="text--green">Repeat</span>
-                                        </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
+                                        <a href="#" class="col-12 btn-ok">Unmark</a>
                                     </div>
                                 </div>
-                                <div class="health__support-plan-day">
-                                    <h6 class="text--green col-md-2 text-md-right">Friday</h6>
-                                    <div class="health__support-plan-day-complete yes my-2 col-md-8">
+                                <div class="health__support-plan-day col-xl-auto">
+                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Friday</h6>
+                                    <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
-                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
-                                            <span class="text--green">Unmark</span>
-                                        </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
+                                        <a href="#" class="col-12 btn-ok">Unmark</a>
                                     </div>
                                 </div>
-                                <div class="health__support-plan-day">
-                                    <h6 class="text--green col-md-2 text-md-right">Saturday</h6>
-                                    <div class="health__support-plan-day-complete yes my-2 col-md-8">
+                                <div class="health__support-plan-day col-xl-auto">
+                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Saturday</h6>
+                                    <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
                                         {{ svg('tick', 'health__support-plan-day-tick') }}
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
-                                        <a href="#" class="col-12 health__support-plan-day-btn-ok">
-                                            <span class="text--green">Unmark</span>
-                                        </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
+                                        <a href="#" class="col-12 btn-ok">Unmark</a>
                                     </div>
                                 </div>
-                                <div class="health__support-plan-day">
-                                    <h6 class="text--green col-md-2 text-md-right">Sunday</h6>
-                                    <div class="health__support-plan-day-complete sunday my-2 col-md-8">
+                                <div class="health__support-plan-day col-xl-auto">
+                                    <h6 class="text--green col-md-2 text-md-right d-xl-none">Sunday</h6>
+                                    <div class="health__support-plan-day-complete sunday my-2 col-md-8 col-xl-auto">
                                         <p class="py-3 mb-0 px-2">During your day remember to stretch you back every two hours</p>
                                     </div>
-                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3">
-                                        <a href="#" class="col-12 health__support-plan-day-btn-done text--white">
-                                            <span class="text--white">Done</span>
-                                        </a>
+                                    <div class="col-md-2 mb-md-0 mb-4 px-0 px-md-3 d-xl-none">
+                                        <a href="#" class="col-12 btn-done text--white">Done</a>
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +112,7 @@
                                         <option>Every 3 days</option>
                                     </select>
                                     <div class="col-4">
-                                        <button class="btn btn-outline-success col-12">Set</button>
+                                        <button class="btn-ok col-12">Set</button>
                                     </div>
                                 </div>
                             </div>
@@ -136,14 +127,14 @@
                                         <option>13:00</option>
                                     </select>
                                     <div class="col-4">
-                                        <button class="btn btn-outline-success col-12">Set</button>
+                                        <button class="btn-ok col-12">Set</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <label class="py-2 mt-3">You missed tasks?</label><span class="health__support-form-tolltip icon icon--tooltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health__support-form-tolltip') }}</span>
                                 <div class="col-12 px-0">
-                                    <button class="btn btn-outline-success col-12 col-sm-7 col-md-12 mb-3">Reset my plan</button>
+                                    <button class="btn-ok col-12 col-sm-7 col-md-12 mb-3">Reset my plan</button>
                                 </div>
                             </div>
                         </div>
