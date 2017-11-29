@@ -137,6 +137,41 @@
  * Styleguide Base - Button - Link
  */
 
+.btn-ok,
+.btn-no {
+    display: inline-block;
+    padding: 4px 10px;
+    color: $text--green;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid $green;
+    border-radius: 3px;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: $green;
+        transition: .3s;
+    }
+}
+
+.btn-done {
+    display: inline-block;
+    padding: 8px 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: $green;
+    border-radius: 3px;
+
+    &:hover {
+        background-color: $green-dark;
+        transition: .3s;
+        color: #fff;
+        text-decoration: none;
+}
+}
+
 /**
  * Disabled button
  *
