@@ -1,6 +1,6 @@
 {% from '../../helpers/svg.nunj' import svg %}
 
-<div class="health__weight my-4 pt-4">
+<div class="health__weight my-4 pt-4 pb-lg-4 pb-xl-0">
     <div class="col-5 col-sm-3 order-2-sm">
         <h3>BMI</h3>
         <p class="text--green bold health__weight-bmi mb-0">20.1</p>
@@ -9,7 +9,7 @@
         <h3>Category</h3>
         <p class="bold text--green pt-3 mb-0">Normal weight</p>
     </div>
-    <div class="col-4 col-sm-3 order-1-sm">
+    <div class="col-4 col-sm-3 order-1-sm text-right">
         {{ svg('waist', 'health__weight-waist') }}
     </div>
     <div class="col-8 col-sm-12 py-3 order-3-sm">
