@@ -1,0 +1,130 @@
+{% from '../helpers/svg.nunj' import svg %}
+
+{%
+    set items = [
+        {
+            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            label: 'Monday',
+            labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
+            labelNone: 'd-none',
+            icon: 'update',
+            ready: 'true',
+            iconDone: 'tick',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3',
+            thisWeek: 'true',
+            week: 'Week 1'
+        },
+        {
+            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            label: 'Tuesday',
+            labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
+            ready: 'true',
+            iconDone: 'tick',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3',
+            thisWeek: 'true',
+            icon: 'update'
+        },
+        {
+            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            label: 'Wednesday',
+            labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
+            ready: 'true',
+            iconDone: 'tick',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3',
+            thisWeek: 'true',
+            icon: 'update'
+        },
+        {
+            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            label: 'Thursday',
+            labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
+            ready: 'false',
+            iconDone: 'tick',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3',
+            thisWeek: 'true',
+            icon: 'update'
+        },
+        {
+            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            label: 'Friday',
+            labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
+            ready: 'true',
+            iconDone: 'tick',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3',
+            thisWeek: 'true',
+            icon: 'update'
+        },
+        {
+            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            label: 'Saturday',
+            labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
+            ready: 'true',
+            iconDone: 'tick',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3',
+            thisWeek: 'true',
+            icon: 'update'
+        },
+        {
+            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            label: 'Sunday',
+            labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
+            ready: 'true',
+            iconDone: 'tick',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3',
+            thisWeek: 'true',
+            icon: 'update'
+        }
+    ]
+%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 health__support-plan-week">
+            <div class="health__support-plan-week-wrap">
+            {% for item in items %}
+
+                {% if loop.index == 1 %}
+                <p class="col-xl-auto d-none d-xl-block text--green">{{ item.week }}</p>
+                {% endif %}
+                <div class="{{ item.class }}">
+                    <label class="{{ item.labelClass }}">{{ item.label }}</label>
+                    {% if item.ready=='true' and item.label !=='Monday' and  item.label !=='Sunday' and item.thisWeek =='true'  %}
+                        <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
+                            {{ svg('tick', 'health__support-plan-day-tick') }}
+                        </div>
+                        <a href="#" class="{{ item.btnClass }} btn-ok">
+                                {{ svg(item.icon, 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                        </a>
+                        {% elif item.label =='Sunday' and item.thisWeek =='true' %}
+                            <div class="health__support-plan-day-complete sunday my-2 col-md-8 col-xl-auto">
+                                <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
+                            </div>
+                            <a href="#" class="{{ item.btnClass }} btn-done">
+                                {{ svg(item.iconDone, 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                            </a>
+                        {% elif item.label =='Monday' and item.thisWeek =='true' %}
+                            <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                            </div>
+                            <a href="#" class="{{ item.btnClass }} btn-ok invisible">
+                                {{ svg(item.icon, 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                            </a>
+                        {% elif item.thisWeek =='true' %}
+                            <div class="health__support-plan-day-complete no my-2 col-md-8 col-xl-auto">
+                                {{ svg('cross', 'health__support-plan-day-cross') }}
+                            </div>
+                            <a href="#" class="{{ item.btnClass }} btn-ok">
+                                {{ svg(item.icon, 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                            </a>
+                        {% else %}
+                            <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
+                            </div>
+                            <a href="#" class="col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 btn-ok invisible">{{ svg('update', 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span></a>
+                    {% endif %}
+                </div>
+
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
