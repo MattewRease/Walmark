@@ -10,5 +10,6 @@
     {# {% include "../tpl/components/health-support-nunjucks.nunj" %} #}
     {% include "../tpl/components/health-index-results.nunj" %}
     {% include "../tpl/components/program-length.nunj" %}
+    {% include "../tpl/components/health-tips.nunj" %}
 
 {% endblock %}

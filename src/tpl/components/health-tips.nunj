@@ -1,0 +1,56 @@
+{% from '../helpers/svg.nunj' import svg %}
+
+{%
+    set items = [
+        {
+            title: 'Illness',
+            icon: 'icon-emotional-balance',
+            description: ' Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Maecenas aliquet accumsan leo. Aliquam id dolor. Vivamus ac leo pretium faucibus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.'
+        },
+        {
+            title: 'Diet',
+            icon: 'icon-nutrition',
+            description: ' Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Maecenas aliquet accumsan leo. Aliquam id dolor. Vivamus ac leo pretium faucibus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.'
+        },
+        {
+            title: 'Mental Health',
+            icon: 'icon-environment-and-bad-habits',
+            description: ' Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Maecenas aliquet accumsan leo. Aliquam id dolor. Vivamus ac leo pretium faucibus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.'
+        },
+        {
+            title: 'Emotional balance',
+            icon: 'icon-emotional-balance',
+            description: ' Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Maecenas aliquet accumsan leo. Aliquam id dolor. Vivamus ac leo pretium faucibus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.'
+        },
+        {
+            title: 'Illness',
+            icon: 'icon-overal-health-condition',
+            description: ' Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Maecenas aliquet accumsan leo. Aliquam id dolor. Vivamus ac leo pretium faucibus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.'
+        },
+        {
+            title: 'Physical activity',
+            icon: 'icon-physical-activity',
+            description: ' Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Maecenas aliquet accumsan leo. Aliquam id dolor. Vivamus ac leo pretium faucibus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.'
+        }
+    ]
+%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+        <h3 class="title col-12 bold px-0 pt-2 pb-3">Extra Tips</h3>
+            <div class="health-tips d-flex flex-wrap align-items-center">
+                {% for item in items %}
+                    <div class="health-tips-method d-flex align-items-center my-3 my-md-1 col-md-2">
+                        {{ svg(item.icon, 'health-tips-method-icon') }}
+                        <h5 class="text--green bold pl-3 d-md-none">{{ item.title }}</h5>
+                    </div>
+                    <div class="health-tips-method-description col-md-10">
+                        <h5 class="text--green bold pl-3 pl-md-0  d-none d-md-block">{{ item.title }}</h5>
+                        <p>{{ item.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

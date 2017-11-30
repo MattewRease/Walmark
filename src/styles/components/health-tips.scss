@@ -1,0 +1,9 @@
+.health-tips {
+    &-method-icon {
+        @include size(55px);
+
+        @include media-breakpoint-up(md) {
+            @include size(90px);
+        }
+    }
+}
