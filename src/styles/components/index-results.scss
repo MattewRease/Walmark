@@ -1,0 +1,48 @@
+.index-results {
+    &-puck {
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    &-puck-image {
+        @include size(180px);
+    }
+
+    &-products {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border: $main-border;
+
+        &-image {
+            @include size(70px);
+
+            @include media-breakpoint-up(md) {
+                @include size(85px);
+            }
+
+            @include media-breakpoint-up(lg) {
+                @include size(80px);
+            }
+        }
+
+        &-icon {
+            @include size(20px);
+            padding: 0;
+            margin: 0;
+            fill: $green;
+        }
+    }
+}
+
+.rating {
+    display: inline-block;
+
+    &--active {
+        fill: $yellow;
+    }
+
+    &--in-active {
+        fill: #c0c0c0;
+    }
+}

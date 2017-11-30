@@ -1,0 +1,78 @@
+{% from '../helpers/svg.nunj' import svg %}
+{% import '../helpers/stars.nunj' as stars %}
+
+{%
+    set items = [
+        {
+            class: 'col-11',
+            icon: 'tick',
+            description: 'Curabitur sagittis hendrerit ante. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis pulvinar. ',
+            productName: 'Benosen',
+            readMore: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam...'
+        },
+        {
+            class: 'col-11',
+            icon: 'tick',
+            description: 'Curabitur sagittis hendrerit ante. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis pulvinar. ',
+            productName: 'Benosen',
+            readMore: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam...'
+        },
+        {
+            class: 'col-11',
+            icon: 'tick',
+            description: 'Curabitur sagittis hendrerit ante. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis pulvinar. ',
+            productName: 'Benosen',
+            readMore: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam...'
+        }
+    ]
+%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="index-results my-4">
+            <h3 class="title col-12 bold px-0 pt-2 pb-3">Your Health Index Result</h3>
+                <div class="index-results-puck col-12">
+                    <div class="col-lg-4 col-12 d-flex flex-wrap flex-sm-nowrap flex-lg-wrap">
+                        <div class="col-sm-6 col-lg-12">
+                        <h4 class="text--green bold py-3">What is it</h4>
+                            <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
+                            <p> Aenean placerat. Nam libero tempore, cum soluta nobis est eligendi.</p>
+                        </div>
+                        <div class="index-results-puck-icon col-12 col-sm-6 col-lg-12 text-center my-5">
+                            {{ svg('health-index', 'index-results-puck-image') }}
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <div class="d-flex justify-content-md-between">
+                            <h4 class="text--green bold py-3 d-none d-md-inline-block">We cover your health</h4>
+                            <h4 class="text--green bold py-3 d-md-inline-block text-right">Products in the puck</h4>
+                        </div>
+                        {% for item in items %}
+                                <div class="col-12 index-results-products my-3">
+                                    <div class="col-md-5 d-flex align-items-center">
+                                        {{ svg(item.icon, 'index-results-products-icon col-1') }}
+                                        <p class="{{ item.class }}">{{ item.description }}</p>
+                                    </div>
+                                    <div class="col-12 col-md-7 my-2 d-flex align-items-center">
+                                        <div class="col-4 my-2">
+                                            {{ svg('health-index', 'index-results-products-image') }}
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="rating">
+                                                    {{ stars.rating(4) }}
+                                                <span class="link-grey pl-2">305 Reviews</span>
+                                            </div>
+                                            <h5 class="text--green bold my-0">{{ item.productName }}</h5>
+                                            <a hfef="#"><span class="link-grey">Food Supplement</span></a>
+                                            <p>Fusce tellus odio, dapibus id fermentum quis, suscipit id erat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
