@@ -1,0 +1,42 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 program-length">
+            <div class="col-12 program-length-title">
+                <h3 class="bold text-white text-center">What the option for the program length?</h>
+            </div>
+            <div class="program-length-description">
+                <p class="py-3 col-12">Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Ut tempus purus at lorem. Etiam bibendum elit eget erat. Aliquam erat volutpat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+            </div>
+            <div class="program-length-short-triangle mt-5"></div>
+            <div class="program-length-short mb-4">
+                <h5 class="col-12 text--green bold">Program for 3 month</h5>
+                <div class="12">
+                    <ul class="pl-3">
+                        <li>Fusce tellus odio, dapibus quis nostrum</li>
+                    </ul>
+                </div>
+                <div class="program-length-price px-3 mx-3 py-4">
+                    <h6 class="text-center text--orange pb-3">Show Total price on partner eshop</h6>
+                    <a href="#" class="col-12 btn-price"><span>Add to shopping list</span></a>
+                </div>
+            </div>
+            <div class="program-length-short-triangle mt-5"></div>
+            <div class="program-length-long mb-4">
+                <h5 class="col-12 text--green bold">Program for 3 month</h5>
+                <div class="12">
+                    <ul class="pl-3">
+                        <li>Fusce tellus odio, dapibus quis nostrum</li>
+                        <li>Fusce tellus odio, dapibus quis nostrum</li>
+                        <li>Fusce tellus odio, dapibus quis nostrum</li>
+                    </ul>
+                </div>
+                <div class="program-length-price px-3 mx-3 py-4">
+                    <h6 class="text-center text--orange pb-3">Show Total price on partner eshop</h6>
+                    <a href="#" class="col-12 btn-price"><span>Add to shopping list</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
