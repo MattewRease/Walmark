@@ -17,8 +17,7 @@
         @include size(60px);
 
         @include media-breakpoint-up(md) {
-        @include size(90px);
-
+            @include size(90px);
         }
     }
 
