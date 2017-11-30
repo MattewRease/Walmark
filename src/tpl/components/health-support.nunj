@@ -1,7 +1,5 @@
 {% from '../helpers/svg.nunj' import svg %}
 
-{% from '../helpers/svg.nunj' import svg %}
-
 {%
     set items = [
         {
@@ -132,7 +130,7 @@
                                             {{ svg('tick', 'health__support-plan-day-tick') }}
                                         </div>
                                         <a href="#" class="{{ item.btnClass }} btn-ok">
-                                                {{ svg(item.icon, 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                                            {{ svg(item.icon, 'btn-ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                         </a>
                                         {% elif item.label =='Sunday' and item.thisWeek =='true' %}
                                             <div class="health__support-plan-day-complete sunday my-2 col-md-8 col-xl-auto">
