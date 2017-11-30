@@ -14,8 +14,12 @@
     }
 
     &-index {
-        width: 60px;
-        height: 60px;
+        @include size(60px);
+
+        @include media-breakpoint-up(md) {
+        @include size(90px);
+
+        }
     }
 
     .progress {
@@ -106,7 +110,11 @@
             @include media-breakpoint-up(xl) {
                 flex-direction: column;
                 align-items: center;
-                // height: 170px;
+                height: 165px;
+
+                &:nth-child(n+9) {
+                    height: 130px;
+                }
             }
 
             &-tick {
