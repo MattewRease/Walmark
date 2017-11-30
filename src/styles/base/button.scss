@@ -163,13 +163,14 @@
     cursor: pointer;
     background-color: $green;
     border-radius: 3px;
+    color: #fff;
 
     &:hover {
         background-color: $green-dark;
         transition: .3s;
         color: #fff;
         text-decoration: none;
-}
+    }
 }
 
 /**

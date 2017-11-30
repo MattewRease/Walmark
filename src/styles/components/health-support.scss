@@ -110,12 +110,12 @@
             }
 
             &-tick {
-                @include size(40px);
+                @include size(30px);
                 fill: $text--green;
             }
 
             &-cross {
-                @include size(40px);
+                @include size(30px);
                 fill: #ed2a32;
             }
 
@@ -192,19 +192,27 @@
             }
         }
     }
+}
 
-    .yes {
-        background-color: #ace0c4;
-        border: none;
-    }
+.yes {
+    background-color: #ace0c4;
+    border: none;
+}
 
-    .no {
-        background-color: #ffdf87;
-        border: none;
-    }
+.no {
+    background-color: #ffdf87;
+    border: none;
+}
 
-    .sunday {
-        background-color: #b9f3ff;
-        border: none;
-    }
+.sunday {
+    background-color: #b9f3ff;
+    border: none;
+}
+
+.nextweek {
+    background-color: #eee;
+}
+
+.none {
+    background-color: #fff;
 }
