@@ -8,5 +8,6 @@
     {% include "../tpl/components/health-index.nunj" %}
     {% include "../tpl/components/health-support.nunj" %}
     {# {% include "../tpl/components/health-support-nunjucks.nunj" %} #}
+    {% include "../tpl/components/health-index-results.nunj" %}
 
 {% endblock %}
