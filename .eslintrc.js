@@ -30,6 +30,7 @@ module.exports = {
         'no-param-reassign': 0, // We love param reassignment. Naming is hard.
         'no-return-assign': 0,
         'no-shadow': 0, // Shadowing is a nice language feature. Naming is hard.
+        'no-unknown': 0,
         'no-unused-expressions': 0,
         'no-unused-vars': 0,
         'no-use-before-define': ['error', { functions: false }],
