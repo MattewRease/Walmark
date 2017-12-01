@@ -7,6 +7,11 @@
     &-icon {
         @include size(30px);
 
+        &-smile {
+            @include size(20px);
+            fill: $green;
+        }
+
         &-wrap {
             @include size(60px);
             display: flex;
