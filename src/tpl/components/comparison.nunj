@@ -34,11 +34,12 @@
 
 <div class="container">
     <div class="row">
-        <h3 class="title col-12 bold px-0 pt-2 pb-3">My comparison</h3>
+        <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3">My comparison</h3>
         <div class="comparison col-12">
+        <h5 class="text-center mb-0 py-4 my-2">See how you compare with others</h5>
             <div class="d-flex flex-column flex-lg-row justify-content-between">
             {% for item in items %}
-                <div class="comparison-item my-3 px-3">
+                <div class="comparison-item mb-3 px-3">
                     <h4 class="text--green bold py-3 my-3">{{ item.title }}</h4>
                     <div class="col-12 d-flex justify-content-around justify-content-sm-center text-center">
                         <div class="px-sm-4 px-lg-2">
