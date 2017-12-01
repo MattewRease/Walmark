@@ -1,0 +1,66 @@
+{% from '../helpers/svg.nunj' import svg %}
+
+{%
+    set items = [
+        {
+            title: 'Health Index',
+            icon: 'icon-chart',
+            averageTitle: 'AVERAGE',
+            average: '53',
+            yoursTitle: 'YOURS',
+            yours: '75',
+            description: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam'
+        },
+        {
+            title: 'BMI',
+            icon: 'icon-chart',
+            averageTitle: 'AVERAGE',
+            average: '53',
+            yoursTitle: 'YOURS',
+            yours: '75',
+            description: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam'
+        },
+        {
+            title: 'What other answered',
+            icon: 'icon-chart',
+            averageTitle: 'YES',
+            average: '53',
+            yoursTitle: 'NO',
+            yours: '75',
+            description: 'Yes'
+            }
+    ]
+%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+        <h3 class="title col-12 bold px-0 pt-2 pb-3">My comparison</h3>
+            <div class="comparison d-flex flex-wrap flex-lg-row">
+                {% for item in items %}
+                    <div class="comparison-item my-3 px-3 d-flex flex-wrap align-items-center mx-lg-auto col-lg-4">
+                        <h4 class="text--green bold py-3 my-3">{{ item.title }}</h4>
+                        <div class="col-12 d-flex justify-content-around justify-content-sm-center text-center">
+                            <div class="px-sm-4">
+                                <span class="text--grey">{{ item.yoursTitle }}</span>
+                                <h4 class="text--orange bold pt-2">{{ item.yours }}%</h4>
+                            </div>
+                            <div class="comparison-icon-wrap">
+                                {{ svg(item.icon, 'comparison-icon') }}
+                            </div>
+                            <div class="px-sm-4">
+                                <span class="text--grey">{{ item.averageTitle }}</span>
+                                <h4 class="text--orange bold pt-2">{{ item.average }}%</h4>
+                            </div>
+                        </div>
+                        {% if item.description == 'Yes' or item.description == 'No' %}
+                            <p class="mb-0 px-1 my-3 text-sm-center">Your answer: <span class="bold">{{ item.description }}</span></p>
+                        {% else %}
+                            <p class="mb-0 px-1 my-3 text-sm-center">{{ item.description }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
