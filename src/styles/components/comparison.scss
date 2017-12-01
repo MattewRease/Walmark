@@ -1,0 +1,20 @@
+.comparison {
+    &-item {
+        border: $main-border;
+        border-radius: 8px;
+    }
+
+    &-icon {
+        @include size(30px);
+
+        &-wrap {
+            @include size(60px);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: #d8d8d8;
+            border-radius: 50%;
+        }
+    }
+}
