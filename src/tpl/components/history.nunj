@@ -1,0 +1,30 @@
+{% from '../helpers/svg.nunj' import svg %}
+{%
+    set items = [
+        {
+            month: 'November ',
+            date: '24 ',
+            year: '2017'
+        },
+        {
+            month: 'May ',
+            date: '12 ',
+            year: '2017'
+        }
+    ]
+%}
+
+<div class="container">
+    <div class="row">
+        <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3 mt-4">My Health Index history</h3>
+        <div class="history col-12 mt-4  text-center">
+            {% for item in items %}
+            <div class="col-12 col-md-5 d-md-inline-block">
+                <a href="#" class="btn-ok my-2 col-12 ">
+                    <span>{{ item.month }}{{ item.date }}{{ item.year }}</span>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
