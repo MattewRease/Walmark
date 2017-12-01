@@ -27,40 +27,44 @@
             average: '53',
             yoursTitle: 'NO',
             yours: '75',
-            description: 'Yes'
+            description: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam'
             }
     ]
 %}
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
         <h3 class="title col-12 bold px-0 pt-2 pb-3">My comparison</h3>
-            <div class="comparison d-flex flex-wrap flex-lg-row">
-                {% for item in items %}
-                    <div class="comparison-item my-3 px-3 d-flex flex-wrap align-items-center mx-lg-auto col-lg-4">
-                        <h4 class="text--green bold py-3 my-3">{{ item.title }}</h4>
-                        <div class="col-12 d-flex justify-content-around justify-content-sm-center text-center">
-                            <div class="px-sm-4">
-                                <span class="text--grey">{{ item.yoursTitle }}</span>
-                                <h4 class="text--orange bold pt-2">{{ item.yours }}%</h4>
-                            </div>
-                            <div class="comparison-icon-wrap">
-                                {{ svg(item.icon, 'comparison-icon') }}
-                            </div>
-                            <div class="px-sm-4">
-                                <span class="text--grey">{{ item.averageTitle }}</span>
-                                <h4 class="text--orange bold pt-2">{{ item.average }}%</h4>
-                            </div>
+        <div class="comparison col-12">
+            <div class="d-flex flex-column flex-lg-row justify-content-between">
+            {% for item in items %}
+                <div class="comparison-item my-3 px-3">
+                    <h4 class="text--green bold py-3 my-3">{{ item.title }}</h4>
+                    <div class="col-12 d-flex justify-content-around justify-content-sm-center text-center">
+                        <div class="px-sm-4 px-lg-2">
+                            <span class="text--grey">{{ item.yoursTitle }}</span>
+                            <h4 class="text--orange bold pt-2">{{ item.yours }}%</h4>
                         </div>
-                        {% if item.description == 'Yes' or item.description == 'No' %}
-                            <p class="mb-0 px-1 my-3 text-sm-center">Your answer: <span class="bold">{{ item.description }}</span></p>
-                        {% else %}
-                            <p class="mb-0 px-1 my-3 text-sm-center">{{ item.description }}</p>
-                        {% endif %}
+                        <div class="comparison-icon-wrap">
+                            {{ svg(item.icon, 'comparison-icon') }}
+                        </div>
+                        <div class="px-sm-4 px-lg-2">
+                            <span class="text--grey">{{ item.averageTitle }}</span>
+                            <h4 class="text--orange bold pt-2">{{ item.average }}%</h4>
+                        </div>
                     </div>
-                {% endfor %}
+                    {% if item.description == 'Yes' or item.description == 'No' %}
+                        <p class="mb-0 px-1 my-3 text-sm-center">Your answer: <span class="bold">{{ item.description }}</span></p>
+                    {% else %}
+                        <p class="mb-0 px-1 my-3 text-sm-center">{{ item.description }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
             </div>
+                <div class="comparison-item p-4 d-flex justify-content-around justify-content-lg-center col-12">
+                    <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!</h4>
+                    {{ svg('smile', 'comparison-icon-smile align-self-center ml-lg-4') }}
+                </div>
         </div>
     </div>
 </div>
