@@ -12,5 +12,6 @@
     {% include "../tpl/components/program-length.nunj" %}
     {% include "../tpl/components/health-tips.nunj" %}
     {% include "../tpl/components/comparison.nunj" %}
+    {% include "../tpl/components/history.nunj" %}
 
 {% endblock %}
