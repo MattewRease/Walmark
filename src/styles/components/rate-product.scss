@@ -1,0 +1,21 @@
+.rate {
+    border: $main-border;
+    border-radius: 8px;
+    background-color: #eee;
+
+    &-input {
+        min-height: 150px;
+        border-radius: 8px;
+        border: none;
+        border: 1px solid #757373;
+        line-height: 1;
+    }
+
+    .star-icon {
+        @include size(25px);
+
+        @include media-breakpoint-up(md) {
+            margin: 0 10px;
+        }
+    }
+}

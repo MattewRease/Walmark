@@ -13,5 +13,6 @@
     {% include "../tpl/components/health-tips.nunj" %}
     {% include "../tpl/components/comparison.nunj" %}
     {% include "../tpl/components/history.nunj" %}
+    {% include "../tpl/components/rate-product.nunj" %}
 
 {% endblock %}
