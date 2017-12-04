@@ -10,7 +10,7 @@
             icon: 'update',
             ready: 'true',
             iconDone: 'tick',
-            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 ml-md-2',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
             week: 'Week'
         },
@@ -20,7 +20,7 @@
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
             iconDone: 'tick',
-            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 ml-md-2',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
             icon: 'update'
         },
@@ -30,7 +30,7 @@
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
             iconDone: 'tick',
-            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 ml-md-2',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
             icon: 'update'
         },
@@ -40,7 +40,7 @@
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'false',
             iconDone: 'tick',
-            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 ml-md-2',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
             icon: 'update'
         },
@@ -50,7 +50,7 @@
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
             iconDone: 'tick',
-            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 ml-md-2',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
             icon: 'update'
         },
@@ -60,7 +60,7 @@
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
             iconDone: 'tick',
-            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 ml-md-2',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
             icon: 'update'
         },
@@ -70,7 +70,7 @@
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
             iconDone: 'tick',
-            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-md-3 ml-md-2',
+            btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
             icon: 'update'
         }

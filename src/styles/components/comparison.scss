@@ -7,6 +7,10 @@
     &-icon {
         @include size(30px);
 
+        @include media-breakpoint-up(xl) {
+            @include size(40px);
+        }
+
         &-smile {
             @include size(20px);
             fill: $green;
@@ -20,6 +24,10 @@
             justify-content: center;
             background-color: #d8d8d8;
             border-radius: 50%;
+
+            @include media-breakpoint-up(xl) {
+                @include size(80px);
+            }
         }
     }
 }

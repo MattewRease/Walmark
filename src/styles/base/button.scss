@@ -138,55 +138,52 @@
  */
 
 .btn-ok,
-.btn-no {
-    display: inline-block;
-    padding: 4px 10px;
-    color: $text--green;
-    text-align: center;
-    cursor: pointer;
-    background-color: #fff;
-    border: 1px solid $green;
-    border-radius: 3px;
-
-    &:hover {
-        color: #fff;
-        text-decoration: none;
-        background-color: $green;
-        transition: .3s;
-    }
-}
-
-.btn-done {
-    display: inline-block;
-    padding: 8px 10px;
-    text-align: center;
-    cursor: pointer;
-    background-color: $green;
-    border-radius: 3px;
-    color: #fff;
-
-    &:hover {
-        background-color: $green-dark;
-        transition: .3s;
-        color: #fff;
-        text-decoration: none;
-    }
-}
-
+.btn-no,
+.btn-done,
 .btn-price {
     display: inline-block;
     padding: 8px 10px;
     text-align: center;
     cursor: pointer;
-    background-color: $orange;
     border-radius: 3px;
-    color: #fff;
 
     &:hover {
-        background-color: $orange-dark;
         transition: .3s;
+    }
+}
+
+.btn-ok,
+.btn-no {
+    color: $text--green;
+    background-color: #fff;
+    border: 1px solid $green;
+
+    &:hover {
         color: #fff;
         text-decoration: none;
+        background-color: $green;
+    }
+}
+
+.btn-done {
+    color: #fff;
+    background-color: $green;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: $green-dark;
+    }
+}
+
+.btn-price {
+    color: #fff;
+    background-color: $orange;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: $orange-dark;
     }
 }
 

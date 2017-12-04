@@ -31,12 +31,15 @@
                         border-bottom: 6px solid #eee;
                         border-left: none;
 
-                        &::after {
+                        &::before {
                             position: absolute;
-                            margin-top: 46px;
-                            border: 30px solid transparent;
-                            border-top: 30px solid #eee;
+                            top: 100px;
+                            width: 50px;
+                            height: 30px;
+                            text-align: center;
+                            background-color: #eee;
                             content: '';
+                            clip-path: polygon(50% 100%, 0 0, 100% 0);
                         }
                     }
                 }
