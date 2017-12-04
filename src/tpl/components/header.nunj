@@ -1,0 +1,30 @@
+{% from '../helpers/svg.nunj' import svg %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 header">
+            <nav class="navbar navbar-default">
+                <a class="navbar-brand" href="#">{{ svg('health-index', 'comparison-icon') }}<span class="header__title d-none d-sm-inline-block text--orange bold">WALMARK</span></a>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item mx-lg-2">
+                        <a class="nav-link px-1 mx-1 mx-sm-2" href="#"><img class="header-profile" src="../../gfx/profile.jpg" alt="profile"/></a>
+                    </li>
+                    <li class="nav-item mx-lg-2">
+                        <a class="nav-link px-1 mx-1 mx-sm-2" href="#">{{ svg('icon-print', 'u--orange header-icon d-md-none') }}<span class="px-2 text--orange d-none d-md-inline border-right border-right-1">Jana Novakova</span><span class="px-2 text--orange d-none d-md-inline">Log out</span></a>
+                    </li>
+                    <li class="nav-item mx-lg-2">
+                        <a class="nav-link px-1 mx-1 mx-sm-2" href="#">{{ svg('icon-star', 'u--orange header-icon') }}</a>
+                    </li>
+                    <li class="nav-item mx-lg-2">
+                        <a class="nav-link px-1 mx-1 mx-sm-2" href="#">{{ svg('update', 'u--orange header-icon') }}</a>
+                    </li>
+                    <li class="nav-item mx-lg-2 ilign-items-center">
+                        <button class="navbar-toggler navbar-toggler-right" type="button">
+                            <span>{{ svg('menu-button', 'header-icon') }}</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
