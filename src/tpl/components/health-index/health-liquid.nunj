@@ -1,10 +1,10 @@
 {% from '../../helpers/svg.nunj' import svg %}
 
 <div class="health__liquid my-4 py-4 align-items-center">
-    <div class="col-9 col-sm-9">
+    <div class="col-9">
         <p class="bold health__weight-text mb-sm-0">Your daily liquid intake is <span class="text--green ">insufficient</span></p>
     </div>
-    <div class="col-3 col-sm-3 pl-sm-0">
+    <div class="col-3 pl-sm-0">
         {{ svg('smile', 'health__liquid-icon mb-xs-2 mt-sm-2') }}
     </div>
     <div class="col-4 col-sm-2 col-md-3 pt-3 pt-sm-0 text-right">
