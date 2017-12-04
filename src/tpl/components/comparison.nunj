@@ -46,7 +46,7 @@
                             <span class="text--grey">{{ item.yoursTitle }}</span>
                             <h4 class="text--orange bold pt-2">{{ item.yours }}%</h4>
                         </div>
-                        <div class="comparison-icon-wrap">
+                        <div class="comparison-icon-wrap mx-lg-3">
                             {{ svg(item.icon, 'comparison-icon') }}
                         </div>
                         <div class="px-sm-4 px-lg-2">
