@@ -38,7 +38,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-        <h3 class="title col-12 bold px-0 pt-2 pb-3">Extra Tips</h3>
+        <h3 class="title col-12 bold px-0 pt-2 pb-3">Your Health Index results</h3>
             <div class="health-tips d-flex flex-wrap align-items-center">
                 {% for item in items %}
                     <div class="health-tips-method d-flex align-items-center my-3 my-md-1 col-md-2">
