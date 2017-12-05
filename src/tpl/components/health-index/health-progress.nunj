@@ -5,7 +5,11 @@
         <h5 class="bold py-2 text--green">Your Health Index</h5>
         <p>Here yoy can see how you stand on the scale of health index</p>
         <div class="health__index-wrap-progress mt-md-5 mt-lg-0">
+        <div class="health__index-wrap-progress-wrap">
             {{ svg('health-index-scale', 'health__index-wrap-progress-icon') }}
+            <div class="health__index-wrap-progress-bg"></div>
+        </div>
+            <div class="health__index-wrap-progress-arrow"></div>
             <p class="bold text--green mb-0">73</p>
         </div>
     </div>
