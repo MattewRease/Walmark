@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 header">
+        <header class="col-12 header">
             <nav class="navbar navbar-default">
                 <a class="navbar-brand" href="#">{{ svg('health-index', 'comparison-icon') }}<span class="header__title d-none d-sm-inline-block text--orange bold">WALMARK</span></a>
                 <ul class="nav justify-content-end">
@@ -25,6 +25,6 @@
                     </li>
                 </ul>
             </nav>
-        </div>
+        </header>
     </div>
 </div>
