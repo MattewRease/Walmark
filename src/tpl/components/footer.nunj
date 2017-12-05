@@ -4,14 +4,15 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-5 col-lg-3 text-center pt-3 d-inline-block footer__social">
+                <div class="col-12 col-sm-5 col-lg-3 text-center py-3 d-inline-block footer__social">
                     <a class="navbar-brand" href="#">{{ svg('health-index', 'comparison-icon') }}<span class="header__title text--orange bold">WALMARK</span></a>
                     <p class="text-left pb-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
-                    <div class="footer__social col-12 my-3 text-left">
-                        <a href='#' class="footer__social-icon">{{ svg('health-index', 'comparison-icon') }}</a>
-                        <a href='#' class="footer__social-icon">{{ svg('health-index', 'comparison-icon') }}</a>
-                        <a href='#' class="footer__social-icon">{{ svg('health-index', 'comparison-icon') }}</a>
-                        <a href='#' class="footer__social-icon">{{ svg('health-index', 'comparison-icon') }}</a>
+                    <div class="footer__social col-12 mb-3 text-left d-flex justify-content-lg-between">
+                        <a href='#' class="footer__social-icon">{{ svg('facebook', 'footer__social-icon') }}</a>
+                        <a href='#' class="footer__social-icon">{{ svg('youtube', 'footer__social-icon') }}</a>
+                        <a href='#' class="footer__social-icon">{{ svg('telegram', 'footer__social-icon') }}</a>
+                        <a href='#' class="footer__social-icon">{{ svg('instagram', 'footer__social-icon') }}</a>
+                        <a href='#' class="footer__social-icon">{{ svg('twitter', 'footer__social-icon') }}</a>
                     </div>
                 </div>
                 <nav class="footer__links col-12 col-sm-7 col-lg-9 py-3 d-inline-block" role="navigation">

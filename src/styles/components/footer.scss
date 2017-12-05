@@ -6,6 +6,21 @@
     &__social {
         background-color: white;
 
+        &-icon {
+            @include size(30px);
+            border-radius: 4px;
+            margin: 0 3px;
+
+            &:hover {
+                transform: scale(1.2);
+                transition: .1s;
+            }
+
+            @include media-breakpoint-up(xl) {
+                @include size(30px);
+            }
+        }
+
         & > a {
             text-decoration: none;
         }
