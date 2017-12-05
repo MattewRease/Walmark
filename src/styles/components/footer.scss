@@ -6,6 +6,21 @@
     &__social {
         background-color: white;
 
+        &-icon {
+            @include size(30px);
+            border-radius: 4px;
+            margin: 0 3px;
+
+            &:hover {
+                transform: scale(1.2);
+                transition: .1s;
+            }
+
+            @include media-breakpoint-up(xl) {
+                @include size(30px);
+            }
+        }
+
         & > a {
             text-decoration: none;
         }
@@ -35,7 +50,7 @@
 
         & li:hover ul:not(.footer__invite) {
             display: block;
-            width: 100%;
+            width: 50%;
             padding-top: 10px;
             background-color: rgb(54, 54, 54);
 
