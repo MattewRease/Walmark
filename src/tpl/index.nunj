@@ -3,7 +3,6 @@
 {% set title = "Walmark" %}
 
 {% block content %}
-    {% include "../tpl/components/header.nunj" %}
     {% include "../tpl/components/greetings.nunj" %}
     {% include "../tpl/components/navigation.nunj" %}
     {% include "../tpl/components/health-index.nunj" %}
