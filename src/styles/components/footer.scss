@@ -1,0 +1,114 @@
+.footer {
+    &__wrap {
+        background-color: #585858;
+    }
+
+    &__social {
+        background-color: white;
+
+        & > a {
+            text-decoration: none;
+        }
+    }
+
+    &__links {
+        background-color: #585858;
+
+        & a {
+            color: rgb(179, 179, 179);
+        }
+
+        & > a {
+            display: none;
+        }
+
+        & li {
+            position: relative;
+        }
+
+        & li ul:not(.footer__invite) {
+            position: absolute;
+            top: 100%;
+            z-index: 100;
+            display: none;
+        }
+
+        & li:hover ul:not(.footer__invite) {
+            display: block;
+            width: 100%;
+            padding-top: 10px;
+            background-color: rgb(54, 54, 54);
+
+            & li {
+                padding: 5px;
+            }
+        }
+
+        &-customers,
+        &-company,
+        &-links {
+            padding-top: 25px;
+
+            &-title {
+                display: inline-block;
+                width: 100%;
+                border-bottom: 1px solid rgb(192, 192, 192);
+            }
+
+            & > a {
+                color: rgb(214, 214, 214);
+            }
+        }
+    }
+
+    &__copiright {
+        background-color: white;
+    }
+
+    & ul {
+        padding-left: 0;
+    }
+
+    & ul li {
+        list-style: none;
+    }
+
+    &__btn {
+        left: -3px;
+        background-color: $orange;
+        border: 1px solid $orange;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $orange-dark;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        background-color: #4c5459;
+
+        &__links {
+            background-color: #4c5459;
+        }
+
+        & li ul:not(.footer__invite) {
+            top: 50px;
+            display: block;
+            padding: 15px 0;
+
+            & li {
+                padding: 5px 0;
+            }
+        }
+
+        & li:hover ul:not(.footer__invite) {
+            width: 100%;
+            padding: 15px 0;
+            background-color: #4c5459;
+
+            & li {
+                padding: 5px 0;
+            }
+        }
+    }
+}

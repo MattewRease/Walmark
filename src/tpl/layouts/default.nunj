@@ -36,9 +36,13 @@
     {% include "../components/cookie-law.nunj" %}
 
     {# Main content of the page #}
+        {% include "../components/header.nunj" %}
+
     <main>
         {% block content %}{% endblock %}
     </main>
+        {% include "../components/footer.nunj" %}
+
 
     {# Scripts #}
     <script>
