@@ -1,7 +1,7 @@
 .health {
     &__title {
         text-align: center;
-        border-bottom: 2px solid #eee;
+        border-bottom: 2px solid $grey;
     }
 
     &__index {
@@ -35,18 +35,18 @@
                     font-size: 36px;
 
                     @include media-breakpoint-up(sm) {
-                        font-size: 56px;
                         top: -85px;
+                        font-size: 56px;
                     }
 
                     @include media-breakpoint-up(md) {
-                        font-size: 66px;
                         top: -90px;
+                        font-size: 66px;
                     }
 
                     @include media-breakpoint-up(lg) {
-                        font-size: 76px;
                         top: -120px;
+                        font-size: 76px;
                     }
                 }
 
@@ -67,20 +67,20 @@
                 }
 
                 &-wrap {
-                    display: inline-block;
                     position: relative;
+                    display: inline-block;
                     overflow: hidden;
                 }
 
                 &-bg {
                     position: absolute;
-                    background-color: rgba(252, 252, 252, .596);
-                    height: 100%;
-                    width: 120%;
                     top: 215px;
                     left: -25px;
-                    transform-origin: 230px 15px;
+                    width: 120%;
+                    height: 100%;
+                    background-color: rgba(252, 252, 252, .596);
                     transform: rotate(-45deg);
+                    transform-origin: 230px 15px;
                 }
             }
         }
@@ -113,7 +113,7 @@
 
         & span {
             padding: 0 40px 0 10px;
-            color: #fff;
+            color: $white;
             text-align: left;
         }
     }
@@ -148,7 +148,7 @@
     &__arrow-icon {
         @include size(30px);
         margin-right: 10px;
-        fill: #fff;
+        fill: $white;
     }
 
     &__weight,

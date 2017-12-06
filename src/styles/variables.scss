@@ -11,6 +11,9 @@ $teal:    #20c997;
 $cyan:    #17a2b8;
 $green-dark: #005f26;
 $orange-dark:  #e26200;
+$white: #fff;
+$grey: #eee;
+$grey-bg: #f6f6f6;
 
 $theme-colors: (
     primary: $teal,
@@ -21,7 +24,7 @@ $theme-colors: (
     danger: $red
 );
 
-$main-border: 4px solid #eee;
+$main-border: 4px solid $grey;
 
 $text--green: #00983d;
 

@@ -1,5 +1,5 @@
 .invite {
-    background-color: #f6f6f6;
+    background-color: $grey-bg;
     border: $main-border;
     border-radius: 4px;
 
@@ -10,7 +10,7 @@
     &__input {
         flex-grow: 2;
         padding: 7px 0 7px 13px;
-        background-color: white;
+        background-color: $white;
         border: 1px solid rgb(107, 107, 107);
         border-radius: 3px;
     }
@@ -18,15 +18,15 @@
     &__btn {
         padding: 9px 0;
         text-align: center;
-        color: white;
-        background-color: #009639;
+        color: $white;
+        background-color: $green;
         border-radius: 5px;
         left: -4px;
 
         &:hover {
-            color: white;
+            color: $white;
             text-decoration: none;
-            background-color: #006d28;
+            background-color: $green-dark;
         }
 
         @include media-breakpoint-up(sm) {

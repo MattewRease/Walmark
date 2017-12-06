@@ -129,15 +129,15 @@
                                         <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
                                             {{ svg('tick', 'health__support-plan-day-tick') }}
                                         </div>
-                                        <a href="#" class="{{ item.btnClass }} btn btn--ok">
-                                            {{ svg(item.icon, 'btn btn--ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                                        <a href="#" class="{{ item.btnClass }} btn btn--ok health__support-btn">
+                                            {{ svg(item.icon, 'btn health__support-btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                         </a>
                                         {% elif item.label =='Sunday' and item.thisWeek =='true' %}
                                             <div class="health__support-plan-day-complete sunday my-2 col-md-8 col-xl-auto">
                                                 <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
                                             </div>
-                                            <a href="#" class="{{ item.btnClass }} btn btn--done">
-                                                {{ svg(item.iconDone, 'btn btn--ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                                            <a href="#" class="{{ item.btnClass }} btn btn--done health__support-btn health__support-btn--done">
+                                                {{ svg(item.iconDone, 'btn health__support-btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                             </a>
                                         {% elif item.label =='Monday' and item.thisWeek =='true' %}
                                             <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
@@ -146,8 +146,8 @@
                                             <div class="health__support-plan-day-complete no my-2 col-md-8 col-xl-auto">
                                                 {{ svg('cross', 'health__support-plan-day-cross') }}
                                             </div>
-                                            <a href="#" class="{{ item.btnClass }} btn btn--ok">
-                                                {{ svg(item.icon, 'btn btn--ok-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                                            <a href="#" class="{{ item.btnClass }} btn btn--ok health__support-btn">
+                                                {{ svg(item.icon, 'btn health__support-btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                             </a>
                                         {% else %}
                                             <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
