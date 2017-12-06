@@ -39,9 +39,13 @@
                             <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
                             <p> Aenean placerat. Nam libero tempore, cum soluta nobis est eligendi.</p>
                         </div>
-                        <div class="index-results-puck-icon col-12 col-sm-6 col-lg-12 text-center my-5">
-                            {{ svg('health-index', 'index-results-puck-image') }}
-                        </div>
+                        <picture class="index-results-puck-icon col-12 col-sm-6 col-lg-12 text-center my-5">
+                            <source srcset="http://satyr.io/290x330" media="(min-width: 1200px)">
+                            <source srcset="http://satyr.io/260x290" media="(min-width: 992px)">
+                            <source srcset="http://satyr.io/205x230" media="(min-width: 768px)">
+                            <source srcset="http://satyr.io/230x280" media="(min-width: 576px)">
+                            <img srcset="http://satyr.io/200x250" alt="">
+                        </picture>
                     </div>
                     <div class="col-12 col-lg-8">
                         <div class="d-flex justify-content-md-between">
@@ -55,10 +59,14 @@
                                         <p class="{{ item.class }}">{{ item.description }}</p>
                                     </div>
                                     <div class="col-12 col-md-7 my-2 d-flex align-items-center">
-                                        <div class="col-4 my-2">
-                                            {{ svg('health-index', 'index-results-products-image') }}
-                                        </div>
-                                        <div class="col-8">
+                                        <pictures class="col-6 mx-0 px-0 my-2">
+                                            <source srcset="http://satyr.io/290x330" media="(min-width: 1200px)">
+                                            <source srcset="http://satyr.io/260x290" media="(min-width: 992px)">
+                                            <source srcset="http://satyr.io/205x230" media="(min-width: 768px)">
+                                            <source srcset="http://satyr.io/230x280" media="(min-width: 576px)">
+                                            <img srcset="http://satyr.io/75x77" alt="">
+                                        </pictures>
+                                        <div class="col-6">
                                             <div class="rating">
                                                     {{ stars.rating(4) }}
                                                 <span class="link-grey pl-2">305 Reviews</span>
