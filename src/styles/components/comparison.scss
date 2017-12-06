@@ -12,7 +12,7 @@
 .comparison {
     &-item {
         border: $main-border;
-        border-radius: 8px;
+        border-radius: $main-border-radius;
     }
 
     &-icon {

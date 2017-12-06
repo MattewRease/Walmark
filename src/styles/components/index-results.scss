@@ -13,6 +13,7 @@
         flex-wrap: wrap;
         align-items: center;
         border: $main-border;
+        border-radius: $main-border-radius;
 
         &-image {
             @include size(70px);

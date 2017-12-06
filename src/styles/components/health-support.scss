@@ -1,7 +1,7 @@
 .health__support {
     &-wrap {
         border: 3px solid #ffd94b;
-        border-radius: 4px;
+        border-radius: $main-border-radius;
     }
 
     &-plan {
@@ -166,7 +166,7 @@
                 min-height: 80px;
                 background-color: #f8f8f8;
                 border: $main-border;
-                border-radius: 3px;
+                border-radius: $main-border-radius;
 
                 @include media-breakpoint-up(xl) {
                     @include size(120px);

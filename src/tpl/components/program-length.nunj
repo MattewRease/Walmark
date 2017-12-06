@@ -1,15 +1,13 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 program-length">
-            <div class="col-12 program-length-title">
-                <h3 class="bold text-white text-center">What the option for the program length?</h3>
-            </div>
-            <div class="program-length-description">
-                <p class="py-3 col-12">Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Ut tempus purus at lorem. Etiam bibendum elit eget erat. Aliquam erat volutpat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
-            </div>
-        </div>
+
+<div class="program-length">
+    <div class="program-length-title">
+        <h3 class="bold text-white text-center">What the option for the program length?</h3>
+    </div>
+    <div class="program-length-description">
+        <p class="py-3 col-12">Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Ut tempus purus at lorem. Etiam bibendum elit eget erat. Aliquam erat volutpat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
     </div>
 </div>
+
 
 <div class="container">
     <div class="row">

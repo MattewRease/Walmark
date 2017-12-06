@@ -6,9 +6,10 @@
 
     &__index {
         border: $main-border;
+        border-radius: $main-border-radius;
 
         &-wrap {
-            border-radius: 3px;
+            border-radius: $main-border-radius;
 
             &-progress {
                 height: 80px;
@@ -88,7 +89,7 @@
 
     &__rules {
         border: $main-border;
-        border-radius: 3px;
+        border-radius: $main-border-radius;
     }
 
     &__btn {
@@ -103,7 +104,7 @@
         text-align: center;
         vertical-align: middle;
         background-color: #009639;
-        border-radius: 5px;
+        border-radius: $main-border-radius;
 
         &:hover {
             color: white;
@@ -156,7 +157,7 @@
         display: flex;
         flex-wrap: wrap;
         border: $main-border;
-        border-radius: 3px;
+        border-radius: $main-border-radius;
 
         &-text {
             font-size: 18px;

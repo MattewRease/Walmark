@@ -6,7 +6,7 @@
                 FIXME:
                     - greetings__title nema ziadne styly, bud pouzivaj BEM alebo utility class
             #}
-                <h5 class="greetings__title bold py-1">
+                <h5 class="bold py-1">
                     Good morning Jana!
                 </h5>
                 <p class="mb-0 py-xl-2 mb-xl-1">You have <span class="bold">24 days</span> to finish you plan and improve your health condition</p>
