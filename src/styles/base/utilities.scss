@@ -40,6 +40,10 @@
     color: #a3a3a3;
 }
 
+// FIXME:
+//  - tato class nehovori velmi co sa meni v CSS
+//  - skor pouzi nieco ako .u-fill--orange, alebo .icon--orange
+//  - "u-" prefix pouzivame iba s jednou odrazkou "-"
 .u--orange {
     fill: #ff6900;
 }
@@ -50,6 +54,7 @@
 }
 
 // Flex-box utilities
+// FIXME: Preco potrebujes pridavat ten isty styl aj na SM breakpoint?
 .order-1 {
     order: 1;
 
@@ -80,17 +85,25 @@
     }
 }
 
+// FIXME: Lepsi naming, link-grey poukazuje na sedu farbu a nie na velkost pisma a inych properties
+// Lepsie si je spravit viacero class na to, napr. link--small, link--grey
+// Navyse v dizajne mali byt rozne velkosti fontu pri review a type produktu, takze by bolo lepsie skor pouzit BEM class pre dane komponenty
+// napriklad: .review__label a .product__type
 .link-grey {
     font-size: 12px;
     color: #a3a3a3;
     text-decoration: none;
 
+    // FIXME: toto by malo byt vseobecne pre vsetky linky, v HTML mas preklep <a hfef="#"><span class="link-grey">Food Supplement</span></a>
+    // Potom by si to nemusel obalovat v <span> a davat na to :hover pre text-decoration a cursor
     &:hover {
         text-decoration: underline;
         cursor: pointer;
     }
 }
 
+// FIXME: aby to bolo viac reusable, bolo by lepsie si nastavit skor vseobecne velkosti pre ikony
+// napriklad: .icon--base, potom by si mohol pre ine ikony pouzit tu istu class
 .star-icon {
     @include size(15px);
 }

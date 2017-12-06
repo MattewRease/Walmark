@@ -1,4 +1,7 @@
 .header {
+    // FIXME:
+    //     - preco border a preco ina farba na zaklade breakpointu?
+    //     - v dizajne je box-shadow nie?
     border-bottom: 2px solid #a2d9b7;
 
     @include media-breakpoint-up(md) {
@@ -22,7 +25,7 @@
     }
 
     &-profile {
-        background: svg-load('../../gfx/svg/icons/cup.svg');
+        background: svg-load('cup.svg');
         border-radius: 50%;
     }
 }

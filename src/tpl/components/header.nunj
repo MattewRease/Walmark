@@ -7,6 +7,12 @@
                 <a class="navbar-brand" href="#">{{ svg('health-index', 'comparison-icon') }}<span class="header__title d-none d-sm-inline-block text--orange bold">WALMARK</span></a>
                 <ul class="nav justify-content-end">
                     <li class="nav-item mx-lg-2">
+                        {#
+                            FIXME:
+                                - pre obrazky mozes pouzivat satyr.io
+                                - .u--orange nehovori velmi co za CSS property to meni (navyse pri utilities sa pouziva iba jedna "-")
+                                - kedze je to fill, tak skor pouzit .u-fill--orange, alebo .icon--orange
+                        #}
                         <a class="nav-link px-1 mx-1 mx-sm-2" href="#"><img class="header-profile" src="../../gfx/profile.jpg" alt="profile"/></a>
                     </li>
                     <li class="nav-item mx-lg-2">

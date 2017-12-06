@@ -137,6 +137,10 @@
  * Styleguide Base - Button - Link
  */
 
+// FIXME:
+//   - Bolo by lepsie pouzivat napriklad .btn z Bootstrapu, alebo aj sam si si ju mohol takto napisat, kedze su to vseobecne styly pre button
+//   - Potom by si mohol pouzivat <button class="btn btn-ok"> etc., ...
+//   - A ked si uz nepouzival Bootstrap, tak si mohol dodrziavat BEM .btn--ok, .btn--done etc., ...
 .btn-ok,
 .btn-no,
 .btn-done,
@@ -152,6 +156,7 @@
     }
 }
 
+// FIXME: .btn-no pouzivas kde?
 .btn-ok,
 .btn-no {
     color: $text--green;

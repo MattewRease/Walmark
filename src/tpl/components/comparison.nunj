@@ -36,6 +36,11 @@
     <div class="row">
         <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3">My comparison</h3>
         <div class="comparison col-12">
+        {#
+            FIXME:
+                - pouzivas hore <h3>, pod tym <h5> a pod tym <h4>, semanticky to nedava zmysel
+                - cisluj postupne h3, h4 a potom h5
+        #}
         <h5 class="text-center mb-0 py-4 my-2">See how you compare with others</h5>
             <div class="d-flex flex-column flex-lg-row justify-content-between">
             {% for item in items %}

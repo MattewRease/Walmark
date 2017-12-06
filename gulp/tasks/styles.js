@@ -12,11 +12,15 @@ const flexbugsFixes = require('postcss-flexbugs-fixes');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
+const postcssInlineSvg = require('postcss-inline-svg');
 
 gulp.task('styles', ['stylelint'], () => {
     const postcssPlugins = [
         flexbugsFixes, // first must be flexbugs, because flexbugs do not process vendor-prefixed variants
-        autoprefixer()
+        autoprefixer(),
+        postcssInlineSvg({
+            path: './src/gfx/svg/icons'
+        })
     ];
 
     const postcssDistPlugins = [

@@ -23,6 +23,7 @@
 
     .progress {
         height: 7px;
+        // FIXME: preco iba -webkit-gradient? Vies co je autoprefixer?
         background-image: -webkit-gradient(linear, left top, right top, from(rgba(230, 230, 230, .3)), to(rgba(230, 230, 230, .3)), color-stop(.2, #fff));
         box-shadow: none;
     }
@@ -34,7 +35,7 @@
 
     &-navigation {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap; // FIXME: preco?
         align-items: center;
         justify-content: space-between;
         width: 100%;
@@ -75,7 +76,7 @@
 
                 &:hover {
                     padding-right: 0;
-                    overflow-y: scroll;
+                    overflow-y: scroll; // FIXME: preco na :hover?
 
                     @include media-breakpoint-up(xl) {
                         overflow-y: hidden;
@@ -98,6 +99,7 @@
         }
 
         &-day {
+            // FIXME: preco? nestaci klasicky display: block?
             display: flex;
             flex-wrap: wrap;
 
@@ -145,6 +147,7 @@
                 }
             }
 
+            // FIXME: preco zanorene?
             .btn-ok,
             .btn-no {
                 @include media-breakpoint-up(xs) {
@@ -201,6 +204,7 @@
     }
 }
 
+// FIXME: tento naming nie je vlemi dobra volba
 .yes {
     background-color: #ace0c4;
     border: none;

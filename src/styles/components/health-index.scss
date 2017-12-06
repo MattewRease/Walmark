@@ -26,6 +26,9 @@
                     height: 250px;
                 }
 
+                // FIXME:
+                //  - nepouzivat zanorene styly pokial to nie je nevyhnutne, napriklad v pripade WYSIWYG editoru
+                //  - skor pouzi BEM class
                 & p {
                     position: relative;
                     top: -50px;
@@ -118,6 +121,20 @@
     &__list {
         list-style: none;
 
+        // FIXME:
+        //   - tu by som sa tiez vyhol zanoreniu
+        //   - ale ked uz, tak radsej zapisat nasledovne:
+        //     li {
+        //         &::before {
+        //             padding: 0 3px;
+        //             margin-right: 10px;
+        //             color: #00983d;
+        //             border: 1px solid #00983d;
+        //             border-radius: 50%;
+        //             content: '▲';
+        //         }
+        //     }
+
         & li::before {
             padding: 0 3px;
             margin-right: 10px;
@@ -145,6 +162,7 @@
             font-size: 18px;
 
             @include media-breakpoint-only(sm) {
+                // FIXME: preco cez &?
                 & {
                     font-size: 21px;
                 }
@@ -163,6 +181,7 @@
         &-divider {
             border-left: 1px solid black;
 
+            // FIXME: preco zanorene?
             & p {
                 font-size: 18px;
             }

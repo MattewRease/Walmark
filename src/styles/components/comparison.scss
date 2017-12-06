@@ -1,3 +1,14 @@
+// FIXME: Skus pouzivat BEM
+//   - SASS zanorenie nerobime pre "-", ale v ramci BEMu ("--" alebo "__"):
+//  .comparison {
+//      &__item {
+//          ...
+//      }
+
+//      &__icon {
+//          ...
+//      }
+//  }
 .comparison {
     &-item {
         border: $main-border;
@@ -13,13 +24,13 @@
 
         &-smile {
             @include size(20px);
-            fill: $green;
+            fill: $green; // FIXME: Pre SVG je dobre nastavit fill: currentColor a tym padom zdedi farbu na zaklade farby textu (color) svg parent elementu
         }
 
         &-wrap {
             @include size(60px);
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap; // FIXME: Preco potrebujes flex-wrap?
             align-items: center;
             justify-content: center;
             background-color: #d8d8d8;
