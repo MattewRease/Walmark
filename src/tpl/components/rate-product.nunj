@@ -13,7 +13,7 @@
                     </div>
                         <div class="col-md-7 align-self-center">{{ stars.rating(4) }}</div>
                     <div class="col-12 col-md-2">
-                        <a href="#" class="btn-done my-2 col-12 d-inline-block">
+                        <a href="#" class="btn btn--done my-2 col-12 d-inline-block">
                             <span>Submit</span>
                         </a>
                     </div>

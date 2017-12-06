@@ -38,7 +38,7 @@
                         <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
                         <p> Aenean placerat. Nam libero tempore, cum soluta nobis est eligendi.</p>
                     </div>
-                    <picture class="index-results-puck-icon col-12 col-sm-6 col-lg-12 text-center my-5">
+                    <picture class="index-results-puck-icon col-12 col-sm-6 col-lg-12 text-center text-md-right text-xl-left my-3">
                         <source srcset="http://satyr.io/290x330" media="(min-width: 1200px)">
                         <source srcset="http://satyr.io/260x290" media="(min-width: 992px)">
                         <source srcset="http://satyr.io/205x230" media="(min-width: 768px)">

@@ -5,9 +5,7 @@ import 'babel-polyfill';
  */
 import 'svgxuse';
 import init from './init';
-// import factory from './factory';
 import { render, renderFactory } from './render';
-import configureStore from './store/configureStore';
 import suffix from './components/suffix';
 
 const app = (config) => {
