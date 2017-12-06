@@ -16,9 +16,6 @@
 
     {% if firstVisit %}
         <script>
-            {# cookie expired after 24 hours #}
-            document.cookie ='cache=1; expires='+(new Date(new Date().getTime() + 86400000)).toGMTString()+'; path=/';
-
             {#-- Google webfont --#}
             WebFontConfig = {
                 google: {
@@ -33,7 +30,6 @@
     {% endif %}
 </head>
 <body>
-    {% include "../components/cookie-law.nunj" %}
 
     {# Main content of the page #}
         {% include "../components/header.nunj" %}
