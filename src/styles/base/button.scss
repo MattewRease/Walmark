@@ -156,33 +156,33 @@
 // FIXME: .btn-no pouzivas kde?
 .btn--ok {
     color: $text--green;
-    background-color: #fff;
+    background-color: $white;
     border: 1px solid $green;
 
     &:hover {
-        color: #fff;
+        color: $white;
         text-decoration: none;
         background-color: $green;
     }
 }
 
 .btn--done {
-    color: #fff;
+    color: $white;
     background-color: $green;
 
     &:hover {
-        color: #fff;
+        color: $white;
         text-decoration: none;
         background-color: $green-dark;
     }
 }
 
 .btn--price {
-    color: #fff;
+    color: $white;
     background-color: $orange;
 
     &:hover {
-        color: #fff;
+        color: $white;
         text-decoration: none;
         background-color: $orange-dark;
     }

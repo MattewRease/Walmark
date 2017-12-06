@@ -25,7 +25,7 @@
 }
 
 .text--white {
-    color: #fff !important;
+    color: $white !important;
 }
 
 .text--green {
@@ -50,7 +50,7 @@
 
 .title {
     text-align: center;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid $grey;
 }
 
 // Flex-box utilities
