@@ -65,6 +65,7 @@
                         @include size(380px, 240px);
                     }
                 }
+
                 &-wrap {
                     display: inline-block;
                     position: relative;
@@ -73,7 +74,7 @@
 
                 &-bg {
                     position: absolute;
-                    background-color: rgba(252, 252, 252, 0.596);
+                    background-color: rgba(252, 252, 252, .596);
                     height: 100%;
                     width: 120%;
                     top: 215px;
