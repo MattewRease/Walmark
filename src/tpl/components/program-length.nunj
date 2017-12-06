@@ -24,7 +24,7 @@
                     </div>
                     <div class="program-length-price px-3 mx-3 py-4">
                         <h6 class="text-center text--orange pb-3">Show Total price on partner eshop</h6>
-                        <a href="#" class="col-12 btn-price"><span>Add to shopping list</span></a>
+                        <a href="#" class="col-12 btn btn--price"><span>Add to shopping list</span></a>
                     </div>
                 </div>
                 <div class="program-length-long my-5 col-md-5 col-12 d-flex flex-column">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="program-length-price px-3 mx-3 py-4">
                         <h6 class="text-center text--orange pb-3">Show Total price on partner eshop</h6>
-                        <a href="#" class="col-12 btn-price"><span>Add to shopping list</span></a>
+                        <a href="#" class="col-12 btn btn--price"><span>Add to shopping list</span></a>
                     </div>
                 </div>
             </div>

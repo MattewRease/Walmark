@@ -15,7 +15,7 @@
     {#
         FIXME: Preco je toto odkaz bez href atributu?
     #}
-    <a class="health__btn col-12 py-3">
+    <a href="#" class="btn btn--ok col-12 py-3">
         <span>Don't worry, we will help you get better!</span>{{ svg('smile', 'health__arrow-icon') }}
     </a>
 </div>

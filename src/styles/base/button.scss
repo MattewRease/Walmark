@@ -141,14 +141,11 @@
 //   - Bolo by lepsie pouzivat napriklad .btn z Bootstrapu, alebo aj sam si si ju mohol takto napisat, kedze su to vseobecne styly pre button
 //   - Potom by si mohol pouzivat <button class="btn btn-ok"> etc., ...
 //   - A ked si uz nepouzival Bootstrap, tak si mohol dodrziavat BEM .btn--ok, .btn--done etc., ...
-.btn-ok,
-.btn-no,
-.btn-done,
-.btn-price {
+
+.btn {
     display: inline-block;
-    padding: 8px 10px;
+    padding: 6px 10px;
     text-align: center;
-    cursor: pointer;
     border-radius: 3px;
 
     &:hover {
@@ -157,8 +154,7 @@
 }
 
 // FIXME: .btn-no pouzivas kde?
-.btn-ok,
-.btn-no {
+.btn--ok {
     color: $text--green;
     background-color: #fff;
     border: 1px solid $green;
@@ -170,7 +166,7 @@
     }
 }
 
-.btn-done {
+.btn--done {
     color: #fff;
     background-color: $green;
 
@@ -181,7 +177,7 @@
     }
 }
 
-.btn-price {
+.btn--price {
     color: #fff;
     background-color: $orange;
 

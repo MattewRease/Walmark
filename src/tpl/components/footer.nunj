@@ -45,7 +45,7 @@
                                 <li>
                                     <div class="invite__wrapper pb-1 pt-3">
                                         <input class="col-9 invite__input" placeholder="Type your email"></input>
-                                        <a href="#" class="btn-ok text--white footer__btn col-3" href="#">Ok</a>
+                                        <a href="#" class="btn btn--ok text--white footer__btn col-3" href="#">Ok</a>
                                     </div>
                                     <p class="text--grey f-10 f-10-xl-none">Private, secure, spam-free</p>
                                 </li>
