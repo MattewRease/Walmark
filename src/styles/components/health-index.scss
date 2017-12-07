@@ -3,13 +3,15 @@
     $main-padding-lg: 30px 25px;
 
     &__title {
+        margin-bottom: 30px;
         text-align: center;
         border-bottom: 2px solid $grey;
-        margin-bottom: 30px;
     }
 
     &__index {
+        width: 100%;
         padding: $main-padding;
+        margin-bottom: 20px;
         border: $main-border;
         border-radius: $main-border-radius;
 
@@ -182,68 +184,55 @@
     }
 
     &__rules {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
         border: $main-border;
         border-radius: $main-border-radius;
-    }
 
-    &__btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 5px;
-        margin-right: auto;
-        margin-left: auto;
-        font-size: 14px;
-        color: white;
-        text-align: center;
-        vertical-align: middle;
-        background-color: #009639;
-        border-radius: $main-border-radius;
+        &-content {
+            flex-wrap: wrap;
+            padding: $main-padding;
 
-        &:hover {
-            color: white;
-            text-decoration: none;
-            background-color: #006d28;
+            @include media-breakpoint-up(lg) {
+                padding: $main-padding-lg;
+            }
         }
 
-        & span {
-            padding: 0 40px 0 10px;
+        &-list {
+            list-style: none;
+
+            &-item::before {
+                padding: 0 3px;
+                margin-right: 10px;
+                color: #00983d;
+                border: 1px solid #00983d;
+                border-radius: 50%;
+                content: '▲';
+            }
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            width: 100%;
+            padding: 20px 5px;
             color: $white;
-            text-align: left;
+            background-color: $green;
+            border-radius: $main-border-radius;
+
+            @include media-breakpoint-up(lg) {
+                padding: 0;
+            }
         }
-    }
 
-    &__list {
-        list-style: none;
-
-        // FIXME:
-        //   - tu by som sa tiez vyhol zanoreniu
-        //   - ale ked uz, tak radsej zapisat nasledovne:
-        //     li {
-        //         &::before {
-        //             padding: 0 3px;
-        //             margin-right: 10px;
-        //             color: #00983d;
-        //             border: 1px solid #00983d;
-        //             border-radius: 50%;
-        //             content: '▲';
-        //         }
-        //     }
-
-        & li::before {
-            padding: 0 3px;
-            margin-right: 10px;
-            color: #00983d;
-            border: 1px solid #00983d;
-            border-radius: 50%;
-            content: '▲';
+        &-icon {
+            @include size(25px);
+            margin-left: 10px;
+            fill: currentColor;
         }
-    }
-
-    &__arrow-icon {
-        @include size(30px);
-        margin-right: 10px;
-        fill: $white;
     }
 
     &__weight,
