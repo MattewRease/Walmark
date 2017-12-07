@@ -1,88 +1,181 @@
 .health {
+    $main-padding: 20px 15px;
+    $main-padding-lg: 30px 25px;
+
     &__title {
         text-align: center;
         border-bottom: 2px solid $grey;
     }
 
     &__index {
+        padding: $main-padding;
         border: $main-border;
         border-radius: $main-border-radius;
 
-        &-wrap {
-            border-radius: $main-border-radius;
+        @include media-breakpoint-up(lg) {
+            padding: $main-padding-lg;
+        }
 
-            &-progress {
-                height: 80px;
-                text-align: center;
+        &-progress {
+            position: relative;
+            height: 140px;
+            text-align: center;
+
+            @include media-breakpoint-up(sm) {
+                height: 200px;
+            }
+
+            @include media-breakpoint-up(md) {
+                height: 255px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                height: 300px;
+            }
+
+            &-icon {
+                @include size(220px, 120px);
+                margin-top: 10px;
 
                 @include media-breakpoint-up(sm) {
-                    height: 120px;
+                    @include size(340px, 150px);
+                    margin-top: 40px;
                 }
 
                 @include media-breakpoint-up(md) {
-                    height: 255px;
+                    @include size(260px, 150px);
                 }
 
                 @include media-breakpoint-up(lg) {
-                    height: 250px;
+                    @include size(380px, 240px);
+                }
+            }
+
+            &-text {
+                position: relative;
+                top: -98px;
+                font-size: 72px;
+
+                @include media-breakpoint-up(sm) {
+                    top: -110px;
+                    font-size: 85px;
                 }
 
-                // FIXME:
-                //  - nepouzivat zanorene styly pokial to nie je nevyhnutne, napriklad v pripade WYSIWYG editoru
-                //  - skor pouzi BEM class
-                & p {
-                    position: relative;
-                    top: -50px;
-                    font-size: 36px;
-
-                    @include media-breakpoint-up(sm) {
-                        top: -85px;
-                        font-size: 56px;
-                    }
-
-                    @include media-breakpoint-up(md) {
-                        top: -90px;
-                        font-size: 66px;
-                    }
-
-                    @include media-breakpoint-up(lg) {
-                        top: -120px;
-                        font-size: 76px;
-                    }
+                @include media-breakpoint-up(md) {
+                    top: -120px;
                 }
 
-                &-icon {
-                    @include size(150px, 80px);
-
-                    @include media-breakpoint-up(sm) {
-                        @include size(220px, 150px);
-                    }
-
-                    @include media-breakpoint-up(md) {
-                        @include size(260px, 150px);
-                    }
-
-                    @include media-breakpoint-up(lg) {
-                        @include size(380px, 240px);
-                    }
+                @include media-breakpoint-up(lg) {
+                    top: -120px;
+                    font-size: 76px;
                 }
+            }
 
-                &-wrap {
-                    position: relative;
-                    display: inline-block;
-                    overflow: hidden;
-                }
-
-                &-bg {
+            &-value {
+                &--low,
+                &--medium,
+                &--hight,
+                &--min,
+                &--max {
                     position: absolute;
-                    top: 215px;
-                    left: -25px;
-                    width: 120%;
-                    height: 100%;
-                    background-color: rgba(252, 252, 252, .596);
-                    transform: rotate(-45deg);
-                    transform-origin: 230px 15px;
+                    font-size: 13px;
                 }
+
+                &--low {
+                    top: 60px;
+                    left: 8vw;
+
+                    @include media-breakpoint-up(sm) {
+                        top: 100px;
+                        left: 9vw;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        left: 1vw;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        top: 140px;
+                    }
+                }
+
+                &--medium {
+                    top: -12px;
+
+                    @include media-breakpoint-up(sm) {
+                        top: 10px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        top: 20px;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        top: 40px;
+                    }
+                }
+
+                &--hight {
+                    top: -12px;
+                    display: none;
+
+                    @include media-breakpoint-up(sm) {
+                        top: 100px;
+                        right: 9vw;
+                        display: inline;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        display: none;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        top: 140px;
+                        right: 0;
+                        display: inline;
+                    }
+                }
+
+                &--min,
+                &--max {
+                    top: 260px;
+                    font-size: 16px;
+                }
+
+                &--min {
+                    left: 30px;
+                    color: $red;
+
+                    @include media-breakpoint-up(xl) {
+                        left: 70px;
+                    }
+                }
+
+                &--max {
+                    right: 30px;
+                    color: $green;
+
+                    @include media-breakpoint-up(xl) {
+                        right: 70px;
+                    }
+                }
+            }
+
+            &-wrap {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            &-bg {
+                position: absolute;
+                top: 215px;
+                left: -25px;
+                width: 120%;
+                height: 100%;
+                background-color: rgba(252, 252, 252, .596);
+                transform: rotate(-45deg);
+                transform-origin: 230px 15px;
             }
         }
     }
