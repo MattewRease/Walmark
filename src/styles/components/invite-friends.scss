@@ -8,20 +8,19 @@
     }
 
     &__input {
-        flex-grow: 2;
         padding: 7px 0 7px 13px;
         background-color: $white;
-        border: 1px solid rgb(107, 107, 107);
+        border: 1px solid #a6a6a6;
         border-radius: $main-border-radius;
     }
 
     &__btn {
+        left: -4px;
         padding: 9px 0;
-        text-align: center;
         color: $white;
+        text-align: center;
         background-color: $green;
         border-radius: $main-border-radius;
-        left: -4px;
 
         &:hover {
             color: $white;
@@ -30,17 +29,13 @@
         }
 
         @include media-breakpoint-up(sm) {
-            & {
-                margin-left: 35px;
-                padding: 9px 40px;
-            }
+            padding: 9px 40px;
+            margin-left: 35px;
         }
 
         @include media-breakpoint-up(md) {
-            & {
-                margin-left: 15px;
-                padding: 9px 0;
-            }
+            padding: 9px 0;
+            margin-left: 15px;
         }
     }
 }
