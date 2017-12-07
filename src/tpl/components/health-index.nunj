@@ -1,7 +1,7 @@
 <div class="health">
     <div class="container">
         <div class="row">
-            <h4 class="title col-12 bold py-3">My current health index</h4>
+            <h4 class="health__title col-12 bold pb-3">My current health index</h4>
             <div class="col-12 col-md-6">
                 {% include "../components/health-index/health-progress.nunj" %}
             </div>
