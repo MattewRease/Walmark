@@ -1,6 +1,7 @@
 .health {
     $main-padding: 20px 15px;
     $main-padding-lg: 30px 25px;
+    $main-margin: 20px;
 
     &__title {
         margin-bottom: 30px;
@@ -11,7 +12,7 @@
     &__index {
         width: 100%;
         padding: $main-padding;
-        margin-bottom: 20px;
+        margin-bottom: $main-margin;
         border: $main-border;
         border-radius: $main-border-radius;
 
@@ -85,8 +86,8 @@
                 }
 
                 &--low {
-                    top: 60px;
-                    left: 8vw;
+                    top: 40px;
+                    left: 1vw;
 
                     @include media-breakpoint-up(sm) {
                         top: 100px;
@@ -186,7 +187,7 @@
     &__rules {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 20px;
+        margin-bottom: $main-margin;
         border: $main-border;
         border-radius: $main-border-radius;
 
@@ -239,6 +240,8 @@
     &__liquid {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: $main-margin;
+        padding: $main-padding;
         border: $main-border;
         border-radius: $main-border-radius;
 
@@ -246,10 +249,7 @@
             font-size: 18px;
 
             @include media-breakpoint-only(sm) {
-                // FIXME: preco cez &?
-                & {
-                    font-size: 21px;
-                }
+                font-size: 21px;
             }
         }
 
@@ -264,21 +264,25 @@
 
         &-divider {
             border-left: 1px solid black;
-
-            // FIXME: preco zanorene?
-            & p {
-                font-size: 18px;
-            }
         }
 
         &-waist {
-            @include size(65px, 90px);
+            @include size(65px, 75px);
             fill: #7e7e7e;
         }
 
         &-cup {
             @include size(75px, 90px);
             fill: #7e7e7e;
+        }
+    }
+
+    &__liquid-litres {
+        font-size: 30px;
+        font-weight: 900;
+
+        &-text {
+            font-size: 24px;
         }
     }
 }

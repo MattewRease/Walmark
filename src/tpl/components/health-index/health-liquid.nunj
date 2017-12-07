@@ -1,17 +1,17 @@
 {% from '../../helpers/svg.nunj' import svg %}
 
-<div class="health__liquid my-4 py-4 align-items-center">
-    <div class="col-9">
-        <p class="bold health__weight-text mb-sm-0">Your daily liquid intake is <span class="text--green ">insufficient</span></p>
+<div class="health__liquid align-items-center d-flex flex-wrap pb-1">
+    <div class="col-10 pl-0">
+        <h3 class="bold health__weight-text mb-0">Your daily liquid intake is <span class="text--green ">insufficient</span></h3>
     </div>
-    <div class="col-3 pl-sm-0">
+    <div class="col-2 pl-sm-0 px-0">
         {{ svg('smile', 'health__liquid-icon mb-xs-2 mt-sm-2') }}
     </div>
-    <div class="col-4 col-sm-2 col-md-3 pt-3 pt-sm-0 text-right">
-        {{ svg('cup', 'health__liquid-cup') }}
+    <div class="col-3 col-sm-2 col-md-3 text-right pl-0">
+        {{ svg('icon-fluids', 'health__liquid-cup') }}
     </div>
-    <div class="col-8 col-sm-10 col-md-9 pt-sm-3">
-        <h3 class="bold">2.5 <span class="bold">Litres</span></h3>
+    <div class="col-9 col-sm-10 col-md-9 pr-0 mt-3">
+        <p class="health__liquid-litres mb-0">2.5 <span class="bold health__liquid-litres-text">Litres</span></p>
         <p>Is optimal fluid intake for your height and weight</p>
     </div>
 </div>
