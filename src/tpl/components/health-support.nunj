@@ -82,22 +82,22 @@
         <div class="col-12">
             <div class="health__support">
                 <h4 class="title col-12 bold px-0 pt-2 pb-3">Your personal health support</h4>
-                <div class="health__support-wrap mt-3">
+                <div class="health__support-inner mt-3">
                     <div class="health__support-plan mt-4">
-                        <div class="col-3 pl-2 pl-md-5">
+                        <div class="col-4 col-sm-2 col-md-3 pb-3 text-center">
                             {{ svg('health-index', 'health__support-index') }}
                         </div>
-                        <div class="col-6 col-md-6 col-xl-7">
-                            <p class="health__support-plan-description mb-1 pt-md-4">Remaining time <span class="bold">24 days</span></p>
+                        <div class="col-8 col-sm-10 col-md-6 col-xl-7 pt-1">
+                            <p class="health__support-plan-description mb-1 pt-md-2">Remaining time <span class="bold">24 days</span></p>
                             <p class="health__support-plan-description">You will be able to evaluate your plan once you finish it.</p>
                         </div>
-                        <div class="d-none d-md-block col-md-3 col-xl-2">
-                            <a href="#" class="btn btn--ok"><span>Print your plan</span>
+                        <div class="d-none d-md-block col-md-3 col-xl-2 mt-3">
+                            <a href="#" class="btn btn--ok health__support-print px-0"><span>{{ svg('icon-print', 'health__support-print-icon') }}</span><span>Print your plan</span>
                             </a>
                         </div>
                         <div class="col-12 mx-auto col-md-6">
-                            <div class="progress my-2">
-                                <div class="progress-bar" role="progressbar" style="width: 30%;">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 40%;">
                                 </div>
                             </div>
                         </div>
@@ -116,8 +116,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 health__support-plan-week">
-                            <div class="health__support-plan-week-wrap">
+                        <div class="health__support-plan-week">
+                            <div class="health__support-plan-week-inner">
                             {% for item in items %}
 
                                 {% if loop.index == 1 %}
