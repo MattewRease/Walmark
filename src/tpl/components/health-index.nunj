@@ -1,17 +1,17 @@
 <div class="health">
     <div class="container">
-        <div class="row">
+        <div class="row d-flex flex-wrap">
             <h4 class="health__title col-12 bold pb-3">My current health index</h4>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 d-md-flex">
                 {% include "../components/health-index/health-progress.nunj" %}
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 d-flex">
                 {% include "../components/health-index/health-rules.nunj" %}
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 d-flex">
                 {% include "../components/health-index/health-weight.nunj" %}
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 d-flex">
                 {% include "../components/health-index/health-liquid.nunj" %}
             </div>
         </div>
