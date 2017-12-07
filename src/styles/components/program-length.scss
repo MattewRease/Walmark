@@ -21,13 +21,11 @@
         border-bottom-right-radius: 100% 30px;
 
         &::before {
-            @include size(50px);
             position: absolute;
-            top: -35px;
+            top: -56px;
             left: calc(50% - 25px);
-            content: '';
-            transform: rotate(-90deg);
-            background-image: svg-load('icon-triangle.svg');
+            content: svg-load('icon-roundangle.svg', fill=$grey-bg, width=70, height=70);
+            transform: rotate(90deg);
         }
 
         & p {
