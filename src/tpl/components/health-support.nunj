@@ -3,7 +3,7 @@
 {%
     set items = [
         {
-            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            class: 'health-support__day col-xl-auto px-xl-2',
             label: 'Monday',
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             labelNone: 'd-none',
@@ -15,7 +15,7 @@
             week: 'Week'
         },
         {
-            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            class: 'health-support__day col-xl-auto px-xl-2',
             label: 'Tuesday',
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
@@ -25,7 +25,7 @@
             icon: 'update'
         },
         {
-            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            class: 'health-support__day col-xl-auto px-xl-2',
             label: 'Wednesday',
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
@@ -35,7 +35,7 @@
             icon: 'update'
         },
         {
-            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            class: 'health-support__day col-xl-auto px-xl-2',
             label: 'Thursday',
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'false',
@@ -45,7 +45,7 @@
             icon: 'update'
         },
         {
-            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            class: 'health-support__day col-xl-auto px-xl-2',
             label: 'Friday',
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
@@ -55,7 +55,7 @@
             icon: 'update'
         },
         {
-            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            class: 'health-support__day col-xl-auto px-xl-2',
             label: 'Saturday',
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
@@ -65,7 +65,7 @@
             icon: 'update'
         },
         {
-            class: 'health__support-plan-day col-xl-auto px-xl-2',
+            class: 'health-support__day col-xl-auto px-xl-2',
             label: 'Sunday',
             labelClass: 'text--green col-md-2 text-md-right col-xl-auto',
             ready: 'true',
@@ -80,19 +80,19 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div class="health__support">
+            <div class="health-support">
                 <h4 class="title col-12 bold px-0 pt-2 pb-3">Your personal health support</h4>
-                <div class="health__support-inner mt-3">
-                    <div class="health__support-plan mt-4">
+                <div class="health-support__inner mt-3">
+                    <div class="health-support__plan mt-4">
                         <div class="col-4 col-sm-2 col-md-3 pb-3 text-center">
-                            {{ svg('health-index', 'health__support-index') }}
+                            {{ svg('health-index', 'health-support__index') }}
                         </div>
                         <div class="col-8 col-sm-10 col-md-6 col-xl-7 pt-1">
-                            <p class="health__support-plan-description mb-1 pt-md-2">Remaining time <span class="bold">24 days</span></p>
-                            <p class="health__support-plan-description">You will be able to evaluate your plan once you finish it.</p>
+                            <p class="health-support__description mb-1 pt-md-2">Remaining time <span class="bold">24 days</span></p>
+                            <p class="health-support__description">You will be able to evaluate your plan once you finish it.</p>
                         </div>
                         <div class="d-none d-md-block col-md-3 col-xl-2 mt-3">
-                            <a href="#" class="btn btn--ok health__support-print px-0"><span>{{ svg('icon-print', 'health__support-print-icon') }}</span><span>Print your plan</span>
+                            <a href="#" class="btn btn--ok health-support__print px-0"><span>{{ svg('icon-print', 'health-support__print-icon') }}</span><span>Print your plan</span>
                             </a>
                         </div>
                         <div class="col-12 mx-auto col-md-6">
@@ -102,22 +102,22 @@
                             </div>
                         </div>
                         <div class="col-12 px-0 my-3">
-                            <div class="health__support-navigation py-3 d-xl-none">
-                                <div class="health__support-navigation-prev">
-                                    {{ svg('prev', 'health__support-navigation-prev-icon') }}
+                            <div class="health-support__navigation py-3 d-xl-none">
+                                <div class="health-support__navigation-prev">
+                                    {{ svg('prev', 'health-support__navigation-prev-icon') }}
                                     <span class="text--orange bold">Previous</span>
                                 </div>
                                 <div>
                                     <span class="bold">Week 2</span>
                                 </div>
-                                <div class="health__support-navigation-next">
+                                <div class="health-support__navigation-next">
                                     <span class="text--orange bold">Next</span>
-                                    {{ svg('next', 'health__support-navigation-next-icon') }}
+                                    {{ svg('next', 'health-support__navigation-next-icon') }}
                                 </div>
                             </div>
                         </div>
-                        <div class="health__support-plan-week">
-                            <div class="health__support-plan-week-inner">
+                        <div class="health-support__week">
+                            <div class="health-support__week--inner">
                             {% for item in items %}
 
                                 {% if loop.index == 1 %}
@@ -126,31 +126,31 @@
                                 <div class="{{ item.class }}">
                                     <label class="{{ item.labelClass }}">{{ item.label }}</label>
                                     {% if item.ready=='true' and item.label !=='Monday' and  item.label !=='Sunday' and item.thisWeek =='true'  %}
-                                        <div class="health__support-plan-day-complete yes my-2 col-md-8 col-xl-auto">
-                                            {{ svg('tick', 'health__support-plan-day-tick') }}
+                                        <div class="health-support__day--complete day--yes my-2 col-md-8 col-xl-auto">
+                                            {{ svg('tick', 'health-support__day--tick') }}
                                         </div>
-                                        <a href="#" class="{{ item.btnClass }} btn btn--ok health__support-btn">
-                                            {{ svg(item.icon, 'btn health__support-btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                                        <a href="#" class="{{ item.btnClass }} btn btn--ok health-support__btn">
+                                            {{ svg(item.icon, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                         </a>
                                         {% elif item.label =='Sunday' and item.thisWeek =='true' %}
-                                            <div class="health__support-plan-day-complete sunday my-2 col-md-8 col-xl-auto">
+                                            <div class="health-support__day--complete day--sunday my-2 col-md-8 col-xl-auto">
                                                 <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
                                             </div>
-                                            <a href="#" class="{{ item.btnClass }} btn btn--done health__support-btn health__support-btn--done">
-                                                {{ svg(item.iconDone, 'btn health__support-btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                                            <a href="#" class="{{ item.btnClass }} btn btn--done health-support__btn health-support__btn--done">
+                                                {{ svg(item.iconDone, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                             </a>
                                         {% elif item.label =='Monday' and item.thisWeek =='true' %}
-                                            <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                            <div class="health-support__day--complete my-2 col-md-8 col-xl-auto">
                                             </div>
                                         {% elif item.thisWeek =='true' %}
-                                            <div class="health__support-plan-day-complete no my-2 col-md-8 col-xl-auto">
-                                                {{ svg('cross', 'health__support-plan-day-cross') }}
+                                            <div class="health-support__day--complete day--no my-2 col-md-8 col-xl-auto">
+                                                {{ svg('cross', 'health-support__day--cross') }}
                                             </div>
-                                            <a href="#" class="{{ item.btnClass }} btn btn--ok health__support-btn">
-                                                {{ svg(item.icon, 'btn health__support-btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                                            <a href="#" class="{{ item.btnClass }} btn btn--ok health-support__btn">
+                                                {{ svg(item.icon, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                             </a>
                                         {% else %}
-                                            <div class="health__support-plan-day-complete my-2 col-md-8 col-xl-auto">
+                                            <div class="health-support__day--complete my-2 col-md-8 col-xl-auto">
                                                 <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
                                             </div>
                                     {% endif %}
@@ -164,7 +164,7 @@
                                     {% endif %}
                                     <div class="{{ item.class }}">
                                     <label class="{{ item.labelClass }} d-xl-none">{{ item.label }}</label>
-                                        <div class="health__support-plan-day-complete nextweek my-2 col-md-8 col-xl-auto">
+                                        <div class="health-support__day--complete day--nextweek my-2 col-md-8 col-xl-auto">
                                             <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
                                         </div>
                                     </div>
@@ -180,7 +180,7 @@
 
                                     <div class="{{ item.class }}">
                                     <label class="{{ item.labelClass }} d-xl-none">{{ item.label }}</label>
-                                        <div class="health__support-plan-day-complete my-2 none col-md-8 col-xl-auto">
+                                        <div class="health-support__day--complete my-2 day--none col-md-8 col-xl-auto">
                                         </div>
                                     </div>
 
@@ -188,7 +188,7 @@
 
                                     <div class="{{ item.class }}">
                                     <label class="{{ item.labelClass }} d-xl-none">{{ item.label }}</label>
-                                        <div class="health__support-plan-day-complete nextweek my-2 col-md-8 col-xl-auto">
+                                        <div class="health-support__day--complete day--nextweek my-2 col-md-8 col-xl-auto">
                                             <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
                                         </div>
                                     </div>
@@ -197,9 +197,9 @@
                             {% endfor %}
                             </div>
                         </div>
-                        <div class="health__support-form col-12">
+                        <div class="health-support__form col-12">
                             <div class="col-12 col-md-4">
-                                <label class="py-2 mt-3">Set reminders</label><span class="health__support-form-tolltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health__support-form-tolltip') }}</span>
+                                <label class="py-2 mt-3">Set reminders</label><span class="health-support__form-tolltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health-support__form-tolltip') }}</span>
                                 <div class="form-row align-items-center">
                                     <select id="inputState" class="form-control col-8">
                                         <option selected>Every 3 days</option>
@@ -229,7 +229,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
-                                <label class="py-2 mt-3">You missed tasks?</label><span class="health__support-form-tolltip icon icon--tooltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health__support-form-tolltip') }}</span>
+                                <label class="py-2 mt-3">You missed tasks?</label><span class="health-support__form-tolltip icon icon--tooltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health-support__form-tolltip') }}</span>
                                 <div class="col-12 px-0">
                                     <a href="#" class="btn btn--ok col-12 col-sm-7 col-md-12 mb-3">Reset my plan</a>
                                 </div>

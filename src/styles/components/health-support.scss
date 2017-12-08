@@ -1,11 +1,11 @@
-.health__support {
-    &-inner {
+.health-support {
+    &__inner {
         position: relative;
         border: 3px solid #ffd94b;
         border-radius: $main-border-radius;
     }
 
-    &-plan {
+    &__plan {
         display: flex;
         flex-wrap: wrap;
 
@@ -14,7 +14,7 @@
         }
     }
 
-    &-index {
+    &__index {
         @include size(60px);
 
         @include media-breakpoint-up(md) {
@@ -49,7 +49,7 @@
         box-shadow: inset 0 1px 3px 0 rgba(255, 255, 255, .87);
     }
 
-    &-navigation {
+    &__navigation {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -66,7 +66,7 @@
         }
     }
 
-    &-form {
+    &__form {
         display: flex;
         flex-wrap: wrap;
         align-content: center;
@@ -77,7 +77,7 @@
         }
     }
 
-    &-btn {
+    &__btn {
         @include media-breakpoint-up(xs) {
             top: -10px;
         }
@@ -118,89 +118,87 @@
         }
     }
 
-    &-plan {
-        &-week {
+    &__week {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+
+        &--inner {
             width: 100%;
-            height: 100%;
-            overflow: auto;
+            height: 1220px;
 
-            &-inner {
-                width: 100%;
-                height: 1220px;
-
-                @include media-breakpoint-up(md) {
-                    height: 650px;
-                }
-
-                @include media-breakpoint-up(lg) {
-                    height: 635px;
-                }
-
-                @include media-breakpoint-up(xl) {
-                    display: flex;
-                    flex-flow: row wrap;
-                    align-items: center;
-                    flex: 0 0 auto;
-                    height: auto;
-                    margin-bottom: 0;
-                    overflow-y: hidden;
-                }
-            }
-        }
-
-        &-day {
             @include media-breakpoint-up(md) {
-                display: flex;
-                flex-wrap: nowrap;
-                align-items: center;
+                height: 650px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                height: 635px;
             }
 
             @include media-breakpoint-up(xl) {
-                flex-direction: column;
-                align-items: center;
-                height: 165px;
-
-                &:nth-child(n+9) {
-                    height: 130px;
-                }
-            }
-
-            &-tick {
-                @include size(35px);
-                fill: $text--green;
-                stroke: $white;
-                stroke-width: 5px;
-            }
-
-            &-cross {
-                @include size(35px);
-                fill: #ed2a32;
-                stroke: $white;
-                stroke-width: 5px;
-            }
-
-            &-complete {
                 display: flex;
+                flex-flow: row wrap;
                 align-items: center;
-                justify-content: center;
-                min-height: 75px;
-                background-color: #f8f8f8;
-                border: $main-border;
-                border-radius: $main-border-radius;
-
-                @include media-breakpoint-up(xl) {
-                    @include size(120px);
-                    flex-wrap: nowrap;
-                    align-items: center;
-                    font-size: 10px;
-                    text-align: center;
-                    border-radius: 50%;
-                }
+                flex: 0 0 auto;
+                height: auto;
+                margin-bottom: 0;
+                overflow-y: hidden;
             }
         }
     }
 
-    &-print {
+    &__day {
+        @include media-breakpoint-up(md) {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        @include media-breakpoint-up(xl) {
+            flex-direction: column;
+            align-items: center;
+            height: 165px;
+
+            &:nth-child(n+9) {
+                height: 130px;
+            }
+        }
+
+        &--tick {
+            @include size(35px);
+            fill: $text--green;
+            stroke: $white;
+            stroke-width: 5px;
+        }
+
+        &--cross {
+            @include size(35px);
+            fill: #ed2a32;
+            stroke: $white;
+            stroke-width: 5px;
+        }
+
+        &--complete {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 75px;
+            background-color: #f8f8f8;
+            border: $main-border;
+            border-radius: $main-border-radius;
+
+            @include media-breakpoint-up(xl) {
+                @include size(120px);
+                flex-wrap: nowrap;
+                align-items: center;
+                font-size: 10px;
+                text-align: center;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__print {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -213,26 +211,25 @@
     }
 }
 
-// FIXME: tento naming nie je vlemi dobra volba
-.yes {
+.day--yes {
     background-color: #ace0c4;
     border: none;
 }
 
-.no {
+.day--no {
     background-color: #ffdf87;
     border: none;
 }
 
-.sunday {
+.day--sunday {
     background-color: #b9f3ff;
     border: none;
 }
 
-.nextweek {
+.day--nextweek {
     background-color: $grey;
 }
 
-.none {
+.day--none {
     background-color: $white;
 }
