@@ -29,16 +29,16 @@
 
 <div class="container">
     <div class="row">
-        <div class="index-results my-4">
+        <div class="index-results__ my-4">
             <h3 class="title col-12 bold px-0 pt-2 pb-3">Extra tips</h3>
-            <div class="index-results-puck">
+            <div class="index-results__puck">
                 <div class="col-lg-4 col-12 d-flex flex-wrap flex-sm-nowrap flex-lg-wrap">
                     <div class="col-sm-6 col-lg-12">
                     <h4 class="text--green bold py-3">What is it</h4>
                         <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
                         <p> Aenean placerat. Nam libero tempore, cum soluta nobis est eligendi.</p>
                     </div>
-                    <picture class="index-results-puck-icon col-12 col-sm-6 col-lg-12 text-center text-md-right text-xl-left my-3">
+                    <picture class="index-results__puck-icon col-12 col-sm-6 col-lg-12 text-center text-md-right text-xl-left my-3">
                         <source srcset="http://satyr.io/290x330" media="(min-width: 1200px)">
                         <source srcset="http://satyr.io/260x290" media="(min-width: 992px)">
                         <source srcset="http://satyr.io/205x230" media="(min-width: 768px)">
@@ -52,9 +52,9 @@
                         <h4 class="text--green bold py-3 d-md-inline-block text-right">Products in the puck</h4>
                     </div>
                     {% for item in items %}
-                            <div class="col-12 index-results-products my-3">
+                            <div class="col-12 index-results__products my-3">
                                 <div class="col-md-6 d-flex align-items-center px-0">
-                                    {{ svg(item.icon, 'index-results-products-icon col-1') }}
+                                    {{ svg(item.icon, 'index-results__products-icon col-1') }}
                                     <p class="{{ item.class }}">{{ item.description }}</p>
                                 </div>
                                 <div class="col-12 col-md-6 px-0 my-2 d-flex align-items-center">
@@ -63,10 +63,14 @@
                                         <img srcset="http://satyr.io/75x77" alt="">
                                     </picture>
                                     <div class="col-8 col-md-6 px-0 pt-2">
-                                        <div class="rating">
-                                                {{ stars.rating(4) }}
-                                            <span class="link-grey pl-2">305 Reviews</span>
+                                        <div class="rating rating--direction">
+                                            {% for item in range(1, 6) %}
+                                                <a class="rating__star-icon">
+                                                    {{ svg('icon-star', 'icon--base') }}
+                                                </a>
+                                            {% endfor %}
                                         </div>
+                                            <label class="link-grey pl-2">305 Reviews</label>
                                         <h5 class="text--green bold my-0">{{ item.productName }}</h5>
                                         <a hfef="#"><span class="link-grey">Food Supplement</span></a>
                                         <p class="d-none d-md-block">Fusce tellus odio, dapibus id fermentum quis...</p>

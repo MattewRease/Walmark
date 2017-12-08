@@ -40,10 +40,6 @@
     color: #a3a3a3;
 }
 
-// FIXME:
-//  - tato class nehovori velmi co sa meni v CSS
-//  - skor pouzi nieco ako .u-fill--orange, alebo .icon--orange
-//  - "u-" prefix pouzivame iba s jednou odrazkou "-"
 .icon--orange {
     fill: #ff6900;
 }
@@ -104,7 +100,7 @@
 
 // FIXME: aby to bolo viac reusable, bolo by lepsie si nastavit skor vseobecne velkosti pre ikony
 // napriklad: .icon--base, potom by si mohol pre ine ikony pouzit tu istu class
-.star-icon {
+.icon--base {
     @include size(15px);
 }
 
