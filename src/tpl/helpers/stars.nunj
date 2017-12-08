@@ -2,10 +2,8 @@
 
 {% macro rating(rating) %}
     {% for item in range(1, 6) %}
-        {% if item <= rating %}
-            {{ svg('icon-star', 'rating--active star-icon') }}
-        {% else %}
-            {{ svg('icon-star', 'rating--in-active star-icon') }}
-        {% endif %}
+
+            <a>{{ svg('icon-star', 'star-icon') }}</a>
+
     {% endfor %}
 {% endmacro %}
