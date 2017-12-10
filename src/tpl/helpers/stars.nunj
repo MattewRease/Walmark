@@ -3,7 +3,7 @@
 {% macro rating(rating) %}
     {% for item in range(1, 6) %}
 
-            <a>{{ svg('icon-star', 'star-icon') }}</a>
+            <a>{{ svg('icon-star', 'star--icon') }}</a>
 
     {% endfor %}
 {% endmacro %}

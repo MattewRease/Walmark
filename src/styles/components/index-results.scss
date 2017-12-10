@@ -4,10 +4,6 @@
         flex-wrap: wrap;
     }
 
-    &__puck-image {
-        @include size(180px);
-    }
-
     &__products {
         display: flex;
         flex-wrap: wrap;
@@ -15,7 +11,7 @@
         border: $main-border;
         border-radius: $main-border-radius;
 
-        &-icon {
+        &--icon {
             @include size(20px);
             padding: 0;
             margin: 0;

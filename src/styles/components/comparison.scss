@@ -1,36 +1,24 @@
-// FIXME: Skus pouzivat BEM
-//   - SASS zanorenie nerobime pre "-", ale v ramci BEMu ("--" alebo "__"):
-//  .comparison {
-//      &__item {
-//          ...
-//      }
-
-//      &__icon {
-//          ...
-//      }
-//  }
 .comparison {
-    &-item {
+    &__item {
         border: $main-border;
         border-radius: $main-border-radius;
     }
 
-    &-icon {
+    &__icon {
         @include size(30px);
 
         @include media-breakpoint-up(xl) {
             @include size(40px);
         }
 
-        &-smile {
+        &--smile {
             @include size(20px);
-            fill: $green; // FIXME: Pre SVG je dobre nastavit fill: currentColor a tym padom zdedi farbu na zaklade farby textu (color) svg parent elementu
+            fill: currentColor;
         }
 
-        &-wrap {
+        &--block {
             @include size(60px);
             display: flex;
-            flex-wrap: wrap; // FIXME: Preco potrebujes flex-wrap?
             align-items: center;
             justify-content: center;
             background-color: #d8d8d8;

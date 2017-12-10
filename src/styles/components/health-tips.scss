@@ -1,5 +1,5 @@
 .health-tips {
-    &-method-icon {
+    &__method--icon {
         @include size(55px);
 
         @include media-breakpoint-up(md) {
