@@ -36,23 +36,18 @@
     <div class="row">
         <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3">My comparison</h3>
         <div class="comparison col-12">
-        {#
-            FIXME:
-                - pouzivas hore <h3>, pod tym <h5> a pod tym <h4>, semanticky to nedava zmysel
-                - cisluj postupne h3, h4 a potom h5
-        #}
-        <h5 class="text-center mb-0 py-4 my-2">See how you compare with others</h5>
+        <h4 class="text-center mb-0 py-4 my-2">See how you compare with others</h4>
             <div class="d-flex flex-column flex-lg-row justify-content-between">
             {% for item in items %}
-                <div class="comparison-item mx-2 mb-3 px-3">
+                <div class="comparison__item mx-2 mb-3 px-3">
                     <h4 class="text--green bold py-3 my-3">{{ item.title }}</h4>
                     <div class="col-12 d-flex justify-content-around justify-content-sm-center text-center">
                         <div class="px-sm-4 px-lg-2">
                             <span class="text--grey">{{ item.yoursTitle }}</span>
                             <h4 class="text--orange bold pt-2">{{ item.yours }}%</h4>
                         </div>
-                        <div class="comparison-icon-wrap mx-lg-3">
-                            {{ svg(item.icon, 'comparison-icon') }}
+                        <div class="comparison__icon--block mx-lg-3">
+                            {{ svg(item.icon, 'comparison__icon') }}
                         </div>
                         <div class="px-sm-4 px-lg-2">
                             <span class="text--grey">{{ item.averageTitle }}</span>
@@ -68,8 +63,7 @@
             {% endfor %}
             </div>
                 <div class="comparison-item p-4 d-flex justify-content-around justify-content-lg-center col-12">
-                    <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!</h4>
-                    {{ svg('smile', 'comparison-icon-smile align-self-center ml-lg-4') }}
+                    <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!<span> {{ svg('smile', 'comparison__icon--smile align-self-center ml-lg-4') }}</span></h4>
                 </div>
         </div>
     </div>

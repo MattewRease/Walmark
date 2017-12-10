@@ -6,7 +6,7 @@
         <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3 mt-4">Rate the product</h3>
         <div class="rate col-12 mt-4">
             <div class="p-3">
-                <textarea  class="rate-input col-12 mt-3" placeholder="Your review"/></textarea>
+                <textarea  class="rate--input col-12 mt-3" placeholder="Your review"/></textarea>
                 <div class="d-flex flex-wrap align-content-between">
                     <div class="align-self-center col-md-3">
                         <h5 class="text--grey text-center d-inline text-md-left">Your rating: </h>

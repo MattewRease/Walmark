@@ -5,31 +5,31 @@
         <div class="row">
             <nav class="navbar navbar-default col-12 pb-0">
                 <a class="navbar-brand header__logo pb-0 mr-0" href="#">
-                    {{ svg('site-logo', 'header__logo-icon') }}
-                    {{ svg('site-logo-text', 'header__logo-icon-text d-none d-sm-inline-block pt-sm-2 pt-md-0') }}
-                    <span class="header__logo-text bold d-none d-md-inline">Your beggest supporter</span>
+                    {{ svg('site-logo', 'header__logo--icon') }}
+                    {{ svg('site-logo-text', 'header__logo--icon__text d-none d-sm-inline-block pt-sm-2 pt-md-0') }}
+                    <span class="header__logo--text bold d-none d-md-inline">Your beggest supporter</span>
                 </a>
                 <ul class="nav justify-content-end header__profile d-flex align-items-center">
                     <li class="nav-item pb-1">
                         <a class="nav-link px-1 pl-sm-2 pl-md-1" href="#">
-                            <img class="header__profile-img" srcset="http://satyr.io/25x25/1" alt="img">
+                            <img class="header__profile--img" srcset="http://satyr.io/25x25/1" alt="img">
                         </a>
                     </li>
                     <li class="nav-item mx-lg-2">
                         <a class="nav-link px-1 pl-sm-2 pl-md-1" href="#">
-                            {{ svg('icon-logout', 'icon--orange header__profile-icon d-md-none') }}
+                            {{ svg('icon-logout', 'icon--orange header__profile--icon d-md-none') }}
                             <span class="px-2 text--orange d-none d-md-inline border-right border-right-1">Jana Novakova</span>
                             <span class="px-2 text--orange d-none d-md-inline">Log out</span>
                         </a>
                     </li>
                     <li class="nav-item mx-lg-2">
                         <a class="nav-link px-1 pl-sm-2 pl-md-1" href="#">
-                            {{ svg('icon-wishlist', 'icon--orange header__profile-icon') }}
+                            {{ svg('icon-wishlist', 'icon--orange header__profile--icon') }}
                         </a>
                     </li>
                     <li class="nav-item mx-lg-2">
                         <a class="nav-link px-1 pl-sm-2 pl-md-1" href="#">
-                            {{ svg('icon-search', 'header__profile-icon-search') }}
+                            {{ svg('icon-search', 'header__profile--icon-search') }}
                         </a>
                     </li>
                     <li class="nav-item px-0 mx-0">
@@ -37,7 +37,7 @@
                     </li>
                     <li class="nav-item pl-0 pt-1">
                         <a href="#" class="navbar-toggler navbar-toggler-right">
-                            <span>{{ svg('menu-button', 'header__profile-icon') }}</span>
+                            <span>{{ svg('menu-button', 'header__profile--icon') }}</span>
                         </a>
                     </li>
                 </ul>
