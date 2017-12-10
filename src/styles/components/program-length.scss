@@ -1,15 +1,16 @@
 .program-length {
     &__title {
-        @include size(100%, 200px);
+        @include size(100%, 180px);
         position: relative;
+        z-index: 10;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         overflow: hidden;
         background-color: rgb(43, 43, 43);
-        border-bottom-right-radius: 800px 10%;
-        border-bottom-left-radius: 800px 10%;
+        border-bottom-right-radius: 800px 5%;
+        border-bottom-left-radius: 800px 5%;
 
         &::before {
             position: absolute;
@@ -19,9 +20,9 @@
     }
 
     &__description {
+        position: relative;
         top: -20px;
         width: 100%;
-        position: relative;
         padding: 30px 0 10px;
         margin-bottom: 20px;
         background-color: $grey-bg;
@@ -30,7 +31,8 @@
 
         &::before {
             position: absolute;
-            top: -56px;
+            top: -35px;
+            z-index: 11;
             left: calc(50% - 35px);
             content: svg-load('icon-roundangle.svg', fill=$grey-bg, width=70, height=70);
             transform: rotate(90deg);
