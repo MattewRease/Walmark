@@ -1,7 +1,7 @@
 
 <div class="program-length">
-    <div class="program-length__title program-length__title--border">
-        <h3 class="bold text-white text-center">What the option for the program length?</h3>
+    <div class="program-length__title">
+        <h3 class="bold text-white text-center pt-3">What the option for the program length?</h3>
     </div>
     <div class="program-length__description">
         <p class="program-length__description--text py-3 col-12">Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Ut tempus purus at lorem. Etiam bibendum elit eget erat. Aliquam erat volutpat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
