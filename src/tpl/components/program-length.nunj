@@ -1,10 +1,10 @@
 
 <div class="program-length">
-    <div class="program-length-title">
+    <div class="program-length__title program-length__title--border">
         <h3 class="bold text-white text-center">What the option for the program length?</h3>
     </div>
-    <div class="program-length-description">
-        <p class="py-3 col-12">Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Ut tempus purus at lorem. Etiam bibendum elit eget erat. Aliquam erat volutpat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+    <div class="program-length__description">
+        <p class="program-length__description--text py-3 col-12">Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Ut tempus purus at lorem. Etiam bibendum elit eget erat. Aliquam erat volutpat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
     </div>
 </div>
 
@@ -13,8 +13,8 @@
     <div class="row">
         <div class="col-12 program-length">
             <div class="d-flex flex-wrap justify-content-around">
-                <div class="program-length-short my-5 col-md-5 col-12 d-flex flex-column">
-                    <div class="12 program-length-list">
+                <div class="program-length__short my-5 col-md-5 col-12 d-flex flex-column">
+                    <div class="12 program-length__list">
                         <h5 class="col-12 text--green bold">Program for 3 month</h5>
                         <ul class="pl-3">
                             <li>Fusce tellus odio, dapibus quis nostrum</li>
@@ -25,8 +25,8 @@
                         <a href="#" class="col-12 btn btn--price"><span>Add to shopping list</span></a>
                     </div>
                 </div>
-                <div class="program-length-long my-5 col-md-5 col-12 d-flex flex-column">
-                    <div class="12 program-length-list">
+                <div class="program-length__long my-5 col-md-5 col-12 d-flex flex-column">
+                    <div class="12 program-length__list">
                     <h5 class="col-12 text--green bold">Program for 3 month</h5>
                         <ul class="pl-3">
                             <li>Fusce tellus odio, dapibus quis nostrum</li>
@@ -34,7 +34,7 @@
                             <li>Fusce tellus odio, dapibus quis nostrum</li>
                         </ul>
                     </div>
-                    <div class="program-length-price px-3 mx-3 py-4">
+                    <div class="program-length__price px-3 mx-3 py-4">
                         <h6 class="text-center text--orange pb-3">Show Total price on partner eshop</h6>
                         <a href="#" class="col-12 btn btn--price"><span>Add to shopping list</span></a>
                     </div>
