@@ -2,9 +2,9 @@
     <div class="row">
         <nav class="navigation col-12 py-4 px-0">
             <ul class="navigation__list pl-0">
-                <li class="navigation__list-index navigation__list-item mb-1">Health index</li>
-                <li class="navigation__list-orders navigation__list-item mb-1">My orders</li>
-                <li class="navigation__list-settings navigation__list-item mb-1">Profile settings</li>
+                <li class="navigation__list--index navigation__item mb-1">Health index</li>
+                <li class="navigation__list--orders navigation__item mb-1">My orders</li>
+                <li class="navigation__list--settings navigation__item mb-1">Profile settings</li>
             </ul>
         </div>
     </div>
