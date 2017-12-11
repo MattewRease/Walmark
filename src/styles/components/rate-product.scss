@@ -1,9 +1,9 @@
-.rate {
-    background-color: $grey;
+.rate-product {
+    background-color: $grey-bg;
     border: $main-border;
     border-radius: $main-border-radius;
 
-    &--input {
+    &__input {
         min-height: 150px;
         line-height: 1;
         border: none;
@@ -11,11 +11,29 @@
         border-radius: $main-border-radius;
     }
 
-    .star--icon {
-        @include size(25px);
+    &__star-icon {
+        transition: .8s;
+        fill: #d8d8d8;
 
-        @include media-breakpoint-up(md) {
-            margin: 0 10px;
+        &:hover,
+        &:hover ~ &,
+        &:focus,
+        &:focus ~ & {
+            text-decoration: none;
+            cursor: pointer;
+            fill: orange;
+        }
+    }
+
+    &__rating {
+        &--icon {
+            @include size(25px);
+            margin: 0 5px;
+        }
+
+        &--direction {
+            float: left;
+            direction: rtl;
         }
     }
 }
