@@ -22,12 +22,13 @@
         },
         {
             title: 'What other answered',
-            icon: 'icon-chart',
+            subtitle: 'Do you regulary stretch your body?',
+            icon: 'progress',
             averageTitle: 'YES',
             average: '53',
             yoursTitle: 'NO',
             yours: '75',
-            description: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam'
+            description: 'Yes'
             }
     ]
 %}
@@ -35,36 +36,46 @@
 <div class="container">
     <div class="row">
         <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3">My comparison</h3>
-        <div class="comparison col-12">
-        <h4 class="text-center mb-0 py-4 my-2">See how you compare with others</h4>
-            <div class="d-flex flex-column flex-lg-row justify-content-between">
-            {% for item in items %}
-                <div class="comparison__item mx-2 mb-3 px-3">
-                    <h4 class="text--green bold py-3 my-3">{{ item.title }}</h4>
-                    <div class="col-12 d-flex justify-content-around justify-content-sm-center text-center">
-                        <div class="px-sm-4 px-lg-2">
-                            <span class="text--grey">{{ item.yoursTitle }}</span>
-                            <h4 class="text--orange bold pt-2">{{ item.yours }}%</h4>
+        <h4 class="text-center col-12  mb-0 py-4 my-2">See how you compare with others</h4>
+        <div class="comparison">
+        {% for item in items %}
+            <div class="comparison__item col-lg-4 col-12 mb-2 pt-2 d-inline-block">
+                <h4 class="text--green text-center text-lg-left bold py-3">
+                    {{ item.title }}</h4>
+                {% if item.description == 'Yes' or item.description == 'No' %}
+                    <p class="pb-2 text-sm-center text-lg-left">{{ item.subtitle }}</p>
+                {% endif %}
+                <div class="d-flex justify-content-center justify-content-lg-between text-center">
+                    <div class="px-4 px-lg-0 mx-xl-3">
+                        <span class="text--grey">{{ item.yoursTitle }}</span>
+                        <h4 class="text--orange bold pt-2">{{ item.yours }}%</h4>
+                    </div>
+
+                    {% if item.description == 'Yes' or item.description == 'No' %}
+                        <div>
+                            {{ svg(item.icon, 'comparison__icon--progress') }}
                         </div>
+                    {% else %}
                         <div class="comparison__icon--block mx-lg-3">
                             {{ svg(item.icon, 'comparison__icon') }}
                         </div>
-                        <div class="px-sm-4 px-lg-2">
-                            <span class="text--grey">{{ item.averageTitle }}</span>
-                            <h4 class="text--orange bold pt-2">{{ item.average }}%</h4>
-                        </div>
-                    </div>
-                    {% if item.description == 'Yes' or item.description == 'No' %}
-                        <p class="mb-0 px-1 my-3 text-sm-center">Your answer: <span class="bold">{{ item.description }}</span></p>
-                    {% else %}
-                        <p class="mb-0 px-1 my-3 text-sm-center">{{ item.description }}</p>
                     {% endif %}
+
+                    <div class="px-4 px-lg-0 mx-xl-3">
+                        <span class="text--grey">{{ item.averageTitle }}</span>
+                        <h4 class="text--orange bold pt-2">{{ item.average }}%</h4>
+                    </div>
                 </div>
-            {% endfor %}
+                {% if item.description == 'Yes' or item.description == 'No' %}
+                    <p class="mb-0 px-1 my-3 pt-lg-2 text-sm-center  text-lg-left">Your answer: <strong>{{ item.description }}</strong></p>
+                {% else %}
+                    <p class="mb-0 px-1 my-3 text-sm-center  text-lg-left">{{ item.description }}</p>
+                {% endif %}
             </div>
-                <div class="comparison-item p-4 d-flex justify-content-around justify-content-lg-center col-12">
-                    <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!<span> {{ svg('smile', 'comparison__icon--smile align-self-center ml-lg-4') }}</span></h4>
-                </div>
+        {% endfor %}
         </div>
+            <div class="comparison__item p-4 d-flex justify-content-around justify-content-lg-center col-12">
+                <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!<span> {{ svg('smile', 'comparison__icon--smile align-self-center ml-lg-4') }}</span></h4>
+            </div>
     </div>
 </div>
