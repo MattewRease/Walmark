@@ -22,7 +22,8 @@
                 <nav class="footer__links col-12 col-sm-7 col-lg-9 py-3 d-inline-block" role="navigation">
                     <ul class="d-xl-flex justify-content-between pl-0">
                         <li class="footer__customers col-xl-4 mx-2">
-                            <span id="dropMenu" class="footer__customers--title dropdown" aria-haspopup="true">For customers</span>
+                            <label for="toggle-customers" id="dropMenu" class="footer__customers--title dropdown" aria-haspopup="true">For customers</label>
+                            <input type="checkbox" class="footer__checkbox" id="toggle-customers"/>
                             <ul class="dropdown-content footer__list">
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Ambassador</a></li>
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Products</a></li>
@@ -32,17 +33,18 @@
                             </ul>
                         </li>
                         <li class="footer__company col-xl-4 mx-2">
-                            <span id="dropMenu" class="footer__company--title"  aria-haspopup="true">Company</span>
+                            <label for="toggle-company" id="dropMenu" class="footer__company--title"  aria-haspopup="true">Company</label>
+                            <input  type="checkbox" class="footer__checkbox" id="toggle-company"/>
                             <ul class="dropdown-content footer__list">
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">About Walmark</a></li>
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Media</a></li>
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Jobs</a></li>
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Privacy policy</a></li>
-                                <li class="footer__list--item"><a class="footer__links--item" href="#">Contacts</a></li>
                             </ul>
                         </li>
                         <li class="footer__invite col-xl-4 mx-2">
-                            <span class="footer__invite--title" aria-haspopup="true">Receive inspiration & tips</span>
+                            <label for="toggle-invite" class="footer__invite--title" aria-haspopup="true">Receive inspiration & tips</label>
+                            <input type="checkbox" class="footer__checkbox" id="toggle-invite"/>
                             <ul class="footer__list">
                                 <li class="footer__list--item">
                                     <div class="invite__wrapper pb-1 pt-3">
