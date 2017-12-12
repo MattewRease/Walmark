@@ -74,7 +74,7 @@
             </div>
         {% endfor %}
         </div>
-            <div class="comparison__item p-4 d-flex justify-content-around justify-content-lg-center col-12">
+            <div class="comparison__item p-4 mt-3 d-flex justify-content-around justify-content-lg-center col-12">
                 <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!<span> {{ svg('smile', 'comparison__icon--smile align-self-center ml-lg-4') }}</span></h4>
             </div>
     </div>
