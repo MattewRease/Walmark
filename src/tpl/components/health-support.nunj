@@ -199,7 +199,10 @@
                         </div>
                         <div class="health-support__form col-12">
                             <div class="col-12 col-md-4">
-                                <label class="py-2 mt-3">Set reminders</label><span class="health-support__tooltip" data-placement="top" data-toggle="tooltip" title="Tooltip on top">{{ svg('question-mark', 'health-support__tooltip') }}</span>
+                                <label class="py-2 mt-3">Set reminders</label>
+                                <span class="health-support__tooltip icon icon--tooltip">
+                                    {{ svg('question-mark', 'health-support__tooltip') }}</span>
+                                <span class="health-support__tooltip--text">Text inside tooltip</span>
                                 <div class="form-row align-items-center">
                                     <select id="inputState" class="form-control col-8">
                                         <option selected>Every 3 days</option>

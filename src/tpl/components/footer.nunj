@@ -29,7 +29,6 @@
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Articles</a></li>
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Terms & Conditions</a></li>
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Sitemap</a></li>
-
                             </ul>
                         </li>
                         <li class="footer__company col-xl-4 mx-2">
@@ -40,7 +39,6 @@
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Jobs</a></li>
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Privacy policy</a></li>
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Contacts</a></li>
-
                             </ul>
                         </li>
                         <li class="footer__invite col-xl-4 mx-2">
@@ -60,7 +58,7 @@
             </div>
         </div>
     </footer>
-    <div class="pt-4 px-3 text-center footer__copiright">
+    <div class="py-3 text-center footer__copiright">
         <p>Copyright (C) 2017 Walmark line - all rights reserved</p>
     </div>
 </div>
