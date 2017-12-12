@@ -7,9 +7,11 @@ import 'svgxuse';
 import init from './init';
 import { render, renderFactory } from './render';
 import suffix from './components/suffix';
+import dropdown from './components/dropdown';
 
 const app = (config) => {
     init(suffix, document.querySelector('.js-suffix'));
+    render(suffix, document.getElementsById('dropdown'));
 };
 
 app(window.config);
