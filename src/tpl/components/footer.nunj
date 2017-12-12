@@ -4,45 +4,49 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-5 col-lg-3 text-center py-3 d-inline-block footer__social">
-                    <a class="navbar-brand" href="#">{{ svg('health-index', 'comparison-icon') }}<span class="header__title text--orange bold">WALMARK</span></a>
-                    <p class="text-left pb-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+                <div class="col-12 col-sm-5 col-lg-3 text-center px-0 py-3 d-inline-block footer__social">
+                    <a class="navbar-brand header__logo px-0 mx-0" href="#">
+                        {{ svg('site-logo', 'footer__logo--icon') }}
+                        {{ svg('site-logo-text', 'footer__logo--icon__text') }}
+                        <span class="header__logo--text bold">Your beggest supporter</span>
+                    </a>
+                    <p class="text-left pb-3 px-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
                     <div class="footer__social col-12 mb-3 text-left d-flex justify-content-lg-between">
-                        <a href='#' class="footer__social-icon">{{ svg('facebook', 'footer__social-icon') }}</a>
-                        <a href='#' class="footer__social-icon">{{ svg('youtube', 'footer__social-icon') }}</a>
-                        <a href='#' class="footer__social-icon">{{ svg('telegram', 'footer__social-icon') }}</a>
-                        <a href='#' class="footer__social-icon">{{ svg('instagram', 'footer__social-icon') }}</a>
-                        <a href='#' class="footer__social-icon">{{ svg('twitter', 'footer__social-icon') }}</a>
+                        <a href='#'>{{ svg('facebook', 'footer__social--icon') }}</a>
+                        <a href='#'>{{ svg('youtube', 'footer__social--icon') }}</a>
+                        <a href='#'>{{ svg('telegram', 'footer__social--icon') }}</a>
+                        <a href='#'>{{ svg('instagram', 'footer__social--icon') }}</a>
+                        <a href='#'>{{ svg('twitter', 'footer__social--icon') }}</a>
                     </div>
                 </div>
                 <nav class="footer__links col-12 col-sm-7 col-lg-9 py-3 d-inline-block" role="navigation">
-                    <ul class="d-xl-flex justify-content-between">
-                        <li class="footer__links-customers col-xl-4 mx-2">
-                            <a class="footer__links-customers-title" href="/" aria-haspopup="true">For customers</a>
-                            <ul>
-                                <li><a href="#">Ambassador</a></li>
-                                <li><a href="#">Products</a></li>
-                                <li><a href="#">Articles</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Sitemap</a></li>
+                    <ul class="d-xl-flex justify-content-between pl-0">
+                        <li class="footer__customers col-xl-4 mx-2">
+                            <span id="dropMenu" class="footer__customers--title dropdown" aria-haspopup="true">For customers</span>
+                            <ul class="dropdown-content footer__list">
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">Ambassador</a></li>
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">Products</a></li>
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">Articles</a></li>
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">Terms & Conditions</a></li>
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">Sitemap</a></li>
 
                             </ul>
                         </li>
-                        <li class="footer__links-company col-xl-4 mx-2">
-                            <a class="footer__links-company-title" href="/" aria-haspopup="true">Company</a>
-                            <ul>
-                                <li><a href="#">About Walmark</a></li>
-                                <li><a href="#">Media</a></li>
-                                <li><a href="#">Jobs</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Contacts</a></li>
+                        <li class="footer__company col-xl-4 mx-2">
+                            <span id="dropMenu" class="footer__company--title"  aria-haspopup="true">Company</span>
+                            <ul class="dropdown-content footer__list">
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">About Walmark</a></li>
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">Media</a></li>
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">Jobs</a></li>
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">Privacy policy</a></li>
+                                <li class="footer__list--item"><a class="footer__links--item" href="#">Contacts</a></li>
 
                             </ul>
                         </li>
-                        <li class="footer__links-links col-xl-4 mx-2">
-                            <a class="footer__links-links-title" href="/" aria-haspopup="true">Receive inspiration & tips</a>
-                            <ul class="footer__invite">
-                                <li>
+                        <li class="footer__invite col-xl-4 mx-2">
+                            <span class="footer__invite--title" aria-haspopup="true">Receive inspiration & tips</span>
+                            <ul class="footer__list">
+                                <li class="footer__list--item">
                                     <div class="invite__wrapper pb-1 pt-3">
                                         <input class="col-9 invite__input" placeholder="Type your email"></input>
                                         <a href="#" class="btn btn--ok text--white footer__btn col-3" href="#">Ok</a>
