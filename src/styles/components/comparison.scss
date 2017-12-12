@@ -1,7 +1,17 @@
 .comparison {
+    display: flex;
+    flex-wrap: wrap;
+
     &__item {
         border: $main-border;
         border-radius: $main-border-radius;
+
+
+        @include media-breakpoint-up(lg) {
+            justify-content: space-between;
+            margin: 0 10px;
+            flex: 1 0 0;
+        }
     }
 
     &__icon {
@@ -14,6 +24,14 @@
         &--smile {
             @include size(20px);
             fill: currentColor;
+        }
+
+        &--progress {
+            @include size(60px);
+
+            @include media-breakpoint-up(xl) {
+                @include size(80px);
+            }
         }
 
         &--block {
