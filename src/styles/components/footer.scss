@@ -1,6 +1,7 @@
 .footer {
     $footer-bg-main: #585858;
     $footer-bg: #4c5459;
+    overflow: hidden;
 
     &__wrap {
         background-color: $footer-bg-main;
@@ -32,8 +33,8 @@
 
         &--icon {
             @include size(30px);
-            border-radius: $main-border-radius;
             margin: 0 3px;
+            border-radius: $main-border-radius;
 
             &:hover {
                 transform: scale(1.2);
@@ -50,7 +51,6 @@
         background-color: $footer-bg-main;
 
         &--item {
-            display: none;
             color: rgb(179, 179, 179);
 
             &:hover {
@@ -65,32 +65,62 @@
         }
     }
 
+    &__checkbox {
+        display: none;
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__checkbox:checked + &__list {
+            display: block;
+        }
+
+        &__list {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            background-color: $footer-bg-main;
+
+            &--item {
+                padding: 5px 0;
+            }
+        }
+    }
+
+    &__list {
+        display: none;
+        padding-left: 0;
+
+        &--item {
+            list-style: none;
+        }
+
+        @include media-breakpoint-up(xl) {
+            display: block;
+        }
+    }
+
     &__customers,
     &__company,
     &__invite {
-        list-style: none;
         padding-top: 25px;
         color: $grey;
+        list-style: none;
 
         &--title {
             display: inline-block;
-            margin-bottom: 5px;
             width: 100%;
+            margin-bottom: 5px;
+            cursor: pointer;
             border-bottom: 1px solid rgb(192, 192, 192);
+
+            @include media-breakpoint-up(xl) {
+                cursor: default;
+            }
         }
     }
 
     &__copiright {
         background-color: $white;
-    }
-
-    &__list {
-        padding-left: 0;
-        list-style: none;
-
-        &--item {
-            list-style: none;
-        }
     }
 
     &__btn {
