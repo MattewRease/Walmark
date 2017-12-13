@@ -3,8 +3,22 @@
     border: $main-border;
     border-radius: $main-border-radius;
 
+    &__inner {
+        padding: 25px 10px 10px;
+        text-align: center;
+
+        @include media-breakpoint-up(xl) {
+            width: 70%;
+            margin: auto;
+            padding-bottom: 30px;
+        }
+    }
+
     &__input {
-        min-height: 150px;
+        min-height: 130px;
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
         line-height: 1;
         border: none;
         border: 1px solid #757373;
@@ -25,10 +39,18 @@
         }
     }
 
+    &__btn {
+        padding: 15px 0;
+    }
+
     &__rating {
         &--icon {
-            @include size(25px);
-            margin: 0 5px;
+            @include size(18px);
+            margin: 3px 5px 0;
+
+            @include media-breakpoint-up(md) {
+                @include size(25px);
+            }
         }
 
         &--direction {
