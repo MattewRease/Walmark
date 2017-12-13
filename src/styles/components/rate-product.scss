@@ -25,10 +25,18 @@
         }
     }
 
+    &__btn {
+        padding: 15px 0;
+    }
+
     &__rating {
         &--icon {
-            @include size(25px);
-            margin: 0 5px;
+            @include size(18px);
+            margin: 3px 5px 0;
+
+            @include media-breakpoint-up(md) {
+                @include size(25px);
+            }
         }
 
         &--direction {
