@@ -22,10 +22,14 @@
 
         &--text {
             position: absolute;
-            top: 35px;
+            top: 40px;
             left: 55px;
             font-size: 12px;
             color: $orange;
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include size(0, 30px);
         }
     }
 
@@ -41,6 +45,10 @@
                 @include size(30px);
             }
 
+            @include media-breakpoint-up(xl) {
+                @include size(20px);
+            }
+
             &:hover {
                 transform: scale(1.5);
                 transition: .2s;
@@ -51,10 +59,44 @@
             border-radius: 50%;
         }
 
+        &--icon-user {
+            @include size(15px);
+            fill: #4d4d4d;
+        }
+
         &--icon-search {
             padding: 4px;
             border: 2px solid $orange;
             border-radius: 50%;
+
+            @include media-breakpoint-up(xl) {
+                @include size(30px);
+            }
         }
+    }
+
+    &__list {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        list-style: none;
+
+        &--item {
+            color: black;
+        }
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        @include media-breakpoint-up(xl) {
+            display: flex !important;
+        }
+    }
+
+    &__links--item {
+        padding: 0 15px;
+        color: black;
     }
 }

@@ -10,34 +10,73 @@
                     <span class="header__logo--text bold d-none d-md-inline">Your beggest supporter</span>
                 </a>
                 <ul class="nav justify-content-end header__profile d-flex align-items-center">
-                    <li class="nav-item pb-1">
-                        <a class="nav-link px-1 pl-sm-2 pl-md-1" href="#">
-                            <img class="header__profile--img" srcset="http://satyr.io/25x25/1" alt="img">
+                    <li class="mx-lg-2 d-none d-xl-inline">
+                        <span>Helpline: <strong>800 141 141</strong></span>
+                    </li>
+                    <li>
+                        <a class="pl-sm-2 pl-md-1" href="#">
+                            <img class="header__profile--img d-xl-none" srcset="http://satyr.io/25x25/1" alt="img">
+                            {{ svg('icon-user', 'header__profile--icon-user d-none d-xl-inline') }}
                         </a>
                     </li>
-                    <li class="nav-item mx-lg-2">
-                        <a class="nav-link px-1 pl-sm-2 pl-md-1" href="#">
+                    <li class="mr-lg-2">
+                        <a class="px-1 pl-sm-2 pl-md-1" href="#">
                             {{ svg('icon-logout', 'icon--orange header__profile--icon d-md-none') }}
                             <span class="px-2 text--orange d-none d-md-inline border-right border-right-1">Jana Novakova</span>
+                        </a>
+                        <a href="#">
                             <span class="px-2 text--orange d-none d-md-inline">Log out</span>
                         </a>
                     </li>
-                    <li class="nav-item mx-lg-2">
-                        <a class="nav-link px-1 pl-sm-2 pl-md-1" href="#">
+                    <li class="mx-lg-2 d-flex flex-wrap align-items-center">
+                        <a class="px-1 pl-sm-2 pl-md-1" href="#">
                             {{ svg('icon-wishlist', 'icon--orange header__profile--icon') }}
                         </a>
+                        <span class="d-none d-xl-inline">Wish list is empty</span>
+                        <span class="tooltip icon icon--tooltip ml-2 d-none d-xl-inline">
+                            {{ svg('question-mark', 'tooltip') }}
+                        <span class="tooltip--text">Text inside tooltip</span>
+                        </span>
                     </li>
-                    <li class="nav-item mx-lg-2">
-                        <a class="nav-link px-1 pl-sm-2 pl-md-1" href="#">
+                    <li class="mx-lg-2 d-xl-none">
+                        <a class="px-1 pl-sm-2 pl-md-1" href="#">
                             {{ svg('icon-search', 'header__profile--icon-search') }}
                         </a>
                     </li>
-                    <li class="nav-item px-0 mx-0">
+                    <li class="px-0 mx-0 d-xl-none">
                         <span class="pl-2 d-none d-md-inline">MENU</span>
                     </li>
-                    <li class="nav-item pl-0 pt-1">
-                        <a href="#" class="navbar-toggler navbar-toggler-right">
+                    <li class="pl-0 pt-1 d-xl-none">
+                        <a href="#" class="dropMenu navbar-toggler navbar-toggler-right">
                             <span>{{ svg('menu-button', 'header__profile--icon') }}</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="dropdown-content header__list w-100 mb-0 pl-0">
+                    <li class="header__list--item">
+                        <a class="header__links--item" href="#">Homepage</a>
+                    </li>
+                    <li class="header__list--item">
+                        <a class="header__links--item" href="#">About us</a>
+                    </li>
+                    <li class="header__list--item">
+                        <a class="header__links--item" href="#">Products</a>
+                    </li>
+                    <li class="header__list--item">
+                        <a class="header__links--item" href="#">Nutrition programs</a>
+                    </li>
+                    <li class="header__list--item">
+                        <a class="header__links--item" href="#">Articles</a>
+                    </li>
+                    <li class="header__list--item">
+                        <a class="header__links--item" href="#">Ambassador</a>
+                    </li>
+                    <li class="header__list--item">
+                        <a href="#" class="btn btn--done px-4 mb-2 py-1 w-100 d-inline-block">Health index</a>
+                    </li>
+                    <li class="header__list--item">
+                        <a class="header__links--item pr-0" href="#">
+                            {{ svg('icon-search', 'header__profile--icon-search d-none d-xl-inline-block') }}
                         </a>
                     </li>
                 </ul>
