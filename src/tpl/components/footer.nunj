@@ -22,7 +22,12 @@
                 <nav class="footer__links col-12 col-sm-7 col-lg-9 py-3 d-inline-block" role="navigation">
                     <ul class="d-xl-flex justify-content-between pl-0">
                         <li class="footer__customers col-xl-4 mx-2">
-                            <label for="toggle-customers" id="dropMenu" class="footer__customers--title dropdown" aria-haspopup="true">For customers</label>
+                            <label for="toggle-customers" id="dropMenu" class="footer__customers--title dropdown" aria-haspopup="true">
+                                For customers
+                                <span class="footer__dropdown">
+                                    {{ svg('icon-triangle', 'footer__dropdown-icon') }}
+                                </span>
+                            </label>
                             <input type="checkbox" class="footer__checkbox" id="toggle-customers"/>
                             <ul class="dropdown-content footer__list">
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Ambassador</a></li>
@@ -33,7 +38,7 @@
                             </ul>
                         </li>
                         <li class="footer__company col-xl-4 mx-2">
-                            <label for="toggle-company" id="dropMenu" class="footer__company--title"  aria-haspopup="true">Company</label>
+                            <label for="toggle-company" id="dropMenu" class="footer__company--title"  aria-haspopup="true">Company<span>{{ svg('icon-triangle', 'footer__dropdown-icon') }}</span></label>
                             <input  type="checkbox" class="footer__checkbox" id="toggle-company"/>
                             <ul class="dropdown-content footer__list">
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">About Walmark</a></li>
@@ -43,7 +48,7 @@
                             </ul>
                         </li>
                         <li class="footer__invite col-xl-4 mx-2">
-                            <label for="toggle-invite" class="footer__invite--title" aria-haspopup="true">Receive inspiration & tips</label>
+                            <label for="toggle-invite" class="footer__invite--title" aria-haspopup="true">Receive inspiration & tips<span>{{ svg('icon-triangle', 'footer__dropdown-icon') }}</span></label>
                             <input type="checkbox" class="footer__checkbox" id="toggle-invite"/>
                             <ul class="footer__list">
                                 <li class="footer__list--item">

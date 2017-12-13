@@ -69,9 +69,26 @@
         display: none;
     }
 
+    &__dropdown-icon {
+        @include size(10px);
+        position: absolute;
+        top: calc(50% + 5px);
+        right: 30px;
+        transform: rotate(90deg);
+        fill: currentColor;
+
+        @include media-breakpoint-up(xl) {
+            display: none;
+        }
+    }
+
     @include media-breakpoint-down(lg) {
         &__checkbox:checked + &__list {
             display: block;
+        }
+
+        &__checkbox:checked + &__dropdown-icon {
+            transform: rotate(-90deg);
         }
 
         &__list {
