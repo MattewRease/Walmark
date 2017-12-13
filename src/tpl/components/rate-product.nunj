@@ -5,10 +5,10 @@
     <div class="row">
         <h3 class="title w-100 bold px-0 mb-0 pt-2 pb-3 mt-4">Rate the product</h3>
         <div class="rate-product col-12 mt-4">
-            <div class="p-2">
-                <textarea  class="rate-product__input w-100 my-2" placeholder="Your review"/></textarea>
+            <div class="rate-product__inner">
+                <textarea  class="rate-product__input" placeholder="Your review"/></textarea>
                 <div class="d-flex flex-wrap align-content-between text-center">
-                    <div class="align-self-center col-5 col-md-2 col-lg-2 pr-0 text-sm-right text-md-left">
+                    <div class="align-self-center col-5 col-md-2 col-lg-2 px-0 text-sm-right text-md-left">
                         <h6 class="text--grey text-right d-inline text-md-left">Your rating: </h6>
                     </div>
                     <div class="rate-product__rating rate-product__rating--direction col-7  col-md-8 col-lg-8 align-self-center text-left">
