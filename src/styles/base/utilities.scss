@@ -1,25 +1,3 @@
-/**
- * Utilities
- *
- * weight: -5
- *
- * Styleguide Base - Utilities
- */
-
-/**
- * Hidden element
- *
- * markup:
- * <p class="u-hidden">…</p>
- *
- * weight: -10
- *
- * Styleguide Base - Utilities - Hidden element
- */
-.u-hidden {
-    display: none;
-}
-
 .bold {
     font-weight: 900;
 }
@@ -51,6 +29,8 @@
 
 // Flex-box utilities
 // FIXME: Preco potrebujes pridavat ten isty styl aj na SM breakpoint?
+
+//TODO: I use this property from sm display-width, but don't use with xs
 .order-1 {
     order: 1;
 
@@ -81,25 +61,6 @@
     }
 }
 
-// FIXME: Lepsi naming, link-grey poukazuje na sedu farbu a nie na velkost pisma a inych properties
-// Lepsie si je spravit viacero class na to, napr. link--small, link--grey
-// Navyse v dizajne mali byt rozne velkosti fontu pri review a type produktu, takze by bolo lepsie skor pouzit BEM class pre dane komponenty
-// napriklad: .review__label a .product__type
-.link-grey {
-    font-size: 12px;
-    color: #a3a3a3;
-    text-decoration: none;
-
-    // FIXME: toto by malo byt vseobecne pre vsetky linky, v HTML mas preklep <a hfef="#"><span class="link-grey">Food Supplement</span></a>
-    // Potom by si to nemusel obalovat v <span> a davat na to :hover pre text-decoration a cursor
-    &:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-}
-
-// FIXME: aby to bolo viac reusable, bolo by lepsie si nastavit skor vseobecne velkosti pre ikony
-// napriklad: .icon--base, potom by si mohol pre ine ikony pouzit tu istu class
 .icon--base {
     @include size(15px);
 }
@@ -117,4 +78,3 @@
         }
     }
 }
-
