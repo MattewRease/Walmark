@@ -38,12 +38,12 @@
                         <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
                         <p> Aenean placerat. Nam libero tempore, cum soluta nobis est eligendi.</p>
                     </div>
-                    <picture class="index-results__puck--icon col-12 col-sm-6 col-lg-12 text-center text-md-right text-xl-left my-3">
+                    <picture class="col-12 col-sm-6 col-lg-12 text-center text-md-right text-xl-left my-3">
                         <source srcset="http://satyr.io/290x330" media="(min-width: 1200px)">
                         <source srcset="http://satyr.io/260x290" media="(min-width: 992px)">
                         <source srcset="http://satyr.io/205x230" media="(min-width: 768px)">
                         <source srcset="http://satyr.io/230x280" media="(min-width: 576px)">
-                        <img srcset="http://satyr.io/200x250" alt="">
+                        <img srcset="http://satyr.io/200x250" alt="img">
                     </picture>
                 </div>
                 <div class="col-12 col-lg-8">
@@ -70,9 +70,9 @@
                                                 </a>
                                             {% endfor %}
                                         </div>
-                                            <label class="link-grey pl-2">305 Reviews</label>
+                                        <label class="index-results__label pl-2">305 Reviews</label>
                                         <h5 class="text--green bold my-0">{{ item.productName }}</h5>
-                                        <a hfef="#"><span class="link-grey">Food Supplement</span></a>
+                                        <a hfef="#" class="index-results__link">Food Supplement</a>
                                         <p class="d-none d-md-block">Fusce tellus odio, dapibus id fermentum quis...</p>
                                     </div>
                                 </div>
