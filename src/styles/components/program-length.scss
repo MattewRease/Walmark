@@ -46,10 +46,18 @@
 
     &__list {
         flex: 1 0 auto;
+
+        &--icon {
+            @include size(20px);
+            fill: currentColor;
+        }
     }
 
     &__short,
     &__long {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
         position: relative;
         padding: 20px;
         background-color: $grey-bg;
@@ -71,12 +79,13 @@
             &::before {
                 margin-right: 10px;
                 font-size: 18px;
-                content: '⯈';
+                content: svg-load('icon-triangle.svg', fill=#000, width=10, height=10, stroke-width=6);
             }
         }
     }
 
     &__price {
+        flex: 0 0 auto;
         background-color: white;
     }
 }

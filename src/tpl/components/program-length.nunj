@@ -1,41 +1,42 @@
+{% from '../helpers/svg.nunj' import svg %}
 
 <div class="program-length">
     <div class="program-length__title">
         <h3 class="bold text-white text-center pt-3">What the option for the program length?</h3>
     </div>
     <div class="program-length__description">
-        <p class="program-length__description--text py-3 col-12">Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Ut tempus purus at lorem. Etiam bibendum elit eget erat. Aliquam erat volutpat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+        <p class="program-length__description--text py-3 col-12 mb-0">Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Ut tempus purus at lorem. Etiam bibendum elit eget erat. Aliquam erat volutpat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
     </div>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-12 program-length">
-            <div class="d-flex flex-wrap justify-content-around">
-                <div class="program-length__short my-5 col-md-5 col-12 d-flex flex-column">
-                    <div class="12 program-length__list">
-                        <h5 class="col-12 text--green bold">Program for 3 month</h5>
-                        <ul class="pl-3">
-                            <li>Fusce tellus odio, dapibus quis nostrum</li>
-                        </ul>
-                    </div>
-                    <div class="program-length-price px-3 mx-3 py-4">
-                        <h6 class="text-center text--orange pb-3">Show Total price on partner eshop</h6>
-                        <a href="#" class="col-12 btn btn--price"><span>Add to shopping list</span></a>
-                    </div>
+    <div class="row d-flex flex-wrap">
+        <div class="my-5 col-12 col-md-6 d-flex">
+            <div class="program-length__short">
+                <div class="program-length__list">
+                    <h5 class="d-flex align-items-center col-12 text--green bold"><span class="pr-3 d-none d-sm-inline">{{ svg('icon-triangle', 'program-length__list--icon') }}</span>Program for 3 month</h5>
+                    <ul class="pl-3">
+                        <li>Fusce tellus odio, dapibus quis nostrum</li>
+                    </ul>
                 </div>
-                <div class="program-length__long my-5 col-md-5 col-12 d-flex flex-column">
-                    <div class="12 program-length__list">
-                    <h5 class="col-12 text--green bold">Program for 3 month</h5>
-                        <ul class="pl-3">
-                            <li>Fusce tellus odio, dapibus quis nostrum</li>
-                            <li>Fusce tellus odio, dapibus quis nostrum</li>
-                            <li>Fusce tellus odio, dapibus quis nostrum</li>
-                        </ul>
-                    </div>
-                    <div class="program-length__price px-3 mx-3 py-4">
-                        <h6 class="text-center text--orange pb-3">Show Total price on partner eshop</h6>
-                        <a href="#" class="col-12 btn btn--price"><span>Add to shopping list</span></a>
-                    </div>
+                <div class="program-length__price px-3 mx-3 py-4">
+                    <h6 class="text-center text--orange pb-3">Show Total price on partner eshop</h6>
+                    <a href="#" class="col-12 btn btn--price"><span>Add to shopping list</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="my-5 col-12 col-md-6 d-flex">
+            <div class="program-length__long">
+                <div class="program-length__list">
+                    <h5 class="col-12 text--green bold"><span class="pr-3 d-none d-sm-inline">{{ svg('icon-triangle', 'program-length__list--icon') }}</span>Program for 3 month</h5>
+                    <ul class="pl-3">
+                        <li>Fusce tellus odio, dapibus quis nostrum</li>
+                        <li>Fusce tellus odio, dapibus quis nostrum</li>
+                        <li>Fusce tellus odio, dapibus quis nostrum</li>
+                    </ul>
+                </div>
+                <div class="program-length__price px-3 mx-3 py-4">
+                    <h6 class="text-center text--orange pb-3">Show Total price on partner eshop</h6>
+                    <a href="#" class="col-12 btn btn--price"><span>Add to shopping list</span></a>
                 </div>
             </div>
         </div>
