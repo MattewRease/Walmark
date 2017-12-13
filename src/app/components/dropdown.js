@@ -1,13 +1,10 @@
-document.getElementById('dropMenu').addEventListener('click', () => {
-    document.getElementsByClassName('dropdown-content').classList.add('d-block');
+const button = document.querySelector('.dropMenu');
+const menu = document.querySelector('.dropdown-content');
+button.addEventListener('click', () => {
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+    }
 }
 );
-
-// window.onclick = function f(unfocus) {
-//     const myDropdownContent = document.querySelector('.dropdown-content');
-//     if (!unfocus.target.matches('.dropdown')) {
-//         if (myDropdownContent.classList.contains('d-block')) {
-//             myDropdownContent.classList.remove('d-block');
-//         }
-//     }
-// };
