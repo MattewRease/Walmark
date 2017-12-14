@@ -128,9 +128,9 @@
             }
 
             @include media-breakpoint-up(md) {
-                top: 53px;
-                transform: rotate(50deg);
-                height: 130px;
+                top: 50px;
+                transform: rotate(48deg);
+                height: 136px;
             }
 
             @include media-breakpoint-up(lg) {
@@ -256,7 +256,7 @@
         border: $main-border;
         border-radius: $main-border-radius;
 
-        &-content {
+        &--content {
             flex-wrap: wrap;
             padding: $main-padding;
 
@@ -265,20 +265,20 @@
             }
         }
 
-        &-list {
+        &--list {
             list-style: none;
-
-            &-item::before {
-                padding: 0 3px;
-                margin-right: 10px;
-                color: #00983d;
-                border: 1px solid #00983d;
-                border-radius: 50%;
-                content: '▲';
-            }
         }
 
-        &-text {
+        &--item::before {
+            padding: 0 3px;
+            margin-right: 10px;
+            color: #00983d;
+            border: 1px solid #00983d;
+            border-radius: 50%;
+            content: '▲';
+        }
+
+        &--text {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -294,7 +294,7 @@
             }
         }
 
-        &-icon {
+        &--icon {
             @include size(25px);
             margin-left: 10px;
             fill: currentColor;
@@ -310,7 +310,7 @@
         border: $main-border;
         border-radius: $main-border-radius;
 
-        &-text {
+        &--text {
             font-size: 18px;
 
             @include media-breakpoint-only(sm) {
@@ -318,35 +318,35 @@
             }
         }
 
-        &-icon {
+        &--icon {
             @include size(30px);
             fill: #00983d;
         }
 
-        &-bmi {
+        &--bmi {
             font-size: 32px;
         }
 
-        &-divider {
+        &--divider {
             border-left: 1px solid black;
         }
 
-        &-waist {
+        &--waist {
             @include size(65px, 75px);
             fill: #7e7e7e;
         }
 
-        &-cup {
+        &--cup {
             @include size(75px, 90px);
             fill: #7e7e7e;
         }
     }
 
-    &__liquid-litres {
+    &__litres {
         font-size: 30px;
         font-weight: 900;
 
-        &-text {
+        &--text {
             font-size: 24px;
         }
     }

@@ -1,18 +1,18 @@
 {% from '../../helpers/svg.nunj' import svg %}
 
 <div class="health__rules">
-    <div class="health__rules-content">
+    <div class="health__rules--content">
         <h5 class="bold text--green">5 Areas to Improve Your Health</h5>
         <p>Your Health Index is quite high. But it can be even higher! Based on your test responses, we identify several areas to work on:</p>
-        <ul class="health__rules-list pl-0">
-            <li class="health__rules-list-item py-1">Maintain a Healthy Diet and Exercise</li>
-            <li class="health__rules-list-item py-1">Be sure Your Perscriptions Are Up</li>
-            <li class="health__rules-list-item py-1">Make relaxation a Priority</li>
-            <li class="health__rules-list-item py-1">Get Enought Sleep</li>
-            <li class="health__rules-list-item py-1">Kick Your Unhealthy Vices To The Curb</li>
+        <ul class="health__rules--list pl-0">
+            <li class="health__rules--item py-1">Maintain a Healthy Diet and Exercise</li>
+            <li class="health__rules--item py-1">Be sure Your Perscriptions Are Up</li>
+            <li class="health__rules--item py-1">Make relaxation a Priority</li>
+            <li class="health__rules--item py-1">Get Enought Sleep</li>
+            <li class="health__rules--item py-1">Kick Your Unhealthy Vices To The Curb</li>
         </ul>
     </div>
-    <div class="health__rules-text">
-        <p class="mb-0">Don't worry, we will help you get better!</p><span>{{ svg('smile', 'health__rules-icon') }}</span>
+    <div class="health__rules--text">
+        <p class="mb-0">Don't worry, we will help you get better!</p><span>{{ svg('smile', 'health__rules--icon') }}</span>
     </div>
 </div>
