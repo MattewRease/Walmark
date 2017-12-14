@@ -74,9 +74,9 @@
                     <li class="header__list--item">
                         <a href="#" class="btn btn--done px-4 mb-2 py-1 w-100 d-inline-block">Health index</a>
                     </li>
-                    <li class="header__list--item">
+                    <li class="header__list--item d-none d-xl-inline-block">
                         <a class="header__links--item pr-0" href="#">
-                            {{ svg('icon-search', 'header__profile--icon-search d-none d-xl-inline-block') }}
+                            {{ svg('icon-search', 'header__profile--icon-search') }}
                         </a>
                     </li>
                 </ul>

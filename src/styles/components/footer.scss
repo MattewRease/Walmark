@@ -22,7 +22,7 @@
         &--text {
             position: absolute;
             top: 50px;
-            left: 55px;
+            left: calc(50% - 60px);
             font-size: 12px;
             color: $orange;
         }
@@ -124,6 +124,10 @@
         background-color: $orange;
         border: 1px solid $orange;
         border-radius: $main-border-radius;
+
+        &:hover {
+            background-color: $orange-dark;
+        }
     }
 
     @include media-breakpoint-down(lg) {
