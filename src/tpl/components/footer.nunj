@@ -5,10 +5,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-5 col-lg-3 text-center px-0 py-3 d-inline-block footer__social">
-                    <a class="navbar-brand header__logo px-0 mx-0" href="#">
+                    <a class="navbar-brand footr__logo px-0 mx-0" href="#">
                         {{ svg('site-logo', 'footer__logo--icon') }}
                         {{ svg('site-logo-text', 'footer__logo--icon__text') }}
-                        <span class="header__logo--text bold">Your beggest supporter</span>
+                        <span class="footer__logo--text bold">Your beggest supporter</span>
                     </a>
                     <p class="text-left pb-3 px-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
                     <div class="footer__social col-12 mb-3 text-left d-flex justify-content-lg-between">
@@ -52,7 +52,7 @@
                             <input type="checkbox" class="footer__checkbox" id="toggle-invite"/>
                             <ul class="footer__list">
                                 <li class="footer__list--item">
-                                    <div class="invite__wrapper pb-1 pt-3">
+                                    <div class="invite__inner pb-1 pt-3">
                                         <input class="col-9 invite__input" placeholder="Type your email"></input>
                                         <a href="#" class="btn btn--ok text--white footer__btn col-3" href="#">Ok</a>
                                     </div>
