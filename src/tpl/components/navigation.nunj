@@ -1,31 +1,109 @@
+{%
+    set items = [
+        {
+            classItem: 'navigation__list--index',
+            itemTitle: 'Health index'
+        },
+        {
+            classItem: 'navigation__list--orders',
+            itemTitle: 'My orders'
+        },
+        {
+            classItem: 'navigation__list--settings',
+            itemTitle: 'Profile settings'
+        }
+    ]
+%},
+{%
+    set indexItems = [
+        {
+            itemTitle: 'Lorem'
+        },
+        {
+            itemTitle: 'Sapiente'
+        },
+        {
+            itemTitle: 'Hymenaeos'
+        },
+        {
+            itemTitle: 'Profile'
+        }
+    ]
+%},
+{%
+    set orderItems = [
+        {
+            itemTitle: 'Health index'
+        },
+        {
+            itemTitle: 'Hymenaeos'
+        },
+        {
+            itemTitle: 'Sapiente'
+        },
+        {
+            itemTitle: 'Profile'
+        },
+        {
+            itemTitle: 'Class'
+        }
+    ]
+%},
+{%
+    set profileItems = [
+        {
+            itemTitle: 'Health index'
+        },
+        {
+            itemTitle: 'My orders'
+        },
+        {
+            itemTitle: 'Profile settings'
+        },
+        {
+            itemTitle: 'Monday'
+        }
+    ]
+%}
+
 <div class="container-fluid">
     <div class="row">
         <nav class="navigation col-12 py-4 px-0">
             <ul class="navigation__list pl-0 mb-0">
-                <li class="navigation__list--index navigation__item mb-1"><a href="#" class="navigation__link"> Health index</a>
+            {% for item in items %}
+                <li class="{{ item.classItem }} navigation__item mb-1">
+                    <a href="#" class="navigation__link">
+                        {{ item.itemTitle }}
+                    </a>
                     <ul class="navigation__submenu col-12">
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Health index</a></li>
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Lorem</a></li>
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Sapiente</a></li>
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Hymenaeos</a></li>
+                        {% if item.itemTitle=='Health index' %}
+                            {% for index in indexItems %}
+                                <li class="navigation__submenu--item">
+                                    <a href="#" class="navigation__link">
+                                        {{ index.itemTitle }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        {% elif item.itemTitle=='My orders' %}
+                            {% for order in orderItems %}
+                                <li class="navigation__submenu--item">
+                                    <a href="#" class="navigation__link">
+                                        {{ order.itemTitle }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        {% elif item.itemTitle=='Profile settings' %}
+                            {% for profile in profileItems %}
+                                <li class="navigation__submenu--item">
+                                    <a href="#" class="navigation__link">
+                                        {{ profile.itemTitle }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
                     </ul>
                 </li>
-                <li class="navigation__list--orders navigation__item mb-1"><a href="#" class="navigation__link"> My orders</a>
-                    <ul class="navigation__submenu col-12">
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Health index</a></li>
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Hymenaeos</a></li>
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">My orders</a></li>
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Maecenas</a></li>
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">My orders</a></li>
-                    </ul>
-                </li>
-                <li class="navigation__list--settings navigation__item mb-1"><a href="#" class="navigation__link"> Profile settings</a>
-                    <ul class="navigation__submenu col-12">
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Health index</a></li>
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Hymenaeos</a></li>
-                        <li class="navigation__submenu--item"><a href="#" class="navigation__link">Class</a></li>
-                    </ul>
-                </li>
+            {% endfor %}
             </ul>
         </div>
     </div>
