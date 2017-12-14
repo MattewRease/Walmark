@@ -77,8 +77,7 @@
 
     &__list {
         display: none;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-flow: column wrap;
         list-style: none;
 
         &--item {

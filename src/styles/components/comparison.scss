@@ -6,7 +6,6 @@
         border: $main-border;
         border-radius: $main-border-radius;
 
-
         @include media-breakpoint-up(lg) {
             justify-content: space-between;
             margin: 0 10px;
