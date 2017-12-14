@@ -13,7 +13,7 @@
             itemTitle: 'Profile settings'
         }
     ]
-%},
+%}
 {%
     set indexItems = [
         {
@@ -29,7 +29,7 @@
             itemTitle: 'Profile'
         }
     ]
-%},
+%}
 {%
     set orderItems = [
         {
@@ -48,7 +48,7 @@
             itemTitle: 'Class'
         }
     ]
-%},
+%}
 {%
     set profileItems = [
         {
