@@ -50,7 +50,7 @@
                         <li class="footer__invite col-xl-4 mx-2">
                             <label for="toggle-invite" class="footer__invite--title" aria-haspopup="true">Receive inspiration & tips<span>{{ svg('icon-triangle', 'footer__dropdown-icon') }}</span></label>
                             <input type="checkbox" class="footer__checkbox" id="toggle-invite"/>
-                            <ul class="footer__list">
+                            <ul class="footer__list pr-xl-0">
                                 <li class="footer__list--item">
                                     <div class="invite__inner pb-1 pt-3">
                                         <input class="col-9 invite__input" placeholder="Type your email"></input>

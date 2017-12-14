@@ -88,7 +88,7 @@
                             {{ svg('health-index', 'health-support__index') }}
                         </div>
                         <div class="col-8 col-sm-10 col-md-6 col-xl-7 pt-1">
-                            <p class="health-support__description mb-1 pt-md-2">Remaining time <span class="bold">24 days</span></p>
+                            <p class="health-support__description mb-1 pt-md-2">Remaining time <strong>24 days</strong></p>
                             <p class="health-support__description">You will be able to evaluate your plan once you finish it.</p>
                         </div>
                         <div class="d-none d-md-block col-md-3 col-xl-2 mt-3">

@@ -9,11 +9,11 @@
                     {{ svg('site-logo-text', 'header__logo--icon__text d-none d-sm-inline-block pt-sm-2 pt-md-0') }}
                     <span class="header__logo--text bold d-none d-md-inline">Your beggest supporter</span>
                 </a>
-                <ul class="nav justify-content-end header__profile d-flex align-items-center">
+                <ul class="nav header__profile justify-content-end d-flex align-items-center">
                     <li class="mx-lg-2 d-none d-xl-inline">
                         <span>Helpline: <strong>800 141 141</strong></span>
                     </li>
-                    <li>
+                    <li class="pb-1 pb-xl-0">
                         <a class="pl-sm-2 pl-md-1" href="#">
                             <img class="header__profile--img d-xl-none" srcset="http://satyr.io/25x25/1" alt="img">
                             {{ svg('icon-user', 'header__profile--icon-user d-none d-xl-inline') }}
@@ -28,7 +28,7 @@
                             <span class="px-2 text--orange d-none d-md-inline">Log out</span>
                         </a>
                     </li>
-                    <li class="mx-lg-2 d-flex flex-wrap align-items-center">
+                    <li class=" align-items-center ml-lg-2 d-flex flex-wrap">
                         <a class="px-1 pl-sm-2 pl-md-1" href="#">
                             {{ svg('icon-wishlist', 'icon--orange header__profile--icon') }}
                         </a>
