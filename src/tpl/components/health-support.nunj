@@ -77,7 +77,7 @@
     ]
 %}
 
-<div class="container">
+<section class="container">
     <div class="row">
         <div class="col-12">
             <div class="health-support">
@@ -248,4 +248,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>
