@@ -33,7 +33,7 @@
     ]
 %}
 
-<div class="container">
+<section class="container">
     <div class="row">
         <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3">My comparison</h3>
         <h4 class="text-center col-12  mb-0 py-4 my-2">See how you compare with others</h4>
@@ -78,4 +78,4 @@
                 <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!<span> {{ svg('smile', 'comparison__icon--smile align-self-center ml-lg-4') }}</span></h4>
             </div>
     </div>
-</div>
+</section>

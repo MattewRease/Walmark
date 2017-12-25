@@ -35,7 +35,7 @@
     ]
 %}
 
-<div class="container">
+<section class="container">
     <div class="row">
         <div class="col-12">
         <h3 class="col-12 bold px-0 pt-2 pb-3 text-center">Your Health Index results</h3>
@@ -54,4 +54,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

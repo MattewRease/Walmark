@@ -1,7 +1,7 @@
 {% from '../helpers/svg.nunj' import svg %}
 {% import '../helpers/stars.nunj' as stars %}
 
-<div class="container">
+<section class="container">
     <div class="row">
         <h3 class="title w-100 bold px-0 mb-0 pt-2 pb-3 mt-4">Rate the product</h3>
         <div class="rate-product col-12 mt-4">
@@ -24,5 +24,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>

@@ -14,7 +14,7 @@
     ]
 %}
 
-<div class="container">
+<section class="container">
     <div class="row">
         <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3 mt-4">My Health Index history</h3>
         <div class="col-12 mt-4  text-center">
@@ -26,5 +26,5 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
 </div>
