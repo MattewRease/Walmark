@@ -42,6 +42,7 @@
             position: absolute;
             bottom: -10px;
             left: calc(50% - 40px);
+            z-index: 10;
             font-size: 72px;
 
             @include media-breakpoint-up(sm) {
@@ -81,90 +82,95 @@
         &--inner {
             position: relative;
             display: inline-block;
-            height: 160px;
             width: 250px;
+            height: 160px;
             overflow: hidden;
 
             @include media-breakpoint-up(sm) {
-                height: 210px;
                 width: 360px;
+                height: 210px;
             }
 
             @include media-breakpoint-up(md) {
-                height: 210px;
                 width: 270px;
+                height: 210px;
             }
 
             @include media-breakpoint-up(lg) {
-                height: 280px;
                 width: 390px;
+                height: 280px;
             }
         }
 
         &--bg {
             position: absolute;
-            top: 128px;
-            left: 5px;
-            width: 175%;
-            height: 124%;
-            background-color: rgba(255, 255, 255, .452);
-            transform: rotate(-45deg);
-            transform-origin: 30% 0;
+            top: -56px;
+            left: 0;
+            z-index: 1;
+            width: 250px;
+            height: 180px;
+            background-color: rgba(255, 255, 255, 0.52);
+            transform: rotate(136deg);
+            transform-origin: 50% 100%;
 
             @include media-breakpoint-up(sm) {
-                top: 190px;
-                left: -60px;
-                transform-origin: 39% 0;
+                top: 0px;
+                width: 370px;
+                height: 190px;
             }
 
             @include media-breakpoint-up(md) {
-                width: 190%;
-                height: 118%;
+                top: 0px;
+                width: 270px;
+                height: 180px;
             }
 
             @include media-breakpoint-up(lg) {
-                top: 256px;
-                left: -101px;
+                top: 35px;
+                width: 395px;
+                height: 220px;
             }
         }
 
         &--arrow {
             position: absolute;
-            top: 15px;
-            left: calc(50% - 20px);
-            width: 40px;
-            height: 110px;
+            top: 109px;
+            left: calc(50% - 114px);
+            z-index: 10;
+            width: 114px;
+            height: 30px;
             background-color: rgba(255, 255, 255, 0);
-            transform: rotate(52deg);
-            transform-origin: 50% 100%;
+            transform: rotate(137deg);
+            transform-origin: 100% 50%;
 
             @include media-breakpoint-up(sm) {
-                top: 40px;
-                height: 150px;
-                transform: rotate(46deg);
+                top: 174px;
+                left: calc(50% - 150px);
+                width: 150px;
             }
 
             @include media-breakpoint-up(md) {
-                top: 50px;
-                height: 136px;
-                transform: rotate(48deg);
+                top: 164px;
+                left: calc(50% - 134px);
+                width: 134px;
             }
 
             @include media-breakpoint-up(lg) {
-                top: 65px;
-                height: 190px;
-                transform: rotate(43deg);
+                top: 234px;
+                left: calc(50% - 183px);
+                width: 183px;
+                height: 40px;
             }
 
             &__icon {
                 @include size(30px);
-                position: absolute;
+            position: absolute;
                 left: 5px;
-                transform: rotate(90deg);
+            z-index: 12;
 
                 @include media-breakpoint-up(sm) {
                     @include size(35px);
-                    left: 3px;
+                    top: -2px;
                 }
 
                 @include media-breakpoint-up(lg) {
@@ -182,6 +188,7 @@
         &--min,
         &--max {
             position: absolute;
+            z-index: 15;
             font-size: 13px;
         }
 
@@ -195,8 +202,8 @@
             }
 
             @include media-breakpoint-up(md) {
-                left: 2px;
                 top: 85px;
+                left: 2px;
             }
 
             @include media-breakpoint-up(lg) {
@@ -232,8 +239,8 @@
             }
 
             @include media-breakpoint-up(md) {
-                right: 0;
                 top: 85px;
+                right: 0;
             }
 
             @include media-breakpoint-up(lg) {
@@ -259,7 +266,7 @@
             }
 
             @include media-breakpoint-up(md) {
-                top: 180px;
+                top: 185px;
                 left: 17px;
             }
 
@@ -279,7 +286,7 @@
             }
 
             @include media-breakpoint-up(md) {
-                top: 180px;
+                top: 185px;
                 right: 10px;
             }
 
