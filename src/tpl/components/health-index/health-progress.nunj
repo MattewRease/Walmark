@@ -7,13 +7,13 @@
         <div class="health__progress--inner">
             {{ svg('health-index-scale', 'health__progress--icon') }}
             <div class="health__progress--bg"></div>
-        </div>
-        <div class="health__progress--arrow">{{ svg('icon-cursor', 'health__progress--arrow__icon') }}</div>
+        <span class="health__value--min bold">0</span>
+        <span class="health__value--max bold">100</span>
         <span class="health__value--low">Low</span>
         <span class="health__value--medium">Medium</span>
         <span class="health__value--hight">Hight</span>
-        <span class="health__value--min bold d-none d-lg-inline">0</span>
-        <span class="health__value--max bold d-none d-lg-inline">100</span>
+        </div>
+        <div class="health__progress--arrow">{{ svg('icon-cursor', 'health__progress--arrow__icon') }}</div>
         <p class="health__progress--text bold text--green mb-0">73</p>
     </div>
 </div>
