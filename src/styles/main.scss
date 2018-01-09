@@ -4,6 +4,8 @@
 
 body {
     font-family: 'Roboto', $font-family-base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     &.wf-active {
         font-family: $font-family-base;

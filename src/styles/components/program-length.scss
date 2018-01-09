@@ -34,7 +34,7 @@
             top: -35px;
             z-index: 11;
             left: calc(50% - 35px);
-            content: svg-load('icon-roundangle.svg', fill=$grey-bg !important, width=70, height=70);
+            content: svg-load('icon-roundangle.svg', fill=$grey-bg, width=70, height=70);
             transform: rotate(90deg);
         }
 

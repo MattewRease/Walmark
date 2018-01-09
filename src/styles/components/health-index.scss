@@ -380,13 +380,39 @@
         }
 
         &--waist {
-            @include size(65px, 75px);
+            @include size(55px, 57px);
+            margin: 0 10px;
             fill: #7e7e7e;
+
+            @include media-breakpoint-up(sm) {
+                margin: 10px;
+            }
+
+            @include media-breakpoint-up(md) {
+                margin: 15px 0;
+            }
+
+            @include media-breakpoint-up(lg) {
+                @include size(60px);
+                margin-top: 15px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                margin: 10px;
+            }
         }
 
         &--cup {
-            @include size(75px, 90px);
-            fill: #7e7e7e;
+            @include size(75px, 70px);
+                fill: #7e7e7e;
+
+            @include media-breakpoint-up(md) {
+                margin: 15px 0;
+            }
+
+            @include media-breakpoint-up(lg) {
+                @include size(80px, 75px);
+            }
         }
     }
 
