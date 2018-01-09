@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ _cssPath }}/main{% if not _dev %}.min{% endif %}.css">
 
         {#-- Google webfont --#}
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,700i,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,600,900" rel="stylesheet">
 </head>
 <body>
 
