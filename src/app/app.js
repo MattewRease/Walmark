@@ -5,7 +5,7 @@ import 'babel-polyfill';
  */
 import 'svgxuse';
 import init from './init';
-import { render, renderFactory } from './render';
+// import { render, renderFactory } from './render';
 import suffix from './components/suffix';
 import dropdown from './components/dropdown';
 
