@@ -5,13 +5,13 @@ import 'babel-polyfill';
  */
 import 'svgxuse';
 import init from './init';
-// import { render, renderFactory } from './render';
+import { render, renderFactory } from './render';
 import suffix from './components/suffix';
 import dropdown from './components/dropdown';
 
-const app = (container, config) => {
+const app = (config) => {
     init(suffix, document.querySelector('.js-suffix'));
-    init(dropdown, document.querySelector('.dropdown-content'));
+    render(suffix, document.getElementsById('dropdown'));
 };
 
-app(null, window.config);
+app(window.config);
