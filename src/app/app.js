@@ -10,7 +10,7 @@ import dropdown from './components/dropdown';
 
 const app = (config) => {
     init(suffix, document.querySelector('.js-suffix'));
-    init(dropdown, document.querySelector('.dropMenu'));
+    init(dropdown, document.querySelector('.dropdown-content'));
 };
 
 app(null, window.config);
