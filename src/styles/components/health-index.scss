@@ -109,18 +109,17 @@
             z-index: 1;
             width: 250px;
             height: 180px;
-            background-color: rgba(255, 255, 255, 0.52);
+            background-color: rgba(255, 255, 255, .52);
             transform: rotate(136deg);
             transform-origin: 50% 100%;
 
             @include media-breakpoint-up(sm) {
-                top: 0px;
+                top: 0;
                 width: 370px;
                 height: 190px;
             }
 
             @include media-breakpoint-up(md) {
-                top: 0px;
                 width: 270px;
                 height: 180px;
             }
@@ -164,9 +163,9 @@
 
             &__icon {
                 @include size(30px);
-            position: absolute;
+                position: absolute;
                 left: 5px;
-            z-index: 12;
+                z-index: 12;
 
                 @include media-breakpoint-up(sm) {
                     @include size(35px);
@@ -404,7 +403,7 @@
 
         &--cup {
             @include size(75px, 70px);
-                fill: #7e7e7e;
+            fill: #7e7e7e;
 
             @include media-breakpoint-up(md) {
                 margin: 15px 0;
