@@ -11,7 +11,7 @@ import dropdown from './components/dropdown';
 
 const app = (config) => {
     init(suffix, document.querySelector('.js-suffix'));
-    init(document.getElementsById('dropdown'));
+    render(suffix, document.getElementsById('dropdown'));
 };
 
 app(window.config);
