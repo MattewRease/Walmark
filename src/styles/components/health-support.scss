@@ -1,4 +1,6 @@
 .health-support {
+    margin-bottom: $main-margin-bottom;
+
     &__inner {
         position: relative;
         border: 3px solid #ffd94b;
@@ -85,7 +87,7 @@
         @include media-breakpoint-up(xl) {
             top: -40px;
             left: 30px;
-            padding: 14px;
+            padding: 15px;
             background-color: $orange;
             border: 5px solid white;
             border-radius: 50%;
@@ -97,7 +99,7 @@
             &-icon {
                 @include size(40px);
                 position: absolute;
-                top: -6px;
+                top: -5px;
                 left: -4px;
                 fill: $white;
             }

@@ -9,9 +9,9 @@
             <p class="program-length__description--text py-3 col-12 mb-0">Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Ut tempus purus at lorem. Etiam bibendum elit eget erat. Aliquam erat volutpat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
         </div>
     </div>
-    <div class="container">
+    <div class="container program-length__option">
         <div class="row d-flex flex-wrap">
-            <div class="my-5 col-12 col-md-6 d-flex">
+            <div class="mt-5 col-12 col-md-6 d-flex">
                 <div class="program-length__short">
                     <div class="program-length__list">
                         <h5 class="d-flex align-items-center col-12 text--green bold"><span class="pr-3 d-none d-sm-inline">{{ svg('icon-triangle', 'program-length__list--icon') }}</span>Program for 3 month</h5>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="my-5 col-12 col-md-6 d-flex">
+            <div class="mt-5 col-12 col-md-6 d-flex">
                 <div class="program-length__long">
                     <div class="program-length__list">
                         <h5 class="col-12 text--green bold"><span class="pr-3 d-none d-sm-inline">{{ svg('icon-triangle', 'program-length__list--icon') }}</span>Program for 3 month</h5>

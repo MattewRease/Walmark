@@ -74,9 +74,9 @@
                 {% endif %}
             </div>
         {% endfor %}
+        <div class="comparison__message col-12 p-4 mt-3 d-flex justify-content-around justify-content-lg-center">
+            <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!<span> {{ svg('smile', 'comparison__icon--smile align-self-center ml-lg-4') }}</span></h4>
         </div>
-    </div>
-    <div class="comparison__item p-4 mt-3 d-flex justify-content-around justify-content-lg-center">
-        <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!<span> {{ svg('smile', 'comparison__icon--smile align-self-center ml-lg-4') }}</span></h4>
+        </div>
     </div>
 </section>

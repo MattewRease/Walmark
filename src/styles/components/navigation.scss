@@ -1,7 +1,11 @@
 .navigation {
     $nav-border: 6px solid #eee;
-    margin-bottom: 65px;
+    margin-bottom: $main-margin-bottom;
     margin-top: 35px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 120px;
+    }
 
     &__list {
         display: flex;
