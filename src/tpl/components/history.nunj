@@ -17,7 +17,7 @@
 <section class="container">
     <div class="row">
         <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3">My Health Index history</h3>
-        <div class="col-12 mt-4 text-center">
+        <div class="w-100 mt-4 text-center">
             {% for item in items %}
             <div class="history col-12 col-md-5 d-md-inline-block">
                 <a href="#" class="btn btn--ok mt-2 col-12 ">
