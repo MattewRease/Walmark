@@ -29,7 +29,7 @@
 
 <section class="container">
     <div class="row">
-        <section class="index-results my-4">
+        <section class="index-results">
             <h3 class="title col-12 bold px-0 pt-2 pb-3">Extra tips</h3>
             <div class="index-results__puck">
                 <div class="col-lg-4 col-12 d-flex flex-wrap flex-sm-nowrap flex-lg-wrap">

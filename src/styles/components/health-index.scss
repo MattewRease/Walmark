@@ -1,6 +1,7 @@
 .health {
     $main-padding-lg: 30px 25px;
     $main-margin: 20px;
+    margin-bottom: $main-margin-bottom;
 
     &__title {
         margin-bottom: 30px;
@@ -352,7 +353,6 @@
         display: flex;
         flex-wrap: wrap;
         padding: $main-padding;
-        margin-bottom: $main-margin;
         border: $main-border;
         border-radius: $main-border-radius;
 

@@ -13,6 +13,12 @@
         }
     }
 
+    &__message {
+        margin-bottom: $main-margin-bottom !important;
+        border: $main-border;
+        border-radius: $main-border-radius;
+    }
+
     &__icon {
         @include size(30px);
 

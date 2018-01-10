@@ -1,4 +1,6 @@
 .health-tips {
+    margin-bottom: $main-margin-bottom;
+
     &__method--icon {
         @include size(45px);
 
