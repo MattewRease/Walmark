@@ -28,7 +28,8 @@
             average: '53',
             yoursTitle: 'NO',
             yours: '75',
-            description: 'Yes'
+            description: 'Yes',
+            chart: true
             }
     ]
 %}
@@ -37,12 +38,12 @@
     <div class="row">
         <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3">My comparison</h3>
         <h4 class="text-center col-12  mb-0 py-4 my-2">See how you compare with others</h4>
-        <div class="comparison">
+        <div class="comparison col-12">
         {% for item in items %}
             <div class="comparison__item col-lg-4 col-12 mb-2 pt-2 d-inline-block">
                 <h4 class="text--green text-center text-lg-left bold py-3">
                     {{ item.title }}</h4>
-                {% if item.description == 'Yes' or item.description == 'No' %}
+                {% if item.chart === true %}
                     <p class="pb-2 text-sm-center text-lg-left">{{ item.subtitle }}</p>
                 {% endif %}
                 <div class="d-flex justify-content-center justify-content-lg-between text-center">
@@ -74,8 +75,8 @@
             </div>
         {% endfor %}
         </div>
-        <div class="comparison__item p-4 mt-3 d-flex justify-content-around justify-content-lg-center col-12">
-            <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!<span> {{ svg('smile', 'comparison__icon--smile align-self-center ml-lg-4') }}</span></h4>
-        </div>
+    </div>
+    <div class="comparison__item p-4 mt-3 d-flex justify-content-around justify-content-lg-center">
+        <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!<span> {{ svg('smile', 'comparison__icon--smile align-self-center ml-lg-4') }}</span></h4>
     </div>
 </section>

@@ -7,6 +7,7 @@
     &__products {
         display: flex;
         flex-wrap: wrap;
+        padding: $main-padding;
         align-items: center;
         border: $main-border;
         border-radius: $main-border-radius;
