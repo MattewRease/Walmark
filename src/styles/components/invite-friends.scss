@@ -11,16 +11,16 @@
         padding: 7px 0 7px 13px;
         background-color: $white;
         border: 1px solid #a6a6a6;
-        border-radius: $main-border-radius;
+        border-radius: 4px;
     }
 
     &__btn {
         left: -4px;
-        padding: 9px 0;
+        padding: 8px 0;
         color: $white;
         text-align: center;
         background-color: $green;
-        border-radius: $main-border-radius;
+        border-radius: 4px;
 
         &:hover {
             color: $white;

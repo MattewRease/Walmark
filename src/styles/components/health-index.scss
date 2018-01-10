@@ -1,5 +1,4 @@
 .health {
-    $main-padding: 20px 15px;
     $main-padding-lg: 30px 25px;
     $main-margin: 20px;
 
@@ -358,6 +357,9 @@
         border-radius: $main-border-radius;
 
         &--text {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
             font-size: 18px;
 
             @include media-breakpoint-only(sm) {
@@ -366,7 +368,8 @@
         }
 
         &--icon {
-            @include size(30px);
+            @include size(25px);
+            margin: 5px 10px;
             fill: #00983d;
         }
 

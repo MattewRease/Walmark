@@ -13,6 +13,6 @@
         </ul>
     </div>
     <div class="health__rules--text">
-        <p class="mb-0">Don't worry, we will help you get better!</p><span>{{ svg('smile', 'health__rules--icon') }}</span>
+        <p class="mb-0">Don't worry, we will help you get better!</p>{{ svg('smile', 'health__rules--icon') }}
     </div>
 </div>

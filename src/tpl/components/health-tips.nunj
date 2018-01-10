@@ -37,21 +37,19 @@
 
 <section class="container">
     <div class="row">
-        <div class="col-12">
         <h3 class="col-12 bold px-0 pt-2 pb-3 text-center">Your Health Index results</h3>
-            <div class="health-tips d-flex flex-wrap align-items-center">
-                {% for item in items %}
-                    <div class="health-tips__method d-flex align-items-center my-3 my-md-1 col-md-2">
-                        {{ svg(item.icon, 'health-tips__method--icon') }}
-                        <h5 class="text--green bold pl-3 d-md-none">{{ item.title }}</h5>
-                    </div>
-                    <div class="col-md-10">
-                        <h5 class="text--green bold pl-3 pl-md-0  d-none d-md-block">
-                            {{ item.title }}</h5>
-                        <p>{{ item.description }}</p>
-                    </div>
-                {% endfor %}
-            </div>
+        <div class="health-tips d-flex flex-wrap align-items-center">
+            {% for item in items %}
+                <div class="health-tips__method d-flex align-items-center my-3 my-md-1 col-md-2">
+                    {{ svg(item.icon, 'health-tips__method--icon') }}
+                    <h5 class="text--green bold pl-3 d-md-none">{{ item.title }}</h5>
+                </div>
+                <div class="col-md-10">
+                    <h5 class="text--green bold pl-3 pl-md-0  d-none d-md-block">
+                        {{ item.title }}</h5>
+                    <p>{{ item.description }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>

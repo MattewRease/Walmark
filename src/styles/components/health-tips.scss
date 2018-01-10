@@ -1,6 +1,6 @@
 .health-tips {
     &__method--icon {
-        @include size(55px);
+        @include size(45px);
 
         @include media-breakpoint-up(md) {
             @include size(90px);
