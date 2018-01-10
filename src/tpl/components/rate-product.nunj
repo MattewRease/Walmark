@@ -3,7 +3,7 @@
 
 <section class="container">
     <div class="row">
-        <h3 class="title w-100 bold px-0 mb-0 pt-2 pb-3">Rate the product</h3>
+        <h3 class="rate-product__title title w-100 bold px-0 mb-0 pt-2 pb-3">Rate the product</h3>
         <div class="rate-product col-12 mt-4">
             <div class="rate-product__inner">
                 <textarea  class="rate-product__input" placeholder="Your review"/></textarea>
