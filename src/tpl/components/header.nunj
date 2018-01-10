@@ -52,7 +52,7 @@
                         </a>
                     </li>
                 </ul>
-                <ul class="dropdown-content header__list w-100 mb-0 pl-0">
+                <ul class="dropdown-content header__list w-100 mb-0 pl-0" id="dropdown">
                     <li class="header__list--item">
                         <a class="header__links--item" href="#">Homepage</a>
                     </li>

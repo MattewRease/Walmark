@@ -30,7 +30,7 @@
             yours: '75',
             description: 'Yes',
             chart: true
-            }
+        }
     ]
 %}
 
