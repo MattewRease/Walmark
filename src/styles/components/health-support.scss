@@ -48,6 +48,7 @@
     .progress-bar {
         background: linear-gradient(180deg, rgba(255, 255, 255, .281) 0%, rgba(221, 221, 221, .5) 100%), linear-gradient(228.04deg, #1fbba6 0%, rgba(255, 115, 0, .97) 100%);
         border-radius: 4px;
+        transition: width .5s ease;
         box-shadow: inset 0 1px 3px 0 rgba(255, 255, 255, .87);
     }
 
