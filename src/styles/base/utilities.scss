@@ -93,17 +93,17 @@
 }
 
 .active {
-    transition: all .5s ease !important;
-    display: block !important;
+    max-height: 100%;
+    opacity: 1;
+    transition: all .5s ease;
 }
 
 .disable {
-    transition: all .5s ease !important;
+    transition: all .5s ease;
     display: none;
 }
 
 .up {
-    transition: transform .5s ease;
     transform: rotate(-90deg) !important;
     top: 25px !important;
 }

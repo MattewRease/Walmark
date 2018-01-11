@@ -14,11 +14,9 @@ export default function () {
 
         if (selectedPanel) {
             selectedPanel.parentElement.lastElementChild.classList.remove('active');
-            selectedPanel.parentElement.lastElementChild.classList.add('disable');
             selectedPanel.querySelector('.footer__dropdown-icon').classList.remove('up');
         }
         selectedPanel = panel;
-        selectedPanel.parentElement.lastElementChild.classList.remove('disable');
         selectedPanel.parentElement.lastElementChild.classList.add('active');
         selectedPanel.querySelector('.footer__dropdown-icon').classList.add('up');
     }

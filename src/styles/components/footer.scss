@@ -76,7 +76,13 @@
         top: calc(50% - 5px);
         right: 30px;
         transform: rotate(90deg);
-        fill: #fff;
+        transition: transform .5s ease;
+        fill: currentColor;
+
+        .up {
+            top: 25px !important;
+            transform: rotate(-90deg) !important;
+        }
 
         @include media-breakpoint-up(xl) {
             display: none;
@@ -84,16 +90,23 @@
     }
 
     &__list {
-        display: none;
-        padding-left: 0;
+        max-height: 0;
         padding-right: 30px;
+        padding-left: 0;
+        opacity: 0;
 
         &--item {
             list-style: none;
         }
 
         @include media-breakpoint-up(xl) {
-            display: block;
+            opacity: 1;
+        }
+
+        &.active {
+            max-height: 100%;
+            opacity: 1;
+            transition: all 1s ease;
         }
     }
 
@@ -122,10 +135,10 @@
     }
 
     &__btn {
-        left: -3px;
+        left: -5px;
         background-color: $orange;
         border: 1px solid $orange;
-        border-radius: $main-border-radius;
+        border-radius: 6px;
 
         &:hover {
             background-color: $orange-dark;
