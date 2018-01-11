@@ -176,6 +176,13 @@
             stroke-width: 5px;
         }
 
+        &--tick,
+        &--cross {
+            &.disable {
+                display: none;
+            }
+        }
+
         &--complete {
             display: flex;
             align-items: center;

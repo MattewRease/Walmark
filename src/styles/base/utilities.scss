@@ -91,19 +91,3 @@
 .range-icon--low {
     fill: #e54544 !important;
 }
-
-.active {
-    transition: all .5s ease !important;
-    display: block !important;
-}
-
-.disable {
-    transition: all .5s ease !important;
-    display: none;
-}
-
-.up {
-    transition: transform .5s ease;
-    transform: rotate(-90deg) !important;
-    top: 25px !important;
-}
