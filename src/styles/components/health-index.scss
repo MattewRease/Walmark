@@ -41,18 +41,19 @@
         &--text {
             position: absolute;
             bottom: -10px;
-            left: calc(50% - 40px);
+            left: 50%;
             z-index: 10;
             font-size: 72px;
+            transform: translateX(-50%);
 
             @include media-breakpoint-up(sm) {
                 bottom: -20px;
+                left: 50%;
                 font-size: 85px;
             }
 
             @include media-breakpoint-up(md) {
                 bottom: 40px;
-                left: calc(50% - 45px);
             }
 
             @include media-breakpoint-up(lg) {
@@ -104,13 +105,13 @@
 
         &--bg {
             position: absolute;
-            top: -56px;
+            top: -55px;
             left: 0;
             z-index: 1;
             width: 250px;
             height: 180px;
-            background-color: rgba(255, 255, 255, .52);
-            transform: rotate(136deg);
+            background-color: rgba(255, 255, 255, .603);
+            transition: all .8s ease;
             transform-origin: 50% 100%;
 
             @include media-breakpoint-up(sm) {
@@ -126,7 +127,7 @@
 
             @include media-breakpoint-up(lg) {
                 top: 35px;
-                width: 395px;
+                width: 389px;
                 height: 220px;
             }
         }
@@ -139,7 +140,7 @@
             width: 114px;
             height: 30px;
             background-color: rgba(255, 255, 255, 0);
-            transform: rotate(137deg);
+            transition: all .8s ease;
             transform-origin: 100% 50%;
 
             @include media-breakpoint-up(sm) {
@@ -155,7 +156,7 @@
             }
 
             @include media-breakpoint-up(lg) {
-                top: 234px;
+                top: 237px;
                 left: calc(50% - 183px);
                 width: 183px;
                 height: 40px;
@@ -164,6 +165,7 @@
             &__icon {
                 @include size(30px);
                 position: absolute;
+                fill: rgba(168, 168, 168, .329);
                 left: 5px;
                 z-index: 12;
 
@@ -334,10 +336,9 @@
             padding: 20px 5px;
             color: $white;
             background-color: $green;
-            border-radius: $main-border-radius;
 
             @include media-breakpoint-up(lg) {
-                padding: 0;
+                padding: 15px 0;
             }
         }
 
@@ -415,6 +416,14 @@
             @include media-breakpoint-up(lg) {
                 @include size(80px, 75px);
             }
+        }
+    }
+
+    &__weight {
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
         }
     }
 

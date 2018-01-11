@@ -75,3 +75,27 @@
         }
     }
 }
+
+.range--low {
+    color: #e54544;
+}
+
+.range--middle {
+    color: #ffd849;
+}
+
+.range--hight {
+    color: #00a14e;
+}
+
+.range-icon--low {
+    fill: #e54544 !important;
+}
+
+.active {
+    display: block !important;
+}
+
+.disable {
+    display: none;
+}

@@ -21,7 +21,7 @@ module.exports = {
         indent: [1, 4, { SwitchCase: 1 }],
         'jsx-a11y/html-has-lang': 0, // Can't recognize the Helmet.
         'max-len': 0,
-        'no-alert': 2,
+        'no-alert': 0,
         'no-class-assign': 0, // Class assign is used for higher order components.
         'no-confusing-arrow': 0, // This rule is super confusing.
         'no-console': 1,
