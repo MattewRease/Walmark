@@ -73,10 +73,10 @@
     &__dropdown-icon {
         @include size(10px);
         position: absolute;
-        top: calc(50% + 5px);
+        top: calc(50% - 5px);
         right: 30px;
         transform: rotate(90deg);
-        fill: currentColor;
+        fill: #fff;
 
         @include media-breakpoint-up(xl) {
             display: none;
@@ -100,13 +100,13 @@
     &__customers,
     &__company,
     &__invite {
-        padding-top: 25px;
         color: $grey;
         list-style: none;
 
         &--title {
             display: inline-block;
             width: 100%;
+            padding: 10px 0;
             margin-bottom: 5px;
             cursor: pointer;
             border-bottom: 1px solid rgb(192, 192, 192);
@@ -131,27 +131,6 @@
             background-color: $orange-dark;
         }
     }
-
-    // @include media-breakpoint-down(lg) {
-    //     &__checkbox:checked + &__list {
-    //         display: block;
-    //     }
-
-    //     &__checkbox:checked + &__dropdown-icon {
-    //         transform: rotate(-90deg);
-    //     }
-
-    //     &__list {
-    //         position: absolute;
-    //         z-index: 10;
-    //         width: 100%;
-    //         background-color: $footer-bg-main;
-
-    //         &--item {
-    //             padding: 5px 0;
-    //         }
-    //     }
-    // }
 
     @include media-breakpoint-up(xl) {
         background-color: $footer-bg;
