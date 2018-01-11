@@ -236,3 +236,7 @@
  *
  * Styleguide Base - Button - Block
  */
+
+button:focus {
+    outline: none !important;
+}

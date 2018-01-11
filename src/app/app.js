@@ -10,6 +10,7 @@ import dropdown from './components/dropdown';
 import progress from './components/progress';
 import weight from './components/weight';
 import liquid from './components/liquid';
+import support from './components/support';
 import accordion from './components/accordion';
 
 const app = (config) => {
@@ -17,6 +18,7 @@ const app = (config) => {
     init(progress, document.getElementById('progress'));
     init(weight, document.querySelector('.health__weight'));
     init(liquid, document.querySelector('.health__liquid'));
+    init(support, document.querySelector('.health-support'));
     init(accordion, document.getElementById('accordion'));
 };
 

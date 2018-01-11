@@ -128,27 +128,29 @@
                                     {% if item.ready=='true' and item.label !=='Monday' and  item.label !=='Sunday' and item.thisWeek =='true'  %}
                                         <div class="health-support__day--complete day--yes my-2 col-md-8 col-xl-auto">
                                             {{ svg('tick', 'health-support__day--tick') }}
+                                            {{ svg('cross', 'health-support__day--cross disable') }}
                                         </div>
-                                        <a href="#" class="{{ item.btnClass }} btn btn--ok health-support__btn">
+                                        <button href="#" class="{{ item.btnClass }} btn btn--ok health-support__btn" data-btn>
                                             {{ svg(item.icon, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
-                                        </a>
+                                        </button>
                                         {% elif item.label =='Sunday' and item.thisWeek =='true' %}
                                             <div class="health-support__day--complete day--sunday my-2 col-md-8 col-xl-auto">
                                                 <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
                                             </div>
-                                            <a href="#" class="{{ item.btnClass }} btn btn--done health-support__btn health-support__btn--done">
+                                            <button href="#" class="{{ item.btnClass }} btn btn--done health-support__btn health-support__btn--done" data-btn>
                                                 {{ svg(item.iconDone, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
-                                            </a>
+                                            </button>
                                         {% elif item.label =='Monday' and item.thisWeek =='true' %}
                                             <div class="health-support__day--complete my-2 col-md-8 col-xl-auto">
                                             </div>
                                         {% elif item.thisWeek =='true' %}
                                             <div class="health-support__day--complete day--no my-2 col-md-8 col-xl-auto">
                                                 {{ svg('cross', 'health-support__day--cross') }}
+                                                {{ svg('tick', 'health-support__day--tick disable') }}
                                             </div>
-                                            <a href="#" class="{{ item.btnClass }} btn btn--ok health-support__btn">
-                                                {{ svg(item.icon, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
-                                            </a>
+                                            <button href="#" class="{{ item.btnClass }} btn btn--ok health-support__btn" data-btn>
+                                                {{ svg(item.icon, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Mark</span>
+                                            </button>
                                         {% else %}
                                             <div class="health-support__day--complete my-2 col-md-8 col-xl-auto">
                                                 <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
