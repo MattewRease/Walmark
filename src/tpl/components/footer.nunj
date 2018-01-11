@@ -20,8 +20,8 @@
                     </div>
                 </div>
                 <nav class="footer__links col-12 col-sm-7 col-lg-9 py-3 d-inline-block" role="navigation">
-                    <ul class="d-xl-flex justify-content-between pl-0">
-                        <li class="footer__customers accordiontitle col-xl-4 mx-2 pl-0">
+                    <ul class="d-xl-flex justify-content-between pl-0" id="accordion">
+                        <li class="footer__customers accordiontitle col-xl-4 mx-2 pl-0" data-accordion='title'>
                             <label for="toggle-customers" class="footer__customers--title dropdown">
                                 For customers
                                 <span>
@@ -37,7 +37,7 @@
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Sitemap</a></li>
                             </ul>
                         </li>
-                        <li class="footer__company accordiontitle col-xl-4 mx-2 pl-0">
+                        <li class="footer__company accordiontitle col-xl-4 mx-2 pl-0" data-accordion='title'>
                             <label for="toggle-company" class="footer__company--title">Company<span>{{ svg('icon-triangle', 'footer__dropdown-icon') }}</span></label>
                             <input  type="checkbox" class="footer__checkbox" id="toggle-company"/>
                             <ul class="dropdown-content footer__list">
@@ -47,7 +47,7 @@
                                 <li class="footer__list--item"><a class="footer__links--item" href="#">Privacy policy</a></li>
                             </ul>
                         </li>
-                        <li class="footer__invite accordiontitle col-xl-4 mx-2 pl-0">
+                        <li class="footer__invite accordiontitle col-xl-4 mx-2 pl-0" data-accordion='title'>
                             <label for="toggle-invite" class="footer__invite--title">Receive inspiration & tips<span>{{ svg('icon-triangle', 'footer__dropdown-icon') }}</span></label>
                             <input type="checkbox" class="footer__checkbox" id="toggle-invite"/>
                             <ul class="footer__list pr-xl-0">

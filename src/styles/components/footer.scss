@@ -132,26 +132,26 @@
         }
     }
 
-    @include media-breakpoint-down(lg) {
-        &__checkbox:checked + &__list {
-            display: block;
-        }
+    // @include media-breakpoint-down(lg) {
+    //     &__checkbox:checked + &__list {
+    //         display: block;
+    //     }
 
-        &__checkbox:checked + &__dropdown-icon {
-            transform: rotate(-90deg);
-        }
+    //     &__checkbox:checked + &__dropdown-icon {
+    //         transform: rotate(-90deg);
+    //     }
 
-        &__list {
-            position: absolute;
-            z-index: 10;
-            width: 100%;
-            background-color: $footer-bg-main;
+    //     &__list {
+    //         position: absolute;
+    //         z-index: 10;
+    //         width: 100%;
+    //         background-color: $footer-bg-main;
 
-            &--item {
-                padding: 5px 0;
-            }
-        }
-    }
+    //         &--item {
+    //             padding: 5px 0;
+    //         }
+    //     }
+    // }
 
     @include media-breakpoint-up(xl) {
         background-color: $footer-bg;
