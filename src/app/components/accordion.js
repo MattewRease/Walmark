@@ -5,19 +5,21 @@ export default function () {
 
     acc.onclick = (event) => {
         const target = event.target;
-        if (target.dataset.accordion !== 'title') return;
-        toggle(target);
+        if (target.dataset.accordion === 'title') {
+            toggle(target);
+        }
     };
 
     function toggle(panel) {
 
         if (selectedPanel) {
-                block.classList.remove('active');
-                block.classList.add('disable');
-            } else {
-            selectedPanel = panel;
-                block.classList.remove('disable');
-                selectedPanel.ul.classList.add('active');
+            selectedPanel.parentElement.lastElementChild.classList.remove('active');
+            selectedPanel.parentElement.lastElementChild.classList.add('disable');
+            selectedPanel.querySelector('.footer__dropdown-icon').classList.remove('up');
         }
+        selectedPanel = panel;
+        selectedPanel.parentElement.lastElementChild.classList.remove('disable');
+        selectedPanel.parentElement.lastElementChild.classList.add('active');
+        selectedPanel.querySelector('.footer__dropdown-icon').classList.add('up');
     }
-    }
+}
