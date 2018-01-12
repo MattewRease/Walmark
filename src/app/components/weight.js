@@ -5,7 +5,7 @@ export default () => {
 
     bmi.innerHTML = indexBmi;
 
-    if (indexBmi < 15 || indexBmi > 30) {
+    if (indexBmi < 15 || indexBmi > 25) {
 
         indexBmi < 15 ? category.innerHTML = 'To Low Weight!' : category.innerHTML = 'Too High Weight!';
 
