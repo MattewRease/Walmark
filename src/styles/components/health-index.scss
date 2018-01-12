@@ -111,12 +111,12 @@
             width: 250px;
             height: 180px;
             background-color: rgba(255, 255, 255, .603);
-            transition: all .8s ease;
+            transition: transform .8s ease;
             transform-origin: 50% 100%;
 
             @include media-breakpoint-up(sm) {
                 top: 0;
-                width: 370px;
+                width: 358px;
                 height: 190px;
             }
 
@@ -140,7 +140,7 @@
             width: 114px;
             height: 30px;
             background-color: rgba(255, 255, 255, 0);
-            transition: all .8s ease;
+            transition: transform .8s ease;
             transform-origin: 100% 50%;
 
             @include media-breakpoint-up(sm) {

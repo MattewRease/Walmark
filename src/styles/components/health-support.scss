@@ -60,12 +60,22 @@
         font-size: 14px;
         background-color: $grey-bg;
 
+        &-prev:hover,
+        &-next:hover {
+            cursor: pointer;
+        }
+
         &-prev-icon,
         &-next-icon {
             @include size(18px);
             margin: 0 7px;
             vertical-align: middle;
             fill: rgb(133, 133, 133);
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all .3s ease;
+            }
         }
     }
 
@@ -217,19 +227,23 @@
     }
 }
 
+.day--yes,
+.day--no,
+.day--sunday {
+    transition: all .5s ease-out;
+    border: none;
+}
+
 .day--yes {
     background-color: #ace0c4;
-    border: none;
 }
 
 .day--no {
     background-color: #ffdf87;
-    border: none;
 }
 
 .day--sunday {
     background-color: #b9f3ff;
-    border: none;
 }
 
 .day--nextweek {

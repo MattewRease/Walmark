@@ -103,17 +103,17 @@
                         </div>
                         <div class="col-12 px-0 my-3">
                             <div class="health-support__navigation py-3 d-xl-none">
-                                <div class="health-support__navigation-prev">
+                                <a class="health-support__navigation-prev">
                                     {{ svg('prev', 'health-support__navigation-prev-icon') }}
                                     <span class="text--orange bold">Previous</span>
-                                </div>
+                                </a>
                                 <div>
                                     <span class="bold">Week 2</span>
                                 </div>
-                                <div class="health-support__navigation-next">
+                                <a class="health-support__navigation-next">
                                     <span class="text--orange bold">Next</span>
                                     {{ svg('next', 'health-support__navigation-next-icon') }}
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="health-support__week">
@@ -121,7 +121,7 @@
                             {% for item in items %}
 
                                 {% if loop.index == 1 %}
-                                    <p class="col-xl-auto d-none d-xl-block text--green">{{ item.week + ' 1'}}</p>
+                                    <p class="targetDay col-xl-auto d-none d-xl-block text--green">{{ item.week + ' 1'}}</p>
                                 {% endif %}
                                 <div class="{{ item.class }}">
                                     <label class="{{ item.labelClass }}">{{ item.label }}</label>
@@ -162,7 +162,7 @@
                             {% for item in range(1,4) %}
                                 {% for item in items %}
                                     {% if loop.index == 1 %}
-                                        <p class="col-xl-auto d-none d-xl-block text--green">{{ item.week + ' 2' }}</p>
+                                        <p class="targetDay col-xl-auto d-none d-xl-block text--green">{{ item.week + ' 2' }}</p>
                                     {% endif %}
                                     <div class="{{ item.class }}">
                                     <label class="{{ item.labelClass }} d-xl-none">{{ item.label }}</label>
@@ -176,7 +176,7 @@
 
                             {% for item in items %}
                                 {% if loop.index == 1 %}
-                                    <p class="col-xl-auto d-none d-xl-block text--green">{% set week = 'Week 5' %}{{ week }}</p>
+                                    <p class="targetDay col-xl-auto d-none d-xl-block text--green">{% set week = 'Week 5' %}{{ week }}</p>
                                 {% endif %}
                                 {% if loop.index >= 4 %}
 
