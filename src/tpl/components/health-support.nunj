@@ -108,7 +108,7 @@
                                     <span class="text--orange bold">Previous</span>
                                 </a>
                                 <div>
-                                    <span class="bold">Week 2</span>
+                                    <span id="weekNumder" class="bold">Week 1</span>
                                 </div>
                                 <a class="health-support__navigation-next">
                                     <span class="text--orange bold">Next</span>
