@@ -5,7 +5,9 @@ export default () => {
     const days = document.querySelectorAll('.health-support__day');
     const myArray = Array.from(days);
     const newSelect = myArray.slice(7);
+    const count = document.getElementById('weekNumder');
     let i = 0;
+    let m = 1;
 
     for (let i = 0; i < myArray.length; i += 7) {
         myArray[i].dataset.day = 'monday';
@@ -15,6 +17,7 @@ export default () => {
     const monday = calendar.querySelectorAll('[data-day="monday"]');
     const mondays = Array.from(monday);
     let param;
+    count.innerHTML = `Week ${m}`;
 
     nextBtn.addEventListener('click', nextMonday);
     prevBtn.addEventListener('click', prevMonday);
@@ -22,8 +25,12 @@ export default () => {
     function nextMonday() {
         if (i < mondays.length - 1) {
             i += 1;
+            m += 1;
+            count.innerHTML = `Week ${m}`;
         } else if (i === mondays.length - 1) {
             i = 0;
+            m = 1;
+            count.innerHTML = `Week ${m}`;
         }
         const topPos = mondays[i].offsetTop;
         calendar.scrollTop = topPos - 220;
@@ -32,58 +39,19 @@ export default () => {
     function prevMonday() {
         if (i > 0) {
             i -= 1;
+            m -= 1;
+            count.innerHTML = `Week ${m}`;
         } else if (i === 0) {
             i = mondays.length - 1;
+            m = mondays.length;
+            count.innerHTML = `Week ${m}`;
         }
         const topPos = mondays[i].offsetTop;
         calendar.scrollTop = topPos - 220;
     }
 
-    // function nextMonday() {
-    //     mondays[i].scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
-    //     i += 1;
-    //     if (i === mondays.length) {
-    //         i = 0;
-    //     }
-    // }
-    // window.scrollBy({ top: -240, left: 0, behavior: 'smooth' });
-    // nextBtn.addEventListener('click', scrollNext);
-    // prevBtn.addEventListener('click', scrollPrev);
     // calendar.onscroll = () => { weekNumber(); };
 
-
-    // function scrollNext() {
-    //     if (window.innerWidth < 740) {
-    //         if (calendar.scrollTop < 1235) {
-    //             calendar.scrollBy({ top: 1240, left: 0, behavior: 'smooth' });
-    //         } else {
-    //             calendar.scrollBy({ top: 948, left: 0, behavior: 'smooth' });
-    //         }
-    //     } else {
-    //         if (calendar.scrollTop < 650) {
-    //             calendar.scrollBy({ top: 643, left: 0, behavior: 'smooth' });
-    //         } else {
-    //             calendar.scrollBy({ top: 640, left: 0, behavior: 'smooth' });
-    //         }
-    //     }
-    // }
-
-    // function scrollPrev() {
-    //     if (window.innerWidth < 740) {
-    //         if (calendar.scrollTop < 1235) {
-    //             calendar.scrollBy({ top: -1240, left: 0, behavior: 'smooth' });
-    //         } else {
-    //             calendar.scrollBy({ top: -948, left: 0, behavior: 'smooth' });
-    //         }
-    //     } else {
-    //         if (calendar.scrollTop < 650) {
-    //             calendar.scrollBy({ top: -643, left: 0, behavior: 'smooth' });
-    //         } else {
-    //             calendar.scrollBy({ top: -640, left: 0, behavior: 'smooth' });
-    //         }
-    //     }
-    // }
-    // document.getElementById('weekNumder').innerHTML = 'Week 1';
 
     // function weekNumber() {
     //     if (window.innerWidth < 768) {
