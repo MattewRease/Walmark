@@ -14,7 +14,7 @@
             <div class="mt-5 col-12 col-md-6 d-flex">
                 <div class="program-length__short">
                     <div class="program-length__list">
-                        <h5 class="program-length__list--title d-flex align-items-center col-12 text--green bold"><span class="pr-3 d-none d-sm-inline">{{ svg('icon-triangle', 'program-length__list--icon') }}</span>Program for 3 month</h5>
+                        <h5 class="program-length__list--title d-flex align-items-center col-12 text--green bold"><span class="pr-3 d-none d-sm-inline">{{ svg('icon-triangle', 'program-length__list--icon') }}</span>Program for 1 month</h5>
                         <ul class="pl-3 program-length__list-short">
                             <li>Fusce tellus odio, dapibus quis nostrum</li>
                         </ul>
@@ -28,8 +28,8 @@
             <div class="mt-5 col-12 col-md-6 d-flex">
                 <div class="program-length__long">
                     <div class="program-length__list">
-                        <h5 class="col-12 text--green bold"><span class="pr-3 d-none d-sm-inline">{{ svg('icon-triangle', 'program-length__list--icon') }}</span>Program for 3 month</h5>
-                        <ul class="pl-3">
+                        <h5 class="col-12 text--green bold program-length__list-long--title"><span class="pr-3 d-none d-sm-inline">{{ svg('icon-triangle', 'program-length__list--icon') }}</span>Program for 3 month</h5>
+                        <ul class="pl-3 program-length__list-long">
                             <li>Fusce tellus odio, dapibus quis nostrum</li>
                             <li>Fusce tellus odio, dapibus quis nostrum</li>
                             <li>Fusce tellus odio, dapibus quis nostrum</li>
