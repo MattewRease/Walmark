@@ -8,6 +8,7 @@ import init from './init';
 import { render, renderFactory } from './render';
 import dropdown from './components/dropdown';
 import progress from './components/progress';
+import shopping from './components/shopping';
 import weight from './components/weight';
 import liquid from './components/liquid';
 import support from './components/support';
@@ -16,6 +17,7 @@ import accordion from './components/accordion';
 
 const app = (config) => {
     init(dropdown, document.getElementById('dropdown'));
+    init(shopping, document.querySelector('.shopping-list'));
     init(progress, document.getElementById('progress'));
     init(weight, document.querySelector('.health__weight'));
     init(liquid, document.querySelector('.health__liquid'));
