@@ -17,7 +17,17 @@ export default () => {
         const copyItem = item.cloneNode(true);
         const newItem = item.parentNode.insertBefore(copyItem, item.nextSibling);
         newItem.className = 'shopping-list__item--new';
+        const noteWrapp = document.createElement('div');
+
+        if (!document.querySelector('.note-wrap')) {
+            document.body.appendChild(noteWrapp);
+            noteWrapp.className = 'note-wrap';
+        } else {
+            false;
+        }
+
         addContent();
+        notify();
     };
 
     function addContent() {
@@ -37,5 +47,24 @@ export default () => {
                 target = target.parentNode;
             }
         };
+    }
+
+    function notify() {
+        const noteWrapp = document.querySelector('.note-wrap');
+        const note = document.createElement('p');
+        noteWrapp.appendChild(note);
+        note.className = 'note';
+        bought();
+
+        function bought() {
+            setTimeout(() => {
+                note.classList.add('active');
+                note.innerHTML = 'Program added to your shopping list!';
+            }, 300);
+            setTimeout(() => {
+                console.log(noteWrapp);
+                noteWrapp.removeChild(noteWrapp.lastChild);
+            }, 3000);
+        }
     }
 };
