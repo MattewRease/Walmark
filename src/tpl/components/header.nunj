@@ -29,7 +29,7 @@
                         </a>
                     </li>
                     <li class=" align-items-center ml-lg-2 d-flex flex-wrap">
-                        <a class="px-1 pl-sm-2 pl-md-1" href="#">
+                        <a id="shoppingList" class="px-1 pl-sm-2 pl-md-1" href="#">
                             {{ svg('icon-wishlist', 'icon--orange header__profile--icon') }}
                         </a>
                         <span class="d-none d-xl-inline">Wish list is empty</span>

@@ -173,9 +173,11 @@
 .btn--price {
     color: $white;
     background-color: $orange;
+    border: none;
 
     &:hover {
         color: $white;
+        cursor: pointer;
         text-decoration: none;
         background-color: $orange-dark;
     }
