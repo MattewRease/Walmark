@@ -118,6 +118,7 @@
 
         &--done {
             border: none;
+
             @include media-breakpoint-up(xl) {
                 background-color: $green;
 

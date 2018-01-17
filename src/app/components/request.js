@@ -1,17 +1,21 @@
 import axios from 'axios';
+import { task } from './support';
+
 export default () => {
     const APIUrl = 'http://localhost:5003/tasks';
     const messageText = document.querySelector('[data-message="text"]');
     const callBtn = document.querySelector('[data-result="week"]');
 
-    callBtn.addEventListener('click', () => {
+    callBtn.addEventListener('click', postRes);
+
+    function postRes() {
         axios({
-            method: 'get',
+            method: 'post',
             url: APIUrl,
-            responseType: 'stream'
-        })
-            .then((response) => {
-                messageText.innerHTML = response.data.message.text;
-            });
-    });
+            data: {
+                id: '1',
+                text: 'sucessfully'
+            }
+        });
+    }
 };

@@ -20,10 +20,3 @@ module.exports = () => {
         tasks
     };
 };
-
-// task: {
-//     id: 12,
-//     text: 'tea gadg'
-// }
-
-// //localhost:5003/tasks
