@@ -145,7 +145,7 @@
                                                 <p data-message='text' class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
                                             </div>
                                             <button data-result="week" class="{{ item.btnClass }} btn btn--done health-support__btn health-support__btn--done" data-btn>
-                                                {{ svg(item.iconDone, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Week Result</span>
+                                                {{ svg(item.iconDone, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                             </button>
                                         {% elif item.label =='Monday' and item.thisWeek =='true' %}
                                             <div class="health-support__day--complete my-2 col-md-8 col-xl-auto">
