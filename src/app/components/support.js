@@ -41,12 +41,12 @@ export default () => {
                     }
                 });
             }
+            innerSpan.innerHTML === 'Mark' ? innerSpan.innerHTML = 'Unmark' : innerSpan.innerHTML = 'Mark';
 
             for (let j = 0; j < btn.length; j += 1) {
                 iconAll[j].classList.toggle('disable');
                 progressBar();
             }
-            innerSpan.innerHTML === 'Mark' ? innerSpan.innerHTML = 'Unmark' : innerSpan.innerHTML = 'Mark';
         });
     }
 

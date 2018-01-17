@@ -220,6 +220,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
 
         &-icon {
             @include size(15px);
