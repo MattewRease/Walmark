@@ -10,8 +10,8 @@ export default () => {
         btn[i].addEventListener('click', () => {
 
             const task = {
-                id: '1232',
-                text: '12323'
+                id: '',
+                text: ''
             };
 
             const selected = btn[i].previousElementSibling;

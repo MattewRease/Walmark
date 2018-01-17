@@ -214,27 +214,28 @@
                                 <span class="tooltip--text">Text inside tooltip</span>
                                 </span>
                                 <div class="form-row align-items-center">
-                                    <select class="form-control col-12">
-                                        <option selected>Every 3 days</option>
+                                    <select class="form-control col-12" data-reminder="day">
+                                        <option selected>Select day</option>
+                                        <option>Every 1 day</option>
+                                        <option>Every 2 days</option>
                                         <option>Every 3 days</option>
-                                        <option>Every 3 days</option>
-                                        <option>Every 3 days</option>
-                                        <option>Every 3 days</option>
+                                        <option>Every 4 days</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <label class="py-2 mt-2">Preffered time to receive email</label>
                                 <div class="form-row align-items-center">
-                                    <select class="form-control col-8">
-                                        <option selected>9:00</option>
+                                    <select class="form-control col-8" data-reminder="time">
+                                        <option selected>Select time</option>
+                                        <option>9:00</option>
                                         <option>10:00</option>
                                         <option>11:00</option>
                                         <option>12:00</option>
                                         <option>13:00</option>
                                     </select>
                                     <div class="col-4">
-                                        <button class="btn btn--ok col-12">Set</button>
+                                        <button class="btn btn--ok col-12" data-reminder="set">Set</button>
                                     </div>
                                 </div>
                             </div>
