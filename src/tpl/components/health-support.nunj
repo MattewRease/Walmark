@@ -12,7 +12,8 @@
             iconDone: 'tick',
             btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
-            week: 'Week'
+            week: 'Week',
+            dataId: '1'
         },
         {
             class: 'health-support__day col-xl-auto px-xl-2',
@@ -22,7 +23,8 @@
             iconDone: 'tick',
             btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
-            icon: 'update'
+            icon: 'update',
+            dataId: '2'
         },
         {
             class: 'health-support__day col-xl-auto px-xl-2',
@@ -32,7 +34,8 @@
             iconDone: 'tick',
             btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
-            icon: 'update'
+            icon: 'update',
+            dataId: '3'
         },
         {
             class: 'health-support__day col-xl-auto px-xl-2',
@@ -42,7 +45,8 @@
             iconDone: 'tick',
             btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
-            icon: 'update'
+            icon: 'update',
+            dataId: '4'
         },
         {
             class: 'health-support__day col-xl-auto px-xl-2',
@@ -52,7 +56,8 @@
             iconDone: 'tick',
             btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
-            icon: 'update'
+            icon: 'update',
+            dataId: '5'
         },
         {
             class: 'health-support__day col-xl-auto px-xl-2',
@@ -62,7 +67,8 @@
             iconDone: 'tick',
             btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
-            icon: 'update'
+            icon: 'update',
+            dataId: '6'
         },
         {
             class: 'health-support__day col-xl-auto px-xl-2',
@@ -72,7 +78,8 @@
             iconDone: 'tick',
             btnClass: 'col-12 col-md-2 mb-md-0 mb-4 px-0 px-xl-3 ml-md-2',
             thisWeek: 'true',
-            icon: 'update'
+            icon: 'update',
+            dataId: '7'
         }
     ]
 %}
@@ -92,8 +99,8 @@
                             <p class="health-support__description">You will be able to evaluate your plan once you finish it.</p>
                         </div>
                         <div class="d-none d-md-block col-md-3 col-xl-2 mt-3">
-                            <a href="#" class="btn btn--ok health-support__print px-0"><span>{{ svg('icon-print', 'health-support__print-icon') }}</span><span>Print your plan</span>
-                            </a>
+                            <button href="#" class="btn btn--ok health-support__print px-0"><span>{{ svg('icon-print', 'health-support__print-icon') }}</span><span>Print your plan</span>
+                            </button>
                         </div>
                         <div class="col-12 mx-auto col-md-6">
                             <div class="progress">
@@ -116,14 +123,14 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="health-support__week">
+                        <div class="health-support__week" id="request">
                             <div class="health-support__week--inner">
                             {% for item in items %}
 
                                 {% if loop.index == 1 %}
                                     <p class="targetDay col-xl-auto d-none d-xl-block text--green">{{ item.week + ' 1'}}</p>
                                 {% endif %}
-                                <div class="{{ item.class }}">
+                                <div class="{{ item.class }}" data-id="{{ item.dataId }}">
                                     <label class="{{ item.labelClass }}">{{ item.label }}</label>
                                     {% if item.ready=='true' and item.label !=='Monday' and  item.label !=='Sunday' and item.thisWeek =='true'  %}
                                         <div class="health-support__day--complete day--yes my-2 col-md-8 col-xl-auto">
@@ -135,10 +142,10 @@
                                         </button>
                                         {% elif item.label =='Sunday' and item.thisWeek =='true' %}
                                             <div class="health-support__day--complete day--sunday my-2 col-md-8 col-xl-auto">
-                                                <p class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
+                                                <p data-message='text' class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
                                             </div>
-                                            <button href="#" class="{{ item.btnClass }} btn btn--done health-support__btn health-support__btn--done" data-btn>
-                                                {{ svg(item.iconDone, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                                            <button data-result="week" class="{{ item.btnClass }} btn btn--done health-support__btn health-support__btn--done" data-btn>
+                                                {{ svg(item.iconDone, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Week Result</span>
                                             </button>
                                         {% elif item.label =='Monday' and item.thisWeek =='true' %}
                                             <div class="health-support__day--complete my-2 col-md-8 col-xl-auto">
@@ -207,16 +214,13 @@
                                 <span class="tooltip--text">Text inside tooltip</span>
                                 </span>
                                 <div class="form-row align-items-center">
-                                    <select class="form-control col-8">
+                                    <select class="form-control col-12">
                                         <option selected>Every 3 days</option>
                                         <option>Every 3 days</option>
                                         <option>Every 3 days</option>
                                         <option>Every 3 days</option>
                                         <option>Every 3 days</option>
                                     </select>
-                                    <div class="col-4">
-                                        <a href="#" class="btn btn--ok col-12">Set</a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
@@ -230,7 +234,7 @@
                                         <option>13:00</option>
                                     </select>
                                     <div class="col-4">
-                                        <a href="#" class="btn btn--ok col-12">Set</a>
+                                        <button class="btn btn--ok col-12">Set</button>
                                     </div>
                                 </div>
                             </div>
@@ -241,7 +245,7 @@
                                 <span class="tooltip--text">Text inside tooltip</span>
                                 </span>
                                 <div class="col-12 px-0">
-                                    <a href="#" class="btn btn--ok col-12 col-sm-7 col-md-12 mb-3">Reset my plan</a>
+                                    <button class="btn btn--ok col-12 col-sm-7 col-md-12 mb-3">Reset my plan</button>
                                 </div>
                             </div>
                         </div>

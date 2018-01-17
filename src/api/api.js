@@ -1,13 +1,22 @@
 module.exports = () => {
-    const createUser = id => ({
-        id,
-        name: `user_${id}`
-    });
-    const users = [];
-    const usersCount = 10;
-    for (let i = 0; i < usersCount; i++) {
-        users.push(createUser(i));
+    const tasks = {
+        message: {
+            type: 'Success', // warning or success
+            title: 'Congratulations!',
+            text: 'The thing you just did was a great success.'
+        }
     }
 
-    return { users };
+    const reminders = {
+        message: {
+            type: 'Warning', // warning or success
+            title: 'Entschuldigung Sie bitte!',
+            text: 'An error occured, please try again later.'
+        }
+    }
+
+    return {
+        reminders,
+        tasks
+    };
 };

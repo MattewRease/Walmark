@@ -2,16 +2,13 @@
 
 <div class="shopping-list">
     <div class="shopping-list__content">
-        <div class="container">
-            <div class="row">
-            <h2 class="col-12 shopping-list__title mb-0">Shopping List<span>{{ svg('close', 'shopping-list__close-icon icon--base') }}</span></h2>
-            <h3 class="shopping-list__title-empty">Empty</h3>
+        <h2 class="shopping-list__title mb-0">Shopping List<span>{{ svg('close', 'shopping-list__close-icon icon--base') }}</span></h2>
+        <h3 class="shopping-list__title-empty">Empty</h3>
 
-                <div class="shopping-list__item disable">
-                    <h3 class="shopping-list__item--name">{{ svg('trash', 'shopping-list__trash-icon icon--base') }}</h3>
-                    <p class="shopping-list__item--description"></p>
-                    <div class="shopping-list__list">
-                    </div>
+            <div class="shopping-list__item disable">
+                <h3 class="shopping-list__item--name">{{ svg('trash', 'shopping-list__trash-icon icon--base') }}</h3>
+                <p class="shopping-list__item--description"></p>
+                <div class="shopping-list__list">
                 </div>
             </div>
         </div>
