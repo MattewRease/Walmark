@@ -87,7 +87,10 @@ export default () => {
     function notify() {
         const noteWrapp = document.querySelector('.note-wrap');
         const note = document.createElement('p');
-        noteWrapp.appendChild(note);
+        const newNote = document.querySelector('.note');
+
+        newNote ? noteWrapp.insertBefore(note, newNote) : noteWrapp.appendChild(note);
+
         note.className = 'note';
         setTimeout(() => {
             note.classList.add('active');

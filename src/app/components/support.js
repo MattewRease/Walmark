@@ -31,9 +31,9 @@ export default () => {
 
             postRes();
 
-        innerSpan.innerHTML === 'Mark' ? innerSpan.innerHTML = 'Unmark' : innerSpan.innerHTML = 'Mark';
+            innerSpan.innerHTML === 'Mark' ? innerSpan.innerHTML = 'Unmark' : innerSpan.innerHTML = 'Mark';
 
-        innerSpan.innerHTML === 'Unmark' ? notify() : false;
+            innerSpan.innerHTML === 'Unmark' ? notify() : false;
 
             for (let j = 0; j < btn.length; j += 1) {
                 iconAll[j].classList.toggle('disable');
@@ -64,7 +64,9 @@ export default () => {
     function notify() {
         const noteWrapp = document.querySelector('.note-wrap');
         const note = document.createElement('p');
-        noteWrapp.appendChild(note);
+        const newNote = document.querySelector('.note');
+
+        newNote ? noteWrapp.insertBefore(note, newNote) : noteWrapp.appendChild(note);
         note.className = 'note success';
         setTimeout(() => {
             note.classList.add('active');
