@@ -135,10 +135,10 @@
     }
 
     &__btn {
-        left: -3px;
+        left: -5px;
         background-color: $orange;
         border: 1px solid $orange;
-        border-radius: $main-border-radius;
+        border-radius: 4px;
 
         &:hover {
             background-color: $orange-dark;

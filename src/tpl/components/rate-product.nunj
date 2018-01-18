@@ -1,6 +1,26 @@
 {% from '../helpers/svg.nunj' import svg %}
 {% import '../helpers/stars.nunj' as stars %}
 
+{%
+    set items = [
+        {
+            value: '5'
+        },
+        {
+            value: '4'
+        },
+        {
+            value: '3'
+        },
+        {
+            value: '2'
+        },
+        {
+            value: '1'
+        }
+    ]
+%}
+
 <section class="container">
     <div class="row">
         <h3 class="title w-100 bold px-0 mb-0 pt-2 pb-3">Rate the product</h3>
@@ -12,14 +32,14 @@
                         <h6 class="text--grey text-right d-inline text-md-left">Your rating: </h6>
                     </div>
                     <div class="rate-product__rating rate-product__rating--direction col-7  col-md-8 col-lg-8 align-self-center text-left">
-                        {% for item in range(1, 6) %}
-                            <button class="rate-product__star-icon">
+                        {% for item in items %}
+                            <button class="rate-product__star-icon"  value ="{{ item.value }}">
                                 {{ svg('icon-star', 'rate-product__rating--icon') }}
                             </button>
                         {% endfor %}
                     </div>
                     <div class="col-9 col-md-2 px-0 mx-auto mt-2 mt-md-0">
-                        <a href="#" class="btn btn--done rate-product__btn my-2 col-12 d-inline-block">Submit</a>
+                        <button class="btn btn--done rate-product__btn my-2 col-12 d-inline-block">Submit</button>
                     </div>
                 </div>
             </div>

@@ -15,6 +15,7 @@ import support from './components/support';
 import weekNav from './components/weekNav';
 import accordion from './components/accordion';
 import request from './components/request';
+import rateProduct from './components/rateProduct';
 
 const app = (config) => {
     init(dropdown, document.getElementById('dropdown'));
@@ -26,6 +27,7 @@ const app = (config) => {
     init(support, document.querySelector('.health-support'));
     init(accordion, document.getElementById('accordion'));
     init(request, document.getElementById('request'));
+    init(rateProduct, document.querySelector('.rate-product'));
 };
 
 app(null, window.config);
