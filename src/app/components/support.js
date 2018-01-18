@@ -1,4 +1,7 @@
 import axios from 'axios';
+import notify from './../base/notify';
+import { note, success } from './../variables/notes';
+import { conratz } from './../variables/messages';
 
 export default () => {
     const btn = document.querySelectorAll('.health-support__btn');
@@ -32,8 +35,7 @@ export default () => {
             postRes();
 
             innerSpan.innerHTML === 'Mark' ? innerSpan.innerHTML = 'Unmark' : innerSpan.innerHTML = 'Mark';
-
-            innerSpan.innerHTML === 'Unmark' ? notify() : false;
+            innerSpan.innerHTML === 'Unmark' ? notify(`${note} ${success}`, conratz) : false;
 
             for (let j = 0; j < btn.length; j += 1) {
                 iconAll[j].classList.toggle('disable');
@@ -48,10 +50,6 @@ export default () => {
     }
 
     function postRes() {
-        const noteWrapp = document.createElement('div');
-        document.body.appendChild(noteWrapp);
-        noteWrapp.className = 'note-wrap';
-
         axios({
             method: 'post',
             url: APIUrl,
@@ -59,22 +57,6 @@ export default () => {
                 task
             }
         });
-    }
-
-    function notify() {
-        const noteWrapp = document.querySelector('.note-wrap');
-        const note = document.createElement('p');
-        const newNote = document.querySelector('.note');
-
-        newNote ? noteWrapp.insertBefore(note, newNote) : noteWrapp.appendChild(note);
-        note.className = 'note success';
-        setTimeout(() => {
-            note.classList.add('active');
-            note.innerHTML = 'Congratulation!';
-        }, 300);
-        setTimeout(() => {
-            noteWrapp.removeChild(noteWrapp.lastChild);
-        }, 3000);
     }
 
     progressBar();
