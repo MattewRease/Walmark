@@ -1,4 +1,7 @@
 import axios from 'axios';
+import notify from './../base/notify';
+import { note, info, warning } from './../variables/notes';
+import { sent, failed } from './../variables/messages';
 
 export default () => {
     const APIUrl = 'http://localhost:5003/rating';
@@ -17,9 +20,6 @@ export default () => {
     }
 
     rateBtn.addEventListener('click', () => {
-        const noteWrapp = document.createElement('div');
-        document.body.appendChild(noteWrapp);
-        noteWrapp.className = 'note-wrap';
         const review = {
             rate: selectedStar,
             text: reviewText.value
@@ -33,43 +33,10 @@ export default () => {
                     review
                 }
             });
-            notify();
+            notify(`${note} ${info}`, sent);
         } else {
-            notifyWarning();
+            notify(`${note} ${warning}`, failed);
         }
         reviewText.value = '';
-        function notify() {
-            const noteWrapp = document.querySelector('.note-wrap');
-            const note = document.createElement('p');
-            const newNote = document.querySelector('.note');
-
-            newNote ? noteWrapp.insertBefore(note, newNote) : noteWrapp.appendChild(note);
-
-            note.className = 'note info';
-            setTimeout(() => {
-                note.classList.add('active');
-                note.innerHTML = 'Your review has been sent!';
-            }, 300);
-            setTimeout(() => {
-                noteWrapp.removeChild(noteWrapp.firstChild);
-            }, 3000);
-        }
-
-        function notifyWarning() {
-            const noteWrapp = document.querySelector('.note-wrap');
-            const note = document.createElement('p');
-            const newNote = document.querySelector('.note');
-
-            newNote ? noteWrapp.insertBefore(note, newNote) : noteWrapp.appendChild(note);
-
-            note.className = 'note warning';
-            setTimeout(() => {
-                note.classList.add('active');
-                note.innerHTML = 'Failed! Fill the Form!';
-            }, 300);
-            setTimeout(() => {
-                noteWrapp.removeChild(noteWrapp.firstChild);
-            }, 3000);
-        }
     });
 };

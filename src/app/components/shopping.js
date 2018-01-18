@@ -1,3 +1,7 @@
+import notify from './../base/notify';
+import { note } from './../variables/notes';
+import { buy } from './../variables/messages';
+
 export default () => {
     const shoppingList = document.getElementById('shoppingList');
     const trashBtn = document.querySelector('.shopping-list__trash-icon');
@@ -33,13 +37,7 @@ export default () => {
         newItem.className = 'shopping-list__item--new';
         const noteWrapp = document.createElement('div');
 
-        if (!document.querySelector('.note-wrap')) {
-            document.body.appendChild(noteWrapp);
-            noteWrapp.className = 'note-wrap';
-        } else {
-            false;
-        }
-        notify();
+        notify(note, buy);
     }
 
     function addContentShort() {
@@ -79,25 +77,6 @@ export default () => {
 
     function notEmpty() {
         const newItem = document.querySelector('.shopping-list__item--new');
-        if (newItem) {
-            document.querySelector('.shopping-list__title-empty').classList.add('disable');
-        }
-    }
-
-    function notify() {
-        const noteWrapp = document.querySelector('.note-wrap');
-        const note = document.createElement('p');
-        const newNote = document.querySelector('.note');
-
-        newNote ? noteWrapp.insertBefore(note, newNote) : noteWrapp.appendChild(note);
-
-        note.className = 'note';
-        setTimeout(() => {
-            note.classList.add('active');
-            note.innerHTML = 'Program added to your shopping list!';
-        }, 300);
-        setTimeout(() => {
-            noteWrapp.removeChild(noteWrapp.lastChild);
-        }, 3000);
+        newItem ? document.querySelector('.shopping-list__title-empty').classList.add('disable') : false;
     }
 };
