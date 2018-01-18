@@ -15,8 +15,16 @@ module.exports = () => {
         }
     }
 
+    const rating = {
+        message: {
+            rate: '0',
+            text: 'Your message wiil be here.'
+        }
+    }
+
     return {
         reminders,
-        tasks
+        tasks,
+        rating
     };
 };

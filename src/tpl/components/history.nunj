@@ -20,9 +20,9 @@
         <div class="w-100 mt-4  text-center">
             {% for item in items %}
             <div class="history col-12 col-md-5 d-md-inline-block">
-                <a href="#" class="btn btn--ok mt-2 col-12 ">
+                <button class="btn btn--ok mt-2 col-12 ">
                     <span>{{ item.month }}{{ item.date }}{{ item.year }}</span>
-                </a>
+                </button>
             </div>
             {% endfor %}
         </div>
