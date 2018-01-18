@@ -13,9 +13,9 @@
                     </div>
                     <div class="rate-product__rating rate-product__rating--direction col-7  col-md-8 col-lg-8 align-self-center text-left">
                         {% for item in range(1, 6) %}
-                            <a href="#" class="rate-product__star-icon">
+                            <button class="rate-product__star-icon">
                                 {{ svg('icon-star', 'rate-product__rating--icon') }}
-                            </a>
+                            </button>
                         {% endfor %}
                     </div>
                     <div class="col-9 col-md-2 px-0 mx-auto mt-2 mt-md-0">

@@ -1,5 +1,8 @@
 .rating {
     &__star-icon {
+        @include size(15px, 15px);
+        background-color: transparent;
+        border: none;
         transition: .3s;
         fill: $grey;
 
