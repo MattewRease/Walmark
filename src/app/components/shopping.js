@@ -35,7 +35,6 @@ export default () => {
         const copyItem = item.cloneNode(true);
         const newItem = item.parentNode.insertBefore(copyItem, item.nextSibling);
         newItem.className = 'shopping-list__item--new';
-        const noteWrapp = document.createElement('div');
 
         notify(note, buy);
     }

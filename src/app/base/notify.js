@@ -1,22 +1,20 @@
 export default function notify(a, b) {
-    const newNote = document.querySelector('.note');
     const note = document.createElement('p');
+    const newNote = document.querySelector('.note');
+    document.body.insertBefore(note, newNote);
 
-    if (!document.querySelector('.note-wrap')) {
-        const createWrapp = document.createElement('div');
-        createWrapp.className = 'note-wrap';
-        document.body.appendChild(createWrapp);
-    }
+    newNote ? newNote.classList.remove('active') : false;
 
-    const noteWrapp = document.querySelector('.note-wrap');
-
-    newNote ? noteWrapp.insertBefore(note, newNote) : noteWrapp.appendChild(note);
     note.className = a;
     setTimeout(() => {
         note.classList.add('active');
         note.innerHTML = b;
     }, 300);
     setTimeout(() => {
-        noteWrapp.removeChild(noteWrapp.lastChild);
+        note.classList.remove('active');
     }, 3000);
+    setTimeout(() => {
+        note.remove();
+    }, 3500);
+
 }

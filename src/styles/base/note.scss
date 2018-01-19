@@ -1,36 +1,31 @@
-.note-wrap {
-    position: fixed;
-    top: 10px;
-    right: 0;
-    z-index: 100;
-    max-height: 250px;
-}
-
 .note {
+    position: fixed;
+    top: 30px;
+    right: -35rem;
+    z-index: 1001;
     padding: 10px 15px;
-    margin: 0 5px;
-    color: #fff;
+    color: $white;
     background-color: #e26200;
     border-radius: 8px;
-    opacity: 0;
-    visibility: hidden;
+    transition: right .5s;
 
     &.active {
-        margin: 10px 5px;
-        opacity: 1;
-        visibility: visible;
-        transition: all .4s ease;
+        right: 1rem;
+        transition: right .5s;
     }
 
     &.success {
-        background-color: #00983d;
+        color: $green;
+        background-color: #e5f4eb;
     }
 
     &.info {
+        color: $white;
         background-color: #3a81dd;
     }
 
     &.warning {
+        color: $white;
         background-color: #e54544;
     }
 }
