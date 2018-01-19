@@ -1,4 +1,7 @@
 import axios from 'axios';
+import notify from './../base/notify';
+import { note, info } from './../variables/notes';
+import { sent } from './../variables/messages';
 
 export default () => {
     const APIUrl = 'http://localhost:5003/reminders';
@@ -24,9 +27,6 @@ export default () => {
     setBtn.addEventListener('click', postRes);
 
     function postRes() {
-        const noteWrapp = document.createElement('div');
-        document.body.appendChild(noteWrapp);
-        noteWrapp.className = 'note-wrap';
         axios({
             method: 'post',
             url: APIUrl,
@@ -35,23 +35,6 @@ export default () => {
                 time: selectedTime
             }
         });
-        notify();
-    }
-
-    function notify() {
-        const noteWrapp = document.querySelector('.note-wrap');
-        const note = document.createElement('p');
-        const newNote = document.querySelector('.note');
-
-        newNote ? noteWrapp.insertBefore(note, newNote) : noteWrapp.appendChild(note);
-
-        note.className = 'note info';
-        setTimeout(() => {
-            note.classList.add('active');
-            note.innerHTML = 'Reminder set!';
-        }, 300);
-        setTimeout(() => {
-            noteWrapp.removeChild(noteWrapp.firstChild);
-        }, 3000);
+        notify(`${note} ${info}`, sent);
     }
 };
