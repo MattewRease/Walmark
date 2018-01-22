@@ -87,6 +87,10 @@
     }
 
     &__btn {
+        &.disable {
+            display: none;
+        }
+
         @include media-breakpoint-up(xs) {
             top: -14px;
         }
@@ -117,8 +121,6 @@
         }
 
         &--done {
-            border: none;
-
             @include media-breakpoint-up(xl) {
                 background-color: $green;
 
@@ -193,6 +195,10 @@
         &--cross {
             &.disable {
                 display: none;
+            }
+
+            &.active {
+                // display: block;
             }
         }
 
