@@ -1,13 +1,14 @@
 import axios from 'axios';
 import notify from './../base/notify';
 import { note, success } from './../variables/notes';
-import { conratz } from './../variables/messages';
+import { congratz } from './../variables/messages';
 
 export default () => {
     const btn = document.querySelectorAll('.health-support__btn');
     const APIUrl = 'http://localhost:5003/tasks';
     const messageText = document.querySelector('[data-message="text"]');
-    const callBtn = document.querySelector('[data-result="week"]');
+    const iconCross = document.querySelector('.health-support__day--cross');
+    const dayText = document.querySelector('[data-message="text"]');
 
     const task = {
         id: '',
@@ -18,9 +19,21 @@ export default () => {
         btn[i].addEventListener('click', () => {
             const selected = btn[i].previousElementSibling;
             const innerSpan = btn[i].querySelector('span');
-            const icon = selected.querySelector('svg').classList;
             const iconAll = selected.querySelectorAll('svg');
             const dataId = selected.parentNode.dataset.id;
+
+            if (selected.classList.contains('day--sunday')) {
+                selected.classList.remove('day--sunday');
+                const cloneCross = iconCross.cloneNode(true);
+                dayText.parentNode.appendChild(cloneCross);
+                dayText.remove();
+                selected.classList.add('day--no');
+                document.querySelector('.health-support__btn--done').remove();
+                document.querySelector('[data-btn="disable"]').classList.remove('disable');
+                postRes();
+            }
+
+
             selected.classList.toggle('day--no');
             selected.classList.toggle('day--yes');
 
@@ -35,18 +48,18 @@ export default () => {
             postRes();
 
             innerSpan.innerHTML === 'Mark' ? innerSpan.innerHTML = 'Unmark' : innerSpan.innerHTML = 'Mark';
-            innerSpan.innerHTML === 'Unmark' ? notify(`${note} ${success}`, conratz) : false;
+            innerSpan.innerHTML === 'Unmark' ? notify(`${note} ${success}`, congratz) : false;
 
-            for (let j = 0; j < btn.length; j += 1) {
-                iconAll[j].classList.toggle('disable');
-                progressBar();
-            }
+            iconAll[0].classList.toggle('disable');
+            iconAll[1].classList.toggle('disable');
+
+            progressBar();
         });
     }
 
     function progressBar() {
         const done = document.querySelectorAll('.day--yes').length;
-        document.querySelector('.progress-bar').style.width = `${done * 20}%`;
+        document.querySelector('.progress-bar').style.width = `${done * 17}%`;
     }
 
     function postRes() {

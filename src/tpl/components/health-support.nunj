@@ -99,7 +99,7 @@
                             <p class="health-support__description">You will be able to evaluate your plan once you finish it.</p>
                         </div>
                         <div class="d-none d-md-block col-md-3 col-xl-2 mt-3">
-                            <button href="#" class="btn btn--ok health-support__print px-0"><span>{{ svg('icon-print', 'health-support__print-icon') }}</span><span>Print your plan</span>
+                            <button class="btn btn--ok health-support__print px-0"><span>{{ svg('icon-print', 'health-support__print-icon') }}</span><span>Print your plan</span>
                             </button>
                         </div>
                         <div class="col-12 mx-auto col-md-6">
@@ -134,28 +134,32 @@
                                     <label class="{{ item.labelClass }}">{{ item.label }}</label>
                                     {% if item.ready=='true' and item.label !=='Monday' and  item.label !=='Sunday' and item.thisWeek =='true'  %}
                                         <div class="health-support__day--complete day--yes my-2 col-md-8 col-xl-auto">
-                                            {{ svg('tick', 'health-support__day--tick') }}
+                                            {{ svg('tick', 'health-support__day--tick active') }}
                                             {{ svg('cross', 'health-support__day--cross disable') }}
                                         </div>
-                                        <button href="#" class="{{ item.btnClass }} btn btn--ok health-support__btn" data-btn>
+                                        <button class="{{ item.btnClass }} btn btn--ok health-support__btn" data-btn>
                                             {{ svg(item.icon, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                         </button>
                                         {% elif item.label =='Sunday' and item.thisWeek =='true' %}
                                             <div class="health-support__day--complete day--sunday my-2 col-md-8 col-xl-auto">
+                                                {{ svg('tick', 'health-support__day--tick disable') }}
                                                 <p data-message='text' class="py-3 mb-0 px-2 p-xl-0">During your day remember to stretch you back every two hours</p>
                                             </div>
-                                            <button data-result="week" class="{{ item.btnClass }} btn btn--done health-support__btn health-support__btn--done" data-btn>
-                                                {{ svg(item.iconDone, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
+                                            <button class="{{ item.btnClass }} btn btn--done health-support__btn health-support__btn--done" data-btn>
+                                                {{ svg(item.iconDone, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Mark</span>
+                                            </button>
+                                            <button class="{{ item.btnClass }} btn btn--ok health-support__btn disable" data-btn="disable">
+                                                {{ svg(item.icon, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Unmark</span>
                                             </button>
                                         {% elif item.label =='Monday' and item.thisWeek =='true' %}
                                             <div class="health-support__day--complete my-2 col-md-8 col-xl-auto">
                                             </div>
                                         {% elif item.thisWeek =='true' %}
                                             <div class="health-support__day--complete day--no my-2 col-md-8 col-xl-auto">
-                                                {{ svg('cross', 'health-support__day--cross') }}
+                                                {{ svg('cross', 'health-support__day--cross active') }}
                                                 {{ svg('tick', 'health-support__day--tick disable') }}
                                             </div>
-                                            <button href="#" class="{{ item.btnClass }} btn btn--ok health-support__btn" data-btn>
+                                            <button class="{{ item.btnClass }} btn btn--ok health-support__btn" data-btn>
                                                 {{ svg(item.icon, 'btn health-support__btn-icon d-none d-xl-block') }}<span class="d-xl-none">Mark</span>
                                             </button>
                                         {% else %}
