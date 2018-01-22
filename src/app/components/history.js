@@ -6,16 +6,26 @@ export default function historyModal() {
     const modalWindow = document.querySelector('.history-modal');
     const content = document.querySelector('.history-modal__content');
     const healthIndex = document.querySelector('.health');
-    const copyItem = healthIndex.cloneNode(true);
-    const newItem = content.appendChild(copyItem, healthIndex.nextSibling);
+    const comparison = document.querySelector('.comparison');
+    const copyIndexItem = healthIndex.cloneNode(true);
+    const copyComparisonItem = comparison.cloneNode(true);
+    const newIndexItem = content.appendChild(copyIndexItem, healthIndex.nextSibling);
+    const newComparisonItem = content.appendChild(copyComparisonItem, comparison.nextSibling);
     const indexRate = content.querySelector('#rateIndex');
 
-    firstBtn.onclick = () => {
+    firstBtn.addEventListener('click', () => {
+        modalWindow.classList.add('active');
+        indexRate.dataset.index = 7;
+        countIndex();
+    });
+
+    secondBtn.addEventListener('click', () => {
         modalWindow.classList.add('active');
         indexRate.dataset.index = 77;
+        countIndex();
+    });
 
-        // shhhiiiiitttttt
-
+    function countIndex() {
         const arrow = content.querySelector('#rateArrow');
         const bg = content.querySelector('#rateBg');
         const rateChange = `rotate(${indexRate.dataset.index * 1.8}deg)`;
@@ -35,10 +45,7 @@ export default function historyModal() {
                 indexRate.classList.add('range--hight');
             }
         }
-
-        // shhhiiiiitttttt
-
-    };
+    }
 
     modalWindow.onclick = (event) => {
         event.target === modalWindow ? close() : false;
