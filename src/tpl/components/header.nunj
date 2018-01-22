@@ -35,7 +35,7 @@
                         <span class="d-none d-xl-inline">Wish list is empty</span>
                         <span class="tooltip icon icon--tooltip ml-2 d-none d-xl-inline">
                             {{ svg('question-mark', 'tooltip') }}
-                        <span class="tooltip--text">Text inside tooltip</span>
+                        <span class="tooltip__text tooltip__text--left">Text inside tooltip</span>
                         </span>
                     </li>
                     <li class="mx-lg-2 d-xl-none">
