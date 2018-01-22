@@ -212,7 +212,7 @@
                                     <label class="py-2 mt-3">Set reminders</label>
                                     <span class="tooltip icon icon--tooltip mt-1 ml-2">
                                         {{ svg('question-mark', 'tooltip') }}
-                                    <span class="tooltip--text">Text inside tooltip</span>
+                                    <span class="tooltip__text">Text inside tooltip</span>
                                     </span>
                                 </div>
                                 <div class="form-row align-items-center">
@@ -242,11 +242,11 @@
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
-                                <div class="d-flex flex-wrap align-items-center">
-                                    <label class="py-2 mt-3">You missed tasks?</label>
-                                    <span class="tooltip icon icon--tooltip ml-2 mt-1">
+                                <div class="d-flex flex-wrap align-items-center justify-content-end">
+                                    <label class="py-2 mt-3">Set reminders</label>
+                                    <span class="tooltip icon icon--tooltip mt-1 ml-2">
                                         {{ svg('question-mark', 'tooltip') }}
-                                    <span class="tooltip--text">Text inside tooltip</span>
+                                    <span class="tooltip__text tooltip__text--left">Text inside tooltip</span>
                                     </span>
                                 </div>
                                 <div class="col-12 px-0">
