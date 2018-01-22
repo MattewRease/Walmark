@@ -30,7 +30,11 @@
         }
 
         @include media-breakpoint-up(lg) {
-            margin: 30px;
+            margin: 30px 5px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin: 30px 40px;
         }
     }
 
