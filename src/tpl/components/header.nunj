@@ -47,7 +47,7 @@
                         <span class="pl-2 d-none d-md-inline">MENU</span>
                     </li>
                     <li class="pl-0 pt-1 d-xl-none">
-                        <a href="#" class="js-dropMenu dropMenu navbar-toggler navbar-toggler-right">
+                        <a href="#" class="js-dropMenu navbar-toggler navbar-toggler-right">
                             <span>{{ svg('menu-button', 'header__profile--icon') }}</span>
                         </a>
                     </li>

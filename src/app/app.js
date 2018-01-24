@@ -19,7 +19,7 @@ import history from './components/history';
 import rateProduct from './components/rateProduct';
 
 const app = (config) => {
-    init(dropdown, document.querySelector('.js-dropdown-content'));
+    init(dropdown, document.querySelector('.header'));
     init(shopping, document.querySelector('.shopping-list'));
     init(progress, document.querySelector('.js-progress'));
     init(weight, document.querySelector('.health__weight'));

@@ -80,6 +80,10 @@
         flex-flow: column wrap;
         list-style: none;
 
+        &.active {
+            display: flex;
+        }
+
         &--item {
             padding: 5px 0;
             color: black;
