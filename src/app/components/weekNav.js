@@ -5,7 +5,7 @@ export default () => {
     const days = document.querySelectorAll('.health-support__day');
     const myArray = Array.from(days);
     const newSelect = myArray.slice(7);
-    const count = document.getElementById('weekNumder');
+    const count = document.querySelector('.js-weekNumder');
     let i = 0;
     let w = 1;
 
@@ -54,15 +54,15 @@ export default () => {
     // function weekNumber() {
     //     if (window.innerWidth < 768) {
     //         if (calendar.scrollTop > 750 && calendar.scrollTop < 1858) {
-    //             document.getElementById('weekNumder').innerHTML = 'Week 2';
+    //             document.querySelector('.js-weekNumder').innerHTML = 'Week 2';
     //         } else if (calendar.scrollTop > 938 && calendar.scrollTop < 1594) {
-    //             document.getElementById('weekNumder').innerHTML = 'Week 3';
+    //             document.querySelector('.js-weekNumder').innerHTML = 'Week 3';
     //         } else if (calendar.scrollTop > 1595 && calendar.scrollTop < 2034) {
-    //             document.getElementById('weekNumder').innerHTML = 'Week 4';
+    //             document.querySelector('.js-weekNumder').innerHTML = 'Week 4';
     //         } else if (calendar.scrollTop > 2035) {
-    //             document.getElementById('weekNumder').innerHTML = 'Week 5';
+    //             document.querySelector('.js-weekNumder').innerHTML = 'Week 5';
     //         } else if (calendar.scrollTop < 200) {
-    //             document.getElementById('weekNumder').innerHTML = 'Week 1';
+    //             document.querySelector('.js-weekNumder').innerHTML = 'Week 1';
     //         }
     //     }
 

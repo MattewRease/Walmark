@@ -3,7 +3,7 @@
 <div class="health__index">
     <h5 class="bold py-2 text--green">Your Health Index</h5>
     <p>Here yoy can see how you stand on the scale of health index</p>
-    <div class="health__progress mt-md-5 mt-lg-0" id="progress">
+    <div class="js-progress health__progress mt-md-5 mt-lg-0">
         <div class="health__progress--inner js-rateIndex">
             {{ svg('health-index-scale', 'health__progress--icon') }}
             <span class="health__value--min bold">0</span>
@@ -11,10 +11,10 @@
             <span class="health__value--low">Low</span>
             <span class="health__value--medium">Medium</span>
             <span class="health__value--hight">Hight</span>
-            <div class="health__progress--bg js-rateBg" id="rateBg"></div>
+            <div class="health__progress--bg js-rateBg"></div>
         </div>
-        <div class="health__progress--arrow js-rateArrow" id="rateArrow">{{ svg('icon-cursor', 'health__progress--arrow__icon') }}</div>
-        <p class="health__progress--text bold mb-0 js-numberIndex" id="rateIndex" data-index="90"></p>
+        <div class="health__progress--arrow js-rateArrow">{{ svg('icon-cursor', 'health__progress--arrow__icon') }}</div>
+        <p class="health__progress--text bold mb-0 js-numberIndex"  data-index="90"></p>
     </div>
 </div>
 

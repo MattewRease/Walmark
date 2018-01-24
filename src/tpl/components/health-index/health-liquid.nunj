@@ -10,7 +10,7 @@
 
 <div class="health__liquid align-items-center d-flex flex-wrap pb-1">
     <div class="col-12 pl-0">
-        <h3 class="health__weight--text mb-0 "><strong class="pr-2">Your daily liquid intake is </strong><span id="liquidRate" class="bold"></span>
+        <h3 class="health__weight--text mb-0 "><strong class="pr-2">Your daily liquid intake is </strong><span class="js-liquidRate bold"></span>
         {% for item in items %}
             {% if  item.dataLiquid < 2.5 %}
                 {{ svg('sad', 'health__liquid--icon range-icon--low mb-xs-2 mt-sm-2') }}

@@ -1,8 +1,8 @@
 
 export default function historyModal() {
-    const firstBtn = document.getElementById('firstHistory');
+    const firstBtn = document.querySelector('.js-firstHistory');
     const closeBtn = document.querySelector('.history-modal__close');
-    const secondBtn = document.getElementById('secondHistory');
+    const secondBtn = document.querySelector('.js-secondHistory');
     const modalWindow = document.querySelector('.history-modal');
     const content = document.querySelector('.history-modal__content');
     const healthIndex = document.querySelector('.health');
@@ -11,7 +11,7 @@ export default function historyModal() {
     const copyComparisonItem = comparison.cloneNode(true);
     const newIndexItem = content.appendChild(copyIndexItem, healthIndex.nextSibling);
     const newComparisonItem = content.appendChild(copyComparisonItem, comparison.nextSibling);
-    const indexRate = content.querySelector('#rateIndex');
+    const indexRate = content.querySelector('.js-numberIndex');
 
     firstBtn.addEventListener('click', () => {
         modalWindow.classList.add('active');
@@ -26,8 +26,8 @@ export default function historyModal() {
     });
 
     function countIndex() {
-        const arrow = content.querySelector('#rateArrow');
-        const bg = content.querySelector('#rateBg');
+        const arrow = content.querySelector('.js-rateArrow');
+        const bg = content.querySelector('.js-rateBg');
         const rateChange = `rotate(${indexRate.dataset.index * 1.8}deg)`;
         indexRate.innerHTML = (indexRate.dataset.index);
 

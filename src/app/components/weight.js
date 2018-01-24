@@ -1,7 +1,7 @@
 export default () => {
     const bmi = document.querySelector('.health__weight--bmi');
     const indexBmi = bmi.dataset.bmi;
-    const category = document.getElementById('weightCategory');
+    const category = document.querySelector('.js-weightCategory');
 
     bmi.innerHTML = indexBmi;
 

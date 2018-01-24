@@ -19,15 +19,15 @@ import history from './components/history';
 import rateProduct from './components/rateProduct';
 
 const app = (config) => {
-    init(dropdown, document.getElementById('dropdown'));
+    init(dropdown, document.querySelector('.js-dropdown-content'));
     init(shopping, document.querySelector('.shopping-list'));
-    init(progress, document.getElementById('progress'));
+    init(progress, document.querySelector('.js-progress'));
     init(weight, document.querySelector('.health__weight'));
     init(liquid, document.querySelector('.health__liquid'));
     init(weekNav, document.querySelector('.health-support__navigation'));
     init(support, document.querySelector('.health-support'));
-    init(accordion, document.getElementById('accordion'));
-    init(request, document.getElementById('request'));
+    init(accordion, document.querySelector('.footer__links'));
+    init(request, document.querySelector('.js-request'));
     init(rateProduct, document.querySelector('.rate-product'));
     init(history, document.querySelector('.history'));
 };
