@@ -1,6 +1,6 @@
 export default () => {
-    const button = document.querySelector('.dropMenu');
-    const menu = document.querySelector('.dropdown-content');
+    const button = document.querySelector('.js-dropMenu');
+    const menu = document.querySelector('.js-dropdown-content');
     button.addEventListener('click', () => {
         if (menu.style.display === 'flex') {
             menu.style.display = 'none';
@@ -10,3 +10,22 @@ export default () => {
     }
     );
 };
+
+// export default class DropMenu {
+//     constructor(container) {
+//         this.container = container;
+//         const dropBtn = container.querySelector('.dropMenu');
+//         console.log(dropBtn);
+
+//         this.dropBtn.addEventListener('click', this.massege);
+//     }
+
+//     massege() {
+//         const dropMenu = container.querySelector('.dropdown-content');
+//         if (this.dropMenu.style.display === 'flex') {
+//             this.dropMenu.style.display = 'none';
+//         } else {
+//             this.dropMenu.style.display = 'flex';
+//         }
+//     }
+// }

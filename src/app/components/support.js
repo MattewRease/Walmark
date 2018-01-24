@@ -33,7 +33,6 @@ export default () => {
                 postRes();
             }
 
-
             selected.classList.toggle('day--no');
             selected.classList.toggle('day--yes');
 
@@ -45,15 +44,15 @@ export default () => {
                 task.text = 'unsuccessfully';
             }
 
+            progressBar();
             postRes();
 
             innerSpan.innerHTML === 'Mark' ? innerSpan.innerHTML = 'Unmark' : innerSpan.innerHTML = 'Mark';
             innerSpan.innerHTML === 'Unmark' ? notify(`${note} ${success}`, congratz) : false;
 
+
             iconAll[0].classList.toggle('disable');
             iconAll[1].classList.toggle('disable');
-
-            progressBar();
         });
     }
 
