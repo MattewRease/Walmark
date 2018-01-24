@@ -6,7 +6,7 @@
     &__text {
         position: absolute;
         top: 20px;
-        left: calc(50% - 75px);
+        left: -155px;
         z-index: 10;
         width: 150px;
         padding: 7px;
@@ -29,6 +29,11 @@
         &--left {
             top: -7px;
             left: -155px;
+        }
+
+        &--right {
+            top: -7px;
+            left: 25px;
         }
     }
 }
