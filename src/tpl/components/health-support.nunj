@@ -115,7 +115,7 @@
                                     <span class="text--orange bold">Previous</span>
                                 </a>
                                 <div>
-                                    <span id="weekNumder" class="bold"></span>
+                                    <span class="js-weekNumder bold"></span>
                                 </div>
                                 <a class="health-support__navigation-next">
                                     <span class="text--orange bold">Next</span>
@@ -123,7 +123,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="health-support__week" id="request">
+                        <div class="js-request health-support__week">
                             <div class="health-support__week--inner">
                             {% for item in items %}
 

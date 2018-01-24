@@ -3,7 +3,7 @@ import { note } from './../variables/notes';
 import { buy } from './../variables/messages';
 
 export default () => {
-    const shoppingList = document.getElementById('shoppingList');
+    const shoppingList = document.querySelector('.js-shoppingList');
     const trashBtn = document.querySelector('.shopping-list__trash-icon');
     const item = document.querySelector('.shopping-list__item');
     const title = document.querySelector('.program-length__list--title');

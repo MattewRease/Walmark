@@ -26,8 +26,8 @@ export default function historyModal() {
     });
 
     function countIndex() {
-        const arrow = content.querySelector('#rateArrow');
-        const bg = content.querySelector('#rateBg');
+        const arrow = content.querySelector('.js-rateArrow');
+        const bg = content.querySelector('.js-rateBg');
         const rateChange = `rotate(${indexRate.dataset.index * 1.8}deg)`;
         indexRate.innerHTML = (indexRate.dataset.index);
 

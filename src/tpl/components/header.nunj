@@ -28,8 +28,8 @@
                             <span class="px-2 text--orange d-none d-md-inline">Log out</span>
                         </a>
                     </li>
-                    <li class=" align-items-center ml-lg-2 d-flex flex-wrap">
-                        <a id="shoppingList" class="px-1 pl-sm-2 pl-md-1" href="#">
+                    <li class="align-items-center ml-lg-2 d-flex flex-wrap">
+                        <a class="js-shoppingList px-1 pl-sm-2 pl-md-1" href="#">
                             {{ svg('icon-wishlist', 'icon--orange header__profile--icon') }}
                         </a>
                         <span class="d-none d-xl-inline">Wish list is empty</span>
@@ -52,7 +52,7 @@
                         </a>
                     </li>
                 </ul>
-                <ul class="js-dropdown-content dropdown-content header__list w-100 mb-0 pl-0">
+                <ul class="js-dropdown-content  header__list w-100 mb-0 pl-0">
                     <li class="header__list--item">
                         <a class="header__links--item" href="#">Homepage</a>
                     </li>
