@@ -216,7 +216,7 @@
                                     <label class="py-2 mt-3">Set reminders</label>
                                     <span class="tooltip icon icon--tooltip mt-1 ml-2">
                                         {{ svg('question-mark', 'tooltip') }}
-                                    <span class="tooltip__text">Text inside tooltip</span>
+                                    <span class="tooltip__text tooltip__text--right">Text inside tooltip</span>
                                     </span>
                                 </div>
                                 <div class="form-row align-items-center">

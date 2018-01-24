@@ -1,27 +1,34 @@
-export default () => {
-    const bmi = document.querySelector('.health__weight--bmi');
-    const indexBmi = bmi.dataset.bmi;
-    const category = document.querySelector('.js-weightCategory');
-
-    bmi.innerHTML = indexBmi;
-
-    if (indexBmi < 15 || indexBmi > 25) {
-
-        indexBmi < 15 ? category.innerHTML = 'To Low Weight!' : category.innerHTML = 'Too High Weight!';
-
-        category.classList.add('range--low');
-        bmi.classList.add('range--low');
-
-    } else if (indexBmi > 15 && indexBmi < 20) {
-
-        category.classList.add('range--middle');
-        category.innerHTML = 'Close To Normal Weight';
-        bmi.classList.add('range--middle');
-
-    } else {
-
-        category.classList.add('range--hight');
-        category.innerHTML = 'Normal Weight';
-        bmi.classList.add('range--hight');
+export default class Weight {
+    constructor(container) {
+        this.container = container;
+        this.bmi = this.container.querySelector('.health__weight--bmi');
+        this.indexBmi = this.bmi.dataset.bmi;
+        this.category = this.container.querySelector('.js-weightCategory');
+        this.bmi.innerHTML = this.indexBmi;
+        this.countWeight();
     }
-};
+
+    countWeight() {
+        if (this.indexBmi < 15 || this.indexBmi > 25) {
+            this.category.classList.add('range--low');
+            this.bmi.classList.add('range--low');
+            this.overNormal();
+
+        } else if (this.indexBmi > 15 && this.indexBmi < 20) {
+
+            this.category.classList.add('range--middle');
+            this.category.innerHTML = 'Close To Normal Weight';
+            this.bmi.classList.add('range--middle');
+
+        } else {
+
+            this.category.classList.add('range--hight');
+            this.category.innerHTML = 'Normal Weight';
+            this.bmi.classList.add('range--hight');
+        }
+    }
+
+    overNormal() {
+        this.indexBmi < 15 ? this.category.innerHTML = 'To Low Weight!' : this.category.innerHTML = 'Too High Weight!';
+    }
+}
