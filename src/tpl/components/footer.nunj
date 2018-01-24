@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <nav class="footer__links col-12 col-sm-7 col-lg-9 py-3 d-inline-block" role="navigation">
-                    <ul class="d-xl-flex justify-content-between pl-0" id="accordion">
+                    <ul class="js-accordion d-xl-flex justify-content-between pl-0">
                         <li class="footer__customers accordiontitle col-xl-4 mx-2 pl-0">
                             <label for="toggle-customers" class="footer__customers--title dropdown" data-accordion='title'>
                                 For customers
