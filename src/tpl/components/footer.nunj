@@ -22,7 +22,7 @@
                 <nav class="footer__links col-12 col-sm-7 col-lg-9 py-3 d-inline-block" role="navigation">
                     <ul class="js-accordion d-xl-flex justify-content-between pl-0">
                         <li class="footer__customers accordiontitle col-xl-4 mx-2 pl-0">
-                            <label class="footer__customers--title dropdown" data-accordion='title'>
+                            <label class="footer__customers--title" data-accordion='title'>
                                 For customers
                                 <span>
                                     {{ svg('icon-triangle', 'footer__dropdown-icon') }}
