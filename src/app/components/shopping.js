@@ -1,6 +1,6 @@
 import notify from './../base/notify';
-import { note } from './../variables/notes';
-import { buy } from './../variables/messages';
+import { notes } from './../constants/notes';
+import { messages } from './../constants/messages';
 
 export default () => {
     const shoppingList = document.querySelector('.js-shoppingList');
@@ -36,7 +36,7 @@ export default () => {
         const newItem = item.parentNode.insertBefore(copyItem, item.nextSibling);
         newItem.className = 'shopping-list__item--new';
 
-        notify(note, buy);
+        notify(notes.note, messages.buy);
     }
 
     function addContentShort() {

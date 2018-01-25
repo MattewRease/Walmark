@@ -4,7 +4,6 @@ export default class Liquid {
         this.liquidRate = this.container.querySelector('.js-liquidRate');
         this.litres = this.container.querySelector('.health__litres');
         this.optimalLitres = this.container.querySelector('.js-liquid-optimal');
-        console.log(this.optimalLitres);
         this.count();
     }
 
