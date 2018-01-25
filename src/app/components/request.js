@@ -1,7 +1,7 @@
 import axios from 'axios';
 import notify from './../base/notify';
-import { note, info } from './../variables/notes';
-import { sent } from './../variables/messages';
+import { note, info, warning } from './../variables/notes';
+import { sent, failed } from './../variables/messages';
 
 export default () => {
     const APIUrl = 'http://localhost:5003/reminders';
@@ -24,9 +24,9 @@ export default () => {
         (selectedDay !== 'Select day') && (selectedTime !== 'Select time') ? setBtn.disabled = false : setBtn.disabled = true;
     });
 
-    setBtn.addEventListener('click', postRes);
+    setBtn.addEventListener('click', postResult);
 
-    function postRes() {
+    function postResult() {
         axios({
             method: 'post',
             url: APIUrl,
@@ -34,7 +34,13 @@ export default () => {
                 day: selectedDay,
                 time: selectedTime
             }
-        });
-        notify(`${note} ${info}`, sent);
+        })
+            .then((response) => {
+                notify(`${note} ${info}`, sent);
+            })
+            .catch((error) => {
+                notify(`${note} ${warning}`, failed);
+
+            });
     }
 };

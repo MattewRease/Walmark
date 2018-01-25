@@ -1,11 +1,11 @@
 import axios from 'axios';
 import notify from './../base/notify';
-import { note, success } from './../variables/notes';
-import { congratz } from './../variables/messages';
+import { note, success, warning } from './../variables/notes';
+import { congratz, failed } from './../variables/messages';
 
 export default () => {
     const btn = document.querySelectorAll('.health-support__btn');
-    const APIUrl = 'http://localhost:5003/tasks';
+    const APIURl = 'http://localhost:5003/tasks';
     const messageText = document.querySelector('[data-message="text"]');
     const iconCross = document.querySelector('.health-support__day--cross');
     const dayText = document.querySelector('[data-message="text"]');
@@ -30,7 +30,7 @@ export default () => {
                 selected.classList.add('day--no');
                 document.querySelector('.health-support__btn--done').remove();
                 document.querySelector('[data-btn="disable"]').classList.remove('disable');
-                postRes();
+                postResult();
             }
 
             selected.classList.toggle('day--no');
@@ -45,11 +45,10 @@ export default () => {
             }
 
             progressBar();
-            postRes();
+            postResult();
 
             innerSpan.innerHTML === 'Mark' ? innerSpan.innerHTML = 'Unmark' : innerSpan.innerHTML = 'Mark';
             innerSpan.innerHTML === 'Unmark' ? notify(`${note} ${success}`, congratz) : false;
-
 
             iconAll[0].classList.toggle('disable');
             iconAll[1].classList.toggle('disable');
@@ -61,15 +60,17 @@ export default () => {
         document.querySelector('.progress-bar').style.width = `${done * 17}%`;
     }
 
-    function postRes() {
+    function postResult() {
         axios({
             method: 'post',
-            url: APIUrl,
+            url: APIURl,
             data: {
                 task
             }
-        });
+        })
+            .catch(() => {
+                notify(`${note} ${warning}`, failed);
+            });
     }
-
     progressBar();
 };
