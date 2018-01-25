@@ -4,24 +4,24 @@ import { note, info, warning } from './../variables/notes';
 import { sent, failed } from './../variables/messages';
 
 export default () => {
-    const APIUrl = 'http://localhost:5003/reminders';
+    const APIURl = 'http://localhost:5003/reminders';
     const day = document.querySelector('[data-reminder="day"]');
     const time = document.querySelector('[data-reminder="time"]');
     const setBtn = document.querySelector('[data-reminder="set"]');
     setBtn.disabled = true;
-    let selectedDay = 'Select day';
-    let selectedTime = 'Select time';
+    let SELECTEDDAY = 'Select day';
+    let SELECTEDTIME = 'Select time';
 
     day.addEventListener('change', (event) => {
         const selectEl = event.target;
-        selectedDay = selectEl.value;
-        (selectedDay !== 'Select day') && (selectedTime !== 'Select time') ? setBtn.disabled = false : setBtn.disabled = true;
+        SELECTEDDAY = selectEl.value;
+        (SELECTEDDAY !== 'Select day') && (SELECTEDTIME !== 'Select time') ? setBtn.disabled = false : setBtn.disabled = true;
     });
 
     time.addEventListener('change', (event) => {
         const selectEl = event.target;
-        selectedTime = selectEl.value;
-        (selectedDay !== 'Select day') && (selectedTime !== 'Select time') ? setBtn.disabled = false : setBtn.disabled = true;
+        SELECTEDTIME = selectEl.value;
+        (SELECTEDDAY !== 'Select day') && (SELECTEDTIME !== 'Select time') ? setBtn.disabled = false : setBtn.disabled = true;
     });
 
     setBtn.addEventListener('click', postResult);
@@ -29,10 +29,10 @@ export default () => {
     function postResult() {
         axios({
             method: 'post',
-            url: APIUrl,
+            url: APIURl,
             data: {
-                day: selectedDay,
-                time: selectedTime
+                day: SELECTEDDAY,
+                time: SELECTEDTIME
             }
         })
             .then((response) => {
