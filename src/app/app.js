@@ -14,7 +14,7 @@ import liquid from './components/liquid';
 import support from './components/support';
 import weekNav from './components/weekNav';
 import accordion from './components/accordion';
-import request from './components/request';
+import reminder from './components/reminder';
 import history from './components/history';
 import rateProduct from './components/rateProduct';
 
@@ -27,9 +27,9 @@ const app = (config) => {
     init(weekNav, document.querySelector('.health-support__navigation'));
     init(support, document.querySelector('.health-support'));
     init(accordion, document.querySelector('.footer__links'));
-    init(request, document.querySelector('.js-request'));
+    init(reminder, document.querySelector('.js-reminder'));
     init(rateProduct, document.querySelector('.rate-product'));
-    init(history, document.querySelector('.history'));
+    init(history, document.querySelector('.history-modal'));
 };
 
 app(null, window.config);

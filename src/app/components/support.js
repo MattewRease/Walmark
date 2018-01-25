@@ -1,7 +1,7 @@
 import axios from 'axios';
 import notify from './../base/notify';
-import { note, success, warning } from './../variables/notes';
-import { congratz, failed } from './../variables/messages';
+import { notes } from './../constants/notes';
+import { messages } from './../constants/messages';
 
 export default () => {
     const btn = document.querySelectorAll('.health-support__btn');
@@ -48,7 +48,7 @@ export default () => {
             postResult();
 
             innerSpan.innerHTML === 'Mark' ? innerSpan.innerHTML = 'Unmark' : innerSpan.innerHTML = 'Mark';
-            innerSpan.innerHTML === 'Unmark' ? notify(`${note} ${success}`, congratz) : false;
+            innerSpan.innerHTML === 'Unmark' ? notify(`${notes.note} ${notes.success}`, messages.congratz) : false;
 
             iconAll[0].classList.toggle('disable');
             iconAll[1].classList.toggle('disable');
@@ -69,7 +69,7 @@ export default () => {
             }
         })
             .catch(() => {
-                notify(`${note} ${warning}`, failed);
+                notify(`${notes.note} ${notes.warning}`, messages.failed);
             });
     }
     progressBar();

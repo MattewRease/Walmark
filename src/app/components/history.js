@@ -1,59 +1,85 @@
+// import CountProgress from './../base/countProgress';
 
-export default function historyModal() {
-    const firstBtn = document.querySelector('.js-firstHistory');
-    const closeBtn = document.querySelector('.history-modal__close');
-    const secondBtn = document.querySelector('.js-secondHistory');
-    const modalWindow = document.querySelector('.history-modal');
-    const content = document.querySelector('.history-modal__content');
-    const healthIndex = document.querySelector('.health');
-    const comparison = document.querySelector('.comparison');
-    const copyIndexItem = healthIndex.cloneNode(true);
-    const copyComparisonItem = comparison.cloneNode(true);
-    const newIndexItem = content.appendChild(copyIndexItem, healthIndex.nextSibling);
-    const newComparisonItem = content.appendChild(copyComparisonItem, comparison.nextSibling);
-    const indexRate = content.querySelector('.js-numberIndex');
+export default class History {
+    constructor(container) {
+        this.container = container;
+        // this.countProgress = new CountProgress();
+        this.copyComparisonItem = document.querySelector('.comparison').cloneNode(true);
+        this.copyIndexItem = document.querySelector('.health').cloneNode(true);
+        this.healthIndex = document.querySelector('.health');
+        this.firstBtn = document.querySelector('.js-firstHistory');
+        this.closeBtn = this.container.querySelector('.history-modal__close');
+        this.secondBtn = document.querySelector('.js-secondHistory');
+        this.comparison = document.querySelector('.comparison');
+        this.content = this.container.querySelector('.history-modal__content');
+        this.newIndexItem = this.content.appendChild(this.copyIndexItem, this.healthIndex.nextSibling);
+        this.newComparisonItem = this.content.appendChild(this.copyComparisonItem, this.comparison.nextSibling);
+        this.modalWindow = document.querySelector('.history-modal');
+        this.indexRate = this.container.querySelector('.js-numberIndex');
 
-    firstBtn.addEventListener('click', () => {
-        modalWindow.classList.add('active');
-        indexRate.dataset.index = 7;
-        countIndex();
-    });
+        this.firstHistory();
+        this.secondHistory();
+        this.historyModalWindow();
+    }
 
-    secondBtn.addEventListener('click', () => {
-        modalWindow.classList.add('active');
-        indexRate.dataset.index = 77;
-        countIndex();
-    });
+    callModal() {
+        this.secondBtn.addEventListener('click', this.secondBtn);
+    }
 
-    function countIndex() {
-        const arrow = content.querySelector('.js-rateArrow');
-        const bg = content.querySelector('.js-rateBg');
-        const rateChange = `rotate(${indexRate.dataset.index * 1.8}deg)`;
-        indexRate.innerHTML = (indexRate.dataset.index);
+    firstHistory() {
+        this.firstBtn.addEventListener('click', () => {
+            this.container.classList.add('active');
+            this.indexRate.dataset.index = 78;
+            const setRate = this.indexRate.dataset.index;
+            // this.countProgress.countIndex(setRate);
+            this.countIndex(setRate);
+        });
+    }
 
-        if (indexRate.dataset.index < 0 || indexRate.dataset.index > 100) {
+    secondHistory() {
+        this.secondBtn.addEventListener('click', () => {
+            this.container.classList.add('active');
+            this.indexRate.dataset.index = 57;
+            const setRate = this.indexRate.dataset.index;
+            // this.countProgress.countIndex(setRate);
+            this.countIndex(setRate);
+        });
+    }
+
+    countIndex(setRate) {
+        this.indexRate = this.container.querySelector('.js-numberIndex');
+        const arrow = document.querySelector('.js-rateArrow');
+        const bg = document.querySelector('.js-rateBg');
+        const rateChange = `rotate(${setRate * 1.8}deg)`;
+        this.indexRate.innerHTML = setRate;
+
+        if (setRate < 0 || setRate > 100) {
             alert('bad range');
         } else {
             arrow.style.transform = rateChange;
             bg.style.transform = rateChange;
 
-            if (indexRate.dataset.index < 31) {
-                indexRate.classList.add('range--low');
-            } else if (indexRate.dataset.index < 70) {
-                indexRate.classList.add('range--middle');
+            if (setRate < 31) {
+                this.indexRate.classList.add('range--low');
+            } else if (setRate < 70) {
+                this.indexRate.classList.add('range--middle');
             } else {
-                indexRate.classList.add('range--hight');
+                this.indexRate.classList.add('range--hight');
             }
         }
     }
 
-    modalWindow.onclick = (event) => {
-        event.target === modalWindow ? close() : false;
+    historyModalWindow() {
+        this.closeBtn.addEventListener('click', () => {
+            this.closeBtn ? this.close() : false;
+        });
+        this.modalWindow.addEventListener('click', () => {
+            event.target === this.modalWindow ? this.close() : false;
 
-        closeBtn.addEventListener('click', close);
+        });
+    }
 
-        function close() {
-            modalWindow.classList.remove('active');
-        }
-    };
+    close() {
+        this.modalWindow.classList.remove('active');
+    }
 }

@@ -3,7 +3,8 @@
 {%
     set items = [
         {
-            dataLiquid: '1.5 '
+            dataLiquid: '1.5 ',
+            optimalLiquid: '2.5'
         }
     ]
 %}
@@ -12,7 +13,7 @@
     <div class="col-12 pl-0">
         <h3 class="health__weight--text mb-0 "><strong class="pr-2">Your daily liquid intake is </strong><span class="js-liquidRate bold"></span>
         {% for item in items %}
-            {% if  item.dataLiquid < 2.5 %}
+            {% if  item.dataLiquid < item.optimalLiquid %}
                 {{ svg('sad', 'health__liquid--icon range-icon--low mb-xs-2 mt-sm-2') }}
             {% else %}
                 {{ svg('smile', 'health__liquid--icon mb-xs-2 mt-sm-2') }}
@@ -24,7 +25,7 @@
 
     </div>
     <div class="col-9 col-sm-10 col-md-9 pr-0 mt-3">
-        <p class="health__litres mb-0" data-liquid="{{ item.dataLiquid }}">2.5 <span class="bold health__litres--text">Litres</span></p>
+        <p class="health__litres mb-0" data-liquid="{{ item.dataLiquid }}"><span class="js-liquid-optimal" data-optimal="{{ item.optimalLiquid }}">{{ item.optimalLiquid }} </span><span class="bold health__litres--text">Litres</span></p>
         {% endfor %}
         <p>Is optimal fluid intake for your height and weight</p>
     </div>

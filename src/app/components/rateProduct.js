@@ -1,7 +1,7 @@
 import axios from 'axios';
 import notify from './../base/notify';
-import { note, info, warning } from './../variables/notes';
-import { sent, failed, form } from './../variables/messages';
+import { notes } from './../constants/notes';
+import { messages } from './../constants/messages';
 
 export default () => {
     const APIURl = 'http://localhost:5003/rating';
@@ -33,14 +33,14 @@ export default () => {
                     review
                 }
             })
-                .then((respons) => {
-                    notify(`${note} ${info}`, sent);
+                .then(() => {
+                    notify(`${notes.note} ${notes.info}`, messages.sent);
                 })
-                .catch((error) => {
-                    notify(`${note} ${warning}`, failed);
+                .catch(() => {
+                    notify(`${notes.note} ${notes.warning}`, messages.failed);
                 });
         } else {
-            notify(`${note} ${info}`, form);
+            notify(`${notes.note} ${notes.info}`, messages.form);
         }
         reviewText.value = '';
     });
