@@ -5,9 +5,6 @@ module.exports = {
     env: {
         browser: true
     },
-    globals: {
-        picturefill: true // picturefill is loaded within <head> element (global accessibility) so Eslint doesn't know about it
-    },
     rules: {
         'arrow-body-style': 0,
         'arrow-parens': 0, // Does not work with Flow generic types.
@@ -27,12 +24,13 @@ module.exports = {
         'no-alert': 0,
         'no-class-assign': 0, // Class assign is used for higher order components.
         'no-confusing-arrow': 0, // This rule is super confusing.
-        'no-console': [0, { allow: ["error"] }],
+        'no-console': 1,
         'no-duplicate-imports': 0, // github.com/babel/eslint-plugin-babel/issues/59#issuecomment-230118848
         'no-nested-ternary': 0, // It's nice for JSX.
         'no-param-reassign': 0, // We love param reassignment. Naming is hard.
         'no-return-assign': 0,
         'no-shadow': 0, // Shadowing is a nice language feature. Naming is hard.
+        'no-unknown': 0,
         'no-unused-expressions': 0,
         'no-unused-vars': 0,
         'no-use-before-define': ['error', { functions: false }],

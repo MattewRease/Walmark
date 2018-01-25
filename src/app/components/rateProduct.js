@@ -1,10 +1,10 @@
 import axios from 'axios';
 import notify from './../base/notify';
 import { note, info, warning } from './../variables/notes';
-import { sent, failed } from './../variables/messages';
+import { sent, failed, form } from './../variables/messages';
 
 export default () => {
-    const APIUrl = 'http://localhost:5003/rating';
+    const APIURl = 'http://localhost:5003/rating';
     const rateBtn = document.querySelector('.rate-product__btn');
     const reviewText = document.querySelector('.rate-product__input');
     const rateStars = document.querySelectorAll('.rate-product__star-icon');
@@ -28,14 +28,19 @@ export default () => {
         if (review.rate !== '' && review.text !== '') {
             axios({
                 method: 'post',
-                url: APIUrl,
+                url: APIURl,
                 data: {
                     review
                 }
-            });
-            notify(`${note} ${info}`, sent);
+            })
+                .then((respons) => {
+                    notify(`${note} ${info}`, sent);
+                })
+                .catch((error) => {
+                    notify(`${note} ${warning}`, failed);
+                });
         } else {
-            notify(`${note} ${warning}`, failed);
+            notify(`${note} ${info}`, form);
         }
         reviewText.value = '';
     });
