@@ -3,32 +3,37 @@ import notify from './../base/notify';
 import { notes } from './../constants/notes';
 import { messages } from './../constants/messages';
 
-export default () => {
-    const APIURl = 'http://localhost:5003/rating';
-    const rateBtn = document.querySelector('.rate-product__btn');
-    const reviewText = document.querySelector('.rate-product__input');
-    const rateStars = document.querySelectorAll('.rate-product__star-icon');
-    let selectedStar;
-    let i;
-
-    for (i = 0; i < rateStars.length; i += 1) {
-        rateStars[i].addEventListener('click', selectRate);
+export default class RateProduct {
+    constructor(container) {
+        this.container = container;
+        this.APIURl = 'http://localhost:5003/rating';
+        this.rateBtn = this.container.querySelector('.rate-product__btn');
+        this.reviewText = this.container.querySelector('.rate-product__input');
+        this.rateStars = Array.from(this.container.querySelectorAll('.rate-product__star-icon'));
+        this.selectedStar;
+        this.ratingStars();
+        this.rateBtn.addEventListener('click', this.sendRreview);
     }
 
-    function selectRate() {
-        selectedStar = this.value;
+    ratingStars = () => {
+        this.rateStars.forEach(rateStar => {
+            rateStar.addEventListener('click', () => {
+                console.log(rateStar.value);
+                this.selectedStar = rateStar.value;
+            });
+        });
     }
 
-    rateBtn.addEventListener('click', () => {
+    sendRreview = () => {
         const review = {
-            rate: selectedStar,
-            text: reviewText.value
+            rate: this.selectedStar,
+            text: this.reviewText.value
         };
 
         if (review.rate !== '' && review.text !== '') {
             axios({
                 method: 'post',
-                url: APIURl,
+                url: this.APIURl,
                 data: {
                     review
                 }
@@ -42,6 +47,6 @@ export default () => {
         } else {
             notify(`${notes.note} ${notes.info}`, messages.form);
         }
-        reviewText.value = '';
-    });
-};
+        this.reviewText.value = '';
+    };
+}
