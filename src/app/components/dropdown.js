@@ -7,7 +7,7 @@ export default class DropMenu {
         this.toggle();
     }
 
-    toggle() {
+    toggle = () => {
         this.dropBtn.addEventListener('click', () => {
             if (this.menu.classList.contains('active')) {
                 this.menu.classList.remove('active');

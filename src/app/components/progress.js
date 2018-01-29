@@ -7,7 +7,7 @@ class Progress {
         this.rateIndex(progressData);
     }
 
-    rateIndex(progressData) {
+    rateIndex = (progressData) => {
         this.arrow = this.container.querySelector('.js-rateArrow');
         this.bg = this.container.querySelector('.js-rateBg');
         this.rateChange = `rotate(${progressData * 1.8}deg)`;

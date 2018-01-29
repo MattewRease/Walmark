@@ -7,7 +7,7 @@ export default class Liquid {
         this.count();
     }
 
-    count() {
+    count = () => {
         if (this.litres.dataset.liquid < this.optimalLitres.dataset.optimal) {
             this.liquidRate.innerHTML = 'insufficient';
             this.liquidRate.classList.add('range--low');

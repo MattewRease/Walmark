@@ -5,7 +5,7 @@ export default class Accordion {
         this.select();
     }
 
-    select() {
+    select = () => {
         this.titles.forEach(title => {
             title.addEventListener('click', () => {
                 this.toggle(title);
@@ -13,7 +13,7 @@ export default class Accordion {
         });
     }
 
-    toggle(title) {
+    toggle = (title) => {
         if (!title.classList.contains('selected')) {
             this.titles.forEach(title => {
                 title.querySelector('.footer__dropdown-icon').classList.remove('up');

@@ -22,11 +22,11 @@ export default class History {
         this.historyModalWindow();
     }
 
-    callModal() {
+    callModal = () => {
         this.secondBtn.addEventListener('click', this.secondBtn);
     }
 
-    firstHistory() {
+    firstHistory = () => {
         this.firstBtn.addEventListener('click', () => {
             this.container.classList.add('active');
             this.indexRate.dataset.index = 28;
@@ -36,7 +36,7 @@ export default class History {
         });
     }
 
-    secondHistory() {
+    secondHistory = () => {
         this.secondBtn.addEventListener('click', () => {
             this.container.classList.add('active');
             this.indexRate.dataset.index = 87;
@@ -46,7 +46,7 @@ export default class History {
         });
     }
 
-    countIndex(setRate) {
+    countIndex = (setRate) => {
         this.indexRate = this.container.querySelector('.js-numberIndex');
         const arrow = this.container.querySelector('.js-rateArrow');
         const bg = this.container.querySelector('.js-rateBg');
@@ -69,7 +69,7 @@ export default class History {
         }
     }
 
-    historyModalWindow() {
+    historyModalWindow = () => {
         this.closeBtn.addEventListener('click', () => {
             this.closeBtn ? this.close() : false;
         });
