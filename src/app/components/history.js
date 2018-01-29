@@ -22,34 +22,34 @@ export default class History {
         this.historyModalWindow();
     }
 
-    callModal() {
+    callModal = () => {
         this.secondBtn.addEventListener('click', this.secondBtn);
     }
 
-    firstHistory() {
+    firstHistory = () => {
         this.firstBtn.addEventListener('click', () => {
             this.container.classList.add('active');
-            this.indexRate.dataset.index = 78;
+            this.indexRate.dataset.index = 28;
             const setRate = this.indexRate.dataset.index;
             // this.countProgress.countIndex(setRate);
             this.countIndex(setRate);
         });
     }
 
-    secondHistory() {
+    secondHistory = () => {
         this.secondBtn.addEventListener('click', () => {
             this.container.classList.add('active');
-            this.indexRate.dataset.index = 57;
+            this.indexRate.dataset.index = 87;
             const setRate = this.indexRate.dataset.index;
             // this.countProgress.countIndex(setRate);
             this.countIndex(setRate);
         });
     }
 
-    countIndex(setRate) {
+    countIndex = (setRate) => {
         this.indexRate = this.container.querySelector('.js-numberIndex');
-        const arrow = document.querySelector('.js-rateArrow');
-        const bg = document.querySelector('.js-rateBg');
+        const arrow = this.container.querySelector('.js-rateArrow');
+        const bg = this.container.querySelector('.js-rateBg');
         const rateChange = `rotate(${setRate * 1.8}deg)`;
         this.indexRate.innerHTML = setRate;
 
@@ -69,7 +69,7 @@ export default class History {
         }
     }
 
-    historyModalWindow() {
+    historyModalWindow = () => {
         this.closeBtn.addEventListener('click', () => {
             this.closeBtn ? this.close() : false;
         });

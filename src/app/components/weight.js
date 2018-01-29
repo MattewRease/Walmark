@@ -8,7 +8,7 @@ export default class Weight {
         this.countWeight();
     }
 
-    countWeight() {
+    countWeight = () => {
         if (this.indexBmi < 15 || this.indexBmi > 25) {
             this.category.classList.add('range--low');
             this.bmi.classList.add('range--low');
@@ -28,7 +28,7 @@ export default class Weight {
         }
     }
 
-    overNormal() {
+    overNormal = () => {
         this.indexBmi < 15 ? this.category.innerHTML = 'To Low Weight!' : this.category.innerHTML = 'Too High Weight!';
     }
 }
