@@ -8,22 +8,22 @@ export default class RateProduct {
         this.container = container;
         this.apiUrl = this.container.getAttribute('data-apiUrl');
         this.rateBtn = this.container.querySelector('.rate-product__btn');
-        this.reviewText = this.container.querySelector('.rate-product__input');
-        this.rateStars = [...this.container.getElementsByClassName('rate-product__star-icon')];
+        this.reviewText = this.container.querySelector('.rate-product__review');
+        this.rateStars = [...this.container.getElementsByClassName('rate-product__input')];
         this.selectedStar;
-        this.ratingStars();
-        this.rateBtn.addEventListener('click', this.sendRreview);
-    }
 
-    ratingStars = () => {
+        this.rateBtn.addEventListener('click', this.reviewData);
+
         this.rateStars.forEach(rateStar => {
-            rateStar.addEventListener('click', () => {
-                this.selectedStar = rateStar.value;
-            });
+            rateStar.addEventListener('click', () => { this.ratingStars(rateStar); });
         });
     }
 
-    sendRreview = () => {
+        ratingStars = (rateStar) => {
+            this.selectedStar = rateStar.value;
+        }
+
+    reviewData = () => {
         const review = {
             rate: this.selectedStar,
             text: this.reviewText.value
@@ -32,7 +32,7 @@ export default class RateProduct {
         if (review.rate !== '' && review.text !== '') {
             axios({
                 method: 'post',
-                url: this.APIURl,
+                url: this.apiUrl,
                 data: {
                     review
                 }
