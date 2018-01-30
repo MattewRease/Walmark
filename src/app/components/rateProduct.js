@@ -19,9 +19,9 @@ export default class RateProduct {
         });
     }
 
-        ratingStars = (rateStar) => {
-            this.selectedStar = rateStar.value;
-        }
+    ratingStars = (rateStar) => {
+        this.selectedStar = rateStar.value;
+    }
 
     reviewData = () => {
         const review = {
