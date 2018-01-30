@@ -6,7 +6,7 @@ import { messages } from './../constants/messages';
 export default class RateProduct {
     constructor(container) {
         this.container = container;
-        this.APIURl = 'http://localhost:5003/rating';
+        this.apiUrl = this.container.getAttribute('data-apiUrl');
         this.rateBtn = this.container.querySelector('.rate-product__btn');
         this.reviewText = this.container.querySelector('.rate-product__input');
         this.rateStars = Array.from(this.container.querySelectorAll('.rate-product__star-icon'));
@@ -18,7 +18,6 @@ export default class RateProduct {
     ratingStars = () => {
         this.rateStars.forEach(rateStar => {
             rateStar.addEventListener('click', () => {
-                console.log(rateStar.value);
                 this.selectedStar = rateStar.value;
             });
         });

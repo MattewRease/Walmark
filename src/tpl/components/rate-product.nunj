@@ -24,7 +24,7 @@
 <section class="container">
     <div class="row">
         <h3 class="title w-100 bold px-0 mb-0 pt-2 pb-3">Rate the product</h3>
-        <div class="rate-product col-12 mt-4">
+        <div class="rate-product col-12 mt-4" data-apiUrl="http://localhost:5003/rating">
             <div class="rate-product__inner">
                 <textarea  class="rate-product__input" placeholder="Your review"/></textarea>
                 <div class="d-flex flex-wrap align-content-between text-center">
