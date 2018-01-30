@@ -1,41 +1,32 @@
 {% from '../helpers/svg.nunj' import svg %}
 {% import '../helpers/stars.nunj' as stars %}
 
-{%
-    set items = [
-        {
-            value: '5'
-        },
-        {
-            value: '4'
-        },
-        {
-            value: '3'
-        },
-        {
-            value: '2'
-        },
-        {
-            value: '1'
-        }
-    ]
-%}
+{% set ratings = [
+    "5 stars",
+    "4 stars",
+    "3 stars",
+    "2 stars",
+    "1 star"
+] %}
+
 
 <section class="container">
     <div class="row">
         <h3 class="title w-100 bold px-0 mb-0 pt-2 pb-3">Rate the product</h3>
-        <div class="rate-product col-12 mt-4">
+        <div class="rate-product col-12 mt-4" data-apiUrl="http://localhost:5003/rating">
             <div class="rate-product__inner">
-                <textarea  class="rate-product__input" placeholder="Your review"/></textarea>
+                <textarea  class="rate-product__review" placeholder="Your review"/></textarea>
                 <div class="d-flex flex-wrap align-content-between text-center">
                     <div class="align-self-center col-5 col-md-2 col-lg-2 px-0 text-sm-right text-md-left">
                         <h6 class="text--grey text-right d-inline text-md-left">Your rating: </h6>
                     </div>
                     <div class="rate-product__rating rate-product__rating--direction col-7  col-md-8 col-lg-8 align-self-center text-left">
-                        {% for item in items %}
-                            <button class="rate-product__star-icon"  value ="{{ item.value }}">
-                                {{ svg('icon-star', 'rate-product__rating--icon') }}
-                            </button>
+                        {% for rating in ratings %}
+                            {% set ratingCount = ratings.length + 1 %}
+                            {% set i = ratingCount - loop.index %}
+
+                            <input class="rate-product__input" type="radio" id="star{{ i }}" name="rating" value="{{ i }}" />
+                            <label class="rate-product__label js-tippy" for="star{{ i }}" title="{{ rating }}"></label>
                         {% endfor %}
                     </div>
                     <div class="col-9 col-md-2 px-0 mx-auto mt-2 mt-md-0">

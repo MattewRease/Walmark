@@ -3,32 +3,36 @@ import notify from './../base/notify';
 import { notes } from './../constants/notes';
 import { messages } from './../constants/messages';
 
-export default () => {
-    const APIURl = 'http://localhost:5003/rating';
-    const rateBtn = document.querySelector('.rate-product__btn');
-    const reviewText = document.querySelector('.rate-product__input');
-    const rateStars = document.querySelectorAll('.rate-product__star-icon');
-    let selectedStar;
-    let i;
+export default class RateProduct {
+    constructor(container) {
+        this.container = container;
+        this.apiUrl = this.container.getAttribute('data-apiUrl');
+        this.rateBtn = this.container.querySelector('.rate-product__btn');
+        this.reviewText = this.container.querySelector('.rate-product__review');
+        this.rateStars = [...this.container.getElementsByClassName('rate-product__input')];
+        this.selectedStar;
 
-    for (i = 0; i < rateStars.length; i += 1) {
-        rateStars[i].addEventListener('click', selectRate);
+        this.rateBtn.addEventListener('click', this.reviewData);
+
+        this.rateStars.forEach(rateStar => {
+            rateStar.addEventListener('click', () => { this.ratingStars(rateStar); });
+        });
     }
 
-    function selectRate() {
-        selectedStar = this.value;
+    ratingStars = (rateStar) => {
+        this.selectedStar = rateStar.value;
     }
 
-    rateBtn.addEventListener('click', () => {
+    reviewData = () => {
         const review = {
-            rate: selectedStar,
-            text: reviewText.value
+            rate: this.selectedStar,
+            text: this.reviewText.value
         };
 
         if (review.rate !== '' && review.text !== '') {
             axios({
                 method: 'post',
-                url: APIURl,
+                url: this.apiUrl,
                 data: {
                     review
                 }
@@ -42,6 +46,6 @@ export default () => {
         } else {
             notify(`${notes.note} ${notes.info}`, messages.form);
         }
-        reviewText.value = '';
-    });
-};
+        this.reviewText.value = '';
+    };
+}

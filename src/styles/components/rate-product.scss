@@ -14,7 +14,7 @@
         }
     }
 
-    &__input {
+    &__review {
         width: 100%;
         min-height: 130px;
         padding: 10px;
@@ -25,40 +25,37 @@
         border-radius: $main-border-radius;
     }
 
-    &__star-icon {
-        background-color: transparent;
-        border: none;
-        transition: .8s;
-        fill: #d8d8d8;
-
-        &:hover,
-        &:hover ~ &,
-        &:focus,
-        &:focus ~ & {
-            text-decoration: none;
-            cursor: pointer;
-            fill: orange;
-        }
+    &__input {
+        display: none;
     }
 
-    &__btn {
-        padding: 15px 0;
-        border: none;
+    &__label {
+        @include size(20px);
+        display: block;
+        background: center center no-repeat;
+        background-image: svg-load('icon-star.svg', fill= #d8d8d8);
+        background-size: contain;
+        box-sizing: content-box;
+        padding-left: 5px;
+        cursor: pointer;
+    }
+
+    &__input:checked ~ &__label,
+    &__label:hover,
+    &__label:hover ~ &__label {
+        background-image: svg-load('icon-star.svg', fill= rgb(253, 198, 95));
+    }
+
+    &__input:checked + &__label:hover,
+    &__input:checked ~ &__label:hover,
+    &__input:checked ~ &__label:hover ~ &__label,
+    &__label:hover ~ &__input:checked ~ &__label {
+        background-image: svg-load('icon-star.svg', fill= rgb(255, 166, 0));
     }
 
     &__rating {
-        &--icon {
-            @include size(18px);
-            margin: 3px 3px 0;
-
-            @include media-breakpoint-up(md) {
-                @include size(25px);
-            }
-        }
-
-        &--direction {
-            float: left;
-            direction: rtl;
-        }
+        display: inline-flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
     }
 }
