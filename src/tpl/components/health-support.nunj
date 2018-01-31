@@ -221,11 +221,11 @@
                                 </div>
                                 <div class="form-row align-items-center">
                                     <select class="js-selectDay form-control col-12">
-                                        <option selected>Select day</option>
-                                        <option>Every 1 day</option>
-                                        <option>Every 2 days</option>
-                                        <option>Every 3 days</option>
-                                        <option>Every 4 days</option>
+                                        <option value="Select day" selected>Select day</option>
+                                        <option value="Every 1 day">Every 1 day</option>
+                                        <option value="Every 2 day">Every 2 days</option>
+                                        <option value="Every 3 day">Every 3 days</option>
+                                        <option value="Every 4 day">Every 4 days</option>
                                     </select>
                                 </div>
                             </div>
@@ -233,12 +233,12 @@
                                 <label class="py-2 mt-2">Preffered time to receive email</label>
                                 <div class="form-row align-items-center">
                                     <select class="js-selectTime form-control col-8">
-                                        <option selected>Select time</option>
-                                        <option>9:00</option>
-                                        <option>10:00</option>
-                                        <option>11:00</option>
-                                        <option>12:00</option>
-                                        <option>13:00</option>
+                                        <option value="Select time" selected>Select time</option>
+                                        <option value="9:00">9:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
                                     </select>
                                     <div class="col-4">
                                         <button class="js-setReminder btn btn--ok col-12">Set</button>
