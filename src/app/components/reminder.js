@@ -6,9 +6,9 @@ export default class Reminder {
     constructor(container) {
         this.container = container;
         this.apiUrl = this.container.getAttribute('data-apiUrl');
-        this.day = this.container.querySelector('[data-reminder="day"]');
-        this.time = this.container.querySelector('[data-reminder="time"]');
-        this.setBtn = this.container.querySelector('[data-reminder="set"]');
+        this.day = this.container.querySelector('.js-selectDay');
+        this.time = this.container.querySelector('.js-selectTime');
+        this.setBtn = this.container.querySelector('.js-setReminder');
         this.setBtn.disabled = true;
         this.SELECTEDDAY = 'Select day';
         this.SELECTEDTIME = 'Select time';
