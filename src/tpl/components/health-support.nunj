@@ -87,7 +87,7 @@
 <section class="container">
     <div class="row">
         <div class="col-12">
-            <div class="health-support">
+            <div class="health-support js-reminder"  data-apiUrl="http://localhost:5003/reminders">
                 <h4 class="title col-12 bold px-0 pt-2 pb-3">Your personal health support</h4>
                 <div class="health-support__inner mt-3">
                     <div class="health-support__plan mt-4">
@@ -123,7 +123,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="js-reminder health-support__week">
+                        <div class="health-support__week">
                             <div class="health-support__week--inner">
                             {% for item in items %}
 

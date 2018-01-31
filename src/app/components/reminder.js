@@ -3,36 +3,47 @@ import notify from './../base/notify';
 import { notes } from './../constants/notes';
 import { messages } from './../constants/messages';
 
-export default () => {
-    const APIURl = 'http://localhost:5003/reminders';
-    const day = document.querySelector('[data-reminder="day"]');
-    const time = document.querySelector('[data-reminder="time"]');
-    const setBtn = document.querySelector('[data-reminder="set"]');
-    setBtn.disabled = true;
-    let SELECTEDDAY = 'Select day';
-    let SELECTEDTIME = 'Select time';
+export default class Reminder {
+    constructor(container) {
+        this.container = container;
+        this.apiUrl = this.container.getAttribute('data-apiUrl');
+        this.day = this.container.querySelector('[data-reminder="day"]');
+        this.time = this.container.querySelector('[data-reminder="time"]');
+        this.setBtn = this.container.querySelector('[data-reminder="set"]');
+        this.setBtn.disabled = true;
+        this.SELECTEDDAY = 'Select day';
+        this.SELECTEDTIME = 'Select time';
 
-    day.addEventListener('change', (event) => {
+        this.day.addEventListener('change', this.selectDay);
+        this.time.addEventListener('change', this.selectTime);
+        this.setBtn.addEventListener('click', this.setReminder);
+    }
+
+    selectDay = (event) => {
         const selectEl = event.target;
-        SELECTEDDAY = selectEl.value;
-        (SELECTEDDAY !== 'Select day') && (SELECTEDTIME !== 'Select time') ? setBtn.disabled = false : setBtn.disabled = true;
-    });
+        this.SELECTEDDAY = selectEl.value;
 
-    time.addEventListener('change', (event) => {
+        (this.SELECTEDDAY !== 'Select day') && (this.SELECTEDTIME !== 'Select time') ? this.setBtn.disabled = false : this.setBtn.disabled = true;
+    }
+
+    selectTime = (event) => {
         const selectEl = event.target;
-        SELECTEDTIME = selectEl.value;
-        (SELECTEDDAY !== 'Select day') && (SELECTEDTIME !== 'Select time') ? setBtn.disabled = false : setBtn.disabled = true;
-    });
+        this.SELECTEDTIME = selectEl.value;
 
-    setBtn.addEventListener('click', postResult);
+        (this.SELECTEDDAY !== 'Select day') && (this.SELECTEDTIME !== 'Select time') ? this.setBtn.disabled = false : this.setBtn.disabled = true;
+    }
 
-    function postResult() {
+    setReminder = () => {
+        const remind = {
+            day: this.SELECTEDDAY,
+            time: this.SELECTEDTIME
+        };
+
         axios({
             method: 'post',
-            url: APIURl,
+            url: this.apiUrl,
             data: {
-                day: SELECTEDDAY,
-                time: SELECTEDTIME
+                remind
             }
         })
             .then(() => {
@@ -42,4 +53,4 @@ export default () => {
                 notify(`${notes.note} ${notes.warning}`, messages.failed);
             });
     }
-};
+}
