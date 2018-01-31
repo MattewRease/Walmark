@@ -1,7 +1,6 @@
 import axios from 'axios';
 import notify from './../base/notify';
-import { notes } from './../constants/notes';
-import { messages } from './../constants/messages';
+import { notes, messages } from './../constants/constants';
 
 export default class Reminder {
     constructor(container) {
