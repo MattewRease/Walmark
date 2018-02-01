@@ -147,7 +147,8 @@
     }
 
     &:disabled {
-        cursor: not-allowed;
+        opacity: .6;
+        cursor: no-drop;
     }
 }
 
@@ -160,6 +161,13 @@
         color: $white;
         text-decoration: none;
         background-color: $green;
+    }
+
+    &:disabled {
+        &:hover {
+            color: $green;
+            background-color: $white;
+        }
     }
 }
 

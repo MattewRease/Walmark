@@ -5,3 +5,11 @@ export const messages = {
     congratz: 'Congratulation!',
     form: 'Fill the form!'
 };
+
+export const notes = {
+    note: 'note',
+    info: 'info',
+    success: 'success',
+    warning: 'warning'
+
+};

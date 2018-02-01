@@ -1,6 +1,5 @@
 import notify from './../base/notify';
-import { notes } from './../constants/notes';
-import { messages } from './../constants/messages';
+import { notes, messages } from './../constants/constants';
 
 export default () => {
     const shoppingList = document.querySelector('.js-shoppingList');
