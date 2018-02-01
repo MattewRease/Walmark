@@ -5,60 +5,60 @@ import { notes, messages } from './../constants/constants';
 export default class Reminder {
     constructor(container) {
         this.container = container;
-        this.form = this.container.querySelector('.health-support__form');
-        this.apiUrl = this.container.getAttribute('data-apiUrl');
-        this.selectors = [...this.container.querySelectorAll('select')];
-        this.day = this.container.querySelector('.js-selectDay');
-        this.time = this.container.querySelector('.js-selectTime');
-        this.setBtn = this.container.querySelector('.js-setReminder');
-        this.setBtn.disabled = true;
-        this.selectedDay = this.day.value;
-        this.selectedTime = this.time.value;
-        this.selectorsValue;
+        this.reminderForm = this.container.querySelector('.js-reminder-form');
+        this.reminderApiUrl = this.container.getAttribute('data-apiUrl');
+        this.reminderInputs = [...this.container.querySelectorAll('select')];
+        this.reminderSetBtn = this.container.querySelector('.js-setReminder');
+        this.reminderSetBtn.disabled = true; // disable submit button
+        this.inputsValue = [];
 
-        this.form.addEventListener('change', this.validate);
-        this.setBtn.addEventListener('click', this.setReminder);
+        // Event listener for input change
+        this.reminderForm.addEventListener('change', this.validate);
+
+        // Event listener for sending data
+        this.reminderSetBtn.addEventListener('click', this.setReminder);
     }
 
-    validate = (event) => {
-        const field = event.target;
+    /**
+     * Validate selected form on change
+     */
+    validate = () => {
+        const validInputs = this.reminderInputs.filter(reminderInput => reminderInput.value !== '');
 
-        this.selectorsValue = field.value;
-
-        this.selectors.forEach(selector => {
-            this.selectorsValue = selector.value;
-        });
-
-        this.disableBtn();
+        this.enableSubmitButton(validInputs);
     }
 
-    disableBtn = () => {
-
-        if (this.selectorsValue === '0') {
-            this.setBtn.disabled = true;
+    /**
+     * Enable submit button if all inputs are valid.
+     */
+    enableSubmitButton = (validInputs) => {
+        if (validInputs.length !== this.reminderInputs.length) {
+            this.reminderSetBtn.disabled = true;
         } else {
-            this.setBtn.disabled = false;
+            // Save value from each input. It doesn't matter how many inputs we have.
+            this.reminderInputs.forEach(input => { this.inputsValue.push(input.value); });
+            this.reminderSetBtn.disabled = false;
         }
     }
 
+    /**
+     * Sending inputs value to JSON server
+     */
     setReminder = () => {
-        const remind = {
-            day: this.selectedDay,
-            time: this.selectedTime
-        };
+        const remind = this.inputsValue;
 
         axios({
             method: 'post',
-            url: this.apiUrl,
+            url: this.reminderApiUrl,
             data: {
                 remind
             }
         })
             .then(() => {
-                notify(`${notes.note} ${notes.info}`, messages.sent);
+                notify(`${notes.note} ${notes.info}`, messages.sent); // Will show success alert if success
             })
             .catch(() => {
-                notify(`${notes.note} ${notes.warning}`, messages.failed);
+                notify(`${notes.note} ${notes.warning}`, messages.failed); // Will show error alert if faild
             });
     }
 }
