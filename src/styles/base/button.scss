@@ -145,6 +145,11 @@
     &:hover {
         transition: .3s;
     }
+
+    &:disabled {
+        opacity: .6;
+        cursor: no-drop;
+    }
 }
 
 .btn--ok {
@@ -156,6 +161,13 @@
         color: $white;
         text-decoration: none;
         background-color: $green;
+    }
+
+    &:disabled {
+        &:hover {
+            color: $green;
+            background-color: $white;
+        }
     }
 }
 
