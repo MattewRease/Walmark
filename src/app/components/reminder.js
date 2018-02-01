@@ -5,31 +5,46 @@ import { notes, messages } from './../constants/constants';
 export default class Reminder {
     constructor(container) {
         this.container = container;
+        this.form = this.container.querySelector('.health-support__form');
         this.apiUrl = this.container.getAttribute('data-apiUrl');
+        this.selectors = [...this.container.querySelectorAll('select')];
         this.day = this.container.querySelector('.js-selectDay');
         this.time = this.container.querySelector('.js-selectTime');
         this.setBtn = this.container.querySelector('.js-setReminder');
         this.setBtn.disabled = true;
-        this.selected_day = this.day.value;
-        this.selected_time = this.time.value;
+        this.selectedDay = this.day.value;
+        this.selectedTime = this.time.value;
+        this.selectorsValue;
 
-        this.day.addEventListener('change', this.selectRemindTime);
-        this.time.addEventListener('change', this.selectRemindTime);
+        this.form.addEventListener('change', this.validate);
         this.setBtn.addEventListener('click', this.setReminder);
     }
 
-    selectRemindTime = (event) => {
-        const selectEl = event.target;
+    validate = (event) => {
+        const field = event.target;
 
-        selectEl === this.day ? this.selected_day = selectEl.value : this.selected_time = selectEl.value;
+        this.selectorsValue = field.value;
 
-        (this.selected_day !== null && this.selected_day !== 'Select day') && (this.selected_time !== null && this.selected_time !== 'Select time') ? this.setBtn.disabled = false : this.setBtn.disabled = true;
+        this.selectors.forEach(selector => {
+            this.selectorsValue = selector.value;
+        });
+
+        this.disableBtn();
+    }
+
+    disableBtn = () => {
+
+        if (this.selectorsValue === '0') {
+            this.setBtn.disabled = true;
+        } else {
+            this.setBtn.disabled = false;
+        }
     }
 
     setReminder = () => {
         const remind = {
-            day: this.selected_day,
-            time: this.selected_time
+            day: this.selectedDay,
+            time: this.selectedTime
         };
 
         axios({

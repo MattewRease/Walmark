@@ -221,7 +221,7 @@
                                 </div>
                                 <div class="form-row align-items-center">
                                     <select class="js-selectDay form-control col-12">
-                                        <option value="Select day" selected>Select day</option>
+                                        <option value="0" selected>Select day</option>
                                         <option value="Every 1 day">Every 1 day</option>
                                         <option value="Every 2 day">Every 2 days</option>
                                         <option value="Every 3 day">Every 3 days</option>
@@ -233,7 +233,7 @@
                                 <label class="py-2 mt-2">Preffered time to receive email</label>
                                 <div class="form-row align-items-center">
                                     <select class="js-selectTime form-control col-8">
-                                        <option value="Select time" selected>Select time</option>
+                                        <option value="0" selected>Select time</option>
                                         <option value="9:00">9:00</option>
                                         <option value="10:00">10:00</option>
                                         <option value="11:00">11:00</option>
