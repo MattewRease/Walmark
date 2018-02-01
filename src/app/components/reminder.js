@@ -34,11 +34,12 @@ export default class Reminder {
     enableSubmitButton = (validInputs) => {
         if (validInputs.length !== this.reminderInputs.length) {
             this.reminderSetBtn.disabled = true;
-        } else {
-            // Save value from each input. It doesn't matter how many inputs we have.
-            this.reminderInputs.forEach(input => { this.inputsValue.push(input.value); });
-            this.reminderSetBtn.disabled = false;
+            return;
         }
+
+        // Save value from each input. It doesn't matter how many inputs we have.
+        this.reminderInputs.forEach(input => { this.inputsValue.push(input.value); });
+        this.reminderSetBtn.disabled = false;
     }
 
     /**
