@@ -1,7 +1,6 @@
 import axios from 'axios';
 import notify from './../base/notify';
-import { notes } from './../constants/notes';
-import { messages } from './../constants/messages';
+import { notes, messages } from './../constants/constants';
 
 export default () => {
     const APIURl = 'http://localhost:5003/rating';
@@ -21,8 +20,8 @@ export default () => {
 
     rateBtn.addEventListener('click', () => {
         const review = {
-            rate: selectedStar,
-            text: reviewText.value
+            rate: this.selectedStar,
+            text: this.reviewText.value
         };
 
         if (review.rate !== '' && review.text !== '') {
