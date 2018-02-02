@@ -3,17 +3,17 @@ import countProgress from '../base/countProgress';
 export default class History {
     constructor(container) {
         this.container = container;
-        this.copyComparisonItem = document.querySelector('.comparison').cloneNode(true);
-        this.copyIndexItem = document.querySelector('.health').cloneNode(true);
-        this.healthIndex = document.querySelector('.health');
+        this.content = this.container.querySelector('.history-modal__content');
+        this.healthIndex = document.querySelector('.js-health'); // select health index component
+        this.comparison = document.querySelector('.js-comparison'); // select comparison component
+        this.copyIndexItem = document.querySelector('.js-health').cloneNode(true); // copy health index component
+        this.copyComparisonItem = document.querySelector('.js-comparison').cloneNode(true); // copy comparison component
+        this.newIndexItem = this.content.appendChild(this.copyIndexItem, this.healthIndex.nextSibling); // insert index component to modal window
+        this.newComparisonItem = this.content.appendChild(this.copyComparisonItem, this.comparison.nextSibling); // insert comparison component to modal window
         this.firstBtn = document.querySelector('.js-firstHistory');
         this.closeBtn = this.container.querySelector('.history-modal__close');
         this.secondBtn = document.querySelector('.js-secondHistory');
-        this.comparison = document.querySelector('.comparison');
-        this.content = this.container.querySelector('.history-modal__content');
-        this.newIndexItem = this.content.appendChild(this.copyIndexItem, this.healthIndex.nextSibling);
-        this.newComparisonItem = this.content.appendChild(this.copyComparisonItem, this.comparison.nextSibling);
-        this.modalWindow = document.querySelector('.history-modal');
+        this.modalWindow = document.querySelector('.js-history-modal');
         this.indexRate = this.container.querySelector('.js-numberIndex');
 
         this.firstHistory();

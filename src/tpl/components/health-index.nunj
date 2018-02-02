@@ -1,4 +1,4 @@
-<section class="health">
+<section class="health js-health">
     <div class="container">
         <div class="row d-flex flex-wrap">
             <h4 class="health__title col-12 bold pb-3">My current health index</h4>
