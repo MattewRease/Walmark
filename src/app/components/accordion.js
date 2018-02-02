@@ -1,7 +1,7 @@
 export default class Accordion {
     constructor(container) {
         this.container = container;
-        this.titles = this.container.querySelectorAll('.js-accordionTitle ');
+        this.titles = [...this.container.getElementsByClassName('js-accordionTitle')];
 
         /**
          * Event listener on selected title
