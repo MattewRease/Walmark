@@ -1,19 +1,21 @@
-export default class DropMenu {
+export default class Dropdown {
     constructor(container) {
         this.container = container;
-        this.dropBtn = this.container.querySelector('.js-dropMenu');
-        this.menu = this.container.querySelector('.js-dropdown-content');
+        this.dropdownButton = this.container.querySelector('.js-dropdown-button');
+        this.dropdownMenu = this.container.querySelector('.js-dropdown-menu');
 
-        this.toggle();
+        // Toggle menu by click on button
+        this.dropdownButton.addEventListener('click', this.toggle);
     }
 
+    /**
+     * Toggle menu class
+     */
     toggle = () => {
-        this.dropBtn.addEventListener('click', () => {
-            if (this.menu.classList.contains('active')) {
-                this.menu.classList.remove('active');
-            } else {
-                this.menu.classList.add('active');
-            }
-        });
-    }
+        if (this.dropdownMenu.classList.contains('active')) {
+            this.dropdownMenu.classList.remove('active'); // Close if open
+        } else {
+            this.dropdownMenu.classList.add('active'); // Open if close
+        }
+    };
 }
