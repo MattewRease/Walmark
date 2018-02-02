@@ -3,7 +3,7 @@ import countProgress from '../base/countProgress';
 export default class History {
     constructor(container) {
         this.container = container;
-        this.modalContent = this.container.querySelector('.history-modal__content');
+        this.modalContent = this.container.querySelector('.js-history-modal__content');
         this.healthIndex = document.querySelector('.js-health'); // select health index component
         this.comparison = document.querySelector('.js-comparison'); // select comparison component
         this.copyIndexItem = document.querySelector('.js-health').cloneNode(true); // copy health index component
@@ -11,14 +11,22 @@ export default class History {
         this.newIndexItem = this.modalContent.appendChild(this.copyIndexItem, this.healthIndex.nextSibling); // insert index component to modal window
         this.newComparisonItem = this.modalContent.appendChild(this.copyComparisonItem, this.comparison.nextSibling); // insert comparison component to modal window
         this.historyFirstBtn = document.querySelector('.js-firstHistory');
-        this.modalCloseButton = this.container.querySelector('.history-modal__close');
+        this.modalCloseButton = this.container.querySelector('.js-history-modal__close');
         this.historySecondButton = document.querySelector('.js-secondHistory');
         this.modalWindow = document.querySelector('.js-history-modal');
         this.indexRate = this.container.querySelector('.js-numberIndex');
 
-        this.firstHistory();
-        this.secondHistory();
-        this.historyModalWindow();
+        // Open first history by click
+        this.historyFirstBtn.addEventListener('click', this.firstHistory);
+
+        // Open second history by click
+        this.historySecondButton.addEventListener('click', this.secondHistory);
+
+        // Close modal window by click close button
+        this.modalCloseButton.addEventListener('click', this.closeHistoryModalWindow);
+
+        // Close modal Window by click window except modal content
+        this.modalWindow.addEventListener('click', this.handleClickModal);
     }
 
     callModal = () => {
@@ -26,34 +34,24 @@ export default class History {
     }
 
     firstHistory = () => {
-        this.historyFirstBtn.addEventListener('click', () => {
-            this.container.classList.add('active');
-            this.indexRate.dataset.index = 28;
-            const setRate = this.indexRate.dataset.index;
-            countProgress(this.container, setRate);
-        });
+        this.container.classList.add('active');
+        this.indexRate.dataset.index = 28;
+        const setRate = this.indexRate.dataset.index;
+        countProgress(this.container, setRate);
     }
 
     secondHistory = () => {
-        this.historySecondButton.addEventListener('click', () => {
-            this.container.classList.add('active');
-            this.indexRate.dataset.index = 87;
-            const setRate = this.indexRate.dataset.index;
-            countProgress(this.container, setRate);
-        });
+        this.container.classList.add('active');
+        this.indexRate.dataset.index = 87;
+        const setRate = this.indexRate.dataset.index;
+        countProgress(this.container, setRate);
     }
 
-    historyModalWindow = () => {
-        this.modalCloseButton.addEventListener('click', () => {
-            this.modalCloseButton ? this.close() : false;
-        });
-        this.modalWindow.addEventListener('click', () => {
-            event.target === this.modalWindow ? this.close() : false;
-
-        });
+    handleClickModal = (event) => {
+        event.target === this.modalWindow ? this.closeHistoryModalWindow() : false;
     }
 
-    close() {
+    closeHistoryModalWindow = () => {
         this.modalWindow.classList.remove('active');
     }
 }
