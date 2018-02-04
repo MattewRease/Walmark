@@ -43,12 +43,12 @@ export default class History {
         this.container.classList.add('active');
         this.indexRate.dataset.index = 28; // set new index rate
         const setRate = this.indexRate.dataset.index;
-        this.litres.dataset.liquid = 3;
-        this.optimalLitres.dataset.liquid = 2.5;
+        this.litres.dataset.liquid = 3; // Set daily liquid intake
+        this.optimalLitres.dataset.liquid = 2.5; // Set daily optimal litres
         const setLitresData = this.litres.dataset.liquid;
         const setOptimalLitresData = this.optimalLitres.dataset.liquid;
         countProgress(this.container, setRate); // count health index by new index rate
-        countLiquid(this.container, setLitresData, setOptimalLitresData);
+        countLiquid(this.container, setLitresData, setOptimalLitresData); // count daily liquid rate
 
     }
 
@@ -59,20 +59,21 @@ export default class History {
         this.container.classList.add('active');
         this.indexRate.dataset.index = 87; // set new index rate
         const setRate = this.indexRate.dataset.index;
-        this.litres.dataset.liquid = 2;
-        this.optimalLitres.dataset.liquid = 2.5;
+        this.litres.dataset.liquid = 2; // Set daily liquid intake
+        this.optimalLitres.dataset.liquid = 2.5; // Set daily optimal litres
         const setLitresData = this.litres.dataset.liquid;
         const setOptimalLitresData = this.optimalLitres.dataset.liquid;
         countProgress(this.container, setRate); // count health index by new index rate
-        countLiquid(this.container, setLitresData, setOptimalLitresData);
-
+        countLiquid(this.container, setLitresData, setOptimalLitresData); // count daily liquid rate
     }
 
+    // handle outside click
     handleClickModal = (event) => {
-        event.target === this.modalWindow ? this.closeHistoryModalWindow() : false; // handle outside click
+        event.target === this.modalWindow ? this.closeHistoryModalWindow() : false;
     }
 
+    // close modal window
     closeHistoryModalWindow = () => {
-        this.modalWindow.classList.remove('active'); // close modal window
+        this.modalWindow.classList.remove('active');
     }
 }
