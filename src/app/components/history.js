@@ -1,4 +1,5 @@
 import countProgress from '../base/countProgress';
+import countLiquid from '../base/countLiquid';
 
 export default class History {
     constructor(container) {
@@ -15,6 +16,8 @@ export default class History {
         this.historySecondButton = document.querySelector('.js-secondHistory');
         this.modalWindow = document.querySelector('.js-history-modal');
         this.indexRate = this.container.querySelector('.js-numberIndex');
+        this.litres = this.container.querySelector('.health__litres');
+        this.optimalLitres = this.container.querySelector('.js-liquid-optimal');
 
         // Open first history by click
         this.historyFirstBtn.addEventListener('click', this.firstHistory);
@@ -33,25 +36,43 @@ export default class History {
         this.historySecondButton.addEventListener('click', this.historySecondButton);
     }
 
+    /**
+     * Show modal window with data by the first history date
+     */
     firstHistory = () => {
         this.container.classList.add('active');
         this.indexRate.dataset.index = 28; // set new index rate
         const setRate = this.indexRate.dataset.index;
+        this.litres.dataset.liquid = 3;
+        this.optimalLitres.dataset.liquid = 2.5;
+        const setLitresData = this.litres.dataset.liquid;
+        const setOptimalLitresData = this.optimalLitres.dataset.liquid;
         countProgress(this.container, setRate); // count health index by new index rate
+        countLiquid(this.container, setLitresData, setOptimalLitresData);
+
     }
 
+    /**
+     * Show modal window with data by the second history date
+     */
     secondHistory = () => {
         this.container.classList.add('active');
         this.indexRate.dataset.index = 87; // set new index rate
         const setRate = this.indexRate.dataset.index;
+        this.litres.dataset.liquid = 2;
+        this.optimalLitres.dataset.liquid = 2.5;
+        const setLitresData = this.litres.dataset.liquid;
+        const setOptimalLitresData = this.optimalLitres.dataset.liquid;
         countProgress(this.container, setRate); // count health index by new index rate
+        countLiquid(this.container, setLitresData, setOptimalLitresData);
+
     }
 
     handleClickModal = (event) => {
-        event.target === this.modalWindow ? this.closeHistoryModalWindow() : false;
+        event.target === this.modalWindow ? this.closeHistoryModalWindow() : false; // handle outside click
     }
 
     closeHistoryModalWindow = () => {
-        this.modalWindow.classList.remove('active');
+        this.modalWindow.classList.remove('active'); // close modal window
     }
 }
