@@ -9,13 +9,9 @@ export default class Dropdown {
     }
 
     /**
-     * Toggle menu class
+     * Toggle active class
      */
     toggle = () => {
-        if (this.dropdownMenu.classList.contains('active')) {
-            this.dropdownMenu.classList.remove('active'); // Close if open
-        } else {
-            this.dropdownMenu.classList.add('active'); // Open if close
-        }
+        this.dropdownMenu.classList.toggle('active');
     };
 }
