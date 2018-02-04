@@ -35,16 +35,16 @@ export default class History {
 
     firstHistory = () => {
         this.container.classList.add('active');
-        this.indexRate.dataset.index = 28;
+        this.indexRate.dataset.index = 28; // set new index rate
         const setRate = this.indexRate.dataset.index;
-        countProgress(this.container, setRate);
+        countProgress(this.container, setRate); // count health index by new index rate
     }
 
     secondHistory = () => {
         this.container.classList.add('active');
-        this.indexRate.dataset.index = 87;
+        this.indexRate.dataset.index = 87; // set new index rate
         const setRate = this.indexRate.dataset.index;
-        countProgress(this.container, setRate);
+        countProgress(this.container, setRate); // count health index by new index rate
     }
 
     handleClickModal = (event) => {
