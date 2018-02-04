@@ -2,7 +2,7 @@ export default class DropMenu {
     constructor(container) {
         this.container = container;
         this.dropBtn = this.container.querySelector('.js-dropMenu');
-        this.menu = this.container.querySelector('.dropdown-content');
+        this.menu = this.container.querySelector('.js-dropdown-content');
 
         this.toggle();
     }
