@@ -13,3 +13,9 @@ export const notes = {
     warning: 'warning'
 
 };
+
+export const range = {
+    RANGE_HIGHT_CLASS: 'range--hight',
+    RANGE_MIDDLE_CLASS: 'range--middle',
+    RANGE_LOW_CLASS: 'range--low'
+};

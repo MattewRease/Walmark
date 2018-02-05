@@ -1,3 +1,5 @@
+import { range } from './../constants/constants';
+
 const countProgress = (container, setRate) => {
     const indexRate = container.querySelector('.js-numberIndex');
     const arrow = container.querySelector('.js-rateArrow');
@@ -12,11 +14,11 @@ const countProgress = (container, setRate) => {
         bg.style.transform = rateChange;
 
         if (setRate < 31) {
-            indexRate.classList.add('range--low');
+            indexRate.classList.add(range.RANGE_LOW_CLASS);
         } else if (setRate < 70) {
-            indexRate.classList.add('range--middle');
+            indexRate.classList.add(range.RANGE_MIDDLE_CLASS);
         } else {
-            indexRate.classList.add('range--hight');
+            indexRate.classList.add(range.RANGE_HIGHT_CLASS);
         }
     }
 };
