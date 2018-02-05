@@ -8,15 +8,23 @@ const countLiquid = (container, setLitresData, setOptimalLitresData) => {
 
     if (setLitresData < setOptimalLitresData) {
         liquidRate.innerHTML = 'insufficient';
-        if (liquidRate.classList.contains('range--hight')) liquidRate.classList.remove('range--hight');
+        if (liquidRate.classList.contains('range--hight')) {
+            liquidRate.classList.remove('range--hight');
+        }
         liquidRate.classList.add('range--low');
-        if (liquidNormalIcon.classList.contains('active')) liquidNormalIcon.classList.remove('active');
+        if (liquidNormalIcon.classList.contains('active')) {
+            liquidNormalIcon.classList.remove('active');
+        }
         liquidLowIcon.classList.add('active');
     } else {
         liquidRate.innerHTML = 'sufficient';
-        if (liquidRate.classList.contains('range--low')) liquidRate.classList.remove('range--low');
+        if (liquidRate.classList.contains('range--low')) {
+            liquidRate.classList.remove('range--low');
+        }
         liquidRate.classList.add('range--hight');
-        if (liquidLowIcon.classList.contains('active')) liquidLowIcon.classList.remove('active');
+        if (liquidLowIcon.classList.contains('active')) {
+            liquidLowIcon.classList.remove('active');
+        }
         liquidNormalIcon.classList.add('active');
     }
 };
