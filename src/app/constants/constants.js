@@ -19,3 +19,7 @@ export const range = {
     RANGE_MIDDLE_CLASS: 'range--middle',
     RANGE_LOW_CLASS: 'range--low'
 };
+
+export const state = {
+    active: 'active'
+};

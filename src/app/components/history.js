@@ -1,5 +1,6 @@
 import countProgress from '../base/countProgress';
 import countLiquid from '../base/countLiquid';
+import { state } from './../constants/constants';
 
 export default class History {
     constructor(container) {
@@ -40,7 +41,7 @@ export default class History {
      * Show modal window with data by the first history date
      */
     firstHistory = () => {
-        this.container.classList.add('active');
+        this.container.classList.add(state.active);
         this.indexRate.dataset.index = 28; // set new index rate
         const setRate = this.indexRate.dataset.index;
         this.litres.dataset.liquid = 3; // Set daily liquid intake
@@ -56,7 +57,7 @@ export default class History {
      * Show modal window with data by the second history date
      */
     secondHistory = () => {
-        this.container.classList.add('active');
+        this.container.classList.add(state.active);
         this.indexRate.dataset.index = 87; // set new index rate
         const setRate = this.indexRate.dataset.index;
         this.litres.dataset.liquid = 2; // Set daily liquid intake
@@ -74,6 +75,6 @@ export default class History {
 
     // close modal window
     closeHistoryModalWindow = () => {
-        this.modalWindow.classList.remove('active');
+        this.modalWindow.classList.remove(state.active);
     }
 }
