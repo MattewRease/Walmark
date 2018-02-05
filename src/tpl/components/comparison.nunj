@@ -34,7 +34,7 @@
     ]
 %}
 
-<section class="comparison col-12">
+<section class="comparison js-comparison col-12">
 <div class="container">
     <div class="row">
         <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3">My comparison</h3>

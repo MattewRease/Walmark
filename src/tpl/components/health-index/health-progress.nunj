@@ -14,7 +14,7 @@
             <div class="health__progress--bg js-rateBg"></div>
         </div>
         <div class="health__progress--arrow js-rateArrow">{{ svg('icon-cursor', 'health__progress--arrow__icon') }}</div>
-        <p class="health__progress--text bold mb-0 js-numberIndex"  data-index="90"></p>
+        <p class="health__progress--text bold mb-0 js-number-index"  data-index="90"></p>
     </div>
 </div>
 

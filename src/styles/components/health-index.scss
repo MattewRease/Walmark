@@ -370,8 +370,13 @@
 
         &--icon {
             @include size(25px);
+            display: none;
             margin: 5px 10px;
             fill: #00983d;
+
+            &.active {
+                display: block;
+            }
         }
 
         &--bmi {

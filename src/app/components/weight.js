@@ -1,3 +1,5 @@
+import { range } from './../constants/constants';
+
 export default class Weight {
     constructor(container) {
         this.container = container;
@@ -10,21 +12,21 @@ export default class Weight {
 
     countWeight = () => {
         if (this.indexBmi < 15 || this.indexBmi > 25) {
-            this.category.classList.add('range--low');
-            this.bmi.classList.add('range--low');
+            this.category.classList.add(range.RANGE_LOW_CLASS);
+            this.bmi.classList.add(range.RANGE_LOW_CLASS);
             this.overNormal();
 
         } else if (this.indexBmi > 15 && this.indexBmi < 20) {
 
-            this.category.classList.add('range--middle');
+            this.category.classList.add(range.RANGE_MIDDLE_CLASS);
             this.category.innerHTML = 'Close To Normal Weight';
-            this.bmi.classList.add('range--middle');
+            this.bmi.classList.add(range.RANGE_MIDDLE_CLASS);
 
         } else {
 
-            this.category.classList.add('range--hight');
+            this.category.classList.add(range.RANGE_HEIGHT_CLASS);
             this.category.innerHTML = 'Normal Weight';
-            this.bmi.classList.add('range--hight');
+            this.bmi.classList.add(range.RANGE_HEIGHT_CLASS);
         }
     }
 

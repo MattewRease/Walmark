@@ -1,19 +1,14 @@
+import countLiquid from '../base/countLiquid';
+
 export default class Liquid {
     constructor(container) {
         this.container = container;
-        this.liquidRate = this.container.querySelector('.js-liquidRate');
-        this.litres = this.container.querySelector('.health__litres');
+        this.liquidRate = this.container.querySelector('.js-liquid-rate');
+        this.liquidLowIcon = this.container.querySelector('.js-liquid-low');
         this.optimalLitres = this.container.querySelector('.js-liquid-optimal');
-        this.count();
+        const setOptimalLitresData = this.optimalLitres.dataset.optimal;
+
+        countLiquid(this.container, setOptimalLitresData);
     }
 
-    count = () => {
-        if (this.litres.dataset.liquid < this.optimalLitres.dataset.optimal) {
-            this.liquidRate.innerHTML = 'insufficient';
-            this.liquidRate.classList.add('range--low');
-        } else {
-            this.liquidRate.innerHTML = 'sufficient';
-            this.liquidRate.classList.add('range--hight');
-        }
-    }
 }
