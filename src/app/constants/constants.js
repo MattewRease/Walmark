@@ -11,7 +11,6 @@ export const notes = {
     info: 'info',
     success: 'success',
     warning: 'warning'
-
 };
 
 export const range = {
@@ -22,9 +21,4 @@ export const range = {
 
 export const state = {
     active: 'active'
-};
-
-export const iconRange = {
-    RANGE_HIGHT_ICON: 'range-icon--hight',
-    RANGE_LOW_ICON: 'range-icon--low'
 };

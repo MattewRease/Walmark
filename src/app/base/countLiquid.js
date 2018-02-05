@@ -1,10 +1,12 @@
-import { range, state, iconRange } from './../constants/constants';
+import { range, state } from './../constants/constants';
 
 const countLiquid = (container, setOptimalLitresData) => {
     const liquidRate = container.querySelector('.js-liquid-rate');
     const liquidIcon = container.querySelector('.js-liquid-icon');
     const optimalLitres = container.querySelector('.js-liquid-optimal');
     const dailyIntake = liquidRate.dataset.intake;
+    const RANGE_HIGHT_ICON = 'range-icon--hight';
+    const RANGE_LOW_ICON = 'range-icon--low';
     const hightDailyIntakeIcon = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#smile"></use>';
     const lowDailyIntakeIcon = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#sad"></use>';
 
@@ -19,13 +21,13 @@ const countLiquid = (container, setOptimalLitresData) => {
         case 'insufficient':
             className = range.RANGE_LOW_CLASS;
             icon = lowDailyIntakeIcon;
-            iconClassName = iconRange.RANGE_LOW_ICON;
+            iconClassName = RANGE_LOW_ICON;
             liquidStatus = 'insufficient';
             break;
         case 'sufficient':
             className = range.RANGE_HIGHT_CLASS;
             icon = hightDailyIntakeIcon;
-            iconClassName = iconRange.RANGE_HIGHT_ICON;
+            iconClassName = RANGE_HIGHT_ICON;
             liquidStatus = 'sufficient';
             break;
         default:return;
