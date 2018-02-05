@@ -1,7 +1,7 @@
 import { range } from './../constants/constants';
 
 const countProgress = (container, setRate) => {
-    const indexRate = container.querySelector('.js-numberIndex');
+    const indexRate = container.querySelector('.js-number-index');
     const arrow = container.querySelector('.js-rateArrow');
     const bg = container.querySelector('.js-rateBg');
     const rateChange = `rotate(${setRate * 1.8}deg)`;

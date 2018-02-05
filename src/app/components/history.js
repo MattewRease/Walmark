@@ -5,20 +5,20 @@ import { state } from './../constants/constants';
 export default class History {
     constructor(container) {
         this.container = container;
-        this.modalContent = this.container.querySelector('.js-history-modal__content');
+        this.modalContent = this.container.querySelector('.js-history-modal-content');
         this.healthIndex = document.querySelector('.js-health'); // select health index component
         this.comparison = document.querySelector('.js-comparison'); // select comparison component
         this.copyIndexItem = document.querySelector('.js-health').cloneNode(true); // copy health index component
         this.copyComparisonItem = document.querySelector('.js-comparison').cloneNode(true); // copy comparison component
         this.newIndexItem = this.modalContent.appendChild(this.copyIndexItem, this.healthIndex.nextSibling); // insert index component to modal window
         this.newComparisonItem = this.modalContent.appendChild(this.copyComparisonItem, this.comparison.nextSibling); // insert comparison component to modal window
-        this.historyFirstBtn = document.querySelector('.js-firstHistory');
-        this.modalCloseButton = this.container.querySelector('.js-history-modal__close');
-        this.historySecondButton = document.querySelector('.js-secondHistory');
+        this.historyFirstBtn = document.querySelector('.js-first-history');
+        this.modalCloseButton = this.container.querySelector('.js-history-modal-close');
+        this.historySecondButton = document.querySelector('.js-second-history');
         this.modalWindow = document.querySelector('.js-history-modal');
-        this.indexRate = this.container.querySelector('.js-numberIndex');
-        this.litres = this.container.querySelector('.health__litres');
-        this.optimalLitres = this.container.querySelector('.js-liquidOptimal');
+        this.indexRate = this.container.querySelector('.js-number-index');
+        this.litres = this.container.querySelector('.js-health-litres');
+        this.optimalLitres = this.container.querySelector('.js-liquid-optimal');
 
         // Open first history by click
         this.historyFirstBtn.addEventListener('click', this.firstHistory);
@@ -44,7 +44,7 @@ export default class History {
         this.container.classList.add(state.active);
         this.indexRate.dataset.index = 28; // set new index rate
         const setRate = this.indexRate.dataset.index;
-        this.litres.dataset.liquid = 3; // Set daily liquid intake
+        this.litres.dataset.liquid = 1; // Set daily liquid intake
         this.optimalLitres.dataset.liquid = 2.5; // Set daily optimal litres
         const setLitresData = this.litres.dataset.liquid;
         const setOptimalLitresData = this.optimalLitres.dataset.liquid;
