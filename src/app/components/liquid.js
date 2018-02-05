@@ -7,7 +7,7 @@ export default class Liquid {
         this.liquidLowIcon = this.container.querySelector('.js-liquidLow');
         this.liquidNormalIcon = this.container.querySelector('.js-liquidNormal');
         this.litres = this.container.querySelector('.health__litres');
-        this.optimalLitres = this.container.querySelector('.js-liquid-optimal');
+        this.optimalLitres = this.container.querySelector('.js-liquidOptimal');
         this.litres.dataset.liquid = 1;
         this.optimalLitres.dataset.liquid = 1.5;
         const setLitresData = this.litres.dataset.liquid;

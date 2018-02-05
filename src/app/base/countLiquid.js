@@ -2,7 +2,7 @@ const countLiquid = (container, setLitresData, setOptimalLitresData) => {
     const liquidRate = container.querySelector('.js-liquidRate');
     const liquidLowIcon = container.querySelector('.js-liquidLow');
     const liquidNormalIcon = container.querySelector('.js-liquidNormal');
-    const optimalLitres = container.querySelector('.js-liquid-optimal');
+    const optimalLitres = container.querySelector('.js-liquidOptimal');
 
     optimalLitres.innerHTML = setOptimalLitresData;
 

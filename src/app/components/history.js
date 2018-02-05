@@ -17,7 +17,7 @@ export default class History {
         this.modalWindow = document.querySelector('.js-history-modal');
         this.indexRate = this.container.querySelector('.js-numberIndex');
         this.litres = this.container.querySelector('.health__litres');
-        this.optimalLitres = this.container.querySelector('.js-liquid-optimal');
+        this.optimalLitres = this.container.querySelector('.js-liquidOptimal');
 
         // Open first history by click
         this.historyFirstBtn.addEventListener('click', this.firstHistory);
