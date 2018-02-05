@@ -1,11 +1,10 @@
-import {range } from './../constants/constants';
+import { range } from './../constants/constants';
 
 const countLiquid = (container, setLitresData, setOptimalLitresData) => {
     const liquidRate = container.querySelector('.js-liquidRate');
     const liquidLowIcon = container.querySelector('.js-liquidLow');
     const liquidNormalIcon = container.querySelector('.js-liquidNormal');
     const optimalLitres = container.querySelector('.js-liquidOptimal');
-console.log(range.RANGE_HIGHT_CLASS);
     optimalLitres.innerHTML = setOptimalLitresData;
 
     if (setLitresData < setOptimalLitresData) {
