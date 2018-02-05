@@ -11,7 +11,7 @@
 
     </div>
     <div class="col-9 col-sm-10 col-md-9 pr-0 mt-3">
-        <p class="health__litres mb-0" data-liquid="2"><span class="js-liquidOptimal" data-optimal="2.5">2.5</span><span class="bold health__litres--text">Litres</span></p>
+        <p class="health__litres mb-0" data-liquid="2"><span class="js-liquidOptimal" data-optimal="2.5"></span><span class="bold health__litres--text">Litres</span></p>
         <p>Is optimal fluid intake for your height and weight</p>
     </div>
 </div>

@@ -8,12 +8,9 @@ export default class Liquid {
         this.liquidNormalIcon = this.container.querySelector('.js-liquidNormal');
         this.litres = this.container.querySelector('.health__litres');
         this.optimalLitres = this.container.querySelector('.js-liquidOptimal');
-        this.litres.dataset.liquid = 1;
-        this.optimalLitres.dataset.liquid = 1.5;
-        const setLitresData = this.litres.dataset.liquid;
-        const setOptimalLitresData = this.optimalLitres.dataset.liquid;
+        const setOptimalLitresData = this.optimalLitres.dataset.optimal;
 
-        countLiquid(this.container, setLitresData, setOptimalLitresData);
+        countLiquid(this.container, setOptimalLitresData);
     }
 
 }

@@ -1,32 +1,46 @@
-import { range, state } from './../constants/constants';
+import { range, state, iconRange } from './../constants/constants';
 
-const countLiquid = (container, setLitresData, setOptimalLitresData) => {
+const countLiquid = (container, setOptimalLitresData) => {
     const liquidRate = container.querySelector('.js-liquidRate');
-    const liquidLowIcon = container.querySelector('.js-liquidLow');
-    const liquidNormalIcon = container.querySelector('.js-liquidNormal');
+    const liquidIcon = container.querySelector('.js-liquidLow');
     const optimalLitres = container.querySelector('.js-liquidOptimal');
+    const dailyIntake = liquidRate.dataset.intake;
+    const hightDailyIntakeIcon = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#smile"></use>';
+    const lowDailyIntakeIcon = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#sad"></use>';
+
     optimalLitres.textContent = setOptimalLitresData;
 
-    if (setLitresData < setOptimalLitresData) {
-        liquidRate.textContent = 'insufficient';
-        if (liquidRate.classList.contains(range.RANGE_HIGHT_CLASS)) {
-            liquidRate.classList.remove(range.RANGE_HIGHT_CLASS);
-        }
-        liquidRate.classList.add(range.RANGE_LOW_CLASS);
-        if (liquidNormalIcon.classList.contains(state.active)) {
-            liquidNormalIcon.classList.remove(state.active);
-        }
-        liquidLowIcon.classList.add(state.active);
+    let className;
+    let icon;
+    let iconClassName;
+    let liquidStatus;
+
+    switch (dailyIntake) {
+        case 'insufficient':
+            className = range.RANGE_LOW_CLASS;
+            icon = lowDailyIntakeIcon;
+            iconClassName = iconRange.RANGE_LOW_ICON;
+            liquidStatus = 'insufficient';
+            break;
+        case 'sufficient':
+            className = range.RANGE_HIGHT_CLASS;
+            icon = hightDailyIntakeIcon;
+            iconClassName = iconRange.RANGE_HIGHT_ICON;
+            liquidStatus = 'sufficient';
+            break;
+        default:return;
+    }
+
+    if (dailyIntake) {
+        liquidRate.classList.add(className);
+        liquidRate.textContent = liquidStatus;
+        liquidIcon.innerHTML = icon;
+        liquidIcon.classList.add(iconClassName);
     } else {
-        liquidRate.textContent = 'sufficient';
-        if (liquidRate.classList.contains(range.RANGE_LOW_CLASS)) {
-            liquidRate.classList.remove(range.RANGE_LOW_CLASS);
-        }
-        liquidRate.classList.add(range.RANGE_HIGHT_CLASS);
-        if (liquidLowIcon.classList.contains(state.active)) {
-            liquidLowIcon.classList.remove(state.active);
-        }
-        liquidNormalIcon.classList.add(state.active);
+        liquidRate.classList.add(className);
+        liquidRate.textContent = liquidStatus;
+        liquidIcon.innerHTML = icon;
+        liquidIcon.classList.add(iconClassName);
     }
 };
 
