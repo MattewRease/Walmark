@@ -1,9 +1,9 @@
 import { range, state, iconRange } from './../constants/constants';
 
 const countLiquid = (container, setOptimalLitresData) => {
-    const liquidRate = container.querySelector('.js-liquidRate');
-    const liquidIcon = container.querySelector('.js-liquidLow');
-    const optimalLitres = container.querySelector('.js-liquidOptimal');
+    const liquidRate = container.querySelector('.js-liquid-rate');
+    const liquidIcon = container.querySelector('.js-liquid-icon');
+    const optimalLitres = container.querySelector('.js-liquid-optimal');
     const dailyIntake = liquidRate.dataset.intake;
     const hightDailyIntakeIcon = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#smile"></use>';
     const lowDailyIntakeIcon = '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#sad"></use>';
