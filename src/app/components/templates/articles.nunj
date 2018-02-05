@@ -1,0 +1,9 @@
+{% for healtIndex in data.items %}
+    <div class="col-4">
+        <ul>
+            <li>asdasd</li>
+            <li>asdasd</li>
+            <li><img class="u-d-inline-block" src="asds" /></li>
+        </ul>
+    </div>
+{% endfor %}

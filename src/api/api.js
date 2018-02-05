@@ -22,9 +22,31 @@ module.exports = () => {
         }
     }
 
+    const articles = {
+        nextUrl: '//localhost:5003/articles',
+        items: [
+            {
+                title: 'Article A',
+                description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam asperiores dolores aspernatur tempore ipsum excepturi!',
+                imageUrl: 'http://satyr.io/100x20/'
+            },
+            {
+                title: 'Article B',
+                description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam asperiores dolores aspernatur tempore ipsum excepturi!',
+                imageUrl: 'http://satyr.io/100x20/'
+            },
+            {
+                title: 'Article C',
+                description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam asperiores dolores aspernatur tempore ipsum excepturi!',
+                imageUrl: 'http://satyr.io/100x20/'
+            }
+        ]
+    };
+
     return {
         reminders,
         tasks,
-        rating
+        rating,
+        articles
     };
 };
