@@ -5,10 +5,10 @@ const countLiquid = (container, setLitresData, setOptimalLitresData) => {
     const liquidLowIcon = container.querySelector('.js-liquidLow');
     const liquidNormalIcon = container.querySelector('.js-liquidNormal');
     const optimalLitres = container.querySelector('.js-liquidOptimal');
-    optimalLitres.innerHTML = setOptimalLitresData;
+    optimalLitres.textContent = setOptimalLitresData;
 
     if (setLitresData < setOptimalLitresData) {
-        liquidRate.innerHTML = 'insufficient';
+        liquidRate.textContent = 'insufficient';
         if (liquidRate.classList.contains(range.RANGE_HIGHT_CLASS)) {
             liquidRate.classList.remove(range.RANGE_HIGHT_CLASS);
         }
@@ -18,7 +18,7 @@ const countLiquid = (container, setLitresData, setOptimalLitresData) => {
         }
         liquidLowIcon.classList.add('active');
     } else {
-        liquidRate.innerHTML = 'sufficient';
+        liquidRate.textContent = 'sufficient';
         if (liquidRate.classList.contains(range.RANGE_LOW_CLASS)) {
             liquidRate.classList.remove(range.RANGE_LOW_CLASS);
         }
