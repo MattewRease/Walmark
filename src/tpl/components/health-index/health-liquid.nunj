@@ -2,9 +2,8 @@
 
 <div class="health__liquid align-items-center d-flex flex-wrap pb-1">
     <div class="col-12 pl-0">
-        <h3 class="health__weight--text mb-0 "><strong class="pr-2">Your daily liquid intake is </strong><span class="js-liquidRate bold"></span>
-            {{ svg('sad', 'health__liquid--icon js-liquidLow range-icon--low mb-xs-2 mt-sm-2') }}
-            {{ svg('smile', 'health__liquid--icon js-liquidNormal mb-xs-2 mt-sm-2') }}
+        <h3 class="health__weight--text mb-0 "><strong class="pr-2">Your daily liquid intake is </strong><span class="js-liquidRate bold" data-intake="insufficient"></span>
+            {{ svg('', 'health__liquid--icon active js-liquidLow mb-xs-2 mt-sm-2') }}
         </h3>
     </div>
     <div class="col-3 col-sm-2 col-md-3 text-right pl-0">
