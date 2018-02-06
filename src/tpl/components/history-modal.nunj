@@ -5,5 +5,7 @@
         <div class="history-modal__close">
             {{ svg('cross-delete', 'history-modal__icon') }}
         </div>
+        <div class="history-modal__history">
+        </div>
     </div>
 </div>

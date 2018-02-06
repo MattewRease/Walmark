@@ -1,0 +1,19 @@
+{% extends "layouts/default.nunj" %}
+
+{% set title = "Walmark" %}
+
+{% block content %}
+    {% include "../tpl/components/greetings.nunj" %}
+    {% include "../tpl/components/shopping-list.nunj" %}
+    {% include "../tpl/components/navigation.nunj" %}
+    {% include "../tpl/components/health-index.nunj" %}
+    {% include "../tpl/components/health-support.nunj" %}
+    {% include "../tpl/components/health-index-results.nunj" %}
+    {% include "../tpl/components/program-length.nunj" %}
+    {% include "../tpl/components/health-tips.nunj" %}
+    {% include "../tpl/components/comparison.nunj" %}
+    {% include "../tpl/components/history.nunj" %}
+    {% include "../tpl/components/history-modal.nunj" %}
+    {% include "../tpl/components/rate-product.nunj" %}
+
+{% endblock %}
