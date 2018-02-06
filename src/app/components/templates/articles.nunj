@@ -1,22 +1,3 @@
 {% for healtIndex in data.items %}
-    <section class="health">
-        <div class="container">
-            <div class="row d-flex flex-wrap">
-                <h4 class="health__title col-12 bold pb-3">{{ healthIndex.title }}</h4>
-                <div class="col-12 col-md-6 d-md-flex">
-                    {% include "../components/health-index/health-progress.nunj" %}
-                </div>
-                <div class="col-12 col-md-6 d-flex">
-                    {% include "../components/health-index/health-rules.nunj" %}
-                </div>
-                <div class="col-12 col-md-6 d-flex">
-                    {% include "../components/health-index/health-weight.nunj" %}
-                </div>
-                <div class="col-12 col-md-6 d-flex">
-                    {% include "../components/health-index/health-liquid.nunj" %}
-                </div>
-            </div>
-        </div>
-    </section>
+    <h1>{{ healtIndex.title }}</h1>
 {% endfor %}
-

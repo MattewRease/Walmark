@@ -5,13 +5,13 @@
             month: 'November ',
             date: '24 ',
             year: '2017',
-            class: 'js-firstHistory'
+            class: 'js-first-history'
         },
         {
             month: 'May ',
             date: '12 ',
             year: '2017',
-            class: 'js-secondHistory'
+            class: 'js-second-history'
         }
     ]
 %}

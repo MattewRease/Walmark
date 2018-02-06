@@ -26,9 +26,10 @@ module.exports = () => {
         items: [
             {
                 title: 'My history health index',
-                index: '23',
+                index: '43',
                 optimalLiquid: '2',
-                dataLiquid: '1'
+                dataLiquid: '1',
+                bmi: '10'
             }
         ]
     };
