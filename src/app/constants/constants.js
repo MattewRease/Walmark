@@ -22,3 +22,9 @@ export const range = {
 export const state = {
     active: 'active'
 };
+
+export const bmiRangeLimits = {
+    BMI_RANGE_LOW: '15',
+    BMI_RANGE_NORMAL: '20',
+    BMI_RANGE_HIGHT: '25'
+};
