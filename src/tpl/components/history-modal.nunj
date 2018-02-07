@@ -1,11 +1,11 @@
 {% from '../helpers/svg.nunj' import svg %}
 
 <div class="js-history-modal history-modal">
-    <div class="js-history-modal-content history-modal__content">
+    <div class="history-modal__content">
         <div class="js-history-modal-close history-modal__close">
             {{ svg('cross-delete', 'history-modal__icon') }}
         </div>
-        <div class="history-modal__history">
+        <div class="js-history-modal-content history-modal__history">
         </div>
     </div>
 </div>

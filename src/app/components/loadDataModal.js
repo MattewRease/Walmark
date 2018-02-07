@@ -7,13 +7,13 @@ import { notes, messages } from './../constants/constants';
 export default class LoadDataModal {
     constructor(container) {
         this.container = container;
-        this.historyButtons = [...document.querySelectorAll('.js-history')]; // select all history buttons
-        this.title = this.container.querySelector('h3');
         this.modalCloseButton = this.container.querySelector('.js-history-modal-close');
-        this.content = this.container.querySelector('.history-modal__history');
-        this.modalWindow = document.querySelector('.history-modal');
+        this.modalContent = this.container.querySelector('.js-history-modal-content');
+        this.modalWindow = document.querySelector('.js-history-modal');
+        this.historyButtons = [...document.querySelectorAll('.js-history')]; // select all history buttons
+
+        // get name of template to render
         const jsTemplates = 'http://localhost:5001/js/templates';
-        this.renderContainer = this.container.querySelector('.js-first-history');
         this.nunjEnv = nunjucks.configure(jsTemplates);
 
         // Open modal window by click on history button
@@ -47,14 +47,14 @@ export default class LoadDataModal {
 
     // Rendering temlate on the page
     renderResults = data => {
-        const template = this.nunjEnv.getTemplate('articles.nunj');
+        const template = this.nunjEnv.getTemplate('history.nunj');
         const insertTemplate = template.render({ data });
-        this.content.innerHTML = insertTemplate;
+        this.modalContent.innerHTML = insertTemplate;
 
         const indexRate = this.container.querySelector('.js-number-index');
         const setRate = indexRate.dataset.index;
 
-        countProgress(this.container, setRate);
+        countProgress(this.container, setRate); // Count progress index depends to history data
     }
 
     // Open modal window
