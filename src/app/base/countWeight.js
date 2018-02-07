@@ -1,4 +1,4 @@
-import { range, bmiRangeLimits } from './../constants/constants';
+import { range, bmiRangeLimits, bmiCategory } from './../constants/constants';
 
 // Count weight category by BMI index
 const countWeight = (container, indexBmi) => {
@@ -7,19 +7,19 @@ const countWeight = (container, indexBmi) => {
 
     bmi.textContent = indexBmi;
 
-    if (indexBmi < bmiRangeLimits.BMI_RANGE_LOW || indexBmi > bmiRangeLimits.BMI_RANGE_HIGHT) {
+    if (indexBmi < bmiRangeLimits.LOW || indexBmi > bmiRangeLimits.HIGHT) {
         category.classList.add(range.RANGE_LOW_CLASS);
         bmi.classList.add(range.RANGE_LOW_CLASS);
-        indexBmi < bmiRangeLimits.BMI_RANGE_LOW ? category.textContent = 'To Low Weight!' : category.textContent = 'Too High Weight!';
+        indexBmi < bmiRangeLimits.LOW ? category.textContent = bmiCategory.LOW : category.textContent = bmiCategory.HIGHT;
 
-    } else if (indexBmi > bmiRangeLimits.BMI_RANGE_LOW && indexBmi < bmiRangeLimits.BMI_RANGE_NORMAL) {
+    } else if (indexBmi > bmiRangeLimits.LOW && indexBmi < bmiRangeLimits.NORMAL) {
         category.classList.add(range.RANGE_MIDDLE_CLASS);
-        category.textContent = 'Close To Normal Weight';
+        category.textContent = bmiCategory.NEARLY_NORMAL;
         bmi.classList.add(range.RANGE_MIDDLE_CLASS);
 
     } else {
         category.classList.add(range.RANGE_HIGHT_CLASS);
-        category.textContent = 'Normal Weight';
+        category.textContent = bmiCategory.NORMAL;
         bmi.classList.add(range.RANGE_HIGHT_CLASS);
     }
 };

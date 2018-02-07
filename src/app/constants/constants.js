@@ -24,7 +24,14 @@ export const state = {
 };
 
 export const bmiRangeLimits = {
-    BMI_RANGE_LOW: '15',
-    BMI_RANGE_NORMAL: '20',
-    BMI_RANGE_HIGHT: '25'
+    LOW: '15',
+    NORMAL: '20',
+    HIGHT: '25'
+};
+
+export const bmiCategory = {
+    LOW: 'To Low Weight!',
+    NEARLY_NORMAL: 'Close To Normal Weight',
+    NORMAL: 'Normal Weight',
+    HIGHT: 'Too High Weight!'
 };
