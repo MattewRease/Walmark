@@ -30,7 +30,7 @@ module.exports = () => {
                 optimalLiquid: '2',
                 dataLiquid: '1',
                 dailyIntake: 'insufficient',
-                liquidIcon: 'smile',
+                liquidIcon: 'sad',
                 bmi: '8.5',
                 bmiCategory: 'To Low Weight!'
             }
