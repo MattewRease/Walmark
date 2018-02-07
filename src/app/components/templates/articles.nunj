@@ -25,7 +25,7 @@
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#icon-cursor"></use>
                                 </svg>
                             </div>
-                            <p class="health__progress--text bold mb-0 js-number-index range--middle" data-index="{{ healthIndex.index }}">65</p>
+                            <p class="health__progress--text bold mb-0 js-number-index range--middle" data-index="{{ healthIndex.index }}">{{ healthIndex.index }}</p>
                         </div>
                     </div>
                 </div>
