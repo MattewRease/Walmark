@@ -96,5 +96,79 @@
             </div>
         </div>
     </section>
-
+    <section class="comparison js-comparison col-12">
+        <div class="container">
+            <div class="row">
+                <h3 class="title col-12 bold px-0 mb-0 pt-2 pb-3">My comparison</h3>
+                <h4 class="text-center col-12  mb-0 py-4 my-2">See how you compare with others</h4>
+                    <div class="comparison__item col-lg-4 col-12 mb-2 pt-2 d-inline-block">
+                        <h4 class="text--green text-center text-lg-left bold py-3">Health Index</h4>
+                        <div class="d-flex justify-content-center justify-content-lg-between text-center">
+                            <div class="px-4 px-lg-0 mx-xl-3">
+                                <span class="text--grey">YOURS</span>
+                                <h4 class="text--orange bold pt-2">{{ healthIndex.index }}</h4>
+                            </div>
+                            <div class="comparison__icon--block mx-lg-3">
+                                <svg class="icon comparison__icon">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#icon-chart"></use>
+                                </svg>
+                            </div>
+                            <div class="px-4 px-lg-0 mx-xl-3">
+                                <span class="text--grey">AVERAGE</span>
+                                <h4 class="text--orange bold pt-2">{{ healthIndex.averageIndex }}</h4>
+                            </div>
+                        </div>
+                            <p class="mb-0 px-1 my-3 text-sm-center  text-lg-left">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
+                    </div>
+                    <div class="comparison__item col-lg-4 col-12 mb-2 pt-2 d-inline-block">
+                        <h4 class="text--green text-center text-lg-left bold py-3">BMI</h4>
+                        <div class="d-flex justify-content-center justify-content-lg-between text-center">
+                            <div class="px-4 px-lg-0 mx-xl-3">
+                                <span class="text--grey">YOURS</span>
+                                <h4 class="text--orange bold pt-2">{{ healthIndex.bmi }}</h4>
+                            </div>
+                            <div class="comparison__icon--block mx-lg-3">
+                                <svg class="icon comparison__icon">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#icon-chart"></use>
+                                </svg>
+                            </div>
+                            <div class="px-4 px-lg-0 mx-xl-3">
+                                <span class="text--grey">AVERAGE</span>
+                                <h4 class="text--orange bold pt-2">{{ healthIndex.averageBmi }}</h4>
+                            </div>
+                        </div>
+                        <p class="mb-0 px-1 my-3 text-sm-center  text-lg-left">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
+                    </div>
+                    <div class="comparison__item col-lg-4 col-12 mb-2 pt-2 d-inline-block">
+                        <h4 class="text--green text-center text-lg-left bold py-3">What other answered</h4>
+                        <p class="pb-2 text-sm-center text-lg-left">Do you regulary stretch your body?</p>
+                        <div class="d-flex justify-content-center justify-content-lg-between text-center">
+                            <div class="px-4 px-lg-0 mx-xl-3">
+                                <span class="text--grey">NO</span>
+                                <h4 class="text--orange bold pt-2">{{ healthIndex.answeredNo }}</h4>
+                            </div>
+                            <div>
+                                <svg class="icon comparison__icon--progress">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#progress"></use>
+                                </svg>
+                            </div>
+                            <div class="px-4 px-lg-0 mx-xl-3">
+                                <span class="text--grey">YES</span>
+                                <h4 class="text--orange bold pt-2">{{ healthIndex.answeredYes }}</h4>
+                            </div>
+                        </div>
+                        <p class="mb-0 px-1 my-3 pt-lg-2 text-sm-center  text-lg-left">Your answer: <strong>Yes</strong></p>
+                    </div>
+                <div class="comparison__message col-12 p-4 mt-3 d-flex justify-content-around justify-content-lg-center">
+                    <h4 class="text--green mb-0 bold">Don't worry, we will help you get better!
+                        <span>
+                            <svg class="icon comparison__icon--smile align-self-center ml-lg-4">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/gfx/svg/sprites/icons.svg#smile"></use>
+                            </svg>
+                        </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endfor %}

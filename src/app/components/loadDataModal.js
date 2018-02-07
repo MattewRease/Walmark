@@ -1,12 +1,13 @@
 import nunjucks from 'nunjucks';
 import axios from 'axios';
 import countProgress from '../base/countProgress';
-// import countLiquid from '../base/countLiquid';
+import notify from './../base/notify';
+import { notes, messages } from './../constants/constants';
 
 export default class LoadDataModal {
     constructor(container) {
         this.container = container;
-        this.firstBtn = document.querySelector('.js-first-history');
+        this.historyButtons = [...document.querySelectorAll('.js-history')];
         this.title = this.container.querySelector('h3');
         this.modalCloseButton = this.container.querySelector('.js-history-modal-close');
         this.content = this.container.querySelector('.history-modal__history');
@@ -14,7 +15,11 @@ export default class LoadDataModal {
         const jsTemplates = 'http://localhost:5001/js/templates';
         this.renderContainer = this.container.querySelector('.js-first-history');
         this.nunjEnv = nunjucks.configure(jsTemplates);
-        this.firstBtn.addEventListener('click', this.openModal);
+
+        // Open modal window by click on history button
+        this.historyButtons.forEach(historyButton => {
+            historyButton.addEventListener('click', this.requestService);
+        });
 
         // Close modal window by click close button
         this.modalCloseButton.addEventListener('click', this.closeHistoryModalWindow);
@@ -23,16 +28,23 @@ export default class LoadDataModal {
         this.modalWindow.addEventListener('click', this.handleClickModal);
     }
 
-    requestService = () => {
+    // handleHistoryDate = (event) => {
+    //     console.log(event.currentTarget.dataset.history);
+    //     // if (event.currentTarget.dataset.history)
+    // }
+
+    requestService = (event) => {
+        const handledHistorydate = event.currentTarget.dataset.history;
         axios({
             method: 'get',
-            url: 'http://localhost:5003/articles'
+            url: `http://localhost:5003/${handledHistorydate}`
         })
             .then((response) => {
+                this.openModal();
                 this.renderResults(response.data);
             })
             .catch((error) => {
-                console.error('error');
+                notify(`${notes.note} ${notes.warning}`, messages.failed);
             });
     }
 
@@ -48,13 +60,10 @@ export default class LoadDataModal {
         const setOptimalLitresData = optimalLitres.dataset.optimal;
 
         countProgress(this.container, setRate);
-        // countLiquid(this.container, setOptimalLitresData);
     }
 
     openModal = () => {
         this.container.classList.add('active');
-        this.requestService();
-
     }
 
     // handle outside click

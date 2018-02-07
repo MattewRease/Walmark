@@ -22,7 +22,7 @@ module.exports = () => {
         }
     }
 
-    const articles = {
+    const firstDate = {
         items: [
             {
                 title: 'My history health index',
@@ -32,7 +32,30 @@ module.exports = () => {
                 dailyIntake: 'insufficient',
                 liquidIcon: 'sad',
                 bmi: '8.5',
-                bmiCategory: 'To Low Weight!'
+                bmiCategory: 'To Low Weight!',
+                averageIndex: '65',
+                averageBmi: '15.3',
+                answeredYes: '63%',
+                answeredNo: '27%'
+            }
+        ]
+    }
+
+    const secondDate = {
+        items: [
+            {
+                title: 'My history health index',
+                index: '22',
+                optimalLiquid: '3',
+                dataLiquid: '4',
+                dailyIntake: 'insufficient',
+                liquidIcon: 'sad',
+                bmi: '10.5',
+                bmiCategory: 'To Low Weight!',
+                averageIndex: '35',
+                averageBmi: '15.3',
+                answeredYes: '75%',
+                answeredNo: '25%'
             }
         ]
     };
@@ -41,6 +64,7 @@ module.exports = () => {
         reminders,
         tasks,
         rating,
-        articles
+        secondDate,
+        firstDate
     };
 };
