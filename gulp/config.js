@@ -62,6 +62,10 @@ const
         `!${FAVICON_SOURCE}`
     ],
 
+    /* Nunjucks JS templates */
+    JS_TEMPLATES = `${JS_BASE}/components/templates`,
+    JS_TEMPLATES_BUILD = `${JS_BUILD}/templates`,
+
     /* Templates */
     TEMPLATE_BASE = `${DEVELOPMENT_BASE}/tpl`,
     TEMPLATE_PAGES = `${TEMPLATE_BASE}/*.nunj`,

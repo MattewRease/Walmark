@@ -1,7 +1,7 @@
 import nunjucks from 'nunjucks';
 import axios from 'axios';
 import countProgress from '../base/countProgress';
-import countLiquid from '../base/countLiquid';
+// import countLiquid from '../base/countLiquid';
 
 export default class LoadDataModal {
     constructor(container) {
@@ -48,7 +48,7 @@ export default class LoadDataModal {
         const setOptimalLitresData = optimalLitres.dataset.optimal;
 
         countProgress(this.container, setRate);
-        countLiquid(this.container, setOptimalLitresData);
+        // countLiquid(this.container, setOptimalLitresData);
     }
 
     openModal = () => {

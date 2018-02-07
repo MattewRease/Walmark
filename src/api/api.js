@@ -29,7 +29,10 @@ module.exports = () => {
                 index: '43',
                 optimalLiquid: '2',
                 dataLiquid: '1',
-                bmi: '10'
+                dailyIntake: 'insufficient',
+                liquidIcon: 'smile',
+                bmi: '8.5',
+                bmiCategory: 'To Low Weight!'
             }
         ]
     };
