@@ -22,3 +22,16 @@ export const range = {
 export const state = {
     active: 'active'
 };
+
+export const bmiRangeLimits = {
+    LOW: '15',
+    NORMAL: '20',
+    HIGHT: '25'
+};
+
+export const bmiCategory = {
+    LOW: 'To Low Weight!',
+    NEARLY_NORMAL: 'Close To Normal Weight',
+    NORMAL: 'Normal Weight',
+    HIGHT: 'Too High Weight!'
+};
