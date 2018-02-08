@@ -3,17 +3,17 @@
 {% set title = "Walmark" %}
 
 {% block content %}
-    {% include "../tpl/components/greetings.nunj" %}
-    {% include "../tpl/components/shopping-list.nunj" %}
-    {% include "../tpl/components/navigation.nunj" %}
-    {% include "../tpl/components/health-index.nunj" %}
-    {% include "../tpl/components/health-support.nunj" %}
-    {% include "../tpl/components/health-index-results.nunj" %}
-    {% include "../tpl/components/program-length.nunj" %}
-    {% include "../tpl/components/health-tips.nunj" %}
-    {% include "../tpl/components/comparison.nunj" %}
-    {% include "../tpl/components/history.nunj" %}
-    {% include "../tpl/components/history-modal.nunj" %}
-    {% include "../tpl/components/rate-product.nunj" %}
+    {% include "components/greetings.nunj" %}
+    {% include "components/shopping-list.nunj" %}
+    {% include "components/navigation.nunj" %}
+    {% include "components/health-index.nunj" %}
+    {% include "components/health-support.nunj" %}
+    {% include "components/health-index-results.nunj" %}
+    {% include "components/program-length.nunj" %}
+    {% include "components/health-tips.nunj" %}
+    {% include "components/comparison.nunj" %}
+    {% include "components/history.nunj" %}
+    {% include "components/history-modal.nunj" %}
+    {% include "components/rate-product.nunj" %}
 
 {% endblock %}
