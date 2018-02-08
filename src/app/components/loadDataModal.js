@@ -34,21 +34,33 @@ export default class LoadDataModal {
 
         axios({
             method: 'get',
-            url: `http://localhost:5003/${handledHistoryDate}` // get exactly the data that we chose by click
+            url: 'http://localhost:5003/history' // get json data
         })
             .then((response) => {
                 this.openModal();
-                this.renderResults(response.data); // render template with received data if success
+                this.defineDate(response.data, handledHistoryDate);
             })
             .catch((error) => {
                 notify(`${notes.note} ${notes.warning}`, messages.failed); // show error if failed
             });
     }
 
+    // define selected date
+    defineDate = (data, handledHistoryDate) => {
+
+        // find object with specific date from array. Will return array with one object
+        const myDate = data.filter(newDate => {
+            return newDate.date === handledHistoryDate;
+        });
+
+        const dateSelective = myDate[0]; // select object from received array
+        this.renderResults(dateSelective); // render template with received data
+    }
+
     // Rendering temlate on the page
-    renderResults = data => {
+    renderResults = dateSelective => {
         const template = this.nunjEnv.getTemplate('history.nunj');
-        const insertTemplate = template.render({ data });
+        const insertTemplate = template.render(dateSelective);
         this.modalContent.innerHTML = insertTemplate;
 
         const indexRate = this.container.querySelector('.js-number-index');
