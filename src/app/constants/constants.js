@@ -22,3 +22,7 @@ export const range = {
 export const state = {
     active: 'active'
 };
+
+export const paths = {
+    jsTemplates: 'http://localhost:5001/js/templates'
+};

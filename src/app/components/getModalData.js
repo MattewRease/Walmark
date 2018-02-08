@@ -2,7 +2,7 @@ import nunjucks from 'nunjucks';
 import axios from 'axios';
 import countProgress from '../base/countProgress';
 import notify from './../base/notify';
-import { notes, messages } from './../constants/constants';
+import { notes, messages, paths } from './../constants/constants';
 
 export default class LoadDataModal {
     constructor(container) {
@@ -13,8 +13,7 @@ export default class LoadDataModal {
         this.historyButtons = [...document.querySelectorAll('.js-history')]; // select all history buttons
 
         // get name of template to render
-        const jsTemplates = 'http://localhost:5001/js/templates';
-        this.nunjEnv = nunjucks.configure(jsTemplates);
+        this.nunjEnv = nunjucks.configure(paths.jsTemplates);
 
         // Open modal window by click on history button
         this.historyButtons.forEach(historyButton => {
@@ -38,7 +37,7 @@ export default class LoadDataModal {
         })
             .then((response) => {
                 this.openModal();
-                this.defineDate(response.data, handledHistoryDate);
+                this.defineSpecificDate(response.data, handledHistoryDate);
             })
             .catch((error) => {
                 notify(`${notes.note} ${notes.warning}`, messages.failed); // show error if failed
@@ -46,21 +45,25 @@ export default class LoadDataModal {
     }
 
     // define selected date
-    defineDate = (data, handledHistoryDate) => {
+    defineSpecificDate = (data, handledHistoryDate) => {
 
-        // find object with specific date from array. Will return array with one object
-        const myDate = data.filter(newDate => {
-            return newDate.date === handledHistoryDate;
+        /**
+         * find object with specific date from array.
+         *
+         * Will return array with one object.
+         */
+        const myDate = data.filter(selectDate => {
+            return selectDate.date === handledHistoryDate;
         });
 
-        const dateSelective = myDate[0]; // select object from received array
-        this.renderResults(dateSelective); // render template with received data
+        const dataSelectedDate = myDate[0]; // select object from received array
+        this.renderResults(dataSelectedDate); // render template with received data
     }
 
     // Rendering temlate on the page
-    renderResults = dateSelective => {
+    renderResults = dataSelectedDate => {
         const template = this.nunjEnv.getTemplate('history.nunj');
-        const insertTemplate = template.render(dateSelective);
+        const insertTemplate = template.render(dataSelectedDate);
         this.modalContent.innerHTML = insertTemplate;
 
         const indexRate = this.container.querySelector('.js-number-index');
