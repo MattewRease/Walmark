@@ -60,7 +60,7 @@ module.exports = () => {
                     answeredNo: '25%'
                 }
             ]
-        },
+        }
     ];
 
     return {

@@ -36,8 +36,8 @@ export default class getModalData {
             url: 'http://localhost:5003/history' // get json data
         })
             .then((response) => {
-                this.openModal();
                 this.defineSpecificDate(response.data, handledHistoryDate);
+                this.openModal();
             })
             .catch((error) => {
                 notify(`${notes.note} ${notes.warning}`, messages.failed); // show error if failed

@@ -1,4 +1,4 @@
-{% for healthIndex in data.items %}
+{% for healthIndex in items %}
 
     <section class="health js-health">
         <div class="container">
