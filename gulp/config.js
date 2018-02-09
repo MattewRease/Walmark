@@ -62,6 +62,10 @@ const
         `!${FAVICON_SOURCE}`
     ],
 
+    /* Nunjucks JS templates */
+    JS_TEMPLATES = `${JS_BASE}/components/templates`,
+    JS_TEMPLATES_BUILD = `${JS_BUILD}/templates`,
+
     /* Templates */
     TEMPLATE_BASE = `${DEVELOPMENT_BASE}/tpl`,
     TEMPLATE_PAGES = `${TEMPLATE_BASE}/*.nunj`,
@@ -126,6 +130,9 @@ module.exports = {
     SVG_BUILD_SPRITES,
     SVG_TPL_PATH,
     SVG_SPRITES_TPL_PATH,
+
+    JS_TEMPLATES,
+    JS_TEMPLATES_BUILD,
 
     TEMPLATE_BASE,
     TEMPLATE_PAGES,

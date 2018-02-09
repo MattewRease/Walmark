@@ -35,3 +35,7 @@ export const bmiCategory = {
     NORMAL: 'Normal Weight',
     HIGHT: 'Too High Weight!'
 };
+
+export const paths = {
+    nunjTemplates: 'http://localhost:5001/js/templates'
+};

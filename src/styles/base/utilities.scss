@@ -92,7 +92,8 @@
     fill: #e54544 !important;
 }
 
-.range-icon--hight {
-    fill: #00a14e !important;
+.articles {
+    position: fixed;
+    z-index: 10000;
+    height: 20px;
 }
-
