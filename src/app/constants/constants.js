@@ -24,5 +24,5 @@ export const state = {
 };
 
 export const paths = {
-    jsTemplates: 'http://localhost:5001/js/templates'
+    nunjTemplates: 'http://localhost:5001/js/templates'
 };

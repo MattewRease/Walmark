@@ -13,7 +13,7 @@ export default class getModalData {
         this.historyButtons = [...document.querySelectorAll('.js-history')]; // select all history buttons
 
         // get name of template to render
-        this.nunjEnv = nunjucks.configure(paths.jsTemplates);
+        this.nunjEnv = nunjucks.configure(paths.nunjTemplates);
 
         // Open modal window by click on history button
         this.historyButtons.forEach(historyButton => {
