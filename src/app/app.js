@@ -16,7 +16,7 @@ import weekNav from './components/weekNav';
 import accordion from './components/accordion';
 import reminder from './components/reminder';
 // import history from './components/history';
-import loadDataModal from './components/loadDataModal';
+import getModalData from './components/getModalData';
 import rateProduct from './components/rateProduct';
 
 const app = (config) => {
@@ -31,7 +31,7 @@ const app = (config) => {
     init(reminder, document.querySelector('.js-reminder'));
     init(rateProduct, document.querySelector('.rate-product'));
     // init(history, document.querySelector('.history-modal'));
-    init(loadDataModal, document.querySelector('.history-modal'));
+    init(getModalData, document.querySelector('.history-modal'));
 };
 
 app(null, window.config);

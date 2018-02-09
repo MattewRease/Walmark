@@ -4,7 +4,7 @@ import countProgress from '../base/countProgress';
 import notify from './../base/notify';
 import { notes, messages, paths } from './../constants/constants';
 
-export default class LoadDataModal {
+export default class getModalData {
     constructor(container) {
         this.container = container;
         this.modalCloseButton = this.container.querySelector('.js-history-modal-close');
